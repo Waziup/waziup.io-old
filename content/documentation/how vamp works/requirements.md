@@ -3,7 +3,7 @@ date: 2016-09-13T09:00:00+00:00
 title: Requirements
 ---
 
-Vamp's components work together with elements in your architecture to handle orchetstration, routing, persistence and metrics aggregation. To achieve this, Vamp requires access to a container scheduler, key value store, Elastic Search and HAProxy.
+Waziup components work together with elements in your architecture to handle orchetstration, routing, persistence and metrics aggregation. To achieve this, Vamp requires access to a container scheduler, key value store, Elastic Search and HAProxy.
 
 ## Container scheduler  (orchestration)
 Vamp talks directly to your choice of container scheduler. Currently we support [Mesos/Marathon](/documentation/installation/mesos-marathon), [DC/OS](/documentation/installation/dcos), [Kubernetes](/documentation/installation/kubernetes) and [Rancher](/documentation/installation/rancher). In case you’re “greenfield” and don’t have anything selected or running yet, check [which container scheduler?](/documentation/how-vamp-works/which-container-scheduler)
