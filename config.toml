@@ -1,6 +1,6 @@
 baseurl = "."
 languageCode = "en-us"
-title = "Vamp"
+title = "WAZIUP Platform"
 theme = "vamp-theme"
 metadataformat = "yaml"
 canonifyurls = true
