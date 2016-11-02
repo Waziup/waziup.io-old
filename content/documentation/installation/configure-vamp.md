@@ -1,36 +1,36 @@
 ---
 date: 2016-09-13T09:00:00+00:00
-title: Configure Vamp
+title: Configure waziup
 ---
 
-Vamp can be configured using one or a combination of the Vamp `application.conf` HOCON file ([github.com/typesafehub - config](https://github.com/typesafehub/config)), environment variables and system properties.
+waziup can be configured using one or a combination of the waziup `application.conf` HOCON file ([github.com/typesafehub - config](https://github.com/typesafehub/config)), environment variables and system properties.
 
 For example:
 ```bash
 
-export VAMP_INFO_MESSAGE=Hello # overriding Vamp info message (vamp.info.message)
+export waziup_INFO_MESSAGE=Hello # overriding waziup info message (waziup.info.message)
 
-java -Dvamp.gateway-driver.host=localhost \
+java -Dwaziup.gateway-driver.host=localhost \
      -Dlogback.configurationFile=logback.xml \
      -Dconfig.file=application.conf \
-     -jar vamp.jar
+     -jar waziup.jar
 ```
 
-## The Vamp `application.conf` file
+## The waziup `application.conf` file
 
-The Vamp `application.conf` consists of the following sections. All sections are nested inside a parent `vamp {}` tag.
+The waziup `application.conf` consists of the following sections. All sections are nested inside a parent `waziup {}` tag.
 
-* [rest-api](/documentation/installation/configure-vamp/#rest-api)
-* [persistence](/documentation/installation/configure-vamp/#persistence)
-* [container-drivers](/documentation/installation/configure-vamp/#container-drivers)
-* [gateway-driver](/documentation/installation/configure-vamp/#gateway-driver)
-* [operation](/documentation/installation/configure-vamp/#operation)
+* [rest-api](/documentation/installation/configure-waziup/#rest-api)
+* [persistence](/documentation/installation/configure-waziup/#persistence)
+* [container-drivers](/documentation/installation/configure-waziup/#container-drivers)
+* [gateway-driver](/documentation/installation/configure-waziup/#gateway-driver)
+* [operation](/documentation/installation/configure-waziup/#operation)
 
 ### rest-api
-Configure the port, host name and interface that Vamp runs on using the `rest-api.port`
+Configure the port, host name and interface that waziup runs on using the `rest-api.port`
 
 ```
-vamp {
+waziup {
   rest-api {
     interface = 0.0.0.0
     host = localhost
@@ -43,27 +43,27 @@ vamp {
 
 ### persistence
 
-{{< note title="Updated for Vamp 0.9.1" >}}
-* In the [Vamp configuration](/documentation/installation/configure-vamp/#persistence) we set `persistence caching` by default to `false`. In our Vamp images we set this to `true` to make it easier on the persistence store load. Check out this [default Vamp 0.9.1 configuration](https://github.com/magneticio/vamp/blob/master/bootstrap/src/main/resources/reference.conf) for reference.
-* We've added a key-value store as a persistence data store. Check out this [default Vamp 0.9.1 configuration](https://github.com/magneticio/vamp/blob/master/bootstrap/src/main/resources/reference.conf) for reference.
+{{< note title="Updated for waziup 0.9.1" >}}
+* In the [waziup configuration](/documentation/installation/configure-waziup/#persistence) we set `persistence caching` by default to `false`. In our waziup images we set this to `true` to make it easier on the persistence store load. Check out this [default waziup 0.9.1 configuration](https://github.com/magneticio/waziup/blob/master/bootstrap/src/main/resources/reference.conf) for reference.
+* We've added a key-value store as a persistence data store. Check out this [default waziup 0.9.1 configuration](https://github.com/magneticio/waziup/blob/master/bootstrap/src/main/resources/reference.conf) for reference.
 {{< /note >}}
 
-Vamp uses Elasticsearch for persistence and ZooKeeper ([apache.org - ZooKeeper](https://zookeeper.apache.org/)), etcd ([coreos.com  - etcd documentation](https://coreos.com/etcd/docs/latest/)) or Consul ([consul.io](https://www.consul.io/)) for key-value store (keeping HAProxy configuration).
+waziup uses Elasticsearch for persistence and ZooKeeper ([apache.org - ZooKeeper](https://zookeeper.apache.org/)), etcd ([coreos.com  - etcd documentation](https://coreos.com/etcd/docs/latest/)) or Consul ([consul.io](https://www.consul.io/)) for key-value store (keeping HAProxy configuration).
 
 ```yaml
-vamp {
+waziup {
   persistence {
     response-timeout = 5 seconds
 
     database {
       type: "elasticsearch" # elasticsearch or in-memory (no persistence)
-      elasticsearch.url = ${vamp.pulse.elasticsearch.url}
+      elasticsearch.url = ${waziup.pulse.elasticsearch.url}
     }
 
     key-value-store {
 
       type = "zookeeper"    # zookeeper, etcd or consul
-      base-path = "/vamp"   # base path for keys, e.g. /vamp/...
+      base-path = "/waziup"   # base path for keys, e.g. /waziup/...
 
       zookeeper {
         servers = "192.168.99.100:2181"
@@ -85,19 +85,19 @@ vamp {
 
 ### Container drivers
 
-Vamp can be configured to work with the following container drivers:
+waziup can be configured to work with the following container drivers:
 
-* [Docker](/documentation/installation/configure-vamp/#docker)
-* [Mesos/Marathon](/documentation/installation/configure-vamp/#mesos-marathon)
-* [Kubernetes](/documentation/installation/configure-vamp/#kubernetes)
-* [Rancher](/documentation/installation/configure-vamp/#rancher)
+* [Docker](/documentation/installation/configure-waziup/#docker)
+* [Mesos/Marathon](/documentation/installation/configure-waziup/#mesos-marathon)
+* [Kubernetes](/documentation/installation/configure-waziup/#kubernetes)
+* [Rancher](/documentation/installation/configure-waziup/#rancher)
 
 #### Docker
-Vamp can talk directly to a Docker daemon and its driver is configured by default. This is useful for local testing, Docker Swarm support is coming soon.
-Vamp can even run inside Docker while deploying to Docker.
+waziup can talk directly to a Docker daemon and its driver is configured by default. This is useful for local testing, Docker Swarm support is coming soon.
+waziup can even run inside Docker while deploying to Docker.
 
 1. Install Docker as per Docker's installation manual ([docs.docker.com - install Docker engine](https://docs.docker.com/engine/installation/))
-2. Check the `DOCKER_*` environment variables Vamp uses to connect to Docker, i.e.
+2. Check the `DOCKER_*` environment variables waziup uses to connect to Docker, i.e.
 
     ```
     DOCKER_HOST=tcp://192.168.99.100:2376
@@ -106,8 +106,8 @@ Vamp can even run inside Docker while deploying to Docker.
     DOCKER_CERT_PATH=/Users/tim/.docker/machine/machines/default
     ```
 
-3. If Vamp can't find these environment variables, it falls back to using the `unix:///var/run/docker.sock` Unix socket for communicating with Docker.
-4. Update the container-driver section in Vamp's config file. If you use a package installer like `yum` or `apt-get` you can find this file in `/usr/share/vamp/conf/application.conf`:
+3. If waziup can't find these environment variables, it falls back to using the `unix:///var/run/docker.sock` Unix socket for communicating with Docker.
+4. Update the container-driver section in waziup's config file. If you use a package installer like `yum` or `apt-get` you can find this file in `/usr/share/waziup/conf/application.conf`:
 
     ```
     ...
@@ -117,10 +117,10 @@ Vamp can even run inside Docker while deploying to Docker.
     }
     ...
     ```
-5. (Re)start Vamp by restarting the Java process by hand.   
+5. (Re)start waziup by restarting the Java process by hand.   
 
 #### Mesos/Marathon
-Vamp can use the full power of Marathon running on either a DCOS cluster or custom Mesos cluster. You can use Vamp's DSL, or you can pass native Marathon options by [using a dialect in a blueprint.](/documentation/using-vamp/blueprints/#dialects)  
+waziup can use the full power of Marathon running on either a DCOS cluster or custom Mesos cluster. You can use waziup's DSL, or you can pass native Marathon options by [using a dialect in a blueprint.](/documentation/using-waziup/blueprints/#dialects)  
 
 1. Set up a DCOS cluster using Mesosphere's assisted install on AWS ([mesosphere.com - product](https://mesosphere.com/product/)).  
 If you prefer, you can build your own Mesos/Marathon cluster. Here are some tutorials and scripts to help you get started:
@@ -132,7 +132,7 @@ If you prefer, you can build your own Mesos/Marathon cluster. Here are some tuto
 3. Whichever way you set up Marathon, in the end you should be able to see something like this:  
 ![](/images/screens/marathon-screenshot.png)
 
-4. Make a note of the Marathon endpoint (host:port) and update the container-driver section in [Vamp's config file](/documentation/installation/configure-vamp/). If you use a package installer like `yum` or `apt-get` you can find this file in `/usr/share/vamp/conf/application.conf`. Set the "url" option to the Marathon endpoint.
+4. Make a note of the Marathon endpoint (host:port) and update the container-driver section in [waziup's config file](/documentation/installation/configure-waziup/). If you use a package installer like `yum` or `apt-get` you can find this file in `/usr/share/waziup/conf/application.conf`. Set the "url" option to the Marathon endpoint.
 
     ```
     ...
@@ -143,12 +143,12 @@ If you prefer, you can build your own Mesos/Marathon cluster. Here are some tuto
     }
     ...
     ```    
-5. (Re)start Vamp by restarting the Java process by hand.   
+5. (Re)start waziup by restarting the Java process by hand.   
 
 #### Kubernetes
-Specify Kubernetes as the container driver in the Vamp `application.conf` file.   
+Specify Kubernetes as the container driver in the waziup `application.conf` file.   
 
-Taken from the example `application.conf` file for Kubernetes ([github.com/magneticio - vamp-kubernetes](https://github.com/magneticio/vamp-docker/blob/master/vamp-kubernetes/application.conf)):
+Taken from the example `application.conf` file for Kubernetes ([github.com/magneticio - waziup-kubernetes](https://github.com/magneticio/waziup-docker/blob/master/waziup-kubernetes/application.conf)):
 
 ```
   ...
@@ -165,9 +165,9 @@ Taken from the example `application.conf` file for Kubernetes ([github.com/magne
 
 #### Rancher
 
-Specify Rancher as the container driver in the Vamp `application.conf` file.   
+Specify Rancher as the container driver in the waziup `application.conf` file.   
 
-Taken from the example `application.conf` file for Rancher ([github.com/magneticio - vamp-rancher](https://github.com/magneticio/vamp-docker/blob/master/vamp-rancher/application.conf)):
+Taken from the example `application.conf` file for Rancher ([github.com/magneticio - waziup-rancher](https://github.com/magneticio/waziup-docker/blob/master/waziup-rancher/application.conf)):
 
 ```
   ...
@@ -178,12 +178,12 @@ Taken from the example `application.conf` file for Rancher ([github.com/magnetic
 
 ### gateway-driver
 
-The gateway-driver section configures how traffic should be routed through Vamp Gateway Agent. See the below example on how to configure this:
+The gateway-driver section configures how traffic should be routed through waziup Gateway Agent. See the below example on how to configure this:
 
 ```yaml
-vamp {
+waziup {
   gateway-driver {
-    host: "10.193.238.26"              # Vamp Gateway Agent / Haproxy, internal IP.
+    host: "10.193.238.26"              # waziup Gateway Agent / Haproxy, internal IP.
     response-timeout: 30 seconds
 
     haproxy {
@@ -200,9 +200,9 @@ vamp {
 }  
 ```
 
-The reason for the need to configure `vamp.gateway-driver.host` is that when services are deployed, they need to be able to find Vamp Gateway Agent in their respective networks. This can be a totally different network than where Vamp is running.
-Let's use an example: `frontend` and `backend` service, `frontend` depends on `backend` - in Vamp DSL that would be 2 clusters (assuming the same deployment).
-There are different ways how `frontend` can discover its dependency `backend`, and to make things simpler Vamp supports using specific environment parameters.
+The reason for the need to configure `waziup.gateway-driver.host` is that when services are deployed, they need to be able to find waziup Gateway Agent in their respective networks. This can be a totally different network than where waziup is running.
+Let's use an example: `frontend` and `backend` service, `frontend` depends on `backend` - in waziup DSL that would be 2 clusters (assuming the same deployment).
+There are different ways how `frontend` can discover its dependency `backend`, and to make things simpler waziup supports using specific environment parameters.
 
 ```yaml
 ---
@@ -228,27 +228,27 @@ clusters:
           port: 8080/http
 
 ```
-In this example `$backend.host` will have the value of the `vamp.gateway-driver.host` configuration parameter, while `$backend.ports.port` the next available port from `vamp.operation.gateway.port-range`.
-`frontend` doesn't connect to `backend` directly but via Vamp Gateway Agent(s) - given on these host and port parameters.
+In this example `$backend.host` will have the value of the `waziup.gateway-driver.host` configuration parameter, while `$backend.ports.port` the next available port from `waziup.operation.gateway.port-range`.
+`frontend` doesn't connect to `backend` directly but via waziup Gateway Agent(s) - given on these host and port parameters.
 This is quite simmilar to common pattern to access any clustered application.
 For instance if you want to access DB server, you will have an address string based on e.g. DNS name or something simmilar.
-Note that even without Vamp, you would need to setup access to `backend` in some similar way.
-With Vamp, access is via VGA's and that allows specific routing (conditions, weights) needed for A/B testing and canary releasing.
-Additional information can be found on [service discovery page](/documentation/how-vamp-works/service-discovery/).
+Note that even without waziup, you would need to setup access to `backend` in some similar way.
+With waziup, access is via VGA's and that allows specific routing (conditions, weights) needed for A/B testing and canary releasing.
+Additional information can be found on [service discovery page](/documentation/how-waziup-works/service-discovery/).
 
 ### operation
 
-The operation section holds all parameters that control how Vamp executes against "external" services: this also includes Vamp Pulse and Vamp Gateway Agent.
+The operation section holds all parameters that control how waziup executes against "external" services: this also includes waziup Pulse and waziup Gateway Agent.
 
 ```yaml
 operation {
   sla.period = 5 seconds        # controls how often an SLA checks against metrics
-  escalation.period = 5 seconds # controls how often Vamp checks for escalation events
+  escalation.period = 5 seconds # controls how often waziup checks for escalation events
 	synchronization {
-    period = 4 seconds          # controls how often Vamp performs
-                                # a sync between Vamp and the container driver.
+    period = 4 seconds          # controls how often waziup performs
+                                # a sync between waziup and the container driver.
     timeout {
-      ready-for-deployment: 600	seconds   # controls how long Vamp waits for a
+      ready-for-deployment: 600	seconds   # controls how long waziup waits for a
                                           # service to start. If the service is not started
                                           # before this time, the service is registered as "error"
       ready-for-undeployment: 600 seconds # similar to "ready-for-deployment", but for
@@ -261,9 +261,9 @@ operation {
     response-timeout = 5 seconds # timeout for container operations
 
     virtual-hosts.formats {      # name format
-      gateway                 = "$gateway.vamp"
-      deployment-port         = "$port.$deployment.vamp"
-      deployment-cluster-port = "$port.$cluster.$deployment.vamp"
+      gateway                 = "$gateway.waziup"
+      deployment-port         = "$port.$deployment.waziup"
+      deployment-cluster-port = "$port.$cluster.$deployment.waziup"
     }
   }
 
@@ -282,24 +282,24 @@ operation {
 
 For each cluster and service port within the same cluster a gateway is created - this is exactly as one that can be created using Gateway API.
 That means specific conditions and weights can be applied on traffic to/from cluster services - A/B testing and canary releases support.
-`vamp.operation.gateway.port-range` is range of port values that can be used for these cluster/port gateways.
-These ports need to be available on all Vamp Gateway Agent hosts.
+`waziup.operation.gateway.port-range` is range of port values that can be used for these cluster/port gateways.
+These ports need to be available on all waziup Gateway Agent hosts.
 
 
 ## Environment variables
 
-Each configuration parameter can be replaced by an environment variable. Environment variables have precedence over configuration from `application.conf` or system properties.  Read more about [environment variables](/documentation/using-vamp/environment-variables/).
+Each configuration parameter can be replaced by an environment variable. Environment variables have precedence over configuration from `application.conf` or system properties.  Read more about [environment variables](/documentation/using-waziup/environment-variables/).
 
 ### Environment variable names
 Environment variable names are based on the configuration parameter name converted to upper case. All non-alphanumerics should be replaced by an underscore `_`
 
 ```
-vamp.info.message           ⇒ VAMP_INFO_MESSAGE
-vamp.gateway-driver.timeout ⇒ VAMP_GATEWAY_DRIVER_TIMEOUT
+waziup.info.message           ⇒ waziup_INFO_MESSAGE
+waziup.gateway-driver.timeout ⇒ waziup_GATEWAY_DRIVER_TIMEOUT
 ```
 
 
 {{< note title="What next?" >}}
 * Follow the [getting started tutorials](/documentation/tutorials/)
-* You can read in depth about [using Vamp](/documentation/using-vamp/artifacts/) or browse the [API reference](/documentation/api/api-reference/) or [CLI reference](/documentation/cli/cli-reference/) docs.
+* You can read in depth about [using waziup](/documentation/using-waziup/artifacts/) or browse the [API reference](/documentation/api/api-reference/) or [CLI reference](/documentation/cli/cli-reference/) docs.
 {{< /note >}}
