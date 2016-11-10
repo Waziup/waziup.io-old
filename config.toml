@@ -16,7 +16,7 @@ googleAnalytics = ""
 
 	# Repository
 	provider = "GitHub"
-	repo_url = "https://github.com/magneticio/vamp"
+	repo_url = "https://github.com/Waziup/waziup.io"
 
 	version = "0.9.0"
 	logo = "images/logo.svg"
@@ -59,12 +59,12 @@ googleAnalytics = ""
 	plainIDAnchors = true
 
 [[menu.main]]
-	name   = "WHAT IS VAMP?"
+	name   = "WHAT IS WAZIUP?"
 	url    = "/what-is-vamp/"
 	weight = 10
 
 [[menu.main]]
-	name   = "TRY VAMP"
+	name   = "TRY WAZIUP"
 	url    = "/try-vamp/"
 	weight = 20
 
