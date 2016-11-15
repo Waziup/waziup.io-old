@@ -3,9 +3,9 @@ WAZIUP website
 
 This is the source for the [waziup.io](http://waziup.io) site.
 
+
 Writing content
 ---------------
-
 
 1. Clone this repo
 
@@ -25,3 +25,16 @@ Writing content
         $ hugo server --watch
 
     The site is served under `localhost:1313`
+
+Deploying
+---------
+
+To deploy on Waziup platform:
+
+```
+$ docker build -t waziup/website .
+$ docker push waziup/website
+$ kubectl delete -f website.yaml  --now
+$ kubectl apply -f website.yaml
+```
+
