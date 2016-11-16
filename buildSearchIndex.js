@@ -19,9 +19,7 @@ transverseTree(tree.children);
 setIds(allDocuments);
 writeFile('pages.json', base, JSON.stringify(allDocuments));
 var searchIndex = buildIndex(allDocuments);
-
-//TODO: this line generates an error. Disabling for now.
-//writeFile('searchIndex.json', base, JSON.stringify(searchIndex));
+writeFile('searchIndex.json', base, JSON.stringify(searchIndex));
 
 function transverseTree(tree) {
   tree.forEach(treeItem => {
