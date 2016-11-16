@@ -142,7 +142,7 @@ function menuFileLoaded(data) {
     allowParentLinks: false,
     closedSymbol: '&#xf105;',
     openedSymbol: '&#xf107;',
-    brand: '<a href="'+theBaseUrl+'/"><img id="logo" class="logo" src="'+theBaseUrl+'/img/005-vamp/Logo/logo-long-colour.svg" alt=""></a>'
+    brand: '<a href="'+theBaseUrl+'/"><img id="logo" class="logo" src="'+theBaseUrl+'/img/005-waziup/Logo/logo-waziup-white.svg" alt=""></a>'
   }
 
   $(function(){
