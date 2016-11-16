@@ -1,17 +1,17 @@
 ---
 date: 2016-09-13T09:00:00+00:00
-title: Join the Vamp community
+title: Join the Waziup community
 ---
-Vamp is an open source project, actively developed by Magnetic.io. We encourage anyone to pitch in with pull requests, bug reports etc. 
+Waziup is an open source project, actively developed by the Waziup consortium. We encourage anyone to pitch in with pull requests, bug reports etc. 
 
-## Contribute to Vamp 
-Vamp is split into separate repos and projects. Check the source on Github for an overview of all key repos ([github.com - magneticio](https://github.com/magneticio)).   
+## Contribute to Waziup
+Waziup source code is on Github: ([github.com - Waziup](https://github.com/waziup/platform)).   
 Feel free to contribute with Github pull requests.
 
 ## Submit change or feature requests 
 Let us know your change or feature requests.  
-[Submit an issue on github](https://github.com/magneticio/vamp/issues) tagged "feature proposal". 
+[Submit an issue on github](https://github.com/waziup/platform/issues) tagged "feature". 
 
 ## Report a bug 
 if you find  bug, please report it!  
-[Submit an issue on github](https://github.com/magneticio/vamp/issues), including details of the environment you are running Vamp in.
+[Submit an issue on github](https://github.com/waziup/platform/issues), including details of the bug you encountered.

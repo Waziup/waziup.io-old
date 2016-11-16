@@ -18,9 +18,9 @@ googleAnalytics = ""
 	provider = "GitHub"
 	repo_url = "https://github.com/Waziup/waziup.io"
 
-	version = "0.9.0"
-	logo = "images/logo.svg"
-	favicon = "images/logo.svg"
+	version = "0.1.0"
+	logo = "images/logo-waziup.png"
+	favicon = "images/logo-waziup.png"
 
 	permalink = "#"
 
