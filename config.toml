@@ -11,7 +11,7 @@ googleAnalytics = ""
 [params]
 	# General information
 	author = "magnetic.io"
-	description = "Vamp - Deploy and manage microservices with power and ease."
+	description = "Waziup - Cloud and IoT platform"
 	copyright = "Released under the Apache 2 license"
 
 	# Repository

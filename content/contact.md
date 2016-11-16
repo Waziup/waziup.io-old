@@ -8,4 +8,4 @@ Contact:...
 
 
 ## Community
-Join the [Waziup community](/resources/community/) to make Vamp even better.
+Join the [Waziup community](/resources/community/) to make Waziup even better.
