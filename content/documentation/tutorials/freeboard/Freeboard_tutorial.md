@@ -119,4 +119,3 @@ With this option, you don't have to save or publish your dashboard.
 It is automatically saved within your account and the link to access it is the link in your browser.
 Refreshing the page will not make you loose your data.
 
-You can also choose to make your dashboard private and protect it by a password.
