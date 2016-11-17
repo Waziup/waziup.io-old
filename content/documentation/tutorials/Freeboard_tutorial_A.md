@@ -90,7 +90,7 @@ Now, before leaving the page, you need to save your dashboard.
 Never refresh the page before saving, as you will loose everything !
 
 Click on the save button, select pretty and download the .json file.
-Let's call this file "tutorial_dashboard.json"
+Let's call this file "example_dashboard.json"
 
 Then, upload this file on waziup github in Platform/master/UIManager/freeboard/
 
