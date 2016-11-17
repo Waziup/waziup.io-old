@@ -108,7 +108,7 @@ Go to https://freeboard.io/. Create an account or use your own if you already ha
 
 ![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/new_dashboard.JPG?raw=true)
 
-Choose a name for your dashboard and click on create.
+Choose a name for your dashboard and click on "create new".
 
 ### Step 1 - Configure data source
 This step is the same as Option 1
