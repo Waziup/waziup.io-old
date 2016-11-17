@@ -22,7 +22,7 @@ Click on the "add" button on under DATASOURCES.
 
 Then you will be asked to select a type. Choose FIWARE Orion.
 
-![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/datasource.JPG?raw=true)
+![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/freeboard/datasource.JPG?raw=true)
 
 
 Then you can choose the name of your data. For exemple "my_temperature_sensor"
@@ -47,7 +47,7 @@ Then click on Save. Repeat this procedure for every sensor that you need to moni
 
 When you have all your datasources configured (you can see them under DATASOURCES), you can go to next step.
 
-![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/data_added.JPG?raw=true)
+![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/freeboard/data_added.JPG?raw=true)
 
 ### Step 2 - Configure panel
 
@@ -57,7 +57,7 @@ Click on ADD PANE.
 
 A new panel appears, for the moment it is empty.
 
-![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/add_pane.jpg?raw=true)
+![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/freeboard/add_pane.jpg?raw=true)
 
 Click on the key button to configure the size and the name of the panel.
 It can be 1,2 or 3 columns big.
@@ -66,7 +66,7 @@ You can also delete it by clicking on the trash button.
 Click on the + button to add a data visualisation.
 You can choose several types of visualisation. For this example we will select Gauge.
 
-![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/temperature%20gauge.JPG?raw=true)
+![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/freeboard/temperature%20gauge.JPG?raw=true)
 
 Choose a title for your visualisation, for example : "temperature in my water pond number 1"
 
@@ -76,7 +76,7 @@ Select the units and the min/max value to have a better personnalised visualisat
 
 Click on save, and you will see the gauge indicating the data (temperature in this example).
 
-![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/temperature_panel.JPG?raw=true)
+![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/freeboard/temperature_panel.JPG?raw=true)
 
 Repeat this for every visualisation that you want to see.
 
@@ -106,7 +106,7 @@ That's it ! If you want to modify it, you need to proceed to step 3 again.
 ### Creating your dashboard
 Go to https://freeboard.io/. Create an account or use your own if you already have one.
 
-![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/new_dashboard.JPG?raw=true)
+![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/freeboard/new_dashboard.JPG?raw=true)
 
 Choose a name for your dashboard and click on "create new".
 
