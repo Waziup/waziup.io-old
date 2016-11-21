@@ -18,5 +18,7 @@ notifications:
     on_failure: always
 before_install:
 - mkdir ~/.kube ~/.docker
-- openssl aes-256-cbc -K $encrypted_23f5599cc3d3_key -iv $encrypted_23f5599cc3d3_iv -in config.json.enc -out ~/.docker/config.json -d
-- openssl aes-256-cbc -K $encrypted_23f5599cc3d3_key -iv $encrypted_23f5599cc3d3_iv -in config.enc -out ~/.kube/config -d
+- openssl aes-256-cbc -K $encrypted_23f5599cc3d3_key -iv $encrypted_23f5599cc3d3_iv -in secrets.tar.enc -out secrets.tar -d
+- tar xvf secrets.tar
+- mv home/cdupont/.kube/config ~/.kube
+- mv home/cdupont/.docker/config.json ~/.docker
