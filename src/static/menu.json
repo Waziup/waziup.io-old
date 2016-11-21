@@ -228,6 +228,11 @@
               "path": "documentation/tutorials",
               "text": "Overview",
               "visible": true
+            },
+            {
+              "path": "documentation/tutorials/freeboard",
+              "text": "Freeboard",
+              "visible": true
             }
           ],
           "text": "Tutorials",
