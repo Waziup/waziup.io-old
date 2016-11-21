@@ -233,6 +233,11 @@
               "path": "documentation/tutorials/freeboard",
               "text": "Freeboard",
               "visible": true
+            },
+            {
+              "path": "documentation/tutorials/lora-gateway",
+              "text": "Low cost gateway",
+              "visible": true
             }
           ],
           "text": "Tutorials",
