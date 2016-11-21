@@ -1,12 +1,12 @@
 language: go 
-sudo: false
+sudo: required
 services:
 - docker
 - node_js: 6.9.0
 install:
-  - brew update
-  - brew install hugo
-
+  - go get github.com/spf13/hugo
+  - sudo apt-get update
+  - sudo apt-get install nodejs npm
 script:
   - npm install && gulp build:dev
   - hugo
