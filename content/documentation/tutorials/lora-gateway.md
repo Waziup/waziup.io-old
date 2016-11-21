@@ -353,6 +353,3 @@ Get the advanced version of the gateway with many additional features
 
 Look at the [gw_advanced folder](https://github.com/CongducPham/LowCostLoRaGw/tree/master/gw_advanced) and follow instructions.
 
-
-Enjoy!
-C. Pham
