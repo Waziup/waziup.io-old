@@ -22,8 +22,7 @@ before_install:
 - tar xvf secrets.tar
 - mv home/cdupont/.kube/config ~/.kube
 - mv home/cdupont/.docker/config.json ~/.docker
-- sudo su -
-- curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-- add-apt-repository "deb http://apt.kubernetes.io/ kubernetes-trusty main"
-- apt-get update
-- apt-get install -y kubectl
+- curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+- sudo add-apt-repository "deb http://apt.kubernetes.io/ kubernetes-trusty main"
+- sudo apt-get update
+- sudo apt-get install -y kubectl
