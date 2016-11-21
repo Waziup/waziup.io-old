@@ -1,11 +1,11 @@
-language: go
+dist: trusty
 sudo: required
 services:
 - docker
 install:
 - go get github.com/spf13/hugo
-- sudo apt-get update
-- sudo apt-get install nodejs npm
+#- sudo apt-get update
+#- sudo apt-get install nodejs npm
 script:
 - npm install && gulp build:dev
 - hugo
