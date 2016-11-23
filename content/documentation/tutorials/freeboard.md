@@ -30,7 +30,7 @@ Then you will be asked to select a type. Choose FIWARE Orion.
 
 Then you can choose the name of your data. For exemple "my_temperature_sensor"
 
-In Host:port, put : 217.77.95.64:30026
+In Host:port, put : `broker.waziup.io`
 
 ThingProxy must be "yes"
 
