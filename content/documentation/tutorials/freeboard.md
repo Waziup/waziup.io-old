@@ -3,11 +3,13 @@
 This tutorial will help you to create your Freeboard dashboard to visualize the data you are pushing on WAZIUP platform.
 
 There is 2 options :
-* you can use the hosted Freeboard on WAZIUP platform (same id and password as WAZIUP platform)
-* you can use your own Freeboard account
+
+1- you can use the hosted Freeboard on WAZIUP platform (same id and password as WAZIUP platform)
+2- you can use your own Freeboard account
 
 ## Option 1 -  Create dashboard on waziup platform
 ### Creating your dashboard
+With this option, it is mandatory to use a google chrome web browser. 
 Go to http://freeboard.waziup.io/
 
 You will find an empty freeboard dashboard, ready to be customised.  
