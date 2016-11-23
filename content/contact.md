@@ -4,7 +4,7 @@ title: contact
 ---
 
 Waziup is being developped by the WAZIUP consortium.
-Contact:...
+Project website: www.waziup.eu
 
 
 ## Community
