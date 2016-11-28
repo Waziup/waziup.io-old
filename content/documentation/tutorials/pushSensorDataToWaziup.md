@@ -7,17 +7,17 @@ To communicate with waziup platform you will use the **Http protocol**, any libr
 
 You can create a sensor measuring temperature and pressure (with initial values) like that:
 
-URL: http://broker.waziup.io/v2/entities 
+**URL:** http://broker.waziup.io/v2/entities 
 
-method: POST
+**method:** POST
 
-Headers: 
+**Headers:** 
 
 *	Content-Type: application/json
 *	Fiware-Service: waziup
 *	Fiware-ServicePath:/wazihack
 
-Body:
+**Body:**
 
     {
       "id": "Sensor1",
@@ -34,7 +34,7 @@ Body:
 
 
 * Id: your sensor id
- Type: your sensor type
+* Type: your sensor type
 
 In the example above, the sensor is measuring temperature and pressure. for each maesure we add an attribut:
 
@@ -44,25 +44,22 @@ In the example above, the sensor is measuring temperature and pressure. for each
      }
 
 * value: is the value of your temperature sensor
-* typs: is type of the value like Number
+* type: is type of the value like Number
 
 You can add as much attributes as your sensor have.
 
 ##Update your sensor value
-**URL**
-
-http://broker.waziup.io/v2/entities/<yourSensorId>/attrs/<yourSensorAttribute>/value  
+**URL:** http://broker.waziup.io/v2/entities/yourSensorId/attrs/yourSensorAttribute/value  
 
 Example if:
 
-* YourSensorId is : Sensor1
+* yourSensorId is : Sensor1
 * yourSensorAttribute is: temperature
 
 the Url is:
-
 http://broker.waziup.io/v2/entities/Sensor1/attrs/temperature/value
 
-**Method**: PUT
+**Method:** PUT
 
 **Headers:** 
 * Content-Type: text/plain
@@ -72,34 +69,35 @@ http://broker.waziup.io/v2/entities/Sensor1/attrs/temperature/value
 **Body:** contains the new sensor value.
 
 For example the temperature is 25 now, so you put on the body:
-25
+    
+    25
 
 ##Retrieve your last sensor data inserted
 
-**URL:** http://broker.waziup.io/v2/entities/<yourSensorId>/attrs/<yourSensorAttribute>/value
+**URL:** http://broker.waziup.io/v2/entities/yourSensorId/attrs/yourSensorAttribute/value
 
 Example:
 URL: http://broker.waziup.io/v2/entities/Sensor1/attrs/temperature/value
 
 **Method:** GET
 **Headers:** 
-*	Accept: application/json
-*	Fiware-Service: waziup
-*	Fiware-ServicePath: /wazihack
+* Accept: application/json
+* Fiware-Service: waziup
+* Fiware-ServicePath: /wazihack
 
 
 ## How to remove your sensor:
 
 If you would like to remove your sensor:
 
-**URL:** http://broker.waziup.io/v2/entities/<yourSensorId>
+**URL:** http://broker.waziup.io/v2/entities/yourSensorId
 
 Example:  http://broker.waziup.io/v2/entities/Sensor1 
 
 **Method:** DELETE
 **Headers:**
 * Fiware-Service: waziup
-*	Fiware-ServicePath:/wazihack
+* Fiware-ServicePath:/wazihack
 
 ##Subscriptions?
 
