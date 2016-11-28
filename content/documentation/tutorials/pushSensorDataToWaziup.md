@@ -149,10 +149,7 @@ Example:  http://broker.waziup.io/v2/entities/Sensor1
 
 **The response:**
 
-    code: 204 No Content    
-    
-##Subscriptions?
-
+    code: 204 No Content        
 
 ##Links:
 The reference to the NGSI API:
