@@ -56,6 +56,7 @@ You can add as much attributes as your sensor have.
 To check you sensor data:
 
 **URL:** http://broker.waziup.io/v2/entities/yourSensorId
+
 Example:  http://broker.waziup.io/v2/entities/Sensor1 
 
 **method:** GET
@@ -141,6 +142,7 @@ If you would like to remove your sensor:
 Example:  http://broker.waziup.io/v2/entities/Sensor1 
 
 **Method:** DELETE
+
 **Headers:**
 * Fiware-Service: waziup
 * Fiware-ServicePath:/wazihack
