@@ -238,6 +238,16 @@
               "path": "documentation/tutorials/lora-gateway",
               "text": "Low cost gateway",
               "visible": true
+            },
+            {
+              "path": "documentation/tutorials/pushSensorDataToWaziup",
+              "text": "Sensor Data",
+              "visible": true
+            },
+            {
+              "path": "documentation/tutorials/create-app",
+              "text": "Create an App",
+              "visible": true
             }
           ],
           "text": "Tutorials",
