@@ -243,6 +243,11 @@
               "path": "documentation/tutorials/create-app",
               "text": "Create an App",
               "visible": true
+            },
+            {
+              "path": "documentation/tutorials/use-sms",
+              "text": "Send and receive SMS",
+              "visible": true
             }
           ],
           "text": "Tutorials",
