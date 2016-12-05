@@ -183,11 +183,6 @@
               "path": "documentation/how-waziup-works/requirements",
               "text": "Requirements",
               "visible": true
-            },
-            {
-              "path": "documentation/how-waziup-works/persistence-key-value-store",
-              "text": "Persistence and key-value (KV) store",
-              "visible": false
             }
           ],
           "text": "How Waziup works",
