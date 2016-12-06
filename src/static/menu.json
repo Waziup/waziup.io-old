@@ -106,51 +106,6 @@
       "visible": true,
       "children": [
         {
-          "path": "documentation/how-waziup-works",
-          "text": "How Waziup works",
-          "visible": true,
-          "children": [
-            {
-              "path": "documentation/how-waziup-works/architecture-and-components",
-              "text": "Architecture and components",
-              "visible": true
-            },
-            {
-              "path": "documentation/how-waziup-works/requirements",
-              "text": "Requirements",
-              "visible": true
-            }
-          ]
-        },
-        {
-          "path": "documentation/installation",
-          "text": "Installation",
-          "visible": true,
-          "children":
-          [
-            {
-              "path": "documentation/installation",
-              "text": "Overview",
-              "visible": true
-            },
-            {
-              "path": "documentation/installation/hello-world",
-              "text": "Hello world",
-              "visible": true
-            },
-            {
-              "path": "documentation/installation/docker",
-              "text": "Docker",
-              "visible": true
-            },
-            {
-              "path": "documentation/installation/configure-waziup",
-              "text": "Configure Waziup",
-              "visible": true
-            }
-          ]
-        },
-        {
           "path": "documentation/tutorials",
           "text": "Tutorials",
           "visible": true,
@@ -188,23 +143,45 @@
           ]
         },
         {
-          "path": "documentation/using-waziup/gateways",
-          "text": "Using Waziup",
+          "path": "documentation/mvps",
+          "text": "Real-world application prototyping",
           "visible": true,
           "children": [
             {
-              "path": "documentation/using-waziup/gateways",
-              "text": "Gateways",
+              "path": "documentation/mvps/water",
+              "text": "Fish Farming",
               "visible": true
             },
             {
-              "path": "documentation/using-waziup/environment-variables",
-              "text": "Environment variables",
+              "path": "documentation/mvps/agri",
+              "text": "Weather station",
               "visible": true
             },
             {
-              "path": "documentation/using-waziup/sla",
-              "text": "SLA (Service Level Agreement)",
+              "path": "documentation/mvps/cattle",
+              "text": "Cattle management",
+              "visible": true
+            },
+            {
+              "path": "documentation/mvps/urban",
+              "text": "Urban waste",
+              "visible": true
+            }
+          ]
+        },
+        {
+          "path": "documentation/how-waziup-works",
+          "text": "How Waziup works",
+          "visible": true,
+          "children": [
+            {
+              "path": "documentation/how-waziup-works/architecture-and-components",
+              "text": "Architecture and components",
+              "visible": true
+            },
+            {
+              "path": "documentation/how-waziup-works/requirements",
+              "text": "Requirements",
               "visible": true
             }
           ]
@@ -239,6 +216,19 @@
             {
               "path": "documentation/cli/using-the-cli",
               "text": "Using the Waziup CLI",
+              "visible": true
+            }
+          ]
+        },
+        {
+          "path": "documentation/installation",
+          "text": "Installation",
+          "visible": true,
+          "children":
+          [
+            {
+              "path": "documentation/installation",
+              "text": "Overview",
               "visible": true
             }
           ]
