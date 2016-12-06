@@ -17,83 +17,15 @@
     },
     {
       "path": "draft",
+      "text": "Draft",
+      "visible": false,
       "children": [
         {
           "path": "draft/api",
-          "children": [
-            {
-              "path": "draft/api/0.8.5",
-              "children": [
-                {
-                  "path": "draft/api/0.8.5/example1",
-                  "text": "Example1",
-                  "visible": true
-                },
-                {
-                  "path": "draft/api/0.8.5/index",
-                  "text": "Index",
-                  "visible": false
-                }
-              ],
-              "text": "0.8.5",
-              "visible": true
-            },
-            {
-              "path": "draft/api/0.9.0",
-              "children": [
-                {
-                  "path": "draft/api/0.9.0/example2",
-                  "text": "Example2",
-                  "visible": true
-                },
-                {
-                  "path": "draft/api/0.9.0/index",
-                  "text": "Index",
-                  "visible": false
-                }
-              ],
-              "text": "0.9.0",
-              "visible": true
-            },
-            {
-              "path": "draft/api/master",
-              "children": [
-                {
-                  "path": "draft/api/master/example1",
-                  "text": "Example1",
-                  "visible": true
-                },
-                {
-                  "path": "draft/api/master/example2",
-                  "text": "Example2",
-                  "visible": true
-                },
-                {
-                  "path": "draft/api/master/index",
-                  "text": "Index",
-                  "visible": false
-                }
-              ],
-              "text": "Master",
-              "visible": true
-            }
-          ],
-          "text": "Api",
-          "visible": true
-        },
-        {
-          "path": "draft/blueprint",
-          "text": "Blueprint",
-          "visible": true
-        },
-        {
-          "path": "draft/downloads",
-          "text": "Downloads",
+          "text": "0.8.5",
           "visible": true
         }
-      ],
-      "text": "Draft",
-      "visible": false
+      ]
     },
     {
       "path": "index.json",
@@ -107,15 +39,15 @@
     },
     {
       "path": "instructions",
+      "text": "Instructions",
+      "visible": false,
       "children": [
         {
           "path": "instructions/index",
           "text": "Index",
           "visible": false
         }
-      ],
-      "text": "Instructions",
-      "visible": false
+      ]
     },
     {
       "path": "why-use-waziup",
@@ -129,27 +61,27 @@
         },
         {
           "path": "why-use-waziup/use-cases",
+          "text": "Use cases",
+          "visible": true,
           "children": [
             {
               "path": "index",
               "text": "Index",
               "visible": false
             }
-            ],
-          "text": "Use cases",
-          "visible": true
+          ]
         },
         {
           "path": "why-use-waziup/waziup-compared-to/frameworks-and-tools",
+          "text": "Waziup compared to...",
+          "visible": true,
           "children": [
             {
               "path": "why-use-waziup/waziup-compared-to/frameworks-and-tools",
               "text": "Frameworks and tools",
               "visible": true
             }
-            ],
-          "text": "Waziup compared to...",
-          "visible": true
+          ]
         },
         {
           "path": "why-use-waziup/see-waziup-in-action",
@@ -170,9 +102,13 @@
     },
     {
       "path": "documentation",
+      "text": "Documentation",
+      "visible": true,
       "children": [
         {
           "path": "documentation/how-waziup-works",
+          "text": "How Waziup works",
+          "visible": true,
           "children": [
             {
               "path": "documentation/how-waziup-works/architecture-and-components",
@@ -184,12 +120,12 @@
               "text": "Requirements",
               "visible": true
             }
-          ],
-          "text": "How Waziup works",
-          "visible": true
+          ]
         },
         {
           "path": "documentation/installation",
+          "text": "Installation",
+          "visible": true,
           "children":
           [
             {
@@ -212,12 +148,12 @@
               "text": "Configure Waziup",
               "visible": true
             }
-          ],
-          "text": "Installation",
-          "visible": true
+          ]
         },
         {
           "path": "documentation/tutorials",
+          "text": "Tutorials",
+          "visible": true,
           "children": [
             {
               "path": "documentation/tutorials",
@@ -225,18 +161,8 @@
               "visible": true
             },
             {
-              "path": "documentation/tutorials/freeboard",
-              "text": "Freeboard",
-              "visible": true
-            },
-            {
               "path": "documentation/tutorials/lora-gateway",
-              "text": "Low cost gateway",
-              "visible": true
-            },
-            {
-              "path": "documentation/tutorials/pushSensorDataToWaziup",
-              "text": "Sensor Data",
+              "text": "Create a low cost IoT gateway",
               "visible": true
             },
             {
@@ -245,16 +171,26 @@
               "visible": true
             },
             {
+              "path": "documentation/tutorials/freeboard",
+              "text": "Visualize you data",
+              "visible": true
+            },
+            {
+              "path": "documentation/tutorials/pushSensorDataToWaziup",
+              "text": "Upload your sensor Data",
+              "visible": true
+            },
+            {
               "path": "documentation/tutorials/use-sms",
               "text": "Send and receive SMS",
               "visible": true
             }
-          ],
-          "text": "Tutorials",
-          "visible": true
+          ]
         },
         {
           "path": "documentation/using-waziup/gateways",
+          "text": "Using Waziup",
+          "visible": true,
           "children": [
             {
               "path": "documentation/using-waziup/gateways",
@@ -271,12 +207,12 @@
               "text": "SLA (Service Level Agreement)",
               "visible": true
             }
-          ],
-          "text": "Using Waziup",
-          "visible": true
+          ]
         },
         {
           "path": "documentation/api/api-reference",
+          "text": "API",
+          "visible": true,
           "children": [
             {
               "path": "documentation/api/api-reference",
@@ -288,12 +224,12 @@
               "text": "Using the Waziup API",
               "visible": true
             }
-          ],
-          "text": "API",
-          "visible": true
+          ]
         },
         {
           "path": "documentation/cli/cli-reference",
+          "text": "CLI",
+          "visible": true,
           "children": [
             {
               "path": "documentation/cli/cli-reference",
@@ -305,28 +241,26 @@
               "text": "Using the Waziup CLI",
               "visible": true
             }
-          ],
-          "text": "CLI",
-          "visible": true
+          ]
         },
         {
           "path": "documentation/release-notes/version-0-1-0",
+          "text": "Release notes",
+          "visible": true,
           "children": [
             {
               "path": "documentation/release-notes/version-0-1-0",
               "text": "version 0.1.0",
               "visible": true
             }
-          ],
-          "text": "Release notes",
-          "visible": true
+          ]
         }
-        ],
-      "text": "Documentation",
-      "visible": true
+      ]
     },
     {
       "path": "resources/downloads",
+      "text": "Resources",
+      "visible": true,
       "children": [
         {
           "path": "resources/downloads",
@@ -343,9 +277,7 @@
           "text": "News",
           "visible": true
         }
-      ],
-      "text": "Resources",
-      "visible": true
+      ]
     },
     {
       "path": "support",
