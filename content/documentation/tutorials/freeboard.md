@@ -25,7 +25,7 @@ Click on the "add" button on under DATASOURCES.
 
 Then you will be asked to select a type. Choose FIWARE Orion.
 
-![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/freeboard/datasource.JPG?raw=true)
+![alt text](https://github.com/Waziup/waziup.io/blob/master/content/documentation/tutorials/freeboard/datasource2.JPG?raw=true)
 
 
 Then you can choose the name of your data. For exemple "my_temperature_sensor"
@@ -35,7 +35,7 @@ In Host:port, put : `broker.waziup.io`
 ThingProxy must be "yes"
 
 Under fiware service and fiware service path, put the one you choosed for pushing the data on the platform.
-For example: waziupservice and /waziupservicepath
+For example: waziupservice and /yourCompany
 
 Leave x-auth-token empty
 
