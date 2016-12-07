@@ -1,7 +1,7 @@
 baseurl = "."
 languageCode = "en-us"
 title = "WAZIUP Platform"
-theme = "vamp-theme"
+theme = "waziup-theme"
 metadataformat = "yaml"
 canonifyurls = true
 
@@ -10,7 +10,7 @@ googleAnalytics = ""
 
 [params]
 	# General information
-	author = "magnetic.io"
+	author = "waziup.io"
 	description = "Waziup - Cloud and IoT platform"
 	copyright = "Released under the Apache 2 license"
 
@@ -47,40 +47,4 @@ googleAnalytics = ""
     [params.font]
     	text = "Roboto"
     	code = "Roboto Mono"
-
-[social]
-	twitter = "magneticio"
-	github  = "magneticio/vamp"
-
-[blackfriday]
-	smartypants	= true
-	fractions = true
-	smartDashes = true
-	plainIDAnchors = true
-
-[[menu.main]]
-	name   = "WHAT IS WAZIUP?"
-	url    = "/what-is-vamp/"
-	weight = 10
-
-[[menu.main]]
-	name   = "TRY WAZIUP"
-	url    = "/try-vamp/"
-	weight = 20
-
-
-[[menu.main]]
-	name   = "RESOURCES"
-	url    = "resources/"
-	weight = 30
-
-[[menu.main]]
-	name   = "NEWS"
-	url    = "news/"
-	weight = 40
-
-[[menu.main]]
-	name   = "SUPPORT"
-	url    = "support/"
-	weight = 50
 

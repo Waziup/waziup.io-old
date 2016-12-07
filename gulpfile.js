@@ -46,7 +46,7 @@ gulp.task('sass:dev', function() {
 
   var mergedStream = merge(sassStream, cssStream)
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('./themes/vamp-theme/static/css'))
+    .pipe(gulp.dest('./themes/waziup-theme/static/css'))
     .pipe(shell(['hugo']))
     .pipe(browserSync.stream());
 
@@ -54,8 +54,8 @@ gulp.task('sass:dev', function() {
 });
 
 gulp.task('js:dev', function() {
-  return gulp.src('./themes/vamp-theme/layouts/js/app.js')
-    .pipe(gulp.dest('./themes/vamp-theme/static/js'))
+  return gulp.src('./themes/waziup-theme/layouts/js/app.js')
+    .pipe(gulp.dest('./themes/waziup-theme/static/js'))
 });
 
 gulp.task('bs-reload', ['build:files'], function () {
@@ -80,51 +80,51 @@ gulp.task('dependencies', ['clean:start', 'sass'], function() {
       cascade: false
     })))
     .pipe(gulpif('*.css', minifyCss()))
-    .pipe(gulp.dest('./themes/vamp-theme/layouts'))
+    .pipe(gulp.dest('./themes/waziup-theme/layouts'))
 });
 
 gulp.task('clean:start', function() {
-  return del(['./themes/vamp-theme/layouts/**/*', './themes/vamp-theme/layouts/static/css/**.*', './themes/vamp-theme/layouts/static/js/**.*'])
+  return del(['./themes/waziup-theme/layouts/**/*', './themes/waziup-theme/layouts/static/css/**.*', './themes/waziup-theme/layouts/static/js/**.*'])
 });
 
 
 gulp.task('move:js', ['dependencies'], function() {
-  return gulp.src('./themes/vamp-theme/layouts/js/*.js')
-    .pipe(gulp.dest('./themes/vamp-theme/static/js'))
+  return gulp.src('./themes/waziup-theme/layouts/js/*.js')
+    .pipe(gulp.dest('./themes/waziup-theme/static/js'))
 });
 
 gulp.task('move:css', ['dependencies'], function() {
-  return gulp.src('./themes/vamp-theme/layouts/css/*.css')
-    .pipe(gulp.dest('./themes/vamp-theme/static/css'))
+  return gulp.src('./themes/waziup-theme/layouts/css/*.css')
+    .pipe(gulp.dest('./themes/waziup-theme/static/css'))
 });
 
 gulp.task('move:rest', function() {
   return gulp.src('./src/static/js/ZeroClipboard.swf')
-    .pipe(gulp.dest('./themes/vamp-theme/static/js'));
+    .pipe(gulp.dest('./themes/waziup-theme/static/js'));
 });
 
 gulp.task('move:menu', function() {
   return gulp.src('./src/static/menu.json')
-    .pipe(gulp.dest('./themes/vamp-theme/static'))
+    .pipe(gulp.dest('./themes/waziup-theme/static'))
 });
 
 gulp.task('move:toml', function() {
   return gulp.src('./src/theme.toml')
-    .pipe(gulp.dest('./themes/vamp-theme'))
+    .pipe(gulp.dest('./themes/waziup-theme'))
 });
 
 gulp.task('move:fonts', function() {
   return gulp.src('./src/static/fonts/*')
-    .pipe(gulp.dest('./themes/vamp-theme/static/fonts'))
+    .pipe(gulp.dest('./themes/waziup-theme/static/fonts'))
 });
 
 gulp.task('images', function() {
   return gulp.src('./src/static/img/**/*')
-    .pipe(gulp.dest('./themes/vamp-theme/static/img'))
+    .pipe(gulp.dest('./themes/waziup-theme/static/img'))
 });
 
 gulp.task('clean:moved', ['move:js', 'move:css'], function() {
-  return del(['./themes/vamp-theme/layouts/css', './themes/vamp-theme/layouts/js'])
+  return del(['./themes/waziup-theme/layouts/css', './themes/waziup-theme/layouts/js'])
 });
 
 var developmentBase = '\n<script type="text/javascript">';
@@ -141,15 +141,15 @@ var productionBase = '\n<script type="text/javascript">';
 
 
 gulp.task('set-base:development', ['dependencies'], function() {
-  return gulp.src('./themes/vamp-theme/layouts/partials/head.html')
+  return gulp.src('./themes/waziup-theme/layouts/partials/head.html')
     .pipe(inject.after('<head>',  developmentBase))
-    .pipe(gulp.dest('./themes/vamp-theme/layouts/partials'))
+    .pipe(gulp.dest('./themes/waziup-theme/layouts/partials'))
 });
 
 gulp.task('set-base:production', ['dependencies'], function() {
-  return gulp.src('./themes/vamp-theme/layouts/partials/head.html')
+  return gulp.src('./themes/waziup-theme/layouts/partials/head.html')
     .pipe(inject.after('<head>',  '\n'+productionBase+'\n<base href="'+ prodUrl + '" />'))
-    .pipe(gulp.dest('./themes/vamp-theme/layouts/partials'))
+    .pipe(gulp.dest('./themes/waziup-theme/layouts/partials'))
 });
 
 gulp.task('build-search-index',['dependencies'], shell.task(['node ./buildSearchIndex.js']));

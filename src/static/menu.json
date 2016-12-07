@@ -170,7 +170,7 @@
           ]
         },
         {
-          "path": "documentation/how-waziup-works",
+          "path": "documentation/how-waziup-works/architecture-and-components",
           "text": "How Waziup works",
           "visible": true,
           "children": [

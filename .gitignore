@@ -3,10 +3,10 @@ public
 node_modules
 
 # exclude everything
-themes/vamp-theme
+themes/waziup-theme
 
 # exception to the rule
-!themes/vamp-theme/.gitkeep
+!themes/waziup-theme/.gitkeep
 
 # Compiled source #
 ###################
@@ -45,4 +45,4 @@ themes/vamp-theme
 .Trashes
 ehthumbs.db
 Thumbs.db
-
+*.swp

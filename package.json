@@ -1,7 +1,7 @@
 {
-  "name": "vamp.io",
+  "name": "waziup.io",
   "version": "0.0.1",
-  "description": "This is the source for the new [vamp.io](http://vamp.io) site.",
+  "description": "This is the source for the new [waziup.io](http://waziup.io) site.",
   "main": "buildMenu.js",
   "dependencies": {
     "browser-sync": "^2.17.5",
@@ -29,16 +29,16 @@
     "gulp-build": "~0.5.3"
   },
   "scripts": {
-    "build-index": "hugo-lunr -o themes/vamp-theme/static/lunr.json"
+    "build-index": "hugo-lunr -o themes/waziup-theme/static/lunr.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/magneticio/vamp.io.git"
+    "url": "git+https://github.com/waziup/waziup.io.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/magneticio/vamp.io/issues"
+    "url": "https://github.com/waziup/waziup.io/issues"
   },
-  "homepage": "https://github.com/magneticio/vamp.io#readme"
+  "homepage": "https://github.com/waziup/waziup.io#readme"
 }
