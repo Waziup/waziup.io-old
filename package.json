@@ -24,9 +24,10 @@
     "remove-markdown": "^0.1.0"
   },
   "devDependencies": {
+    "gulp-build": "~0.5.3",
+    "gulp-install": "^0.6.0",
     "gulp-shell": "^0.5.2",
-    "gulp-useref": "^3.1.2",
-    "gulp-build": "~0.5.3"
+    "gulp-useref": "^3.1.2"
   },
   "scripts": {
     "build-index": "hugo-lunr -o themes/waziup-theme/static/lunr.json"
