@@ -34,7 +34,7 @@ metadata:
   namespace: waziup
 spec:
   rules:
-  - host: test.waziup.io
+  - host: www.waziup.io
     http:
       paths:
       - path: /
