@@ -3,7 +3,7 @@ date: 2016-09-13T09:00:00+00:00
 title: WAZIUP use cases
 ---
 
-###WAZIUP cutting-edge IoT PaaS platform and software framework support to develop 1000 of IoT applications, out of the box. Any IoT application that you can imagine. Due to the PaaS nature WAZIUP IoT PaaS platform enable you to easy and rapid IoT application development.
+WAZIUP cutting-edge IoT PaaS platform and software framework support to develop 1000 of IoT applications, out of the box. Any IoT application that you can imagine. Due to the PaaS nature WAZIUP IoT PaaS platform enable you to easy and rapid IoT application development.
  
 **Agriculture:** The smart farming applications may include monitoring of soil moisture, continuous monitoring of water storage tanks and field conditions (weather/rainfall, soil moisture, electrical conductivity, etc.) and agro-management decisions (date of sowing, irrigation, fertilizing, tilling). For example, farmers will be able to monitor the temperature of grain bins (storage areas) and receive an alert if the temperature rises outside of an acceptable range. 
 
