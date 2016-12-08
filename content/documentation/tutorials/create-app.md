@@ -29,7 +29,7 @@ deis login http://deis.waziup.io
 Now that the setup is done, let's create our app.
 We'll download a sample application and associate it with deis:
 ```
-$ git clone https://github.com/deis/example-go.git
+$ git clone https://github.com/Waziup/example-go.git
 $ cd example-go
 $ deis create myapp
 ```
@@ -37,8 +37,11 @@ $ deis create myapp
 Feel free to modify the app as you wish.
 When you're ready, commit and push the application:
 ```
+git add web.go
 git commit -m "test"
 git push deis master
 ```
 
 Your application is now available on the following address: [http://myapp.waziup.io](http://myapp.waziup.io)
+Attention! Due to [this bug](https://github.com/Waziup/Platform/issues/32), the routing of the apps does not work yet
+So, once the application is pushed, you need to send [a mail](waziup.community@create-net.org) to enable it.
