@@ -5,7 +5,7 @@ title: Feature list
 
 Waziup 0.1.0 includes:
 
-####WAZIUP IoT Cloud platform offers cutting-edge IoT features and capabilities for your IoT products
+WAZIUP IoT Cloud platform offers cutting-edge IoT features and capabilities for your IoT products
 
 - **Device Management**: Manage million of IoT devices
 
