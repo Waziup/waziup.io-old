@@ -1,20 +1,19 @@
 ---
 date: 2016-09-13T09:00:00+00:00
-title: Why use Waziup? 
+title: Why use WAZIUP? 
 ---
 
-Waziup is an IoT Cloud platform that allows you to create and deploy your IoT applications both in the Cloud and on the IoT gateway.
-Waziup is particularly adapted to tough conditions, for example for low power and long distance applications. 
-Our technology differentiators:
+WAZIUP is an IoT Cloud platform that allows you to create and deploy your IoT applications both in the Cloud and on the IoT gateway. WAZIUP offers "out-of-box" complete solutions from sensors nodes to applicatons. WAZIUP is particularly adapted to tough conditions, for example for low power and long distance applications. 
 
-- DIY Gateway and sensor nodes
-- LoRa network: Low cost, low power, long range
-- 3G
-- SMS
-- Phone calls
-- Mobile apps
-- Edge computing: local/global cloud
-- Application hosting: PaaS for IoT
-- Data analytics and visualization
+- Simply and easy to deploy the applications (create, push and run)
+- Offer Do-it-Yourself sensors nodes and Gateway solutions (few hours to setup the WAZIUP lORA network)
+- Long Range and low power IoT communicatio 
+- The platform can handle unreliable and intermitten internet connection 
+- WAZIUP offers very low cost hardware as well as application developmet solutions 
+- Multiple fall-back communicaton options (3G, Wifi, BL)
+- User centric interface design (SME, voice call, mobile app and web app)
+
+
+
 
 
