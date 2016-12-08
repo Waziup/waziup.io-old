@@ -7,7 +7,7 @@ WAZIUP is an IoT Cloud platform that allows you to create and deploy your IoT ap
 
 - Simply and easy to deploy the applications (create, push and run)
 - Offer Do-it-Yourself sensors nodes and Gateway solutions (few hours to setup the WAZIUP lORA network)
-- Long Range and low power IoT communicatio 
+- Long Range and low power IoT communication 
 - The platform can handle unreliable and intermitten internet connection 
 - WAZIUP offers very low cost hardware as well as application developmet solutions 
 - Multiple fall-back communicaton options (3G, Wifi, BL)
