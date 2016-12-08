@@ -3,6 +3,8 @@ Create an App with Waziup
 =========================
 
 Waziup allows you to develop and host you own IoT applications.
+This short tutorial will show you how to create an application in go language, and host it on Waziup.
+All you need is a Linux (or equivalent) machine.
 
 Install the tools
 -----------------
@@ -19,15 +21,24 @@ deis register http://deis.waziup.io
 deis keys:add ~/.ssh/<your public key>
 ```
 
-Download the application and associate it with deis:
+If you are already registered, you can just login:
+```
+deis login http://deis.waziup.io
+```
+
+Now that the setup is done, let's create our app.
+We'll download a sample application and associate it with deis:
 ```
 $ git clone https://github.com/deis/example-go.git
 $ cd example-go
 $ deis create myapp
 ```
 
-Push the application:
+Feel free to modify the app as you wish.
+When you're ready, commit and push the application:
 ```
+git commit -m "test"
 git push deis master
 ```
 
+Your application is now available on the following address: [http://myapp.waziup.io](http://myapp.waziup.io)
