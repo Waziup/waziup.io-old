@@ -6,8 +6,8 @@ title: Tutorials
 ## Getting started
 We propose several tutorials to get you started with Waziup:
 
-- Create a low cost IoT gateway
-- Upload your sensor data
-- Visualize you data
-- Create and host an IoT application on Waziup platform
-- Send and receive SMS
+- [Create a low cost IoT gateway](documentation/tutorials/lora-gateway)
+- [Upload your sensor data](documentation/tutorials/push-data)
+- [Visualize you data](documentation/tutorials/freeboard)
+- [Create and host an IoT application on Waziup platform](documentation/tutorials/create-app)
+- [Send and receive SMS](documentation/tutorials/use-sms)

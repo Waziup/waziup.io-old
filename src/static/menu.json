@@ -111,11 +111,6 @@
           "visible": true,
           "children": [
             {
-              "path": "documentation/tutorials",
-              "text": "Overview",
-              "visible": true
-            },
-            {
               "path": "documentation/tutorials/lora-gateway",
               "text": "Create a low cost IoT gateway",
               "visible": true
@@ -131,7 +126,7 @@
               "visible": true
             },
             {
-              "path": "documentation/tutorials/pushSensorDataToWaziup",
+              "path": "documentation/tutorials/push-data",
               "text": "Upload your sensor Data",
               "visible": true
             },
@@ -170,13 +165,18 @@
           ]
         },
         {
-          "path": "documentation/how-waziup-works/architecture-and-components",
+          "path": "documentation/how-waziup-works",
           "text": "How Waziup works",
           "visible": true,
           "children": [
             {
-              "path": "documentation/how-waziup-works/architecture-and-components",
-              "text": "Architecture and components",
+              "path": "documentation/how-waziup-works/architecture",
+              "text": "Architecture",
+              "visible": true
+            },
+            {
+              "path": "documentation/how-waziup-works/localglobal",
+              "text": "Local and global Clouds",
               "visible": true
             },
             {
