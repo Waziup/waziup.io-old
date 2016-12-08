@@ -7,14 +7,10 @@ install:
 #- sudo apt-get update
 #- sudo apt-get install nodejs npm
 script:
-- sudo npm install --save-dev gulp-install
+- npm install -g gulp
+- npm install --save-dev gulp
 - npm install
-- gulp build:dev
-- hugo
-- docker build -t waziup/website .
-- docker push waziup/website
-- kubectl delete -f website.yaml  --now
-- kubectl apply -f website.yaml
+- ./deploy.sh
 notifications:
   email:
     on_failure: always
