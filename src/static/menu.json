@@ -180,6 +180,11 @@
               "visible": true
             },
             {
+              "path": "documentation/how-waziup-works/implementation",
+              "text": "Implementation",
+              "visible": true
+            },
+            {
               "path": "documentation/how-waziup-works/requirements",
               "text": "Requirements",
               "visible": true
