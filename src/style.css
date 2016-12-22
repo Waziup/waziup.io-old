@@ -529,7 +529,7 @@ button:focus {
   margin-right: 0; }
 
 body {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Circular', sans-serif; }
 
 /* Components */
 .page {
@@ -1627,7 +1627,7 @@ pre + pre {
   height: 80vh;
   padding-top: 80px;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Circular', sans-serif; }
   #not-found-page h1 {
     font-size: 32px;
     margin-bottom: 10px;
