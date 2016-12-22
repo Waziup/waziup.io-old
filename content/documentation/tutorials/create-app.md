@@ -28,13 +28,13 @@ $ ssh-add ~/.ssh/id_rsa
 ```
 
 Add your new ssh key to Deis:
-``
+```
 $ deis keys:add ~/.ssh/id_rsa.pub
 ```
 
 If you are already registered, you can just login:
 ```
-deis login http://deis.waziup.io
+$ deis login http://deis.waziup.io
 ```
 
 Now that the setup is done, let's create our app.
@@ -48,16 +48,16 @@ Please replace the myapp with any name that you like for your application.
 You can already push the example application:
 
 ```
-git push deis master
+$ git push deis master
 ```
 
 
 Feel free to modify the app as you wish.
 When you're ready, commit and push again the application:
 ```
-git add web.go
-git commit -m "test"
-git push deis master
+$ git add web.go
+$ git commit -m "test"
+$ git push deis master
 ```
 
 Your application is now available on the following address: [http://myapp.waziup.io](http://myapp.waziup.io).
