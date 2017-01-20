@@ -1,13 +1,10 @@
 ---
 date: 2016-09-13T09:00:00+00:00
-title: WAZIUP Gateway Installation
+title: WAZIUP platform
 
 ---
 
-Step-1
 
+The Waziup dashboard is under construction.
 
-Step-2
-
-
-Step-3
+In the mean-time, you can access all the features of Waziup using the [tutorials](/documentation/tutorials/).
