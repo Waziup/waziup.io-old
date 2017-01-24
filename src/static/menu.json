@@ -271,6 +271,23 @@
           "path": "resources/news",
           "text": "News",
           "visible": true
+        },
+        {
+          "path": "resources/iot-challenge",
+          "text": "IoT Challenge",
+          "visible": true,
+		  "children": [
+		    {
+              "path": "resources/iot-challenge/overall",
+              "text": "Project overall (22/12/2016)",
+              "visible": true
+            },
+            {
+              "path": "resources/iot-challenge/endDevice",
+              "text": "Sensor node (16/01/2017)",
+              "visible": true
+            }
+          ]
         }
       ]
     },
