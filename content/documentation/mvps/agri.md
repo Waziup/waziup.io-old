@@ -1,6 +1,9 @@
+---
+date: 2016-09-13T09:00:00+00:00
+title: weather station prototype
+---
 
-Build a weather station using Waziup
-====================================
+**Build a weather station using Waziup**
 
 The objective is to develop a low-cost and sustainable solution capable of reading real-time data typical of a weather station, using different sensors, and capable of communicating via LoRa.
 The following subsection are a Getting Strated tutorial.

@@ -235,6 +235,11 @@
               "path": "documentation/installation",
               "text": "Overview",
               "visible": true
+            },
+            {
+              "path": "documentation/installation/hello-world",
+              "text": "Platform",
+              "visible": true
             }
           ]
         },

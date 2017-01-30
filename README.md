@@ -19,7 +19,6 @@ Writing content
 
         $ npm install && gulp build:dev
 
-
 4. Run hugo in watch mode and start adding content under the `content/` tree
 
         $ hugo server --watch

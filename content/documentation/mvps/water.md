@@ -1,8 +1,9 @@
 ---
 date: 2016-09-13T09:00:00+00:00
+title: Fish farming prototype
 ---
 
-# Discover here how to prototype an application of fish farming using Waziup. 
+**Discover here how to prototype an application of fish farming using Waziup.**
 
 The goal of this prototype is giving a first look on how to develop an IoT device for fish farming. The device is capable of giving real time reading about relevant information for fish ponds such as acidity,
 dissolved oxygen and communicate this data via LoRa. Below you will find a get started tutorial : how to develop the electronic and software part of the solution.
