@@ -9,7 +9,7 @@ The goal of this prototype is giving a first look on how to develop an IoT devic
 dissolved oxygen and communicate this data via LoRa. Below you will find a get started tutorial : how to develop the electronic and software part of the solution.
 
 The gateway installed in Ghana
-![Gateway](/content/documentation/mvp/water_images/DSC07719.JPG)
+![Gateway](waziup.io/content/documentation/mvp/water_images/DSC07719.JPG)
 
 
 ## Measure
