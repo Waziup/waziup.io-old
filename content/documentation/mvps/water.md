@@ -3,10 +3,13 @@ date: 2016-09-13T09:00:00+00:00
 title: Fish farming prototype
 ---
 
+![buoy_ghana](https://github.com/Waziup/waziup.io/blob/master/content/documentation/mvps/water_images/buoy_tutorial_banner.jpg?raw=true)
+
 **Discover here how to prototype an application of fish farming using Waziup.**
 
 The goal of this prototype is giving a first look on how to develop an IoT device for fish farming. The device is capable of giving real time reading about relevant information for fish ponds such as acidity,
 dissolved oxygen and communicate this data via LoRa. Below you will find a get started tutorial : how to develop the electronic and software part of the solution.
+
 
 ## Measure
 
@@ -119,7 +122,7 @@ As we did with the DS18B20 sensor, a 4k7 ohms resistor is needed between VCC and
 ## Voltage measure
 
 We want to know the voltage at battery outputs to estimate the charge level.
-We use a li-ion battery so the voltage ranges from 3V (empty) to 4.2V (fully charged) at 25°C. We reach 50% charge level at about 3.8V still at 25°C temperature.
+We use a li-ion battery so the voltage ranges from 3V (empty) to 4.2V (fully charged) at 25Â°C. We reach 50% charge level at about 3.8V still at 25Â°C temperature.
 To get voltage at the arduino inputs we use a voltage divider. We choose the analog pin 1 of the arduino to calculate the real voltage.
 Below this is the schema of the voltage divider. We use high-value resistor to minimize the current waste.
 
