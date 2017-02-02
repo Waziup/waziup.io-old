@@ -3,7 +3,7 @@ date: 2016-09-13T09:00:00+00:00
 title: Fish farming prototype
 ---
 
-![buoy_ghana](https://github.com/Waziup/waziup.io/blob/master/content/documentation/mvps/water_images/buoy_tutorial_banner.jpg?raw=true)
+![buoy_ghana](https://github.com/Waziup/waziup.io/blob/master/content/documentation/mvps/water_images/presentation_buoy_ghana.jpg?raw=true)
 
 **Discover here how to prototype an application of fish farming using Waziup.**
 
