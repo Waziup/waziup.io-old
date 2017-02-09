@@ -20,6 +20,8 @@ Waste Bin
 
 Electronic circuit of early experiments running locally.
 
+# Development
+
 ## Development - electronics overview
 
 ![elec](/documentation/mvps/waste_images/20170208_163157_resized.jpg)
@@ -44,10 +46,21 @@ Detailed top view of electronics mounted for waste bin fill level experiments.
 	
 ## Development - hardware description
 
-Arduino
+## Arduino
 
 The Arduino Pro Mini 3.3V (8MHz) board with his 328P microcrontroller is the "heart" of the electronic assembly. It contains the central steering loop: it reads sensor information via a serial connection and sends it
 via the LoRa module. In the following it is shown how to connect the sensor to the Arduino, afterwards it will be shown how to program it. ![Arduino](/images/mvps/water_farming/arduino.JPG)
+
+## LoRa module
+
+ The LoRa chip used here is the inAir9 module.
+ 
+ ![InAir9 and wires](/images/mvps/water_farming/inAir9.jpg)
+
+ Below the wire table of the InAir9 module is shown how to connect it to the arduino.
+ 
+ ![InAir9 and wires](/images/mvps/water_farming/inAir9_table.jpg)
+	
 	
 ## Development - hardware connection
 
