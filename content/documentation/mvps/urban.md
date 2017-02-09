@@ -20,7 +20,7 @@ Waste Bin
 
 Electronic circuit of early experiments running locally.
 
-## Development - electronics overwiew
+## Development - electronics overview
 
 ![elec](/documentation/mvps/waste_images/20170208_163157_resized.jpg)
 
