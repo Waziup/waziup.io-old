@@ -21,7 +21,10 @@ Top vie fo the waste bin electronics mounted on a waste bag holder.
 ![bin top detail](/documentation/mvps/waste_images/20170209_115600_resized.jpg)
 Detailed top view of electronics mounted for waste bin fill level experiments.
 
-![bin meas-65cm](/documentation/mvps/waste_images/20170209_115752_resized.jpg
+![bin almost empty](/documentation/mvps/waste_images/20170209_115643_resized.jpg)
+Almost empty waste bin inside down looking view.
+
+![bin meas-65cm](/documentation/mvps/waste_images/20170209_115752_resized.jpg)
 Distance measured 65cm for almost empty trash bin.
 
 
