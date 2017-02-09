@@ -10,7 +10,7 @@ The goal of this MVP prototype is to provide an overwiew and quick start on how 
 Below you find some impressions, a scenario description and some hints how to start developing the electronic and software part of the solution.
 
 
-## local African waste soft bin
+## Local African waste soft bin
 
 ![bin](/documentation/mvps/waste_images/waste_bin.jpg)
 
@@ -35,7 +35,7 @@ Top view of the waste bin electronics mounted on a waste bin holder.
 
 Detailed top view of electronics mounted for waste bin fill level experiments.
 
-## hardware 
+## Hardware list 
 
 
 - [Arduino Pro Mini 3.3V] (https://www.sparkfun.com/products/11114)
