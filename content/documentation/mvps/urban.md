@@ -61,6 +61,21 @@ via the LoRa module. In the following it is shown how to connect the sensor to t
  
  ![InAir9 and wires](/images/mvps/water_farming/inAir9_table.jpg)
 	
+## Ultrasonic distance sensor US-100
+
+Using US-100 in Serial Data Mode provides high accuracy and low computational power to the arduino main board:
+
+Select the operating mode of the US-100 Ultrasonic Distance Sensor by using the jumper on the back of the module. When the jumper is present (choose serial data mode), the sensor outputs the distance as binary serial data. UART mode serial interface configuration 9600 baud rate, starting a one, and stop bits a, data bits, eight, and white parity checking, no flow control.
+
+Attach the module to a serial port on your microcontroller. The Trig/TX pin connects to your microcontroller's TX serial transmit line. The Echo/RX pin connects to your microcontroller's RX serial receive line. Set the microcontroller's serial port to use 9600 baud at 8-N-1 (eight data bits, no parity, one stop bit).
+
+To start measuring the distance, output a 0x55 over the serial port and read back the two byte distance in high byte, low byte format. The distance returned is measured in millimeters. Use the following formula to obtain the distance as millimeters:
+
+    Millimeters = FirstByteRead * 256 + SecondByteRead
+
+This module can also output the temperature when using serial output mode. To read the temperature, output a 0x50 byte over the serial port and read back a single temperature byte. The actual temperature is obtained by using the following formula:
+
+    Celsius = ByteRead - 45
 	
 ## Development - hardware connection
 
