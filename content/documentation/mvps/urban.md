@@ -65,8 +65,21 @@ via the LoRa module. In the following it is shown how to connect the sensor to t
 ## Development - hardware connection
 
 
-## Development - software
+# Software
 
+## Program the Arduino
+
+Arduino cna be programmed by sending a set of instructions to the microcrontroller on the board.
+To realize that the IDE Arduino Software which uses a simplified version of C++ is applied. The Arduino software can be download [here](https://www.arduino.cc/en/main/software).
+Then to connect the Arduino Pro Mini to the computer an USB-FTDI chip as below was aused.
+
+![FTDI Arduino](/images/mvps/water_farming/ftdi_arduino.png)
+
+## Libraries
+
+
+- [SoftwareSerial library] (https://www.arduino.cc/en/Reference/SoftwareSerial) is used with the distance sensor US-100 via serial communication
+- [SX1272 library] (https://github.com/CongducPham/LowCostLoRaGw) is used with LoRa module
 
 ## Test scenario EU soft waste bin
 
