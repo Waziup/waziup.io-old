@@ -35,14 +35,24 @@ Top view of the waste bin electronics mounted on a waste bin holder.
 
 Detailed top view of electronics mounted for waste bin fill level experiments.
 
-## Hardware list 
-
+## Development - hardware list 
 
 - [Arduino Pro Mini 3.3V] (https://www.sparkfun.com/products/11114)
 - [InAir9 LoRa module] (http://modtronix.com/inair9.html)
 - [Distance and Temperature Sensor] (https://www.bananarobotics.com/shop/US-100-Ultrasonic-Distance-Sensor-Module)
 - [Battery AA] (common local shop)
 	
+## Development - hardware description
+
+Arduino
+
+The Arduino Pro Mini 3.3V (8MHz) board with his 328P microcrontroller is the "heart" of the electronic assembly. It contains the central steering loop: it reads sensor information via a serial connection and sends it
+via the LoRa module. In the following it is shown how to connect the sensor to the Arduino, afterwards it will be shown how to program it. ![Arduino](/images/mvps/water_farming/arduino.JPG)
+	
+## Development - hardware connection
+
+
+## Development - software
 
 
 ## Test scenario EU soft waste bin
