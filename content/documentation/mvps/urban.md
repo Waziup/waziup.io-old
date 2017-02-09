@@ -31,7 +31,7 @@ Detailed top view of electronics mounted for waste bin fill level experiments.
 
 
 ![bin almost empty](/documentation/mvps/waste_images/20170209_115643_resized.jpg)
-Almost empty waste bin inside down looking view.
+Almost empty German waste bin inside - downside looking view.
 
 
 ![bin comp-62cm](/documentation/mvps/waste_images/20170209_115720_resized.jpg)
