@@ -89,7 +89,76 @@ You will find all the samples to use this library [here](https://github.com/Cong
 
 ### Distance sensor module
 
+To get the distance (and inherently temperature) measure from the US-100 sensor the SoftwareSerial library is used to run it in the serial (more accurate than the PWM) mode.
+Here is a sample code used:
 
+
+// Test of distance and temperature for sensor module US-100
+// using 3,3 V  Arduino Pro Mini powering US-100 via Arduino GPIO
+// adapted from Zeisberg, Jan 2017
+// Original from RafaG, 2014
+ 
+#include <SoftwareSerial.h>;
+ 
+const int US100_TX = 6;
+const int US100_RX = 5;
+ 
+// instntiation of a new serial channel
+SoftwareSerial portUS100(US100_RX, US100_TX);
+ 
+unsigned int MSByteDist = 0;
+unsigned int LSByteDist = 0;
+unsigned int mmDist = 0;
+int temp = 0;
+ 
+void setup() {
+    // provide VCC to US100 via GPIO 4 to enable later energy saving function 
+    pinMode(4, OUTPUT);
+    digitalWrite(4, HIGH);
+    
+    Serial.begin(9600);
+    portUS100.begin(9600);
+    
+}
+ 
+void loop() {
+ 
+    portUS100.flush(); // limpia el buffer del puerto serie
+    portUS100.write(0x55); // orden de medición de distancia
+ 
+    delay(500);
+ 
+    if(portUS100.available() >= 2) // comprueba la recepción de 2 bytes
+    {
+        MSByteDist = portUS100.read(); // lectura de ambos bytes
+        LSByteDist  = portUS100.read();
+        mmDist  = MSByteDist * 256 + LSByteDist; // distancia
+        if((mmDist > 1) && (mmDist < 10000)) // comprobación de la distancia dentro de rango
+        {
+            Serial.print("Distance: ");
+            Serial.print(mmDist, DEC);
+            Serial.println(" mm");
+        }
+    }
+ 
+    portUS100.flush(); // limpia el buffer del puerto serie
+    portUS100.write(0x50); // orden de medición de distancia
+ 
+    delay(500);
+    if(portUS100.available() >= 1) // comprueba la recepción de 1 byte
+    {
+        temp = portUS100.read(); // lectura del byte
+        if((temp > 1) && (temp < 130)) // comprobación de rango válido
+        {
+            temp -= 45; // corrige offset de 45º
+            Serial.print("Temperature: ");
+            Serial.print(temp, DEC);
+            Serial.println(" Grad Celsius.");
+        }
+    }
+ 
+    delay(1000);
+}
 
 ## Test scenario EU soft waste bin
 
