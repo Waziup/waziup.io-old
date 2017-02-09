@@ -18,6 +18,11 @@ Electronic compoonents for the Urban Waste Management MVP after testing several 
 ![bin top](/documentation/mvps/waste_images/20170209_115554_resized.jpg)
 Top vie fo the waste bin electronics mounted on a waste bag holder.
 
+![bin top detail](/documentation/mvps/waste_images/20170209_115600_resized.jpg)
+Detailed top view of electronics mounted for waste bin fill level experiments.
+
+
+
 
 
 
