@@ -10,7 +10,7 @@ The goal of this MVP prototype is to provide an overwiew and quick start on how 
 Below you find some impressions, a scenario description and some hints how to start developing the electronic and software part of the solution.
 
 
-## Impression - local waste bin
+## local African waste soft bin
 
 ![bin](/documentation/mvps/waste_images/waste_bin.jpg)
 
@@ -34,6 +34,15 @@ Top view of the waste bin electronics mounted on a waste bin holder.
 ![bin top detail](/documentation/mvps/waste_images/20170209_115600_resized.jpg)
 
 Detailed top view of electronics mounted for waste bin fill level experiments.
+
+## hardware 
+
+
+- [Arduino Pro Mini 3.3V] (https://www.sparkfun.com/products/11114)
+- [InAir9 LoRa module] (http://modtronix.com/inair9.html)
+- [Distance and Temperature Sensor] (https://www.bananarobotics.com/shop/US-100-Ultrasonic-Distance-Sensor-Module)
+- [Battery AA] (common local shop)
+	
 
 
 ## Test scenario EU soft waste bin
