@@ -27,6 +27,9 @@ Almost empty waste bin inside down looking view.
 ![bin meas-65cm](/documentation/mvps/waste_images/20170209_115752_resized.jpg)
 Distance measured 65cm for almost empty trash bin.
 
+![bin meas-42cm](/documentation/mvps/waste_images/20170209_115933_resized.jpg)
+Distance measured 42cm for comparison for 1/3 filled trash bin.
+
 
 
 
