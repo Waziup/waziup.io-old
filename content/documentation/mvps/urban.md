@@ -175,6 +175,9 @@ Here is a sample code used:
 
 ## Test scenario EU soft waste bin
 
+![bin front view](/documentation/mvps/waste_images/20170209_115618_resized.jpg)
+Front side view of MVP urban waste management experimental setup with soft bin and hard top.
+
 ![bin almost empty](/documentation/mvps/waste_images/20170209_115643_resized.jpg)
 Almost empty German waste bin inside - downside looking view.
 
