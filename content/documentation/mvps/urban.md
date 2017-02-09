@@ -5,16 +5,22 @@ title: Urban waste management
 
 Discover here how to prototype an application for waste management using Waziup. 
 **Under construction.**
+The goal of this MVP prototype is to provide an overwiew and quick start on how to develop an IoT device for environmental friendly urban waste manamegement. The device is enabling of periodic reading about fill level information for waste bins equipped with a hard top. This is done via ultrasonic distance measurment of the fill level and radio communication of this value via license free LoRa devices to a monitor station. 
+
+Below you find some impressions, a scenario description and some hints how to start developing the electronic and software part of the solution.
+
+
+## Impression - local waste bin
 
 ![bin](/documentation/mvps/waste_images/waste_bin.jpg)
 
 Waste Bin
 
-
 ![bin elec](/documentation/mvps/waste_images/waste_bin_elec.jpg)
 
 Electronic circuit of early experiments running locally.
 
+## Development - electronics overwiew
 
 ![elec](/documentation/mvps/waste_images/20170208_163157_resized.jpg)
 
@@ -29,6 +35,8 @@ Top view of the waste bin electronics mounted on a waste bin holder.
 
 Detailed top view of electronics mounted for waste bin fill level experiments.
 
+
+## Test scenario EU soft waste bin
 
 ![bin almost empty](/documentation/mvps/waste_images/20170209_115643_resized.jpg)
 Almost empty German waste bin inside - downside looking view.
