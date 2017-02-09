@@ -81,6 +81,16 @@ Then to connect the Arduino Pro Mini to the computer an USB-FTDI chip as below w
 - [SoftwareSerial library] (https://www.arduino.cc/en/Reference/SoftwareSerial) is used with the distance sensor US-100 via serial communication
 - [SX1272 library] (https://github.com/CongducPham/LowCostLoRaGw) is used with LoRa module
 
+### LoRa module
+
+To send data via LoRa we use the SX1272 library.
+
+You will find all the samples to use this library [here](https://github.com/CongducPham/LowCostLoRaGw/tree/master/Arduino).
+
+### Distance sensor module
+
+
+
 ## Test scenario EU soft waste bin
 
 ![bin almost empty](/documentation/mvps/waste_images/20170209_115643_resized.jpg)
