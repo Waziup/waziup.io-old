@@ -83,9 +83,7 @@ Then to connect the Arduino Pro Mini to the computer an USB-FTDI chip as below w
 
 ### LoRa module
 
-To send data via LoRa we use the SX1272 library.
-
-You will find all the samples to use this library [here](https://github.com/CongducPham/LowCostLoRaGw/tree/master/Arduino).
+To send the measured fill level data via the LoRa radio the SX1272 library is used. Examples to use this library  can be found [here](https://github.com/CongducPham/LowCostLoRaGw/tree/master/Arduino).
 
 ### Distance sensor module
 
