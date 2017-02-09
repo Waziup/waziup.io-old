@@ -178,6 +178,9 @@ Here is a sample code used:
 ![bin front view](/documentation/mvps/waste_images/20170209_115618_resized.jpg)
 Front side view of MVP urban waste management experimental setup with soft bin and hard top.
 
+![bin inside top](/documentation/mvps/waste_images/20170209_115629_resized.jpg)
+Inside top view from down - showing sensor looking downwards to estimate the distance from top to the surface of the waste.
+
 ![bin almost empty](/documentation/mvps/waste_images/20170209_115643_resized.jpg)
 Almost empty German waste bin inside - downside looking view.
 
