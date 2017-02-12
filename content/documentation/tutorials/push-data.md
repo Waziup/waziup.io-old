@@ -93,7 +93,6 @@ Example:  http://broker.waziup.io/v2/entities/Sensor1
 
 **Headers:** 
 
-* Content-Type: application/json
 * Fiware-Service: waziup
 * Fiware-ServicePath:/wazihack
 
