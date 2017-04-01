@@ -4,7 +4,7 @@ title: Voir Waziup en action
 url: /fr/why-use-waziup/see-waziup-in-action
 ---
 
-Regardez la vidéo d'[installation de Waziup](/documentation/installation/).
+Regardez la vidéo d'[installation de Waziup](/fr/documentation/installation/).
 
 {{< youtube peHkDhiH3lE >}}
 

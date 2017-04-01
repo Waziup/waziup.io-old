@@ -29,8 +29,8 @@ La plate-forme IoT Cloud de WAZIUP offre des fonctions et fonctionnalités IoT d
 
 
 {{< note title="Quoi de neuf" >}}
-* [Essayer Waziup](/documentation/installation/hello-world/)
-* [Cas d'utilisations](/why-use-waziup/use-cases/): Solutions Waziup aux problèmes pratiques
-* [Ce que Waziup offre comparé autres outils et services](/why-use-waziup/waziup-compared-to/)
-* [Comment fonctionne Waziup](/documentation/how-waziup-works/architecture/)
+* [Essayer Waziup](/fr/documentation/installation/hello-world/)
+* [Cas d'utilisations](/fr/why-use-waziup/use-cases/): Solutions Waziup aux problèmes pratiques
+* [Ce que Waziup offre comparé autres outils et services](/fr/why-use-waziup/waziup-compared-to/)
+* [Comment fonctionne Waziup](/fr/documentation/how-waziup-works/architecture/)
 {{< /note >}}

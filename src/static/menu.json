@@ -2,22 +2,22 @@
   "children": [
     {
       "path": "about",
-      "text": "i18n \"menu_text1\" }}",
+      "text": "About",
       "visible": false
     },
     {
       "path": "community",
-      "text": "{{ i18n \"menu_text2\" }}",
+      "text": "Community",
       "visible": false
     },
     {
       "path": "contact",
-      "text": "{{ i18n \"menu_text3\" }}",
+      "text": "Contact",
       "visible": false
     },
     {
       "path": "draft",
-      "text": "{{ i18n \"menu_text4\" }}",
+      "text": "Draft",
       "visible": false,
       "children": [
         {
@@ -39,7 +39,7 @@
     },
     {
       "path": "instructions",
-      "text": "{{ i18n \"menu_text5\" }}",
+      "text": "Instructions",
       "visible": false,
       "children": [
         {
@@ -51,17 +51,17 @@
     },
     {
       "path": "why-use-waziup",
-      "text": "{{i18n\"menu_text6\"}}",
+      "text": "Why use Waziup? ",
       "visible": true,
       "children": [
         {
           "path": "why-use-waziup",
-          "text": "{{i18n \"menu_text6\"}}",
+          "text": "Why use Waziup?",
           "visible": true
         },
         {
           "path": "why-use-waziup/use-cases",
-          "text": "{{ i18n \"menu_text8\" }}",
+          "text": "Use cases",
           "visible": true,
           "children": [
             {
@@ -73,120 +73,120 @@
         },
         {
           "path": "why-use-waziup/waziup-compared-to/frameworks-and-tools",
-          "text": "{{ i18n \"menu_text9\" }}",
+          "text": "Waziup compared to...",
           "visible": true,
           "children": [
             {
               "path": "why-use-waziup/waziup-compared-to/frameworks-and-tools",
-              "text": "{{ i18n \"menu_text10\" }}",
+              "text": "Frameworks and tools",
               "visible": true
             }
           ]
         },
         {
           "path": "why-use-waziup/see-waziup-in-action",
-          "text": "{{ i18n \"menu_text11\" }}",
+          "text": "See Waziup in action",
           "visible": true
         },
         {
           "path": "why-use-waziup/feature-list",
-          "text": "{{ i18n \"menu_text12\" }}",
+          "text": "Feature list",
           "visible": true
         },
         {
           "path": "why-use-waziup/get-started",
-          "text": "{{ i18n \"menu_text13\" }}",
+          "text": "Get started",
           "visible": true
         }
       ]
     },
     {
       "path": "documentation",
-      "text": "{{ i18n \"menu_text14\" }}",
+      "text": "Documentation",
       "visible": true,
       "children": [
         {
           "path": "documentation/tutorials",
-          "text": "{{ i18n \"menu_text15\" }}",
+          "text": "Tutorials",
           "visible": true,
           "children": [
             {
               "path": "documentation/tutorials/lora-gateway",
-              "text": "{{ i18n \"menu_text16\" }}",
+              "text": "Create a low cost IoT gateway",
               "visible": true
             },
             {
               "path": "documentation/tutorials/create-app",
-              "text": "{{ i18n \"menu_text17\" }}",
+              "text": "Create an App",
               "visible": true
             },
             {
               "path": "documentation/tutorials/freeboard",
-              "text": "{{ i18n \"menu_text18\" }}",
+              "text": "Visualize you data",
               "visible": true
             },
             {
               "path": "documentation/tutorials/push-data",
-              "text": "{{ i18n \"menu_text19\" }}",
+              "text": "Upload your sensor Data",
               "visible": true
             },
             {
               "path": "documentation/tutorials/use-sms",
-              "text": "{{ i18n \"menu_text20\" }}",
+              "text": "Send and receive SMS",
               "visible": true
             }
           ]
         },
         {
           "path": "documentation/mvps",
-          "text": "{{ i18n \"menu_text21\" }}",
+          "text": "Real-world application prototyping",
           "visible": true,
           "children": [
             {
               "path": "documentation/mvps/water",
-              "text": "{{ i18n \"menu_text22\" }}",
+              "text": "Fish Farming",
               "visible": true
             },
             {
               "path": "documentation/mvps/agri",
-              "text": "{{ i18n \"menu_text23\" }}",
+              "text": "Weather station",
               "visible": true
             },
             {
               "path": "documentation/mvps/cattle",
-              "text": "{{ i18n \"menu_text24\" }}",
+              "text": "Cattle management",
               "visible": true
             },
             {
               "path": "documentation/mvps/urban",
-              "text": "{{ i18n \"menu_text25\" }}",
+              "text": "Urban waste",
               "visible": true
             }
           ]
         },
         {
           "path": "documentation/how-waziup-works",
-          "text": "{{ i18n \"menu_text26\" }}",
+          "text": "How Waziup works",
           "visible": true,
           "children": [
             {
               "path": "documentation/how-waziup-works/architecture",
-              "text": "{{ i18n \"menu_text27\" }}",
+              "text": "Architecture",
               "visible": true
             },
             {
               "path": "documentation/how-waziup-works/localglobal",
-              "text": "{{ i18n \"menu_text28\" }}",
+              "text": "Local and global Clouds",
               "visible": true
             },
             {
               "path": "documentation/how-waziup-works/implementation",
-              "text": "{{ i18n \"menu_text29\" }}",
+              "text": "Implementation",
               "visible": true
             },
             {
               "path": "documentation/how-waziup-works/requirements",
-              "text": "{{ i18n \"menu_text30\" }}",
+              "text": "Requirements",
               "visible": true
             }
           ]
@@ -198,12 +198,12 @@
           "children": [
             {
               "path": "documentation/api/api-reference",
-              "text": "{{ i18n \"menu_text31\" }}",
+              "text": "API reference",
               "visible": true
             },
             {
               "path": "documentation/api/using-the-api",
-              "text": "{{ i18n \"menu_text32\" }}",
+              "text": "Using the Waziup API",
               "visible": true
             }
           ]
@@ -215,42 +215,42 @@
           "children": [
             {
               "path": "documentation/cli/cli-reference",
-              "text": "{{ i18n \"menu_text33\" }}",
+              "text": "CLI reference",
               "visible": true
             },
             {
               "path": "documentation/cli/using-the-cli",
-              "text": "{{ i18n \"menu_text34\" }}",
+              "text": "Using the Waziup CLI",
               "visible": true
             }
           ]
         },
         {
           "path": "documentation/installation",
-          "text": "{{ i18n \"menu_text35\" }}",
+          "text": "Installation",
           "visible": true,
           "children":
           [
             {
               "path": "documentation/installation",
-              "text": "{{ i18n \"menu_text36\" }}",
+              "text": "Overview",
               "visible": true
             },
             {
               "path": "documentation/installation/hello-world",
-              "text": "{{ i18n \"menu_text37\" }}",
+              "text": "Platform",
               "visible": true
             }
           ]
         },
         {
           "path": "documentation/release-notes/version-0-1-0",
-          "text": "{{ i18n \"menu_text38\" }}",
+          "text": "Release notes",
           "visible": true,
           "children": [
             {
               "path": "documentation/release-notes/version-0-1-0",
-              "text": "{{ i18n \"menu_text39\" }}",
+              "text": "version 0.1.0",
               "visible": true
             }
           ]
@@ -259,37 +259,37 @@
     },
     {
       "path": "resources/downloads",
-      "text": "{{ i18n \"menu_text40\" }}",
+      "text": "Resources",
       "visible": true,
       "children": [
         {
           "path": "resources/downloads",
-          "text": "{{ i18n \"menu_text41\" }}",
+          "text": "Downloads",
           "visible": true
         },
         {
           "path": "resources/community",
-          "text": "{{ i18n \"menu_text2\" }}",
+          "text": "Community",
           "visible": true
         },
         {
           "path": "resources/news",
-          "text": "{{ i18n \"menu_text42\" }}",
+          "text": "News",
           "visible": true
         },
         {
           "path": "resources/iot-challenge",
-          "text": "{{ i18n \"menu_text43\" }}",
+          "text": "IoT Challenge",
           "visible": true,
 		  "children": [
 		    {
               "path": "resources/iot-challenge/overall",
-              "text": "{{ i18n \"menu_text44\" }}",
+              "text": "Project overall (22/12/2016)",
               "visible": true
             },
             {
               "path": "resources/iot-challenge/endDevice",
-              "text": "{{ i18n \"menu_text45\" }}",
+              "text": "Sensor node (16/01/2017)",
               "visible": true
             }
           ]
@@ -298,7 +298,7 @@
     },
     {
       "path": "support",
-      "text": "{{ i18n \"menu_text46\" }}",
+      "text": "Support",
       "visible": true
     }
   ]

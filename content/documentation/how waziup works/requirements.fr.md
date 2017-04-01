@@ -7,6 +7,6 @@ url: /fr/documentation/how-waziup-works/requirements
 Les composants Waziup fonctionnent avec des éléments de votre architecture pour gérer l'orchestration, le routage, la persistance et l'agrégation de métriques.
 
 {{< note title="Quoi de neuf?" >}}
-* Découvrez comment [installer Waziup](/documentation/installation)
+* Découvrez comment [installer Waziup](/fr/documentation/installation)
 {{< /note >}}
 

@@ -11,8 +11,8 @@ url: /fr/resources/iot-challenge/
  L'équipe de [Easy Global Market](http://www.eglobalmark.com/) Composé de Sabrine, Charlotte, Franck et moi Benjamin travaillons actuellement sur le projet Waziup et plus précisément sur la partie eau du MVP du projet. Nous décidons de participer au Challenge Eclipse IoT 3.0 avec ce MVP. Ce blog vous présentera notre projet.
 
 ### Nouveaux articles
-- [Project overall](/resources/iot-challenge/overall/) (22/12/2016)
-- [Sensor node description](/resources/iot-challenge/endDevice/) (16/01/2017)
+- [Project overall](/fr/resources/iot-challenge/overall/) (22/12/2016)
+- [Sensor node description](/fr/resources/iot-challenge/endDevice/) (16/01/2017)
 - Description de la passerelle
 - Description de Cloud
 

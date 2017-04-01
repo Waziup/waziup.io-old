@@ -7,7 +7,7 @@ url: /fr/about
 Waziup est ...
 
 ## Communauté
-Nous encourageons quiconque [à se joindre à la communauté Waziup] (/resources/community/) et nous proposer des requêtes pull request, des rapports de bogues et des demandes de fonctionnalités pour rendre Waziup encore plus impressionnant.
+Nous encourageons quiconque [à se joindre à la communauté Waziup] (/fr/resources/community/) et nous proposer des requêtes pull request, des rapports de bogues et des demandes de fonctionnalités pour rendre Waziup encore plus impressionnant.
 
 ## Contact
-Vous pouvez nous contacter [ici] (/contact/)
+Vous pouvez nous contacter [ici] (/fr/contact/)

@@ -9,6 +9,6 @@ Site du projet: www.waziup.eu
 
 
 ## Communauté
-Rejoignez la communauté [Waziup] (/resources/community/) pour améliorer Waziup.
+Rejoignez la communauté [Waziup] (/fr/resources/community/) pour améliorer Waziup.
 
 
