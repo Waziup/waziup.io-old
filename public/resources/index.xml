@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resources on WAZIUP Platform</title>
+    <link>/resources/index.xml</link>
+    <description>Recent content in Resources on WAZIUP Platform</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 16 Jan 2017 09:00:00 +0000</lastBuildDate>
+    <atom:link href="/resources/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>IoT Challenge Fish Farming</title>
+      <link>/resources/iot-challenge/enddevice</link>
+      <pubDate>Mon, 16 Jan 2017 09:00:00 +0000</pubDate>
+      
+      <guid>/resources/iot-challenge/enddevice</guid>
+      <description>
+
+&lt;h2 id=&#34;end-node-device&#34;&gt;End node device&lt;/h2&gt;
+
+&lt;p&gt;Our team have already start the project for several weeks.
+ Now we have the first version of our device (gateway and end device node). In this article I present the end device node with the material used, the electronic assembly and the software part.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;electronic-part&#34;&gt;Electronic part&lt;/h2&gt;
+
+&lt;p&gt;The end device (sensor node) is a buoy containing a box with the electronic assembly.
+This device gather information about water (temperature, PH and dissolved oxygen) and send it to the IoT gateway through LoRa connection.&lt;/p&gt;
+
+&lt;p&gt;As it cannot be connect to an electrical outlet, the device needs to have his own power supply to operate.
+We decide to add a battery and a solar panel wich is fixed on the top of the buoy.&lt;/p&gt;
+
+&lt;p&gt;For the microcontroller we use an arduino Pro Mini in his 3.3V version. This choice has been made for the low power comsuption of the Pro Mini, his small size and the ease of development on it (Arduino).
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/iot-challenge/20161118_164330.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;One of the challenges in this isolated rural areas was the necessity to work over a long distance and poor infrastructure. Deploying IoT in this context must use long range wireless communication between device and gateway
+and autonomous low cost energy devices. We decide to use the low-power wide area networks &lt;em&gt;LoRa&lt;/em&gt;. In that purpose we add a LoRa module on the node : the inAir9 module.&lt;/p&gt;
+
+&lt;p&gt;We use the sensors atlas DO oxygen, and atlas PH for dissolved oxygen and PH measurements. The two sensors come with a small circuit to precise the measure and calibrate it (Ezo PH and Ezo DO).
+This two sensors are wired to the arduino via I2C bus that is a master-slave serial bus.&lt;/p&gt;
+
+&lt;p&gt;For temperature we choose the DS28BT whom use the 1 wire bus. We also decide to add a temperature and humidity sensor into our box to detect a probable high peak of temperature or humidity which will damaged our circuit.&lt;/p&gt;
+
+&lt;p&gt;The last thing we add to the circuit is a voltage divider to get the voltage output of the battery and so control his level of charge.&lt;/p&gt;
+
+&lt;p&gt;After some prototype circuit assembly we choose to order a printed circuit board rather than directly solder the component together.&lt;/p&gt;
+
+&lt;p&gt;Below we have the circuit schema and the Pcb schema.&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/iot-challenge/circuit.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Circuit Schema&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/iot-challenge/pcb.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;PCB Schema&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;During the time receiving our circuit board, we build the buoy. It is composed of a watertight box, polystyrene float and slabs of plexigas to bound the overall.
+The float is blocked into two slabs of plexiglas and the box is screwed to one slab.
+A rod of plastic has also been added under the buoy to attached the sensors on it. So the sensors will be fully submerged under 30 cm of water.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/iot-challenge/box_polystyrene.png&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;And few days later we received our printed circuit board and start soldering the components.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/iot-challenge/20170116_170718.jpg&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;PCB Schema&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;After soldering, cutting and drilling this is our final box.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/iot-challenge/final_box.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Final Box&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;software-part&#34;&gt;Software part&lt;/h2&gt;
+
+&lt;h3 id=&#34;library-used&#34;&gt;Library Used&lt;/h3&gt;
+
+&lt;p&gt;To communicate via I2C bus between PH sensor, DO sensor and the Arduino , we use the &lt;a href=&#34;https://www.arduino.cc/en/Reference/Wire&#34;&gt;wire&lt;/a&gt; library.&lt;/p&gt;
+
+&lt;p&gt;One of the tricky part was to handle LoRa communication with the gateway. We use this &lt;a href=&#34;https://github.com/CongducPham/LowCostLoRaGw&#34;&gt;LoRa library&lt;/a&gt; which greatly facilitated the work. This library is developed by Congduc Pham who is also member of the Waziup Project.&lt;/p&gt;
+
+&lt;h3 id=&#34;power-save&#34;&gt;Power save&lt;/h3&gt;
+
+&lt;p&gt;One of the biggest constraint we face is the necessity to save power.
+So we decide to get data from sensor at a rate of about 2 reads by hour. The rest of the time the microcontroller and the sensors need to be in a kind of &amp;ldquo;sleep mode&amp;rdquo;. However we choose to not using the sleep mode avalaible on the sensors (PH and DO) which still consume a little.
+ We just cut off the supply when needed.&lt;/p&gt;
+
+&lt;p&gt;On the arduino the sleep mode is assisted by interrupts, without them just a reset can wake the Arduino up.
+In our case we use the watchdog timer interrupt to handle the sleep mode.
+The watch dog timer is a small timer that force a full system restart if it not receive an &amp;ldquo;ok&amp;rdquo; signal from the microcontroller. The advantage of this timer is
+that it&amp;rsquo;s always runing even when the system is entirely put in sleep mode. So it&amp;rsquo;s a good way to control and wake up the system periodically.&lt;/p&gt;
+
+&lt;h3 id=&#34;system-failure&#34;&gt;System failure&lt;/h3&gt;
+
+&lt;p&gt;We also use the watchdog timer in his main purpose : detect and recover from computer malfunction. In case of unstable loops the watchdog wont receive an &amp;ldquo;ok&amp;rdquo; signal from the microcontroller
+and so will trigger a reboot of the arduino. It prevents hardware or software failure.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately I have spent several hours debugging an annoying issue with the Arduino Pro Mini watchdog timer. I finally find out that the issue didn&amp;rsquo;t come from my code, but from the original bootloader
+of my Arduino board.&lt;/p&gt;
+
+&lt;p&gt;I simulate an infinite loop that trigger the watchdog but instead of reseting once the arduino, it blocks the bootloader into an infinite reset loop.
+And so nothing works anymore on the Arduino:
+I cannot upload new Sketch and cannot reset the arduino manually with the reset button. I had to disconnect the power to recover the Arduino.
+The solution I used is to flash a new bootloader on the board. I took the bootloader (optiboot) of the Arduino UNO which uses the same chip (atmega328) as the arduino Pro Mini and it solves the problem.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IoT Challenge Fish Farming</title>
+      <link>/resources/iot-challenge/</link>
+      <pubDate>Mon, 16 Jan 2017 09:00:00 +0000</pubDate>
+      
+      <guid>/resources/iot-challenge/</guid>
+      <description>
+
+&lt;h4 id=&#34;22-12-2016&#34;&gt;22/12/2016&lt;/h4&gt;
+
+&lt;p&gt;Welcome on the blog of the IoT project Waziup Fish Farming&lt;/p&gt;
+
+&lt;p&gt;The team from &lt;a href=&#34;http://www.eglobalmark.com/&#34;&gt;Easy Global Market&lt;/a&gt; composed of Sabrine, Charlotte, Franck and me Benjamin are currently working
+ on Waziup Project and more precisely on the MVP water part of the project . We decide to take part in the Eclipse IoT Challenge 3.0 with this MVP. This blog will present you our project.&lt;/p&gt;
+
+&lt;h3 id=&#34;new-articles&#34;&gt;New articles&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./resources/iot-challenge/overall/&#34;&gt;Project overall&lt;/a&gt; (22/12/2016)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./resources/iot-challenge/endDevice/&#34;&gt;Sensor node description&lt;/a&gt; (16/01/2017)&lt;/li&gt;
+&lt;li&gt;Gateway description&lt;/li&gt;
+&lt;li&gt;Cloud description&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;description-of-the-project&#34;&gt;Description of the project&lt;/h2&gt;
+
+&lt;p&gt;The goal of the project is to give information to fish farmers located in low income countries about the quality of water in their ponds and support decisions making. From information gathered in the literature, the relevant information for fish ponds monitoring are: water temperature, dissolved oxygen, PH, alkalinity, ammonia, total dissolved solids, carbon dioxide. However, covering all these parameters is highly costly whereas no measures are currently made in the targeted African pond. For our first prototype, we will thus just retrieve temperature, dissolved oxygen and PH and target a trial in a fish farm in Africa, Ghana.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IoT Challenge Fish Farming</title>
+      <link>/resources/iot-challenge/overall</link>
+      <pubDate>Mon, 16 Jan 2017 09:00:00 +0000</pubDate>
+      
+      <guid>/resources/iot-challenge/overall</guid>
+      <description>
+
+&lt;h2 id=&#34;description-of-the-project&#34;&gt;Description of the project&lt;/h2&gt;
+
+&lt;p&gt;The goal of the project is to give information to fish farmers located in low income countries about the quality of water in their ponds and support decisions making. From information gathered in the literature, the relevant information for fish ponds monitoring are: water temperature, dissolved oxygen, PH, alkalinity, ammonia, total dissolved solids, carbon dioxide. However, covering all these parameters is highly costly whereas no measures are currently made in the targeted African pond. For our first prototype, we will thus just retrieve temperature, dissolved oxygen and PH and target a trial in a fish farm in Africa, Ghana.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-solution&#34;&gt;The solution&lt;/h2&gt;
+
+&lt;p&gt;Our solution is divided into 3 parts:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A buoy equipped with sensors for water quality and system monitoring as well as a renewable energy harvester and LoRa based connectivity to the gateway&lt;/li&gt;
+&lt;li&gt;A smart gateway to collect, pre-process and securely send data to the cloud . Advanced functionalities related to device management and cloud disconnect support with local application delivery are planned to be added in a second round.&lt;/li&gt;
+&lt;li&gt;A cloud to process, store and provide access to the data through web interfaces or mobile applications&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The device electronic with the sensors will be attached to a floating buoy and placed into a pond. The device will be powered by solar energy with a solar panel on top of the buoy. The device will gather the information needed and send it to the IoT gateway.
+ Initial discussions took place with the African fish farmer (cat fish farming) to discuss the buoy design.&lt;/p&gt;
+
+&lt;p&gt;The gateway ensures the connectivity between the sensors and the cloud. It pre-process the data, store it in a local database and send it to the cloud. Several options are available for security among which authentication key and data encryption.&lt;/p&gt;
+
+&lt;p&gt;The cloud is composed of an IoT broker and a storage manager. The Iot broker provides pub/sub mechanisms to manage (receive and provide) information. It also provide a messaging system based on subscription. The storage manager of the cloud is for store and retrieve data. The cloud will also provide an API to get an access to the data.
+At the end the services provided to the clients will be:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Data visualisation and exploration on an internet interface&lt;/li&gt;
+&lt;li&gt;The send of a sms or voicecall when a data goes beyond user defined thresholds. Mobile application is also an option but smartphone penetration is still low on the end users side.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This services will help the farmer to maintain his pond. It will help him to know when to treat the water, to change the water level or to feed the fish. The improvement of water quality will increase the productivity of the farm by reducing the fish death rate and provide optimal growth condition for the fishes.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Downloads</title>
+      <link>/resources/downloads/</link>
+      <pubDate>Wed, 19 Oct 2016 09:00:00 +0000</pubDate>
+      
+      <guid>/resources/downloads/</guid>
+      <description>&lt;p&gt;List of Waziup downloads.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>News</title>
+      <link>/resources/</link>
+      <pubDate>Wed, 19 Oct 2016 09:00:00 +0000</pubDate>
+      
+      <guid>/resources/</guid>
+      <description>&lt;p&gt;Index of the news&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Join the Waziup community</title>
+      <link>/resources/community</link>
+      <pubDate>Tue, 13 Sep 2016 09:00:00 +0000</pubDate>
+      
+      <guid>/resources/community</guid>
+      <description>
+
+&lt;p&gt;Waziup is an open source project, actively developed by the Waziup consortium. We encourage anyone to pitch in with pull requests, bug reports etc.&lt;/p&gt;
+
+&lt;h2 id=&#34;contribute-to-waziup&#34;&gt;Contribute to Waziup&lt;/h2&gt;
+
+&lt;p&gt;Waziup source code is on Github: (&lt;a href=&#34;https://github.com/waziup/platform&#34;&gt;github.com - Waziup&lt;/a&gt;).&lt;br /&gt;
+Feel free to contribute with Github pull requests.&lt;/p&gt;
+
+&lt;h2 id=&#34;submit-change-or-feature-requests&#34;&gt;Submit change or feature requests&lt;/h2&gt;
+
+&lt;p&gt;Let us know your change or feature requests.&lt;br /&gt;
+&lt;a href=&#34;https://github.com/waziup/platform/issues&#34;&gt;Submit an issue on github&lt;/a&gt; tagged &amp;ldquo;feature&amp;rdquo;.&lt;/p&gt;
+
+&lt;h2 id=&#34;report-a-bug&#34;&gt;Report a bug&lt;/h2&gt;
+
+&lt;p&gt;if you find  bug, please report it!&lt;br /&gt;
+&lt;a href=&#34;https://github.com/waziup/platform/issues&#34;&gt;Submit an issue on github&lt;/a&gt;, including details of the bug you encountered.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

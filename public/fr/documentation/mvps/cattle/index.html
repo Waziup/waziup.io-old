@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+
+
+
+ <html class="no-js" lang=""> 
+<head>
+<script type="text/javascript">
+theBaseUrl = "http://" + location.host + "/";
+document.write('<base href="' + theBaseUrl + '"/>');
+</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+  <title>Gestion des bovins - La plateforme Waziup</title>
+  <meta name="generator" content="Hugo 0.18.1" />
+
+  
+  <link rel="canonical" href="./fr/documentation/mvps/cattle">
+  
+  <meta name="author" content="waziup.io">
+  
+
+  <meta property="og:url" content="/fr/documentation/mvps/cattle">
+  <meta property="og:title" content="La plateforme Waziup">
+  <meta property="og:image" content="/images/logo-waziup.png">
+  <meta name="apple-mobile-web-app-title" content="La plateforme Waziup">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="shortcut icon" type="image/x-icon" href="./images/logo-waziup.png">
+  <link rel="icon" type="image/x-icon" href="./images/logo-waziup.png">
+
+
+  <style>
+    @font-face {
+      font-family: 'Icon';
+      format('embedded-opentype'),
+      format('woff'),
+      format('truetype'),
+      format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/vendor.js"></script>
+
+  <script src="js/app.js"></script>
+
+</head>
+<body class="palette-primary-pink palette-accent-pink">
+
+
+<div class="single-page">
+  <nav aria-label="Header" id="header" class="top-menu">
+  <div class="left">
+    <a href="#">
+      <div id="logo" class="logo"></div>
+    </a>
+  </div>
+
+  <div class="center">
+          <a href="./" ><img src="img/lang/gb.png" alt="English"></a>
+          <a href="./fr" ><img src="img/lang/fr.png" alt="Français"></a>
+  </div>
+
+  <div class="right">
+    <div class="top-menu-items" id="top-menu-items">
+
+    </div>
+
+    <div class="download">
+      <a href="http://dashboard.waziup.io" class="button button--red">
+        Essayer Waziup
+      </a>
+    </div>
+    
+    <a href="https://github.com/Waziup/platform" target="_blank" class="github-logo">
+      <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+    </a>
+
+    <div class="search-button">
+      <i class="fa fa-lg fa-search"></i>
+    </div>
+
+  </div>
+</nav>
+
+<ul id="mobile-menu" style="display: none">
+</ul>
+
+<div id="search">
+  <div class="search-bar">
+    <div class="search-bar__back">
+      <i class="fa fa-lg fa-times"></i>
+    </div>
+    <input class="search-bar__input" placeholder='Entrer votre recherche ici...'>
+  </div>
+  <div class="search-results">
+    <ul></ul>
+  </div>
+</div>
+
+
+</div>
+
+<div class="page documentation">
+    <div class="menu" id="side-menu">
+    </div>
+    <div class="content">
+      <h1 class="content-header">Gestion des bovins </h1>
+      <div class="markdowned">
+        
+
+<p><strong>Découvrez ici comment construire un collier pour suivre les bovins</strong></p>
+
+<p>Le vol de bétail est un phénomène récurrent causant de nombreux problèmes aux agriculteurs en Afrique.
+Afin de prévenir le broutage des bovins en Afrique, WAZIUP a proposé un prototype basé sur des avancées technologiques récentes, notamment LoRa.
+Ce prototype repose sur une plate-forme LoRa IoT à faible coût intégrée qui se compose d&rsquo;une seule passerelle low-cost (LoRa) avec des capacités de post-traitement, communiquant avec des terminaux low-cost (LoRa) et back-ended avec un IoT plate-forme cloud.</p>
+
+<h1 id="principe">Principe</h1>
+
+<p>Le prototype est basé sur le réseau LoRa avec une communication single hop où les bovins sont assimilés comme noeuds finaux qui envoient périodiquement des données à une passerelle LoRa.
+La passerelle envoie des informations relatives à la situation des vaches au fermier via la plateforme WAZIUP en nuage si la connectivité Internet est disponible, ou directement au smartphone ou à la tablette du fermier via WiFi ou Bluetooth autrement.
+Un collier conçu intégrant notre dispositif LoRa intégré est fixé autour du cou de la vache.
+Ce collier intègre un système de balise qui déclenchera une alarme dans le cas où un risque est observé.</p>
+
+<h2 id="collier-conçu">Collier conçu</h2>
+
+<p>L&rsquo;idée de collier peut ne pas être l&rsquo;innovation majeure dans la construction de ce prototype.
+Cependant, la grande majorité des colliers conçus pour la gestion des bovins ne correspondent pas bien à ce qui est attendu dans le contexte du broutage des bovins en Afrique.
+Cela est dû à plusieurs raisons, et le plus important est qu&rsquo;ils sont facilement amovibles et les voleurs peuvent couper le collier sans la sensibilisation des agriculteurs.
+Pour surmonter ce problème, nous concevons le collier de telle sorte que lorsqu&rsquo;il est coupé ou enlevé, l&rsquo;agriculteur sera informé.
+Nous avons d&rsquo;abord choisi une ceinture robuste et, plus important encore, nous avons passé le fil d&rsquo;alimentation du périphérique LoRa autour du cou avec la ceinture (Fig 2b).
+Un message de balise est envoyé à la passerelle lorsque le connecteur mâle (MC) et le connecteur femelle (FC) du câble d&rsquo;alimentation sont connectés.
+Lorsque la passerelle reçoit le message balise cela signifie que tout va bien avec le collier.</p>
+
+<p><img src="./documentation/mvps/cattle_images/collar.png" alt="collar" />
+<img src="./documentation/mvps/cattle_images/strap.png" alt="strap" /></p>
+
+<h2 id="système-de-balisage">Système de balisage</h2>
+
+<p>Un message de balise est envoyé par les périphériques finaux à la passerelle quand theye MC est connecté au FC.
+Le message de balise est un compteur BC (Beacon Counter) qui prend une valeur comprise entre 0 et 65536.
+Les étoiles BC à 0, augmente de 1 à chaque balise, retourne à 0 après 65536 balises.
+L&rsquo;appareil final est conçu pour envoyer, lorsqu&rsquo;il est sous tension, un message de balise toutes les 10 min.
+La passerelle LoRa stocke le message de balise reçu et le traite afin de détecter si une alarme doit être déclenchée ou non.
+Le résultat du traitement peut être envoyé au nuage WAZIUP si la connectivité Internet est disponible ou directement au smartphone ou à la tablette du fermier (via bluetooth ou wifi) sinon.
+La réception d&rsquo;un message balise signifie que le dispositif terminal qui l&rsquo;envoie est dans la plage de la passerelle.
+Si les vaches sont hors de portée, ou le collier est déconnecté ou endommagé, une alarme sera soulevée.</p>
+
+<p><img src="./documentation/mvps/cattle_images/moo.png" alt="Moo" /></p>
+
+<h2 id="déploiement">Déploiement</h2>
+
+<p>Les Prototypes sont déployés au CIMEL (Mbakhana, à 6 km de l&rsquo;UGB) au Sénégal.
+Une passerelle LoRa sera placée jusqu&rsquo;à l&rsquo;édifice de la bibliothèque UGB (hauteur de 90 mètres) et quelques colliers avec des périphériques LoRa mis en place autour du cou d&rsquo;un animal identifié.
+Un collier va envoyer activement et périodiquement des &ldquo;balises&rdquo; à la passerelle.</p>
+
+<h2 id="matériaux">Matériaux</h2>
+
+<ol>
+<li>Passerelle LoRa</li>
+</ol>
+
+<ul>
+<li>Raspberry PI (1B / 1B + / 2B / 3B)</li>
+<li>Module radio LoRa: Notre prototype est testé et peut fonctionner avec différents modules radio LoRa: Libelium SX1272 LoRa, le HopeRF RFM92W / 95W, le Modronix inAir9 / 9B et le NiceRF SX1276.</li>
+<li>Antenne: Longue antenne de l&rsquo;Antenne Scan fonctionnant sur 824-894 MHz</li>
+</ul>
+
+<p><img src="./documentation/mvps/cattle_images/antenna.png" alt="Antenna" /></p>
+
+<ol>
+<li>Dispositifs terminaux LoRa</li>
+<li>Arduino Nano ou Pro Mini: Pour réduire la taille du collier, les terminaux doivent être petits, alors nous devons utiliser de très petits microcontrôleurs comme arduino nano ou pro mini.</li>
+</ol>
+
+<p><img src="./documentation/mvps/cattle_images/nano.png" alt="Nano" />
+<img src="./documentation/mvps/cattle_images/pro_mini.png" alt="Pro Mini" /></p>
+
+<ul>
+<li>Module radio LoRa + antenne</li>
+</ul>
+
+<p>Notre prototype est testé et il peut fonctionner avec différents modules radio LoRa: Libelium SX1272 LoRa, le HopeRF RFM92W / 95W, le Modronix inAir9 / 9B et le NiceRF SX1276.
+Pour les terminaux, nous utilisons une petite antenne fonctionnant sur 868MHz.</p>
+
+<p><img src="./documentation/mvps/cattle_images/antennas.jpg" alt="Antennas" /></p>
+
+      </div>
+    </div>
+</div>
+
+<div class="lander-row lander-row--blue footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-3">
+        <h2 class="h2">Apprendre plus</h2>
+        <a href='fr/why-use-waziup/'>
+          <p class="text">Pourquoi utiliser Waziup?</p>
+        </a>
+        <a href='fr/documentation/how-waziup-works/'>
+          <p class="text">Documentation</p>
+        </a>
+        <a href='fr/about'>
+          <p class="text">A propos de nous</p>
+        </a>
+        <a href='fr/resources/news/'>
+          <p class="text">Nouveautées</p>
+        </a>
+        <a href='fr/contact'>
+          <p class="text">Contact</p>
+        </a>
+      </div>
+        <div class="col col-6">
+        <h2 class="h2">Tout code</h2>
+          <a href='fr/support'>
+            <p class="text">Support</p>
+          </a>
+          <a href='fr/resources/community'>
+            <p class="text">Communauté</p>
+          </a>
+          <a href="https://github.com/waziup/platform" target="_blank">
+            <p class="text">GitHub</p>
+          </a>
+      </div>
+      <div class="col col-6">
+        <h2 class="h2">Rester à jour</h2>
+        <p class="text">
+          Laisser votre email pour être notifier: We won’t spam you and won’t go off topic.
+        </p>
+
+        
+
+        <div class="social-buttons">
+          <p class="text">Nous suivre sur</p>
+          <a href="https://twitter.com/waziupIOT" target="_blank">
+            <i class="fa fa-2x fa-twitter"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/company/magnetic-io" target="_blank">
+            <i class="fa fa-2x fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer-bottom lander-row--blue">
+  <div class="container">
+    <div class="part">
+      <a href='fr/about'><img class="waziup-logo" src="./img/005-waziup/Logo/logo-waziup-white.svg" alt=""></a>
+    </div>
+
+    <div class="part">
+      <a href="./" class="button button--red" style="text-decoration:none">
+        English
+      </a>
+    </div>
+
+    <div class="part">
+      <p class="text">Code sous licence<a type="application/rss+xml" href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache 2</a> © 2016 <a href='fr/about'>Waziup.io</a></p>
+    </div>
+  </div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59948816-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+

@@ -1,6 +1,7 @@
 ---
 date: 2016-09-13T09:00:00+00:00
-title: Why use WAZIUP? 
+title: Why use WAZIUP?
+url: /why-use-waziup/
 ---
 
 WAZIUP is an IoT Cloud platform that allows you to create and deploy your IoT applications both in the Cloud and on the IoT gateway. WAZIUP offers "out-of-box" complete solutions from sensors nodes to applicatons. WAZIUP is particularly adapted to tough conditions, for example for low power and long distance applications. 

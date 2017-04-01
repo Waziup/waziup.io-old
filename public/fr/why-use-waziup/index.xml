@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Why use waziups on La plateforme Waziup</title>
+    <link>/fr/why-use-waziup/index.xml</link>
+    <description>Recent content in Why use waziups on La plateforme Waziup</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 22 Mar 2017 15:42:47 +0000</lastBuildDate>
+    <atom:link href="/fr/why-use-waziup/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Voir Waziup en action</title>
+      <link>/fr/why-use-waziup/see-waziup-in-action</link>
+      <pubDate>Wed, 22 Mar 2017 15:42:47 +0000</pubDate>
+      
+      <guid>/fr/why-use-waziup/see-waziup-in-action</guid>
+      <description>&lt;p&gt;Regardez la vidéo d&amp;rsquo;&lt;a href=&#34;./documentation/installation/&#34;&gt;installation de Waziup&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/peHkDhiH3lE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/YsKbJeeav_M&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Pourquoi utiliser WAZIUP?</title>
+      <link>/fr/why-use-waziup/</link>
+      <pubDate>Wed, 22 Mar 2017 15:42:24 +0000</pubDate>
+      
+      <guid>/fr/why-use-waziup/</guid>
+      <description>&lt;p&gt;WAZIUP est une plateforme IoT Cloud qui vous permet de créer et de déployer vos applications IoT tant dans le Cloud que sur la passerelle IoT. WAZIUP propose des solutions complètes «out-of-box», des nœuds de capteurs aux applications. WAZIUP est particulièrement adapté aux conditions difficiles, par exemple pour les applications basse consommation et longue distance.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Simple et facile à déployer les applications (créer, pousser et courir)&lt;/li&gt;
+&lt;li&gt;Offrez des nœuds de capteurs Do-Y-Yourself et des solutions Gateway (quelques heures pour configurer le réseau WAZIUP lORA)&lt;/li&gt;
+&lt;li&gt;Communication longue distance et basse consommation IoT&lt;/li&gt;
+&lt;li&gt;La plateforme peut gérer une connexion Internet peu fiable et intermittente&lt;/li&gt;
+&lt;li&gt;WAZIUP propose des solutions matérielles de très faible coût ainsi que des solutions de développement d&amp;rsquo;application&lt;/li&gt;
+&lt;li&gt;Plusieurs options de communication en cascade (3G, Wifi, BL)&lt;/li&gt;
+&lt;li&gt;Conception d&amp;rsquo;interface utilisateur (PME, appel vocal, application mobile et application Web)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Commencer</title>
+      <link>/fr/why-use-waziup/get-started</link>
+      <pubDate>Wed, 22 Mar 2017 15:42:12 +0000</pubDate>
+      
+      <guid>/fr/why-use-waziup/get-started</guid>
+      <description>
+
+&lt;h2 id=&#34;essayez-waziup&#34;&gt;Essayez Waziup&lt;/h2&gt;
+
+&lt;p&gt;Pour tirer le meilleur parti de votre expérience «mon premier Waziup», nous vous suggérons de &lt;a href=&#34;./documentation/installation/hello-world/&#34;&gt;Waziup Hello World app&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&#34;admonition note&#34;&gt;
+  &lt;p class=&#34;admonition-title&#34;&gt;Quoi de neuf?&lt;/p&gt;
+  &lt;p&gt;&lt;ul&gt;
+&lt;li&gt;Essayez&lt;a href=&#34;./documentation/installation/hello-world/&#34;&gt;Hello World app&lt;/a&gt; and &lt;a href=&#34;documentation/tutorials&#34;&gt;tutorials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lisez à propos de &lt;a href=&#34;./documentation/how-waziup-works/architecture&#34;&gt;Waziup architecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Découvrez &lt;a href=&#34;./documentation/installation/&#34;&gt;le doc d&amp;rsquo;installation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Liste des fonctionnalités</title>
+      <link>/fr/why-use-waziup/feature-list</link>
+      <pubDate>Wed, 22 Mar 2017 15:42:00 +0000</pubDate>
+      
+      <guid>/fr/why-use-waziup/feature-list</guid>
+      <description>&lt;p&gt;Waziup 0.1.0 comprend:&lt;/p&gt;
+
+&lt;p&gt;La plate-forme IoT Cloud de WAZIUP offre des fonctions et fonctionnalités IoT de pointe pour vos produits IoT&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Gestion des équipements&lt;/strong&gt;: Gérer des millions de périphériques IoT&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Informatique Edge&lt;/strong&gt;: IoT PaaS léger à la passerelle pour le calcul et l&amp;rsquo;application&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;IoT PaaS&lt;/strong&gt;: Offrez le développement d&amp;rsquo;applications git-push&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Visualisation&lt;/strong&gt;: Analyse et visualisation historiques en temps réel et avancé de l&amp;rsquo;information&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grande analyse de données&lt;/strong&gt;: Traitement de données et analyse en temps réel&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Gestion des utilisateurs&lt;/strong&gt;: Gérer l&amp;rsquo;authentification et les rôles de différents utilisateurs&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Confidentialité et sécurité&lt;/strong&gt;: Offre un contrôle d&amp;rsquo;accès aux données fondé sur des règles&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Cadre conteneur&lt;/strong&gt;: Développé entièrement basé sur le cadre conteneur&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Interface utilisateur&lt;/strong&gt;: Offre une interface utilisateur variée comme SMS, appel vocal, application mobile, application web&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&#34;admonition note&#34;&gt;
+  &lt;p class=&#34;admonition-title&#34;&gt;Quoi de neuf&lt;/p&gt;
+  &lt;p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/installation/hello-world/&#34;&gt;Essayer Waziup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./why-use-waziup/use-cases/&#34;&gt;Cas d&amp;rsquo;utilisations&lt;/a&gt;: Solutions Waziup aux problèmes pratiques&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./why-use-waziup/waziup-compared-to/&#34;&gt;Ce que Waziup offre comparé autres outils et services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/how-waziup-works/architecture/&#34;&gt;Comment fonctionne Waziup&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/fr/why-use-waziup/waziup-compared-to/frameworks-and-tools</link>
+      <pubDate>Wed, 22 Mar 2017 15:41:38 +0000</pubDate>
+      
+      <guid>/fr/why-use-waziup/waziup-compared-to/frameworks-and-tools</guid>
+      <description>
+
+&lt;h2 id=&#34;waziup-par-rapport-à&#34;&gt;Waziup par rapport à &amp;hellip;&lt;/h2&gt;
+
+&lt;div class=&#34;admonition note&#34;&gt;
+  &lt;p class=&#34;admonition-title&#34;&gt;What next?&lt;/p&gt;
+  &lt;p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/installation/hello-world&#34;&gt;Try Waziup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./why-use-wziup/use-cases/&#34;&gt;Use cases&lt;/a&gt; -  Quelques solutions Waziup aux problèmes pratiques
+*Trouver &lt;a href=&#34;./documentation/how-waziup-works/architecture-and-components&#34;&gt;how Waziup works&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cas d&#39;utilisation WAZIUP</title>
+      <link>/fr/why-use-waziup/use-cases/</link>
+      <pubDate>Tue, 21 Mar 2017 22:03:11 +0000</pubDate>
+      
+      <guid>/fr/why-use-waziup/use-cases/</guid>
+      <description>&lt;p&gt;WAZIUP plate-forme PaaS de pointe et support de framework logiciel pour développer 1000 applications IoT, hors de la boîte. Toute application IoT que vous pouvez imaginer. En raison de la nature PaaS WAZIUP IoT PaaS plate-forme vous permettent de développement d&amp;rsquo;applications IoT facile et rapide.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Agriculture:&lt;/strong&gt; Les applications de l&amp;rsquo;agriculture intelligente peuvent inclure la surveillance de l&amp;rsquo;humidité du sol, la surveillance continue des réservoirs d&amp;rsquo;eau et les conditions de terrain (conditions météorologiques/précipitations, humidité du sol, conductivité électrique, etc.) et les décisions d&amp;rsquo;agro-gestion (date de semis, Irrigation, fertilisation, labourage). Par exemple, les agriculteurs pourront surveiller la température des caisses à grains (entrepôts) et recevoir une alerte si la température s&amp;rsquo;élève en dehors d&amp;rsquo;une fourchette acceptable.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pisciculture:&lt;/strong&gt; La plateforme WAZIUP vous permet de connecter un réseau de capteurs pour surveiller les étangs en temps réel, mesurer la température de l&amp;rsquo;eau, la qualité, les niveaux d&amp;rsquo;oxygène et d&amp;rsquo;autres paramètres. Cela permettra d&amp;rsquo;améliorer le processus actuel de gestion des fermes en donnant aux agriculteurs la possibilité de surveiller leurs étangs à distance et d&amp;rsquo;une manière presque en temps réel.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Eau:&lt;/strong&gt; La plateforme WAZIUP vous permet de surveiller la quantité, l&amp;rsquo;approvisionnement, le traitement, le transport et le stockage de l&amp;rsquo;eau du bassin, la surveillance des inondations. Un système de gestion de l&amp;rsquo;eau fondé sur l&amp;rsquo;IoT pour les zones rurales et les pays en développement peut aider le représentant de la Communauté à surveiller et à gérer plus efficacement l&amp;rsquo;utilisation de l&amp;rsquo;eau.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Smart City:&lt;/strong&gt; WAZIUP soutient le développement de diverses applications intelligentes telles que la gestion des déchets urbains, les transports publics, la surveillance des feux de circulation, la surveillance du trafic, le stationnement intelligent, la gestion des eaux usées, la pollution de l&amp;rsquo;air urbain, le tourisme etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Entreprises bovines:&lt;/strong&gt; Le broutage des bovins est l&amp;rsquo;un des principaux problèmes dans les pays en développement. Plate-forme WAZIUP peut offrir aux agriculteurs de surveiller en temps réel la situation du bétail afin d&amp;rsquo;avoir une solution viable pour prévenir un vol. Le fermier recevra une alerte pour toute condition critique en particulier le vol.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Soins de santé:&lt;/strong&gt; WAZIUP permet la surveillance à distance des patients par exemple en temps réel la surveillance de la femme enceinte, le patient avec les diabétiques et l&amp;rsquo;hypertension artérielle, la vie ambiante assistée pour les personnes âgées, la nutrition de l&amp;rsquo;enfant et varie wearable applications pour les activités et Surveillance de la santé.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Logistique:&lt;/strong&gt; WAZIUP Le cas d&amp;rsquo;utilisation logistique peut relier les zones &amp;ldquo;rurales&amp;rdquo; (les biens) aux zones urbaines (les livraisons). La chaîne d&amp;rsquo;approvisionnement Veiller à ce que les marchandises (légumes, poissons) soient livrées de manière efficace, sûre et en temps opportun pour aborder la question de la salubrité des aliments. L&amp;rsquo;étude de cas potentielle consiste à suivre la flotte, à vérifier l&amp;rsquo;intégrité, l&amp;rsquo;identification et l&amp;rsquo;authentification et la traçabilité des marchandises, à surveiller la température et la condition de refroidissement des marchandises.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

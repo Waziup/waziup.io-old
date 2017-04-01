@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+
+
+
+
+ <html class="no-js" lang=""> 
+<head>
+<script type="text/javascript">
+theBaseUrl = "http://" + location.host + "/";
+document.write('<base href="' + theBaseUrl + '"/>');
+</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+  <title> - WAZIUP Platform</title>
+  <meta name="generator" content="Hugo 0.18.1" />
+
+  
+  <link rel="canonical" href="./documentation/tutorials/lora-gateway">
+  
+  <meta name="author" content="waziup.io">
+  
+
+  <meta property="og:url" content="/documentation/tutorials/lora-gateway">
+  <meta property="og:title" content="WAZIUP Platform">
+  <meta property="og:image" content="/images/logo-waziup.png">
+  <meta name="apple-mobile-web-app-title" content="WAZIUP Platform">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="shortcut icon" type="image/x-icon" href="./images/logo-waziup.png">
+  <link rel="icon" type="image/x-icon" href="./images/logo-waziup.png">
+
+
+  <style>
+    @font-face {
+      font-family: 'Icon';
+      format('embedded-opentype'),
+      format('woff'),
+      format('truetype'),
+      format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/vendor.js"></script>
+
+  <script src="js/app.js"></script>
+
+</head>
+<body class="palette-primary-pink palette-accent-pink">
+
+
+<div class="single-page">
+  <nav aria-label="Header" id="header" class="top-menu">
+  <div class="left">
+    <a href="#">
+      <div id="logo" class="logo"></div>
+    </a>
+  </div>
+
+  <div class="center">
+          <a href="./" ><img src="img/lang/gb.png" alt="English"></a>
+          <a href="./fr" ><img src="img/lang/fr.png" alt="Français"></a>
+  </div>
+
+  <div class="right">
+    <div class="top-menu-items" id="top-menu-items">
+
+    </div>
+
+    <div class="download">
+      <a href="http://dashboard.waziup.io" class="button button--red">
+        Try Waziup
+      </a>
+    </div>
+    
+    <a href="https://github.com/Waziup/platform" target="_blank" class="github-logo">
+      <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+    </a>
+
+    <div class="search-button">
+      <i class="fa fa-lg fa-search"></i>
+    </div>
+
+  </div>
+</nav>
+
+<ul id="mobile-menu" style="display: none">
+</ul>
+
+<div id="search">
+  <div class="search-bar">
+    <div class="search-bar__back">
+      <i class="fa fa-lg fa-times"></i>
+    </div>
+    <input class="search-bar__input" placeholder='Type your search here...'>
+  </div>
+  <div class="search-results">
+    <ul></ul>
+  </div>
+</div>
+
+
+</div>
+
+<div class="page documentation">
+    <div class="menu" id="side-menu">
+    </div>
+    <div class="content">
+      <h1 class="content-header"> </h1>
+      <div class="markdowned">
+        
+
+<h1 id="low-cost-lora-gateway-with-raspberry">Low-cost LoRa gateway with Raspberry</h1>
+
+<p>Please consult the web page: <a href="http://cpham.perso.univ-pau.fr/LORA/RPIgateway.html">http://cpham.perso.univ-pau.fr/LORA/RPIgateway.html</a></p>
+
+<p><strong>This is the description of the basic version of the low-cost gateway. There is an advanced version that will upgrade some files. Look at the <a href="https://github.com/CongducPham/LowCostLoRaGw/tree/master/gw_advanced">gw_advanced folder</a> and follow instructions.</strong> With the advanced version, you can then add new updates (such as new cloud management, downlink features, AES encryption and limited LoRaWAN features) in an incremental way if you want to do so. The update/upgrade steps are as follows: basic -&gt; gw_advanced -&gt; new cloud mngt -&gt; downlink -&gt; AES and LoRaWAN.</p>
+
+<ul>
+<li>basic version -&gt; gw_advanced: see <a href="https://github.com/CongducPham/LowCostLoRaGw/tree/master/gw_advanced">gw_advanced folder</a></li>
+<li>gw_advanced -&gt; new cloud management: see <a href="https://github.com/CongducPham/LowCostLoRaGw/blob/master/gw_advanced/new_cloud_design/README-NewCloud.md">README</a>; <a href="https://github.com/CongducPham/LowCostLoRaGw/blob/master/gw_advanced/new_cloud_design/README-NewCloud.md#how-to-update-your-gateway">How to update</a></li>
+<li>gw_advanced w/new cloud management -&gt; downlink features: see <a href="https://github.com/CongducPham/LowCostLoRaGw/blob/master/gw_advanced/downlink/README-downlink.md">README</a>; <a href="https://github.com/CongducPham/LowCostLoRaGw/blob/master/gw_advanced/downlink/README-downlink.md#how-to-update-your-gateway">How to update</a></li>
+<li>gw_advanced w/new cloud management or gw_advanced w/downlink -&gt; aes and LoRaWAN features: see <a href="https://github.com/CongducPham/LowCostLoRaGw/blob/master/gw_advanced/aes_lorawan/README-aes_lorawan.md">README</a>; <a href="https://github.com/CongducPham/LowCostLoRaGw/blob/master/gw_advanced/aes_lorawan/README-aes_lorawan.md#how-to-update-your-gateway">How to update</a></li>
+</ul>
+
+<h2 id="latest-gateway-version-recommended-for-new-users">Latest gateway version (recommended for new users)</h2>
+
+<p>The full, latest version of the low-cost gateway is available in the gw_full_latest folder. It only contains the gateway control and post-processing software. You may need to install required Raspbian Jessie packages as explained in the README file of the various updates.</p>
+
+<p>To get directly to the full, latest gateway version, (i) simply download (git clone) the whole repository and copy the entire content of the gw_full_latest folder on your Raspberry, in a folder named lora_gateway or (ii) get only (svn checkout) the gw_full_latest folder in a folder named lora_gateway. See the installation procedure described <a href="https://github.com/CongducPham/LowCostLoRaGw#install-the-low-level-lora-gateway">below</a> to adapt them to the the gw_full_latest folder.</p>
+
+<p>Then, in the script folder, run new_config_gw.sh to configure your gateway, as described <a href="https://github.com/CongducPham/LowCostLoRaGw/tree/master/gw_advanced#configure-your-gateway-with-config_gwsh">here</a>.</p>
+
+<p>By default both local_conf.json and global_conf.json configure the gateway with a simple behavior: LoRa mode 1 (BW125SF12), no DHT sensor in gateway (so no MongoDB for DHT sensor), no downlink, no AES, no raw mode. clouds.json enables only the ThingSpeak demo channel (even the local MongiDB storage is disabled). You can customize your gateway later when you have more cloud accounts and when you know better what features you want to enable.</p>
+
+<h1 id="new"><strong>NEW</strong></h1>
+
+<ul>
+<li>new encryption and native LoRaWAN frame format
+
+<ul>
+<li><strong>needs at least the new cloud management version</strong> and the latest <a href="https://github.com/CongducPham/LowCostLoRaGw/blob/master/gw_advanced/downlink/lora_gateway.cpp">lora_gateway.cpp</a></li>
+<li>see <a href="https://github.com/CongducPham/LowCostLoRaGw/blob/master/gw_advanced/aes_lorawan/README-aes_lorawan.md">README</a></li>
+<li>end-device can send native LoRaWAN packets</li>
+<li>low-level gateway provides raw output for post_processing_gw.py to handle LoRaWAN packets</li>
+</ul></li>
+<li>new Arduino code for gateway and interactive end-device
+
+<ul>
+<li>code for gateway and interactive end-device are now separated in 2 sketches</li>
+<li>the old version is still in folder Arduino_LoRa_Gateway_1_4 and will not be maintained anymore. It will stay at v1.4</li>
+<li>Arduino_LoRa_Gateway now contains the gateway code. It is equivalent, in previous version v1.4, to compilation with IS_RCV_GATEWAY.</li>
+<li>Arduino_LoRa_InteractiveDevice contains the code for an interactive end-device.  It is equivalent, in previous version v1.4, to compilation with IS_SEND_GATEWAY</li>
+</ul></li>
+<li>new cloud management approach: simpler, more generic
+
+<ul>
+<li><a href="https://github.com/CongducPham/LowCostLoRaGw/tree/master/gw_advanced/new_cloud_design">https://github.com/CongducPham/LowCostLoRaGw/tree/master/gw_advanced/new_cloud_design</a></li>
+<li><a href="https://github.com/CongducPham/LowCostLoRaGw/blob/master/gw_advanced/new_cloud_design/README-NewCloud.md">README</a></li>
+</ul></li>
+<li>new downlink features: to send from gateway to end-device
+
+<ul>
+<li><a href="https://github.com/CongducPham/LowCostLoRaGw/tree/master/gw_advanced/downlink">https://github.com/CongducPham/LowCostLoRaGw/tree/master/gw_advanced/downlink</a></li>
+<li><a href="https://github.com/CongducPham/LowCostLoRaGw/blob/master/gw_advanced/downlink/README-downlink.md">README</a></li>
+</ul></li>
+<li>get the zipped SD card image (Raspbian Jessie) with all the advanced features (have to update for new cloud management and downlink) already installed and working out-of-the-box with the Arduino_LoRa_Simple_temp example on a demo ThingSpeak channel.
+
+<ul>
+<li><a href="http://cpham.perso.univ-pau.fr/LORA/WAZIUP/raspberrypi-jessie-WAZIUP-demo.dmg.zip">raspberrypi-jessie-WAZIUP-demo.dmg.zip</a></li>
+<li>Based on Raspbian Jessie</li>
+<li>Supports Raspberry 1B+, RPI2 and RPI3</li>
+<li>Includes all the advanced features described in the gw_advanced github</li>
+<li>Get the zipped image, unzip it, install it on an 8GB SD card, see <a href="https://www.raspberrypi.org/documentation/installation/installing-images/">this tutorial</a> from www.raspberrypi.org</li>
+<li>Plug the SD card into your Raspberry</li>
+<li>Connect a radio module (see <a href="http://cpham.perso.univ-pau.fr/LORA/RPIgateway.html">http://cpham.perso.univ-pau.fr/LORA/RPIgateway.html</a>)</li>
+<li>Power-on the Raspberry</li>
+<li>The LoRa gateway starts automatically when RPI is powered on</li>
+<li>By default, incoming data are uploaded to the <a href="https://thingspeak.com/channels/123986">WAZIUP ThingSpeak demo channel</a></li>
+<li>Works out-of-the-box with the <a href="https://github.com/CongducPham/LowCostLoRaGw/tree/master/Arduino/Arduino_LoRa_Simple_temp">Arduino_LoRa_Simple_temp sketch</a></li>
+</ul></li>
+<li>2 tutorial videos on YouTube: video of all the steps to build the whole framework from scratch
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=YsKbJeeav_M">Build your low-cost, long-range IoT device with WAZIUP</a></li>
+<li><a href="https://www.youtube.com/watch?v=peHkDhiH3lE">Build your low-cost LoRa gateway with WAZIUP</a></li>
+</ul></li>
+</ul>
+
+<h1 id="install-raspbian-wheezy-or-jessie">Install Raspbian Wheezy or Jessie</h1>
+
+<p>Fisrt install a Raspberry with Raspbian, Jessie is recommended.</p>
+
+<p>then (you need to have Internet access on your Raspberry):</p>
+
+<pre><code>&gt; sudo apt-get update
+&gt; sudo apt-get upgrade
+</code></pre>
+
+<p>Jessie has been tested on RPI1, RPI2 and RPI3, and works great.</p>
+
+<p>Wheezy has been tested on RPI1 and RPI2 and works great. Wheezy on RPI3 is not recommended because built-in WiFi and Bluetooth will not work properly.</p>
+
+<p>We recommend buying either RPI2 or RPI3. RPI3 with Jessie has built-in WiFi and Bluetooth so it is definitely a good choice. In addition RPI3 with Jessie will have a better support lifetime.</p>
+
+<h1 id="connect-a-radio-module-to-raspberry">Connect a radio module to Raspberry</h1>
+
+<p>You have to connect a LoRa radio module to the Raspberry&rsquo;s GPIO header. Just connect the corresponding SPI pin (MOSI, MISO, CLK, CS). Of course you also need to provide the power (3.3v) to the radio module. You can have a look at the &ldquo;Low-cost-LoRa-GW-step-by-step&rdquo; tutorial in our tutorial repository (<a href="https://github.com/CongducPham/tutorials">https://github.com/CongducPham/tutorials</a>).</p>
+
+<h1 id="install-the-low-level-lora-gateway">Install the low-level LoRa gateway</h1>
+
+<p>Log as <strong>pi</strong> user on your Raspberry using ssh or connect a display and a keyboard. To get all the low-level LoRa gateway files you have 2 options.</p>
+
+<h2 id="first-option">First option</h2>
+
+<p>Get all the repository:</p>
+
+<pre><code>&gt; git clone https://github.com/CongducPham/LowCostLoRaGw.git
+</code></pre>
+
+<p>You will get the entire repository:</p>
+
+<pre><code>pi@raspberrypi:~ $ ls -l LowCostLoRaGw/
+total 32
+drwxr-xr-x 7 pi pi  4096 Jul 26 15:38 Arduino
+drwxr-xr-x 5 pi pi  4096 Jul 26 15:38 gw_advanced
+drwxr-xr-x 2 pi pi  4096 Jul 26 15:38 Raspberry
+-rw-r--r-- 1 pi pi 15522 Jul 26 15:38 README.md
+drwxr-xr-x 2 pi pi  4096 Jul 26 15:38 tutorials
+</code></pre>
+
+<p>Create a folder named &ldquo;lora_gateway&rdquo; for instance then copy all the files of the LowCostLoRaGw/Raspberry folder in it.</p>
+
+<pre><code>&gt; mkdir lora_gateway
+&gt; cd lora_gateway
+&gt; cp -R ../LowCostLoRaGw/Raspberry/* .
+</code></pre>
+
+<p>Or if you want to &ldquo;move&rdquo; the LowCostLoRaGw/Raspberry folder, simply do (without creating the lora_gateway folder before):</p>
+
+<pre><code>&gt; mv LowCostLoRaGw/Raspberry ./lora_gateway    
+</code></pre>
+
+<h2 id="second-option">Second option</h2>
+
+<p>Get only the gateway part:</p>
+
+<pre><code>&gt; svn checkout https://github.com/CongducPham/LowCostLoRaGw/trunk/Raspberry lora_gateway
+</code></pre>
+
+<p>That will create the lora_gateway folder and get all the file of (GitHub) LowCostLoRaGw/Raspberry in it. Then:</p>
+
+<pre><code>&gt; cd lora_gateway
+</code></pre>
+
+<p>Note that you may have to install svn before being able to use the svn command:</p>
+
+<pre><code>&gt; sudo apt-get install subversion
+</code></pre>
+
+<h2 id="compiling-the-low-level-gateway-program">Compiling the low-level gateway program</h2>
+
+<p>DO NOT modify the lora_gateway.cpp file unless you know what you are doing. Check the radio.makefile file to indicate whether your radio module uses the PA_BOOST amplifier line or not (which means it uses the RFO line). HopeRF RFM92W/95W or inAir9B or NiceRF1276 or a radio module with +20dBm possibility (the SX1272/76 has +20dBm feature but some radio modules that integrate the SX1272/76 may not have the electronic to support it) need the -DPABOOST. Both Libelium SX1272 and inAir9 (not inAir9B) do not use PA_BOOST. You can also define a maximum output power to stay within transmission power regulations of your country. For instance, if you do not define anything, then the output power is set to 14dBm (ETSI european regulations), otherwise use -DMAX_DBM=10 for 10dBm. Then:</p>
+
+<pre><code>&gt; make lora_gateway
+</code></pre>
+
+<p>If you are using a Raspberry v2 or v3 :</p>
+
+<pre><code>&gt; make lora_gateway_pi2
+</code></pre>
+
+<p>To launch the gateway</p>
+
+<pre><code>&gt; sudo ./lora_gateway
+</code></pre>
+
+<p>On Raspberry v2 or v3 a symbolic link will be created that will point to lora_gateway_pi2.</p>
+
+<p>By default, the gateway runs in LoRa mode 1 and has address 1.</p>
+
+<p>You can have a look at the &ldquo;Low-cost-LoRa-GW-step-by-step&rdquo; tutorial in our tutorial repository (<a href="https://github.com/CongducPham/tutorials">https://github.com/CongducPham/tutorials</a>).</p>
+
+<h1 id="adding-lora-gateway-s-post-processing-features">Adding LoRa gateway&rsquo;s post-processing features</h1>
+
+<p>A data post-processing stage in added after the low-level LoRa gateway program. The post_processing_gw.py script can be customized to process sensor raw data from the low-level LoRa gateway. A typical processing task is to push received data to Internet servers or dedicated (public or private) IoT clouds. post_processing_gw.py is a template that already implement data uploading to various public IoT clouds.</p>
+
+<p>For instance, to push data to the provided ThingSpeak WAZIUP test channel</p>
+
+<pre><code>&gt; sudo ./lora_gateway | python ./post_processing_gw.py -t
+</code></pre>
+
+<p>To log processing output in a file (in ~/Dropbox/LoRa-test/post_processing.log)</p>
+
+<pre><code>&gt; sudo ./lora_gateway | python ./post_processing_gw.py -t | python ./log_gw
+</code></pre>
+
+<p><strong>Note that if you want to run and test the above command now</strong>, you have to create a &ldquo;Dropbox&rdquo; folder in your home directory with a subforder &ldquo;LoRa-test&rdquo; that will be used locally. Please put attention to the name of the folders: they must be &ldquo;Dropbox/LoRa-test&rdquo; because the &ldquo;post_processing_gw.py&rdquo; Python script uses these paths. You can mount Dropbox later on if you want: the local folders and contents will be unchanged. <strong>Otherwise, just run the config_raspbian.sh configurarion script as it will be described later on (recommended)</strong>.</p>
+
+<pre><code>&gt; mkdir -p Dropbox/LoRa-test    
+</code></pre>
+
+<p>To additionally enforce application key at the gateway post-processing stage</p>
+
+<pre><code>&gt; sudo ./lora_gateway | python ./post_processing_gw.py -t --wappkey | python ./log_gw
+</code></pre>
+
+<p>This is the command that we recommend. To test, just flash a temperature sensor and it should work out-of-the-box.</p>
+
+<p>You can customize the post-processing stage (post_processing_gw.py) at your convenience later.</p>
+
+<p>You can have a look at the &ldquo;Low-cost-LoRa-GW-step-by-step&rdquo; tutorial in our tutorial repository (<a href="https://github.com/CongducPham/tutorials">https://github.com/CongducPham/tutorials</a>).</p>
+
+<h1 id="connect-a-radio-module-to-your-end-device">Connect a radio module to your end-device</h1>
+
+<p>To have an end-device, you have to connect a LoRa radio module to an Arduino board. Just connect the corresponding SPI pin (MOSI, MISO, CLK, CS). Of course you also need to provide the power (3.3v) to the radio module. You can have a look at the &ldquo;Low-cost-LoRa-IoT-step-by-step&rdquo; tutorial in the tutorial repository (<a href="https://github.com/CongducPham/tutorials">https://github.com/CongducPham/tutorials</a>).</p>
+
+<p>There is an important issue regarding the radio modules. The Semtech SX1272/76 has actually 2 lines of RF power amplification (PA): a high efficiency PA up to 14dBm (RFO) and a high power PA up to 20dBm (PA_BOOST). Setting transmission power to &ldquo;L&rdquo; (Low), &ldquo;H&rdquo; (High), and &ldquo;M&rdquo; (Max) only uses the RFO and delivers 2dBm, 6dBm and 14dBm respectively. &ldquo;x&rdquo; (extreme) and &ldquo;X&rdquo; (eXtreme) use the PA_BOOST and deliver 14dBm and 20dBm respectively.
+However even if the SX1272/76 chip has the PA_BOOST and the 20dBm features, not all radio modules (integrating these SX1272/76) do have the appropriate wiring and circuits to enable these features: it depends on the choice of the reference design that itself is guided by the main intended frequency band usage, and sometimes also by the target country&rsquo;s regulations (such as maximum transmitted power). So you have to check with the datasheet whether your radio module has PA_BOOST (usually check whether the PA_BOOST pin is wired) and 20dBm capability before using &ldquo;x&rdquo; or &ldquo;X&rdquo;. Some other radio modules only wire the PA_BOOST and not the RFO resulting in very bad range when trying to use the RFO mode (&ldquo;L&rdquo;, &ldquo;H&rdquo;, and &ldquo;M&rdquo;). In this case, one has to use &ldquo;x&rdquo; to indicate PA_BOOST usage to get 14dBm.</p>
+
+<p>Practically, we only use either &ldquo;M&rdquo; (Max) or &ldquo;x&rdquo; (extreme) to have maximum range. They both deliver 14dBm but the difference is whether the RFO pin is used or the PA_BOOST. Therefore, when uploading a sketch on your board, you have to check whether your radio module needs the PA_BOOST in order to get significant output level in which case &ldquo;x&rdquo; should be used instead of &ldquo;M&rdquo;. All the examples start with:</p>
+
+<pre><code>// IMPORTANT
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// uncomment if your radio is an HopeRF RFM92W, HopeRF RFM95W, Modtronix inAir9B, NiceRF1276
+// or you known from the circuit diagram that output use the PABOOST line instead of the RFO line
+//#define PABOOST
+///////////////////////////////////////////////////////////////////////////////////////////////////////////  
+</code></pre>
+
+<p>Uncomment PABOOST if you have a HopeRF RFM92W or RFM95W, or a Modtronix inAir9B (if inAir9, leave commented) or a NiceRF1276. If you have another non listed radio module, try first by leaving PABOOST commented, then see whether the packet reception is correct with a reasonably high SNR (such as 6 to 10 dB) at some meters of the gateway. If not, then try with PABOOST uncommented.</p>
+
+<h1 id="first-try-a-simple-ping-pong-program-example">First try: a simple Ping-Pong program example</h1>
+
+<p>As suggested by some people, we provide here a simple Ping-Pong program to upload on an Arduino board. First, install the Arduino IDE 1.6.6. Check that the AVR board library is not above 1.6.9 as there might be some compilation issue otherwise. Then, in your sketch folder, copy the content of the Arduino folder of the distribution.</p>
+
+<p>Run the gateway with:</p>
+
+<pre><code>&gt; sudo ./lora_gateway
+</code></pre>
+
+<p>With the Arduino IDE, open the Arduino_LoRa_Ping_Pong sketch compile it and upload to an Arduino board. Check your radio module first, see &ldquo;Connect a radio module to your end-device&rdquo; above.</p>
+
+<p>The end-device runs in LoRa mode 1 and has address 8. Open the Serial Monitor (38400 bauds) to see the output of the Arduino. It will send &ldquo;Ping&rdquo; to the gateway by requesting an ACK every 10s. If the ACK is received then it will display &ldquo;Pong received from gateway!&rdquo; otherwise it displays &ldquo;No Pong!&rdquo;.</p>
+
+<p>Note that in most operational scenarios, requesting ACK from the gateway is costly. Look at the next examples to see how we usually send data without requesting ACK.</p>
+
+<p><strong>Notice for low-cost/clone Arduino boards</strong>. If you get a low-cost Arduino board, such as those sold by most of Chinese manufacturer, the USB connectivity is probably based on the CH340 or CH341. To make your low-cost Arduino visible to your Arduino IDE, you need the specific driver. Look at <a href="http://sparks.gogo.co.nz/ch340.html">http://sparks.gogo.co.nz/ch340.html</a> or <a href="http://www.microcontrols.org/arduino-uno-clone-ch340-ch341-chipset-usb-drivers/">http://www.microcontrols.org/arduino-uno-clone-ch340-ch341-chipset-usb-drivers/</a>. For MacOS, you can look at <a href="http://www.mblock.cc/posts/run-makeblock-ch340-ch341-on-mac-os-sierra">http://www.mblock.cc/posts/run-makeblock-ch340-ch341-on-mac-os-sierra</a> which works for MacOS up to Sierra. For MacOS user that have the previous version of CH34x drivers and encountering kernel panic with Sierra, don&rsquo;t forget to delete previous driver installation: &ldquo;sudo rm -rf /System/Library/Extensions/usb.kext&rdquo;.</p>
+
+<h1 id="a-simple-end-device-example-that-periodically-sends-temperature-to-the-gateway">A simple end-device example that periodically sends temperature to the gateway</h1>
+
+<p>See the <a href="https://www.youtube.com/watch?v=YsKbJeeav_M">video here</a>.</p>
+
+<p>First, install the Arduino IDE 1.6.6. Check that the AVR board library is not above 1.6.9 as there might be some compilation issue otherwise. Then, in your sketch folder, copy the content of the Arduino folder of the distribution.</p>
+
+<p>With the Arduino IDE, open the Arduino_LoRa_Simple_temp sketch, compile it and upload to an Arduino board. Check your radio module first, see &ldquo;Connect a radio module to your end-device&rdquo; above.</p>
+
+<p>The end-device runs in LoRa mode 1 and has address 8. It will send data to the gateway.</p>
+
+<p>The default configuration uses an application key filter set to [5, 6, 7, 8].</p>
+
+<p>Use a temperature sensor (e.g. LM35DZ) and plugged in pin A0 (analog 0). You can use a power pin to power your temperature sensor if you are not concerned about power saving. Otherwise, you can use digital 8 (the sketch set this pin HIGH when reading value, then sets it back to LOW) and activate low power mode (uncomment #define LOW_POWER), see below.</p>
+
+<p>For low-power applications the Pro Mini from Sparkfun is certainly a good choice. This board can be either in the 5V or 3.3V version. With the Pro Mini, it is better to really use the 3.3V version running at 8MHz as power consumption will be reduced. Power for the radio module can be obtained from the VCC pin which is powered in 3.3v when USB power is used or when unregulated power is connected to the RAW pin. If you power your Pro Mini with the RAW pin you can use for instance 4 AA batteries to get 6V. If you use a rechargeable battery you can easily find 3.7V Li-Ion packs. In this case, you can inject directly into the VCC pin but make sure that you&rsquo;ve unsoldered the power isolation jumper, see Pro Mini schematic on the Arduino web page. To save more power, you can remove the power led.</p>
+
+<p>The current low-power version for Arduino board use the RocketScream Low Power library (<a href="https://github.com/rocketscream/Low-Power">https://github.com/rocketscream/Low-Power</a>) and can support most Arduino platforms although the Pro Mini platform will probably exhibit the best energy saving (we measured 124uA current in sleep mode with the power led removed). You can buid the low-power version by uncommenting the LOW_POWER compilation define statement. Then set &ldquo;int idlePeriodInMin = 10;&rdquo; to the number of minutes between 2 wake-up. By default it is 10 minutes.</p>
+
+<p>For the special case of Teensy <sup>31</sup>&frasl;<sub>32</sub>, the power saving mode uses the Snooze library provided by the Teensyduino package. You can upgrade the Snooze library from their github. With the Teensy, you can further use the HIBERNATE mode by uncommenting &ldquo;USE_HIBERNATE&rdquo; in the Snooze.h file of the Snooze libary and uncommenting LOW_POWER_HIBERNATE in the temperature example.</p>
+
+<p>For the special of the Arduino Zero, waking up the board from deep sleep mode is done with the RTC. Therefore the RTCZero library from <a href="https://github.com/arduino-libraries/RTCZero">https://github.com/arduino-libraries/RTCZero</a> is used and you need to install it before being able to compile the example for the Arduino Zero.</p>
+
+<p>Depending on the sensor type, the computation to get the real temperature may be changed accordingly. Here is the instruction for the LM35DZ: <a href="http://www.instructables.com/id/ARDUINO-TEMPERATURE-SENSOR-LM35/">http://www.instructables.com/id/ARDUINO-TEMPERATURE-SENSOR-LM35/</a></p>
+
+<p>The default configuration also use the EEPROM to store the last packet sequence number in order to get it back when the sensor is restarted/rebooted. If you want to restart with a packet sequence number of 0, just comment the line &ldquo;#define WITH_EEPROM&rdquo;</p>
+
+<p>Once flashed, the Arduino temperature sensor will send to the gateway the following message !#3#20.4 (20.4 is the measured temperature so you may not have the same value) prefixed by the application key every 10 minutes (with some randomization interval). This will trigger at the processing stage of the gateway the logging on the default ThinkSpeak channel (the test channel we provide) in field 3. At the gateway, 20.4 will be recorded on the provided ThingSpeak test channel in field 3 of the channel. If you go to <a href="https://thingspeak.com/channels/66794">https://thingspeak.com/channels/66794</a> you should see the reported value.</p>
+
+<p>The program has been tested on Arduino Uno, Mega2560, Nano, Pro Mini, Mini, Due, Zero.  We also tested on the Teensy3.<sup>1</sup>&frasl;<sub>3</sub>.2 and the Ideetron Nexus. The SX1272 lib has been modified to change the SPI_SS pin from 2 to 10 when you compile for the Pro Mini, Mini (Nexus), Nano or Teensy.</p>
+
+<p><strong>Notice for low-cost/clone Arduino boards</strong>. If you get a low-cost Arduino board, such as those sold by most of Chinese manufacturer, the USB connectivity is probably based on the CH340 or CH341. To make your low-cost Arduino visible to your Arduino IDE, you need the specific driver. Look at <a href="http://sparks.gogo.co.nz/ch340.html">http://sparks.gogo.co.nz/ch340.html</a> or <a href="http://www.microcontrols.org/arduino-uno-clone-ch340-ch341-chipset-usb-drivers/">http://www.microcontrols.org/arduino-uno-clone-ch340-ch341-chipset-usb-drivers/</a>. For MacOS, you can look at <a href="http://www.mblock.cc/posts/run-makeblock-ch340-ch341-on-mac-os-sierra">http://www.mblock.cc/posts/run-makeblock-ch340-ch341-on-mac-os-sierra</a> which works for MacOS up to Sierra. For MacOS user that have the previous version of CH34x drivers and encountering kernel panic with Sierra, don&rsquo;t forget to delete previous driver installation: &ldquo;sudo rm -rf /System/Library/Extensions/usb.kext&rdquo;.</p>
+
+<h1 id="an-interactive-end-device-for-sending-lora-messages-with-the-arduino-ide">An interactive end-device for sending LoRa messages with the Arduino IDE</h1>
+
+<p>With the Arduino IDE, open the Arduino_LoRa_InteractiveDevice sketch. Then compile it and upload to an Arduino board. It is better to use a more powerful Arduino platform for building the interactive device otherwise stability issues can occur (and especially with more RAM memory such as a MEGA, the Uno, ATMega328P, will be very unstable because of the small amount of memory).</p>
+
+<p>By default, the interactive end-device has address 6 and runs in LoRa mode 1.</p>
+
+<p>Enter &ldquo;!SGSH52UGPVAUYG3S#1#21.6&rdquo; (without the quotes) in the input window and press RETURN</p>
+
+<p>The command will be sent to the gateway and you should see the gateway pushing the data to the ThingSpeak test channel. If you go to <a href="https://thingspeak.com/channels/66794">https://thingspeak.com/channels/66794</a> you should see the reported value.</p>
+
+<p>When testing with the interactive end-device, you should not use the &ndash;wappkey option for the post_processing_gw.py post-processing python script otherwise your command will not be accepted as only text string without logging services will be received and displayed when &ndash;wappkey is set.</p>
+
+<pre><code>&gt; sudo ./lora_gateway | python ./post_processing_gw.py -t | python ./log_gw
+</code></pre>
+
+<h1 id="use-an-arduino-as-a-lora-gateway">Use an Arduino as a LoRa gateway</h1>
+
+<p>The gateway can also be based on an Arduino board, as described in the web page. With the Arduino IDE, open the Arduino_LoRa_Gateway sketch, compile the code and upload to an Arduino board. Then follow instructions on how to use the Arduino board as a gateway. It is better to use a more powerful (and with more RAM memory such as the MEGA) Arduino platform for building the gateway.</p>
+
+<h1 id="running-in-433mhz-band">Running in 433MHz band</h1>
+
+<p>When your radio module can run in the 433MHz band (for instance when the radio is based on SX1276 or SX1278 chip, such as the inAir4 from Modtronics) then you can test running at 433MHz as follows:</p>
+
+<ul>
+<li>select line &ldquo;#define BAND433&rdquo; in Arduino_LoRa_temp or Arduino_LoRa_Simple_temp</li>
+<li>compile the lora_gateway.cpp with &ldquo;#define BAND433&rdquo;</li>
+<li>or simply run your gateway with &ldquo;lora_gateway &ndash;mode 1 &ndash;freq 433.0&rdquo; to be on the same setting for Arduino_LoRa_temp and Arduino_LoRa_Simple_temp</li>
+<li>there are 4 channels in the 433MHz band: 433.3MHz as CH_00_433, 433.6MHz as CH_01_433, 433.9MHz as CH_02_433 and 434.3MHz as CH_03_433</li>
+</ul>
+
+<h1 id="mounting-your-dropbox-folder">Mounting your Dropbox folder</h1>
+
+<p>With sshfs:</p>
+
+<ul>
+<li><p>look at <a href="http://mitchtech.net/dropbox-on-raspberry-pi-via-sshfs/">http://mitchtech.net/dropbox-on-raspberry-pi-via-sshfs/</a>. No need of &ldquo;sudo gpasswd -a pi fuse&rdquo; on Jessie.</p>
+
+<blockquote>
+<p>sudo apt-get install sshfs</p>
+</blockquote></li>
+
+<li><p>then allow option &lsquo;user_allow_other&rsquo; in /etc/fuse.conf</p></li>
+</ul>
+
+<p>with Dropbox uploader:</p>
+
+<ul>
+<li>look at <a href="http://anderson69s.com/2014/02/18/raspberry-pi-dropbox/">http://anderson69s.com/2014/02/18/raspberry-pi-dropbox/</a></li>
+<li>look at <a href="http://raspi.tv/2013/how-to-use-dropbox-with-raspberry-pi">http://raspi.tv/2013/how-to-use-dropbox-with-raspberry-pi</a></li>
+<li>look at <a href="https://github.com/andreafabrizi/Dropbox-Uploader">https://github.com/andreafabrizi/Dropbox-Uploader</a></li>
+<li>but not tested yet and not supported yet<br /></li>
+</ul>
+
+<h1 id="annex-a">ANNEX.A</h1>
+
+<p>Pre-defined LoRa modes (from initial Libelium SX1272.h)</p>
+
+<table>
+<thead>
+<tr>
+<th>mode</th>
+<th>BW</th>
+<th>SF</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>125</td>
+<td>12</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>250</td>
+<td>12</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>125</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>500</td>
+<td>12</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>250</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>500</td>
+<td>11</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>250</td>
+<td>9</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>500</td>
+<td>9</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>500</td>
+<td>7</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>500</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+
+<p>Pre-defined channels in 868MHz, 915MHz and 433MHz band (most of them from initial Libelium SX1272.h, except those marked with *)</p>
+
+<table>
+<thead>
+<tr>
+<th>ch</th>
+<th>F(MHz)</th>
+<th>ch</th>
+<th>F(MHz)</th>
+<th>ch</th>
+<th>F(MHz)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>04</td>
+<td>863.2*</td>
+<td>00</td>
+<td>903.08</td>
+<td>00</td>
+<td>433.3*</td>
+</tr>
+
+<tr>
+<td>05</td>
+<td>863.5*</td>
+<td>01</td>
+<td>905.24</td>
+<td>01</td>
+<td>433.6*</td>
+</tr>
+
+<tr>
+<td>06</td>
+<td>863.8*</td>
+<td>02</td>
+<td>907.40</td>
+<td>02</td>
+<td>433.9*</td>
+</tr>
+
+<tr>
+<td>07</td>
+<td>864.1*</td>
+<td>03</td>
+<td>909.56</td>
+<td>03</td>
+<td>434.3*</td>
+</tr>
+
+<tr>
+<td>08</td>
+<td>864.4*</td>
+<td>04</td>
+<td>911.72</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>09</td>
+<td>864.7*</td>
+<td>05</td>
+<td>913.88</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>865.2</td>
+<td>06</td>
+<td>916.04</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>865.5</td>
+<td>07</td>
+<td>918.20</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>865.8</td>
+<td>08</td>
+<td>920.36</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>866.1</td>
+<td>09</td>
+<td>922.52</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>866.4</td>
+<td>10</td>
+<td>924.68</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>15</td>
+<td>867.7</td>
+<td>11</td>
+<td>926.84</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>16</td>
+<td>867.0</td>
+<td>12</td>
+<td>915.00</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>17</td>
+<td>868.0</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>18</td>
+<td>868.1*</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="warning">WARNING</h1>
+
+<ul>
+<li><p>There is currently no control on the transmit time for both gateway and end-device. When using the library to create devices, you have to ensure that the transmit time of your device is not exceeding the legal maximum transmit time defined in the regulation of your country (for instance ETSI define 1% duty-cycle, i.e. 36s/hour).</p></li>
+
+<li><p>Although 900MHz band is supported (mostly for the US ISM band), the library does not implement the frequency hopping mechanism nor the limited dwell time (e.g. 400ms per transmission).</p></li>
+</ul>
+
+<h1 id="tutorial-materials">Tutorial materials</h1>
+
+<p>Go to <a href="https://github.com/CongducPham/tutorials">https://github.com/CongducPham/tutorials</a> and look for the &ldquo;Low-cost-LoRa-GW-step-by-step&rdquo; tutorial.</p>
+
+<p>Look at our <a href="https://github.com/CongducPham/tutorials/blob/master/FAQ.pdf">FAQ</a>!</p>
+
+<h1 id="get-the-advanced-version-of-the-gateway-with-many-additional-features">Get the advanced version of the gateway with many additional features</h1>
+
+<p>Look at the <a href="https://github.com/CongducPham/LowCostLoRaGw/tree/master/gw_advanced">gw_advanced folder</a> and follow instructions.</p>
+
+      </div>
+    </div>
+</div>
+
+<div class="lander-row lander-row--blue footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-3">
+        <h2 class="h2">Learn More</h2>
+        <a href='./why-use-waziup/'>
+          <p class="text">Why use Waziup?</p>
+        </a>
+        <a href='./documentation/how-waziup-works/'>
+          <p class="text">Documentation</p>
+        </a>
+        <a href='./about'>
+          <p class="text">About us</p>
+        </a>
+        <a href='./resources/news/'>
+          <p class="text">News</p>
+        </a>
+        <a href='./contact'>
+          <p class="text">Contact</p>
+        </a>
+      </div>
+        <div class="col col-6">
+        <h2 class="h2">All things code</h2>
+          <a href='./support'>
+            <p class="text">Support</p>
+          </a>
+          <a href='./resources/community'>
+            <p class="text">Community</p>
+          </a>
+          <a href="https://github.com/waziup/platform" target="_blank">
+            <p class="text">GitHub</p>
+          </a>
+      </div>
+      <div class="col col-6">
+        <h2 class="h2">Stay up to date</h2>
+        <p class="text">
+          Leave your email for the latest news: We won’t spam you and won’t go off topic.
+        </p>
+
+        
+
+        <div class="social-buttons">
+          <p class="text">Follow us on</p>
+          <a href="https://twitter.com/waziupIOT" target="_blank">
+            <i class="fa fa-2x fa-twitter"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/company/magnetic-io" target="_blank">
+            <i class="fa fa-2x fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer-bottom lander-row--blue">
+  <div class="container">
+    <div class="part">
+      <a href='./about'><img class="waziup-logo" src="./img/005-waziup/Logo/logo-waziup-white.svg" alt=""></a>
+    </div>
+
+    <div class="part">
+      <a href="./" class="button button--red" style="text-decoration:none">
+        English
+      </a>
+    </div>
+
+    <div class="part">
+      <p class="text">Code licensed under<a type="application/rss+xml" href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache 2</a> © 2016 <a href='./about'>Waziup.io</a></p>
+    </div>
+  </div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59948816-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+

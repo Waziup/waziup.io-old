@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+
+
+
+ <html class="no-js" lang=""> 
+<head>
+<script type="text/javascript">
+theBaseUrl = "http://" + location.host + "/";
+document.write('<base href="' + theBaseUrl + '"/>');
+</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+  <title> - La plateforme Waziup</title>
+  <meta name="generator" content="Hugo 0.18.1" />
+
+  
+  <link rel="canonical" href="./fr/documentation/tutorials/push-data">
+  
+  <meta name="author" content="waziup.io">
+  
+
+  <meta property="og:url" content="/fr/documentation/tutorials/push-data">
+  <meta property="og:title" content="La plateforme Waziup">
+  <meta property="og:image" content="/images/logo-waziup.png">
+  <meta name="apple-mobile-web-app-title" content="La plateforme Waziup">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="shortcut icon" type="image/x-icon" href="./images/logo-waziup.png">
+  <link rel="icon" type="image/x-icon" href="./images/logo-waziup.png">
+
+
+  <style>
+    @font-face {
+      font-family: 'Icon';
+      format('embedded-opentype'),
+      format('woff'),
+      format('truetype'),
+      format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/vendor.js"></script>
+
+  <script src="js/app.js"></script>
+
+</head>
+<body class="palette-primary-pink palette-accent-pink">
+
+
+<div class="single-page">
+  <nav aria-label="Header" id="header" class="top-menu">
+  <div class="left">
+    <a href="#">
+      <div id="logo" class="logo"></div>
+    </a>
+  </div>
+
+  <div class="center">
+          <a href="./" ><img src="img/lang/gb.png" alt="English"></a>
+          <a href="./fr" ><img src="img/lang/fr.png" alt="Français"></a>
+  </div>
+
+  <div class="right">
+    <div class="top-menu-items" id="top-menu-items">
+
+    </div>
+
+    <div class="download">
+      <a href="http://dashboard.waziup.io" class="button button--red">
+        Essayer Waziup
+      </a>
+    </div>
+    
+    <a href="https://github.com/Waziup/platform" target="_blank" class="github-logo">
+      <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+    </a>
+
+    <div class="search-button">
+      <i class="fa fa-lg fa-search"></i>
+    </div>
+
+  </div>
+</nav>
+
+<ul id="mobile-menu" style="display: none">
+</ul>
+
+<div id="search">
+  <div class="search-bar">
+    <div class="search-bar__back">
+      <i class="fa fa-lg fa-times"></i>
+    </div>
+    <input class="search-bar__input" placeholder='Entrer votre recherche ici...'>
+  </div>
+  <div class="search-results">
+    <ul></ul>
+  </div>
+</div>
+
+
+</div>
+
+<div class="page documentation">
+    <div class="menu" id="side-menu">
+    </div>
+    <div class="content">
+      <h1 class="content-header"> </h1>
+      <div class="markdowned">
+        
+
+<h1 id="pousser-les-données-des-capteurs">Pousser les données des capteurs</h1>
+
+<p>Ce tutoriel vous aidera à transférer vos données de capteurs sur la plate-forme Waziup.
+Pour communiquer avec la plateforme waziup, vous utiliserez le protocole <strong>Http</strong>, toute bibliothèque capable d&rsquo;envoyer une requête Http peut être utilisée.</p>
+
+<h2 id="créez-votre-capteur">Créez votre capteur</h2>
+
+<p>Vous pouvez créer un capteur mesurant la température et la pression (avec des valeurs initiales) comme ça:</p>
+
+<p><strong>URL:</strong> <a href="http://broker.waziup.io/v2/entities">http://broker.waziup.io/v2/entities</a></p>
+
+<p><strong>method:</strong> POST</p>
+
+<p><strong>Headers:</strong></p>
+
+<ul>
+<li>Content-Type: application/json</li>
+<li>Fiware-Service: waziup</li>
+<li>Fiware-ServicePath:/wazihack</li>
+</ul>
+
+<p><strong>Body:</strong></p>
+
+<pre><code>{
+  &quot;id&quot;: &quot;Sensor1&quot;,
+  &quot;type&quot;: &quot;SensingDevice&quot;,
+  &quot;temperature&quot;: {
+    &quot;value&quot;: 23,
+    &quot;type&quot;: &quot;Number&quot;
+  },
+  &quot;pressure&quot;: {
+    &quot;value&quot;: 720,
+    &quot;type&quot;: &quot;Number&quot;
+  }
+}
+</code></pre>
+
+<ul>
+<li>Id: l&rsquo;id de votre capteur</li>
+<li>Type: le type de votre capteur</li>
+</ul>
+
+<p>Dans l&rsquo;exemple ci-dessus, le capteur mesure la température et la pression.
+Pour chaque mesure, nous ajoutons un attribut:</p>
+
+<pre><code>&quot;temperature&quot;: {
+  &quot;value&quot;: 23,
+  &quot;type&quot;: &quot;Number&quot;
+ }
+</code></pre>
+
+<ul>
+<li>value: est la valeur de votre capteur de température</li>
+<li>type: est le type de la valeur comme Number</li>
+</ul>
+
+<p>Vous pouvez ajouter autant d&rsquo;attributs que votre capteur.</p>
+
+<p><strong>La réponse</strong> que vous obtiendrez du serveur sera:</p>
+
+<pre><code>201 created
+</code></pre>
+
+<p>Exemple de requête de curl:</p>
+
+<pre><code>$ curl http://broker.waziup.io/v2/entities -s -S --header 'Content-Type: application/json' --header 'Fiware-ServicePath:/wazihack' --header 'Fiware-Service: waziup' -X POST -d @- &lt;&lt;EOF
+{
+  &quot;id&quot;: &quot;Sensor1&quot;,
+  &quot;type&quot;: &quot;SensingDevice&quot;,
+  &quot;temperature&quot;: {
+    &quot;value&quot;: 23,
+    &quot;type&quot;: &quot;Number&quot;
+  },
+  &quot;pressure&quot;: {
+    &quot;value&quot;: 720,
+    &quot;type&quot;: &quot;Number&quot;
+  }
+}
+EOF
+</code></pre>
+
+<h2 id="obtenez-vos-données-de-capteurs">Obtenez vos données de capteurs</h2>
+
+<p>Pour vérifier vos données de capteur:</p>
+
+<p><strong>URL:</strong> <a href="http://broker.waziup.io/v2/entities/&lt;yourSensorId&gt;">http://broker.waziup.io/v2/entities/&lt;yourSensorId&gt;</a></p>
+
+<p>Exemple:  <a href="http://broker.waziup.io/v2/entities/Sensor1">http://broker.waziup.io/v2/entities/Sensor1</a></p>
+
+<p><strong>method:</strong> GET</p>
+
+<p><strong>Headers:</strong></p>
+
+<ul>
+<li>Fiware-Service: waziup</li>
+<li>Fiware-ServicePath:/wazihack</li>
+</ul>
+
+<p><strong>La réponse</strong></p>
+
+<pre><code>code: 200 OK
+body:
+{
+  &quot;id&quot;: &quot;Sensor1&quot;,
+  &quot;type&quot;: &quot;SensingDevice&quot;,
+  &quot;pressure&quot;: {
+     &quot;type&quot;: &quot;Number&quot;,
+     &quot;value&quot;: 720,
+     &quot;metadata&quot;: {}
+  },
+  &quot;temperature&quot;: {
+     &quot;type&quot;: &quot;Number&quot;,
+     &quot;value&quot;: 23,
+     &quot;metadata&quot;: {}
+  }
+}
+</code></pre>
+
+<p>Exemple de requête curl:</p>
+
+<pre><code>$ curl http://broker.waziup.io/v2/entities/Sensor1 --header 'Fiware-ServicePath:/wazihack' --header 'Fiware-Service:waziup' -X GET
+</code></pre>
+
+<h2 id="mettre-à-jour-la-valeur-de-votre-capteur">Mettre à jour la valeur de votre capteur</h2>
+
+<p><strong>URL:</strong> <a href="http://broker.waziup.io/v2/entities/&lt;yourSensorId&gt;/attrs/&lt;yourSensorAttribute&gt;/value">http://broker.waziup.io/v2/entities/&lt;yourSensorId&gt;/attrs/&lt;yourSensorAttribute&gt;/value</a></p>
+
+<p>Exemple:</p>
+
+<ul>
+<li>yourSensorId is : Sensor1</li>
+<li>yourSensorAttribute is: temperature</li>
+</ul>
+
+<p>L&rsquo;URL is:
+<a href="http://broker.waziup.io/v2/entities/Sensor1/attrs/temperature/value">http://broker.waziup.io/v2/entities/Sensor1/attrs/temperature/value</a></p>
+
+<p><strong>Method:</strong> PUT</p>
+
+<p><strong>Headers:</strong></p>
+
+<ul>
+<li>Content-Type: text/plain</li>
+<li>Fiware-Service: waziup</li>
+<li>Fiware-ServicePath:/wazihack</li>
+</ul>
+
+<p><strong>Body:</strong> contains the new sensor value.</p>
+
+<p>Par exemple, la température est de 25 maintenant, donc vous mettez sur le corps:</p>
+
+<pre><code>25
+</code></pre>
+
+<p><strong>La réponse:</strong></p>
+
+<pre><code>code: 204 No Content
+</code></pre>
+
+<p>Exemple de requête de curl:</p>
+
+<pre><code>$ curl http://broker.waziup.io/v2/entities/Sensor1/attrs/temperature/value -s -S --header 'Content-Type: text/plain' --header 'Fiware-ServicePath:/wazihack' --header 'Fiware-Service:waziup' -X PUT -d 27
+</code></pre>
+
+<h2 id="récupérer-les-dernières-données-de-capteur-insérées">Récupérer les dernières données de capteur insérées</h2>
+
+<p><strong>URL:</strong> <a href="http://broker.waziup.io/v2/entities/&lt;yourSensorId&gt;/attrs/&lt;yourSensorAttribute&gt;/value">http://broker.waziup.io/v2/entities/&lt;yourSensorId&gt;/attrs/&lt;yourSensorAttribute&gt;/value</a></p>
+
+<p>Exemple:
+URL: <a href="http://broker.waziup.io/v2/entities/Sensor1/attrs/temperature/value">http://broker.waziup.io/v2/entities/Sensor1/attrs/temperature/value</a></p>
+
+<p><strong>Method:</strong> GET
+<strong>Headers:</strong></p>
+
+<ul>
+<li>Accept:text/plain</li>
+<li>Fiware-Service: waziup</li>
+<li>Fiware-ServicePath: /wazihack</li>
+</ul>
+
+<p><strong>La réponse:</strong></p>
+
+<pre><code>code: 200 OK
+body: 25
+</code></pre>
+
+<p>Exemple curl:</p>
+
+<pre><code>$ curl http://broker.waziup.io/v2/entities/Sensor1/attrs/temperature/value --header 'Fiware-ServicePath:/wazihack' --header 'Fiware-Service:waziup' -X GET
+</code></pre>
+
+<h2 id="comment-supprimer-votre-capteur">Comment supprimer votre capteur:</h2>
+
+<p>Si vous souhaitez supprimer votre capteur:</p>
+
+<p><strong>URL:</strong> <a href="http://broker.waziup.io/v2/entities/&lt;yourSensorId&gt;">http://broker.waziup.io/v2/entities/&lt;yourSensorId&gt;</a></p>
+
+<p>Exemple:  <a href="http://broker.waziup.io/v2/entities/Sensor1">http://broker.waziup.io/v2/entities/Sensor1</a></p>
+
+<p><strong>Method:</strong> DELETE</p>
+
+<p><strong>Headers:</strong></p>
+
+<ul>
+<li>Fiware-Service: waziup</li>
+<li>Fiware-ServicePath:/wazihack</li>
+</ul>
+
+<p><strong>La réponse:</strong></p>
+
+<pre><code>code: 204 No Content        
+</code></pre>
+
+<p>Exemple curl:</p>
+
+<pre><code>curl http://broker.waziup.io/v2/entities/Sensor1 --header 'Fiware-ServicePath:/wazihack' --header 'Fiware-Service:waziup' -X DELETE
+
+</code></pre>
+
+<h2 id="liens">Liens</h2>
+
+<p>La référence à l&rsquo;API NGSI:
+<a href="http://telefonicaid.github.io/fiware-orion/api/v2/latest/">http://telefonicaid.github.io/fiware-orion/api/v2/latest/</a></p>
+
+      </div>
+    </div>
+</div>
+
+<div class="lander-row lander-row--blue footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-3">
+        <h2 class="h2">Apprendre plus</h2>
+        <a href='fr/why-use-waziup/'>
+          <p class="text">Pourquoi utiliser Waziup?</p>
+        </a>
+        <a href='fr/documentation/how-waziup-works/'>
+          <p class="text">Documentation</p>
+        </a>
+        <a href='fr/about'>
+          <p class="text">A propos de nous</p>
+        </a>
+        <a href='fr/resources/news/'>
+          <p class="text">Nouveautées</p>
+        </a>
+        <a href='fr/contact'>
+          <p class="text">Contact</p>
+        </a>
+      </div>
+        <div class="col col-6">
+        <h2 class="h2">Tout code</h2>
+          <a href='fr/support'>
+            <p class="text">Support</p>
+          </a>
+          <a href='fr/resources/community'>
+            <p class="text">Communauté</p>
+          </a>
+          <a href="https://github.com/waziup/platform" target="_blank">
+            <p class="text">GitHub</p>
+          </a>
+      </div>
+      <div class="col col-6">
+        <h2 class="h2">Rester à jour</h2>
+        <p class="text">
+          Laisser votre email pour être notifier: We won’t spam you and won’t go off topic.
+        </p>
+
+        
+
+        <div class="social-buttons">
+          <p class="text">Nous suivre sur</p>
+          <a href="https://twitter.com/waziupIOT" target="_blank">
+            <i class="fa fa-2x fa-twitter"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/company/magnetic-io" target="_blank">
+            <i class="fa fa-2x fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer-bottom lander-row--blue">
+  <div class="container">
+    <div class="part">
+      <a href='fr/about'><img class="waziup-logo" src="./img/005-waziup/Logo/logo-waziup-white.svg" alt=""></a>
+    </div>
+
+    <div class="part">
+      <a href="./" class="button button--red" style="text-decoration:none">
+        English
+      </a>
+    </div>
+
+    <div class="part">
+      <p class="text">Code sous licence<a type="application/rss+xml" href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache 2</a> © 2016 <a href='fr/about'>Waziup.io</a></p>
+    </div>
+  </div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59948816-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+

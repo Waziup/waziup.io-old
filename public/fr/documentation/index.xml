@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentations on La plateforme Waziup</title>
+    <link>/fr/documentation/index.xml</link>
+    <description>Recent content in Documentations on La plateforme Waziup</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 22 Mar 2017 00:48:29 +0000</lastBuildDate>
+    <atom:link href="/fr/documentation/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>version 0.1.0</title>
+      <link>/fr/documentation/release-notes/version-0-1-0</link>
+      <pubDate>Wed, 22 Mar 2017 00:48:29 +0000</pubDate>
+      
+      <guid>/fr/documentation/release-notes/version-0-1-0</guid>
+      <description>&lt;p&gt;Notes de version pour Waziup 0.1.0&lt;/p&gt;
+
+&lt;div class=&#34;admonition note&#34;&gt;
+  &lt;p class=&#34;admonition-title&#34;&gt;What next?&lt;/p&gt;
+  &lt;p&gt;&lt;ul&gt;
+&lt;li&gt;Lire toutes les notes de la version sur github (&lt;a href=&#34;https://github.com/waziup/platform/releases&#34;&gt;github.com/Waziup/platform - Waziup releases&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Vous pouvez &lt;a href=&#34;./documentation/installation/hello-world&#34;&gt;essayer Waziup&lt;/a&gt; avec notre application hello world.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Documentation</title>
+      <link>/fr/documentation</link>
+      <pubDate>Wed, 22 Mar 2017 00:45:54 +0000</pubDate>
+      
+      <guid>/fr/documentation</guid>
+      <description>&lt;p&gt;Veuillez trouver sur la gauche le menu pour explorer la documentation de Waziup.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tutoriels</title>
+      <link>/fr/documentation/tutorials/</link>
+      <pubDate>Wed, 22 Mar 2017 00:44:51 +0000</pubDate>
+      
+      <guid>/fr/documentation/tutorials/</guid>
+      <description>
+
+&lt;h2 id=&#34;commencer&#34;&gt;Commencer&lt;/h2&gt;
+
+&lt;p&gt;Nous proposons plusieurs tutoriels pour vous aider à démarrer avec Waziup:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/tutorials/lora-gateway&#34;&gt;Créer une passerelle IoT à faible coût&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/tutorials/push-data&#34;&gt;Uploader les données de vos capteur&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/tutorialseeboard&#34;&gt;Visualiser vos données&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/tutorials/create-app&#34;&gt;Créer et héberger une application IoT sur la plate-forme Waziup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/tutorials/use-sms&#34;&gt;Envoyer et recevoir SMS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Prototype de pisciculture</title>
+      <link>/fr/documentation/mvps/water</link>
+      <pubDate>Wed, 22 Mar 2017 00:40:09 +0000</pubDate>
+      
+      <guid>/fr/documentation/mvps/water</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://github.com/Waziup/waziup.io/blob/master/content/documentation/mvps/water_images/presentation_buoy_ghana.jpg?raw=true&#34; alt=&#34;buoy_ghana&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Découvrez ici comment prototype d&amp;rsquo;une application de pisciculture à l&amp;rsquo;aide de Waziup.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Le but de ce prototype est de donner un premier aperçu de la façon de développer un dispositif IoT pour la pisciculture. Le dispositif est capable de donner une lecture en temps réel des informations pertinentes pour les étangs de poissons tels que l&amp;rsquo;acidité,
+Oxygène dissous et communiquer ces données via LoRa. Vous trouverez ci-dessous un didacticiel de démarrage: comment développer la partie électronique et logicielle de la solution.&lt;/p&gt;
+
+&lt;h2 id=&#34;mesure&#34;&gt;Mesure&lt;/h2&gt;
+
+&lt;p&gt;Les mesures prises par le dispositif sont la température, l&amp;rsquo;oxygène dissous et l&amp;rsquo;acidité de l&amp;rsquo;eau. L&amp;rsquo;appareil est alimenté par un panneau solaire avec une batterie.
+La solution sera placée dans une boîte étanche pour protéger l&amp;rsquo;électronique, nous obtenons également la température et l&amp;rsquo;humidité dans la boîte. La dernière valeur contrôlée
+Est la tension de la batterie.&lt;/p&gt;
+
+&lt;h2 id=&#34;matériel&#34;&gt;Matériel&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sparkfun.com/products/11114&#34;&gt;Arduino Pro Mini 3.3V&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://modtronix.com/inair9.html&#34;&gt;Module InAir9 LoRa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sparkfun.com/products/11050&#34;&gt;Capteur de température (pour eau)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.robotshop.com/eu/fr/capteur-humidite-temperature-dht22.html&#34;&gt;Capteur de température et d&amp;rsquo;humidité&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sparkfun.com/products/11194&#34;&gt;Capteur DO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.atlas-scientific.com/product_pages/kits/ph-kit.html&#34;&gt;Capteur de PH&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sparkfun.com/products/13781&#34;&gt;Panneau Solaire 2W&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sparkfun.com/products/8483&#34;&gt;Batterie 2000mAh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sparkfun.com/products/12885&#34;&gt;Chargeur pour panneau solaire et batterie&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Résistance:
+
+&lt;ul&gt;
+&lt;li&gt;4k7 ohm x2&lt;/li&gt;
+&lt;li&gt;47k ohm x1&lt;/li&gt;
+&lt;li&gt;10k ohm x1
+    &lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;construction-électronique&#34;&gt;Construction électronique&lt;/h1&gt;
+
+&lt;h2 id=&#34;arduino&#34;&gt;Arduino&lt;/h2&gt;
+
+&lt;p&gt;La carte Arduino avec son microcroller est la partie centrale de l&amp;rsquo;assemblage électronique. Il contient toute la logique: il recueille des informations capteurs, le traiter et l&amp;rsquo;envoyer
+Via le module LoRa. Dans cette première section, nous allons voir comment connecter les capteurs à l&amp;rsquo;Arduino, sur une seconde main, nous allons voir comment le programmer.
+&lt;img src=&#34;./images/mvps/water_farming/arduino.JPG&#34; alt=&#34;Arduino&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;capteurs-ph-et-do&#34;&gt;Capteurs PH et DO&lt;/h2&gt;
+
+&lt;p&gt;    
+Les capteurs PH et DO fonctionnent avec un petit circuit pour des mesures précises et calibrent le capteur: &lt;a href=&#34;http://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf&#34;&gt;DO EZO circuit&lt;/a&gt; and &lt;a href=&#34;http://www.atlas-scientific.com/_files/_datasheets/_circuit/pH_EZO_datasheet.pdf&#34;&gt;PH EZO circuit&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/ezo_circuits.png&#34; alt=&#34;EZO Circuits&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Les deux circuits sont connectés au fil I2C de l&amp;rsquo;arduino (broche A4 et A5 sur arduino pro mini).
+Pour fonctionner avec I2C, les circuits doivent être commutés en mode I2C.&lt;/p&gt;
+
+&lt;p&gt;Ce sont les instructions pour commuter un circuit EZO en mode I2C:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Connecter le circuit à l&amp;rsquo;arduino comme suit:
+
+&lt;ul&gt;
+&lt;li&gt;VCC d&amp;rsquo;arduino à VCC du circuit EZO&lt;/li&gt;
+&lt;li&gt;GND de l&amp;rsquo;arduino au GND du circuit EZO&lt;/li&gt;
+&lt;li&gt;PGND du circuit EZO vers TX du circuit EZO&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Alimentation de l&amp;rsquo;arduino&lt;/li&gt;
+&lt;li&gt;Attendre que le voyant du circuit passe du vert au bleu&lt;/li&gt;
+&lt;li&gt;Débrancher le connecteur de la broche PGND à la broche TX&lt;/li&gt;
+&lt;li&gt;L&amp;rsquo;appareil est maintenant en mode I2C&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;L&amp;rsquo;adresse I2C par défaut pour l&amp;rsquo;EZO DO est 97, pour le EZO PH c&amp;rsquo;est 99.&lt;/p&gt;
+
+&lt;p&gt;Plutôt que d&amp;rsquo;alimenter les capteurs avec la sortie VCC de l&amp;rsquo;arduino, nous préférons l&amp;rsquo;alimenter avec les broches de sortie numérique.
+Ce choix facilite la gestion de l&amp;rsquo;économie d&amp;rsquo;énergie.
+Dans notre prototype, nous choisissons la broche 6 pour alimenter le circuit EZO DO et la broche 7 pour alimenter le PH EZO.&lt;/p&gt;
+
+&lt;p&gt;Table de fil:
+&lt;img src=&#34;./images/mvps/water_farming/ezo_table.png&#34; alt=&#34;EZO Circuits&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ensuite, il faut connecter chaque capteur à son circuit EZO. Chaque capteur est équipé d&amp;rsquo;une prise de courant continu pour se connecter au circuit.
+Branchez la broche GND du connecteur de barillet avec la broche PGND du circuit EZO et connectez la broche à côté du GND du connecteur de barillet au compartiment PRB du circuit EZO comme ci-dessous.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/wired_sensors.jpg&#34; alt=&#34;Sensors Connection&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;sonde-de-température-de-l-eau&#34;&gt;Sonde de température de l&amp;rsquo;eau&lt;/h2&gt;
+
+&lt;p&gt;Le capteur que nous utilisons pour contrôler la température de l&amp;rsquo;eau est le DS18B20.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/DS18B20.jpg&#34; alt=&#34;DS18B20&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Comme nous l&amp;rsquo;avons fait pour le capteur PH et DO, nous alimentons ce capteur en utilisant la broche de sortie numérique de l&amp;rsquo;arduino. Cependant, vous pouvez utiliser la broche VCC selon vos préférences.
+Ici, la broche numérique 8 est utilisée pour l&amp;rsquo;alimentation et la broche numérique 2 est utilisée pour les données. Une résistance de 4k7 ohms est requise entre la broche VCC et la broche Data. Ci-dessous, le schéma de câblage du capteur.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/DS18B20_wire.jpg&#34; alt=&#34;DS18B20 Wire&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;lora-module&#34;&gt;LoRa module&lt;/h2&gt;
+
+&lt;p&gt; La puce LoRa que nous utilisons est le module inAir9.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/inAir9.jpg&#34; alt=&#34;InAir9 and wires&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En dessous de la table filaire du module InAir9 avec arduino.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/inAir9_table.jpg&#34; alt=&#34;InAir9 and wires&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;capteur-de-température-et-d-humidité-en-option&#34;&gt;Capteur de température et d&amp;rsquo;humidité (en option)&lt;/h2&gt;
+
+&lt;p&gt;Notre premier prototype est testé au Ghana qui est un pays particulièrement chaud donc nous décidons d&amp;rsquo;ajouter un capteur de température et d&amp;rsquo;humidité pour vérifier conditions dans la boîte.
+Vous pouvez choisir de l&amp;rsquo;ajouter ou non comme votre convenance. Le capteur que nous utilisons à cet effet est le capteur DHT22.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/DHT22.png&#34; alt=&#34;DHT22&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La broche VCC du capteur est connectée à la broche numérique 8 de l&amp;rsquo;arduino, mais vous pouvez également utiliser la broche VCC.
+La broche DATA du capteur est connectée à la broche numérique 3 de l&amp;rsquo;arduino.
+Comme nous l&amp;rsquo;avons fait avec le capteur DS18B20, une résistance de 4k7 ohms est nécessaire entre VCC et DATA.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/dht_table.jpg&#34; alt=&#34;DHT22 table&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mesure-de-la-tension&#34;&gt;Mesure de la tension&lt;/h2&gt;
+
+&lt;p&gt;Nous voulons connaître la tension aux sorties de batterie pour estimer le niveau de charge.
+Nous utilisons une batterie Li-ion de sorte que la tension varie de 3V (vide) à 4,2V (entièrement chargée) à 25 ° C. Nous atteignons un niveau de charge de 50% à environ 3,8 V à 25 ° C.
+Pour obtenir la tension aux entrées arduino nous utilisons un diviseur de tension. Nous choisissons la broche analogique 1 de l&amp;rsquo;arduino pour calculer la tension réelle.
+Ci-dessous se trouve le schéma du diviseur de tension. Nous utilisons une résistance de haute valeur pour minimiser les déchets actuels.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/voltage_divider.png&#34; alt=&#34;Voltage divider&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;chargeur-batterie-et-panneau-solaire&#34;&gt;Chargeur, batterie et panneau solaire&lt;/h2&gt;
+
+&lt;p&gt;  Nous prenons une carte de chargeur de sparkfun pour relier le panneau solaire, la batterie et l&amp;rsquo;arduino ensemble.
+  Cette carte chargeur nous fournir la capacité d&amp;rsquo;obtenir la puissance la plus possible hors de notre panneau solaire et dans une rechargeable batterie Li-ion.
+  La mise en place est facile, il suffit de brancher le panneau solaire dans un côté du circuit, la batterie et l&amp;rsquo;arduino en parallèle de l&amp;rsquo;autre côté.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/charger_chip.jpg&#34; alt=&#34;Charger board&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;schéma-général&#34;&gt;Schéma général&lt;/h2&gt;
+
+&lt;p&gt;Ici vous pouvez voir le schéma de l&amp;rsquo;ensemble du circuit sans la partie chargeur.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/schematic.png&#34; alt=&#34;Schematic&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;implementation&#34;&gt;Implementation&lt;/h2&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/mvps/water_farming/prototype_board.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Prototype Board&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Dans notre mise en œuvre, nous décidons de créer une carte PCB du circuit pour faciliter l&amp;rsquo;assemblage des composants.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/mvps/water_farming/pcb_board.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;PCB Board&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/mvps/water_farming/assemblied_board.jpg&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Final assembly&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;h1 id=&#34;logiciel&#34;&gt;Logiciel&lt;/h1&gt;
+
+&lt;h2 id=&#34;programmer-l-arduino&#34;&gt;Programmer l&amp;rsquo;Arduino&lt;/h2&gt;
+
+&lt;p&gt;Nous pouvons programmer l&amp;rsquo;Arduino en envoyant un jeu d&amp;rsquo;instructions au microcrouleur sur le tableau.
+Pour ce faire, nous utilisons le logiciel IDE Arduino qui utilise une version simplifiée de C ++. Le logiciel Arduino peut être téléchargé &lt;a href=&#34;https://www.arduino.cc/en/main/software&#34;&gt;here&lt;/a&gt;.
+Ensuite, pour connecter l&amp;rsquo;Arduino Mini à l&amp;rsquo;ordinateur, nous utilisons une puce USB-FTDI comme ci-dessous.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/ftdi_arduino.png&#34; alt=&#34;FTDI Arduino&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;libraries&#34;&gt;Libraries&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/PaulStoffregen/OneWire&#34;&gt;OneWire library&lt;/a&gt; est utilisé avec la température DS18B20 capteur&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib&#34;&gt;DHT library&lt;/a&gt; est utilisé avec la température et l&amp;rsquo;humidité DHT22 capteur&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/CongducPham/LowCostLoRaGw&#34;&gt;SX1272 library&lt;/a&gt; est utilisé avec le module LoRa&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;echantillons-de-codage-de-capteur&#34;&gt;Echantillons de codage de capteur&lt;/h2&gt;
+
+&lt;h3 id=&#34;capteur-do&#34;&gt;Capteur DO&lt;/h3&gt;
+
+&lt;p&gt;L&amp;rsquo;exemple de code permettant de gérer le capteur DO peut être trouvé &lt;a href=&#34;http://www.atlas-scientific.com/_files/code/do-i2c.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Attention, si vous avez utilisé la broche numérique 6 pour l&amp;rsquo;alimentation, n&amp;rsquo;oubliez pas d&amp;rsquo;ajouter ce code dans la section de configuration pour allumer l&amp;rsquo;alimentation:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    void setup()
+    {
+     Serial.begin(9600);
+     Wire.begin();
+     pinMode(6,OUTPUT);
+     digitalWrite(6,HIGH);
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Capteur PH ###&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;exemple de code pour gérer le capteur PH peut être trouvé &lt;a href=&#34;http://www.atlas-scientific.com/_files/code/ph-i2c.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Attention, si vous avez utilisé la broche numérique 6 pour l&amp;rsquo;alimentation, n&amp;rsquo;oubliez pas d&amp;rsquo;ajouter ce code dans la section de configuration pour allumer l&amp;rsquo;alimentation:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    void setup()
+    {
+     Serial.begin(9600);
+     Wire.begin();
+     pinMode(7,OUTPUT);
+     digitalWrite(7,HIGH);
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;capteur-de-température-de-l-eau&#34;&gt;Capteur de température de l&amp;rsquo;eau&lt;/h3&gt;
+
+&lt;p&gt;Pour obtenir la température du capteur DS18B20, nous utilisons la bibliothèque OneWire.
+Voici un exemple de code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    #include &amp;lt;OneWire.h&amp;gt; 
+
+    #define TemperatureSensorsPowerPin 8
+
+    int DS18S20_Pin = 2; //DS18S20 Signal pin on digital 2
+
+    //Temperature chip i/o
+    OneWire ds(DS18S20_Pin);  // on digital pin 2
+
+    void setup(void) {
+      Serial.begin(19200);
+        pinMode(TemperatureSensorsPowerPin,OUTPUT);    // Switch on power for temp and humdity sensor
+        digitalWrite(TemperatureSensorsPowerPin,HIGH);
+    }
+
+    void loop(void) {
+      float temperature = getTemp(); //will take about 750ms to run
+      Serial.println(temperature);
+      delay(2000);
+    }
+
+
+    float getTemp(){
+      //returns the temperature from one DS18S20 in DEG Celsius
+
+      byte data[12];
+      byte addr[8];
+
+      if ( !ds.search(addr)) {
+          //no more sensors on chain, reset search
+          ds.reset_search();
+          return -1000;
+      }
+
+      if ( OneWire::crc8( addr, 7) != addr[7]) {
+          Serial.println(&amp;quot;CRC is not valid!&amp;quot;);
+          return -1000;
+      }
+
+      if ( addr[0] != 0x10 &amp;amp;&amp;amp; addr[0] != 0x28) {
+          Serial.print(&amp;quot;Device is not recognized&amp;quot;);
+          return -1000;
+      }
+
+      ds.reset();
+      ds.select(addr);
+      ds.write(0x44,1); // start conversion, with parasite power on at the end
+
+      delay(750); // Wait for temperature conversion to complete
+
+      byte present = ds.reset();
+      ds.select(addr);    
+      ds.write(0xBE); // Read Scratchpad
+
+
+      for (int i = 0; i &amp;lt; 9; i++) { // we need 9 bytes
+        data[i] = ds.read();
+      }
+
+      ds.reset_search();
+
+      byte MSB = data[1];
+      byte LSB = data[0];
+
+      float tempRead = ((MSB &amp;lt;&amp;lt; 8) | LSB); //using two&#39;s compliment
+      float TemperatureSum = tempRead / 16;
+
+      return TemperatureSum;
+
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;capteur-de-température-et-d-humidité&#34;&gt;Capteur de température et d&amp;rsquo;humidité&lt;/h3&gt;
+
+&lt;p&gt;Pour obtenir la mesure de température et d&amp;rsquo;humidité du capteur DHT22, nous utilisons la bibliothèque DHT.
+Voici un exemple de code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    #include &amp;quot;DHT.h&amp;quot;
+
+    #define DHT_PIN 3
+
+    const byte DHT_SUCCESS = 0;
+    const byte DHT_TIMEOUT_ERROR = 1;
+    const byte DHT_CHECKSUM_ERROR = 2;
+    DHT dht(DHT_PIN);
+
+
+    void setup()
+    {
+      Serial.begin(19200);
+      pinMode(8,OUTPUT);
+      digitalWrite(8,HIGH);
+    }
+
+    void loop()
+    {
+      float temperature, humidity;
+
+
+      switch (dht.readDHT22(&amp;amp;temperature, &amp;amp;humidity)) {
+      case DHT_SUCCESS: 
+
+        Serial.print(F(&amp;quot;Humidity (%): &amp;quot;));
+        Serial.println(humidity, 2);
+        Serial.print(F(&amp;quot;Temperature (C): &amp;quot;));
+        Serial.println(temperature, 2);
+        break;
+
+      case DHT_TIMEOUT_ERROR: 
+        Serial.println(F(&amp;quot;No response!&amp;quot;)); 
+        break;
+
+      case DHT_CHECKSUM_ERROR: 
+        Serial.println(F(&amp;quot;Communication pb&amp;quot;)); 
+        break;
+      }
+
+      delay(1000);
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;module-lora&#34;&gt;Module LoRa&lt;/h3&gt;
+
+&lt;p&gt;Pour envoyer des données via LoRa, nous utilisons la bibliothèque SX1272.&lt;/p&gt;
+
+&lt;p&gt;Vous trouverez tous les échantillons pour utiliser cette bibliothèque &lt;a href=&#34;https://github.com/CongducPham/LowCostLoRaGw/tree/master/Arduino&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;voltage-de-batterie&#34;&gt;Voltage de batterie&lt;/h3&gt;
+
+&lt;p&gt;Ci-dessous nous avons un échantillon pour calculer la tension de la batterie de sortie.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#define RESISTOR1 47000.0        // RESISTOR to calculate voltage
+#define RESISTOR2 10000.0
+
+#define VoltagePin  A2
+
+
+float batteryVoltage;
+
+void setup() {
+  Serial.begin(38400);
+
+}
+
+void loop() {
+
+  batteryVoltage = getBatteryVoltage();
+  Serial.println(batteryVoltage);
+
+  delay(2000);
+
+}
+
+float getBatteryVoltage()
+{
+   int rawVin;
+   int sumRawVin = 0;
+   analogReference(INTERNAL);
+
+  for (byte y=0; y&amp;lt;30; y++){
+    rawVin = analogRead(VoltagePin);
+    sumRawVin=sumRawVin+rawVin;
+    delay(5);
+  }
+
+  rawVin = sumRawVin/30;
+  float real_v = (rawVin * 1.1 / 1024.0) / (RESISTOR2/(RESISTOR1+RESISTOR2));
+  if (real_v &amp;lt; 0.1) {  real_v=0.0; }
+
+  return real_v;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;mode-veille-arduino&#34;&gt;Mode veille Arduino&lt;/h2&gt;
+
+&lt;p&gt;Afin d&amp;rsquo;économiser de la batterie, vous devrez certainement mettre l&amp;rsquo;Arduino et les capteurs en mode veille.
+Il existe 5 modes de sommeil différents dans arduino du moins au mode d&amp;rsquo;économie d&amp;rsquo;énergie:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;SLEEP_MODE_IDLE&lt;/li&gt;
+&lt;li&gt;SLEEP_MODE_ADC&lt;/li&gt;
+&lt;li&gt;SLEEP_MODE_PWR_SAVE&lt;/li&gt;
+&lt;li&gt;SLEEP_MODE_STANDBY&lt;/li&gt;
+&lt;li&gt;SLEEP_MODE_PWR_DOWN&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Lorsque l&amp;rsquo;arduino est dans le mode SLEEP_MODE_PWR_DOWN la seule façon de le réveiller est avec soit une interruption temporisateur watchdog, une interruption de niveau sur les broches 2 ou 3, ou une interruption de changement de broche. Donc, dans notre cas, nous avons besoin d&amp;rsquo;utiliser le watchdog minuterie interruption.&lt;/p&gt;
+
+&lt;h3 id=&#34;activer-l-interruption-du-temporisateur-watchdog&#34;&gt;Activer l&amp;rsquo;interruption du temporisateur Watchdog&lt;/h3&gt;
+
+&lt;p&gt;Vous pouvez sauter cette section si vous n&amp;rsquo;utilisez pas de mini carte Arduin Pro.&lt;/p&gt;
+
+&lt;p&gt;Malheureusement, l&amp;rsquo;interruption de la minuterie de surveillance est défectueuse sur la mini carte Arduino Pro. Pour résoudre le problème, un nouveau chargeur d&amp;rsquo;amorçage doit être installé.
+Nous installerons le bootloader de l&amp;rsquo;UNO d&amp;rsquo;Arduino qui utilise la même puce de microprocesseur (atmega328).&lt;/p&gt;
+
+&lt;p&gt;Voici comment installer ce bootloader:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Premier Ouvrir le fichier bootloader boards.txt qui est situé&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sur Windows:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;C:\Users\{userName}\AppData\Local\Arduino\packages\arduino\hardware\avr\{version}\boards.txt&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sur Linux :&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;/usr/share/arduino/hardware/arduino/avr/boards.txt&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Dans ce fichier, trouvez les lignes de l&amp;rsquo;Arduino pro mini 3.3V&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;## Arduino Pro or Pro Mini (3.3V, 8 MHz) w/ ATmega328
+## --------------------------------------------------
+pro.menu.cpu.8MHzatmega328=ATmega328 (3.3V, 8 MHz)
+
+pro.menu.cpu.8MHzatmega328.upload.maximum_size=30720
+pro.menu.cpu.8MHzatmega328.upload.maximum_data_size=2048
+pro.menu.cpu.8MHzatmega328.upload.speed=57600
+
+pro.menu.cpu.8MHzatmega328.bootloader.low_fuses=0xFF
+pro.menu.cpu.8MHzatmega328.bootloader.high_fuses=0xDA
+pro.menu.cpu.8MHzatmega328.bootloader.extended_fuses=0xfd
+pro.menu.cpu.8MHzatmega328.bootloader.file=atmega/ATmegaBOOT_168_atmega328.hex
+
+pro.menu.cpu.8MHzatmega328.build.mcu=atmega328p
+pro.menu.cpu.8MHzatmega328.build.f_cpu=8000000L
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Remplacer la ligne: &amp;ldquo;&lt;strong&gt;&lt;em&gt;pro.menu.cpu.8MHzatmega328.bootloader.file=atmega/ATmegaBOOT_168_atmega328.hex&lt;/em&gt;&lt;/strong&gt;&amp;ldquo;&lt;/p&gt;
+
+&lt;p&gt;Par la ligne :  &amp;ldquo;&lt;strong&gt;&lt;em&gt;pro.menu.cpu.8MHzatmega328.bootloader.file=optiboot/optiboot_atmega328.hex&lt;/em&gt;&lt;/strong&gt;&amp;ldquo;&lt;/p&gt;
+
+&lt;p&gt;Enregistrez et fermez le fichier.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Alors nous avons besoin de clignoter la botte en utilisant un programmeur dans le système.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dans ce tutoriel, nous utilisons un Arduino UNO en tant que FAI mais il fonctionne également avec d&amp;rsquo;autres cartes Arduino.
+Nous commençons par connecter l&amp;rsquo;Arduino UNO à l&amp;rsquo;ordinateur. Dans Arduino IDE, nous allons au répertoire &lt;strong&gt;&lt;em&gt;file&lt;/em&gt;&lt;/strong&gt;-&amp;gt;&lt;strong&gt;&lt;em&gt;examples&lt;/em&gt;&lt;/strong&gt; et sélectionnez &lt;strong&gt;&lt;em&gt;ArduinoISP&lt;/em&gt;&lt;/strong&gt;. Il ouvre l&amp;rsquo;esquisse pour utiliser Arduino comme un programmeur système.
+Nous téléversons ce croquis sur l&amp;rsquo;Arduino UNO.&lt;/p&gt;
+
+&lt;p&gt;Ensuite, nous connectons l&amp;rsquo;Arduino UNO et l&amp;rsquo;Arduino Pro mini comme suit.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;&lt;em&gt;Arduino UNO&lt;/em&gt;&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;&lt;em&gt;Arduino Pro mini&lt;/em&gt;&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;3V3&lt;/td&gt;
+&lt;td&gt;VCC&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;GND&lt;/td&gt;
+&lt;td&gt;GND&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Digital 10&lt;/td&gt;
+&lt;td&gt;RST&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Digital 11&lt;/td&gt;
+&lt;td&gt;Digital 11&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Digital 12&lt;/td&gt;
+&lt;td&gt;Digital 12&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Digital 13&lt;/td&gt;
+&lt;td&gt;Digital 13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Puis nous sélectionnons &amp;ldquo;Arduino Pro or Pro mini&amp;rdquo; dans &lt;strong&gt;&lt;em&gt;tools-&amp;gt;Board&lt;/em&gt;&lt;/strong&gt; et &amp;ldquo;ATmega328 (3.3v, 8 MHz)&amp;rdquo; dans &lt;strong&gt;&lt;em&gt;tools-&amp;gt;processor&lt;/em&gt;&lt;/strong&gt;. Enfin, cliquez sur &lt;strong&gt;&lt;em&gt;tools-&amp;gt;Burn Bootloader&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;Arduino Pro mini est maintenant prêt.&lt;/p&gt;
+
+&lt;h3 id=&#34;exemple-de-code-pour-le-mode-veille&#34;&gt;Exemple de code pour le mode veille&lt;/h3&gt;
+
+&lt;p&gt;L&amp;rsquo;intervalle le plus long que la minuterie du chien de garde peut être réglé est de 8 sec.&lt;/p&gt;
+
+&lt;p&gt;Ici vous trouverez un échantillon sur la façon de mettre l&amp;rsquo;Arduino Pro mini en mode veille pour une période plus longue.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;avr/interrupt.h&amp;gt;
+#include &amp;lt;avr/wdt.h&amp;gt;
+#include &amp;lt;avr/sleep.h&amp;gt;
+#include &amp;lt;avr/power.h&amp;gt;
+
+
+#define SLEEP_LOOP 4  // one loop = 8 sec. Example sleep_loop = 4 -&amp;gt; 4*8 = 32 sec
+
+volatile int nbr_remaining; 
+
+void setup()
+{
+
+  Serial.begin(38400);
+  configure_wdt();
+  nbr_remaining=0;
+
+}
+
+
+void loop(void)
+{
+
+  Serial.println(&amp;quot;Loop Start&amp;quot;);
+  while (1) {
+      Serial.println(F(&amp;quot;System awake&amp;quot;));
+      wdt_reset(); // Reset the watchdog timer to not trigger when not needed
+
+      // Put your code here
+      delay(2000);
+      // if your code take more than 8 sec to process 
+      //  dont forget to put some wdt_reset() or the watchdog will be triggered
+
+
+      Serial.println(F(&amp;quot;System sleep&amp;quot;));
+      Serial.flush(); // always put a Serial.flush() before sleep
+                      // to let the serial finished its task before starting sleep mode
+      sleep(SLEEP_LOOP);
+  }
+
+}
+
+// Init the watchdog timer interrupt
+void configure_wdt(void)
+{
+
+  cli();                           // disable interrupts for changing the registers
+
+  MCUSR = 0;                       // reset status register flags
+
+                                   // Put timer in interrupt-only mode:                                       
+  WDTCSR |= 0b00011000;            // Set WDCE (5th from left) and WDE (4th from left) to enter config mode,
+                                   // using bitwise OR assignment (leaves other bits unchanged).
+  WDTCSR =  0b01000000 | 0b100001; // set WDIE: interrupt enabled
+                                   // clr WDE: reset disabled
+                                   // and set delay interval (right side of bar) to 8 seconds
+
+  sei();                           // re-enable interrupts 
+}
+
+// interrupt raised by the watchdog firing
+ISR(WDT_vect)
+{
+    if(nbr_remaining &amp;gt; 0)
+    {
+        nbr_remaining = nbr_remaining - 1;
+        wdt_reset();
+    }
+    else
+    {
+        MCUSR = 0;                          // reset flags
+
+        WDTCSR |= 0b00011000;               // Enter config mode.
+        WDTCSR =  0b00001000 | 0b000000;    // clr WDIE (interrupt enable...7th from left)
+                                              // set WDE (reset enable...4th from left), and set delay interval
+                                              // reset system in 16 ms...
+                                              // unless wdt_disable() in loop() is reached first
+       while(1);          
+
+    }
+}
+
+
+void sleep(int ncycles)
+{ 
+  nbr_remaining = ncycles;
+  set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+
+  power_adc_disable();
+
+  while (nbr_remaining &amp;gt; 0){ 
+    sleep_mode();
+    sleep_disable();
+  }
+  power_all_enable();
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;la-mise-en-oeuvre&#34;&gt;La mise en oeuvre&lt;/h2&gt;
+
+&lt;p&gt;Le schéma Arduino utilisé dans l&amp;rsquo;eau MVP peut être trouvé &lt;a href=&#34;https://github.com/blissillour/MVPWater&#34;&gt;here&lt;/a&gt;.
+Dans cette esquisse nous utilisons une bibliothèque que nous avons créée pour faciliter la mise en œuvre des capteurs.
+La bibliothèque peut être trouvé &lt;a href=&#34;https://github.com/blissillour/water-sensors&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Vous trouverez ci-dessous un exemple d&amp;rsquo;utilisation de la bibliothèque:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;WaterSensor.h&amp;gt;
+
+#define address_PH 99         // default PH sensor adress on I2C port
+#define address_DO 97         // default DO sensor adress on I2C port
+#define DS18S20_Pin 2         // digital pin of the temperature sensor (outside the box)
+#define DHT_PIN 3             // digital pin of the humidity and temperature sensor (inside the box)
+
+#define TemperatureSensorsPowerPin 8
+#define EzoDOSensorPowerPin 6
+#define EzoPHSensorPowerPin 7
+
+float temperatureBox, humidityBox, temperature;
+char dataPH[10] , dataDO[10];
+
+WaterSensor waterSensor(DS18S20_Pin,DHT_PIN, address_PH,address_DO);
+
+void setup()
+{
+  // Open serial communications and wait for port to open:
+  Serial.begin(38400);
+
+  Wire.begin();           //enable I2C port.
+
+  pinMode(TemperatureSensorsPowerPin,OUTPUT);    // Switch on power for temp and humdity sensor
+  pinMode(EzoDOSensorPowerPin,OUTPUT);          // Switch on power for DO sensor
+  pinMode(EzoPHSensorPowerPin,OUTPUT);          // Switch on power for PH sensor
+
+  digitalWrite(TemperatureSensorsPowerPin,HIGH);
+  digitalWrite(EzoPHSensorPowerPin,HIGH);
+  digitalWrite(EzoDOSensorPowerPin,HIGH);
+
+}
+
+void loop(void)
+{
+  dataPH[0] = &#39;\0&#39;;
+  dataDO[0] = &#39;\0&#39;;
+
+  delay(200);
+
+  // Wake up DO and PH sensors 
+  waterSensor.wakeUpPHSensor();
+  waterSensor.wakeUpDOSensor();
+
+  temperature = waterSensor.getTemperatureValue();
+  Serial.print(F(&amp;quot;Temp in water : &amp;quot;));
+  Serial.println(temperature);
+
+  delay(1000);
+
+  waterSensor.getInboxTemperatureHumidityValue(&amp;amp;temperatureBox,&amp;amp;humidityBox);
+  Serial.print(F(&amp;quot;Temp in box : &amp;quot;));
+  Serial.println(temperatureBox);
+  Serial.print(F(&amp;quot;Humidity : &amp;quot;));
+  Serial.println(humidityBox);
+
+  delay(1000);
+
+  waterSensor.sendTempToDOSensor(temperature);   // Send the temperature to DO sensor to precise the reading value
+  waterSensor.getDOSensorValue(dataDO);          // Receive the DO value
+  Serial.print(F(&amp;quot;DO : &amp;quot;));
+  Serial.println(dataDO);
+
+  delay(1000);
+
+  waterSensor.sendTempToPHSensor(temperature);     // Send the temperature to PH sensor to precise the reading of the value
+  waterSensor.getPHSensorValue(dataPH);            // Receive the PH value
+  Serial.print(F(&amp;quot;PH : &amp;quot;));
+  Serial.println(dataPH);
+
+  delay(1000);
+
+  waterSensor.sleepPHSensor();             // Put the PH sensor in sleep mode to save battery power
+  waterSensor.sleepDOSensor();             // Put the DO sensor in sleep mode to save battery power
+  delay(4000);
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gestion des déchets urbains</title>
+      <link>/fr/documentation/mvps/urban</link>
+      <pubDate>Wed, 22 Mar 2017 00:40:03 +0000</pubDate>
+      
+      <guid>/fr/documentation/mvps/urban</guid>
+      <description>
+
+&lt;p&gt;Découvrez ici comment prototype d&amp;rsquo;une application pour la gestion des déchets à l&amp;rsquo;aide de Waziup.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;En construction.&lt;/strong&gt;
+Le but de ce prototype MVP est de fournir une vue d&amp;rsquo;ensemble et un début rapide sur la façon de développer un dispositif IoT pour la gestion écologique des déchets urbains. Le dispositif permet la lecture périodique d&amp;rsquo;informations de niveau de remplissage pour des poubelles équipées d&amp;rsquo;un toit rigide. Ceci se fait par mesure ultrasonore de distance du niveau de remplissage et communication radio de cette valeur via des dispositifs LoRa sans licence à une station de surveillance.&lt;/p&gt;
+
+&lt;p&gt;Vous trouverez ci-dessous quelques impressions, une description de scénario et quelques conseils pour commencer à développer la partie électronique et logicielle de la solution.&lt;/p&gt;
+
+&lt;h2 id=&#34;déchets-locaux-africains&#34;&gt;Déchets locaux africains&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/waste_images/waste_bin.jpg&#34; alt=&#34;bin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Poubelle&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/waste_images/waste_bin_elec.jpg&#34; alt=&#34;bin elec&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Circuit électronique de premières expériences en cours localement.&lt;/p&gt;
+
+&lt;h1 id=&#34;développement&#34;&gt;Développement&lt;/h1&gt;
+
+&lt;h2 id=&#34;développement-aperçu-électronique&#34;&gt;Développement - aperçu électronique&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/waste_images/20170208_163157_resized.jpg&#34; alt=&#34;elec&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Capteur de distance à compensation de température US-100 (tension 2.4 à 5.5V), version Arduino Pro Mini 3.3V (8MHz), source d&amp;rsquo;énergie (2 ou 3 batteries de type AA ), (Module radio - non visible).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/waste_images/20170209_115554_resized.jpg&#34; alt=&#34;bin top&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vue de dessus de l&amp;rsquo;électronique de poubelle montée sur un support de poubelle.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/waste_images/20170209_115600_resized.jpg&#34; alt=&#34;bin top detail&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vue de dessus détaillée de l&amp;rsquo;électronique montée pour des expériences de niveau de remplissage de poubelle.&lt;/p&gt;
+
+&lt;h2 id=&#34;développement-liste-des-matériels&#34;&gt;Développement - liste des matériels&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sparkfun.com/products/11114&#34;&gt;Arduino Pro Mini 3.3V&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://modtronix.com/inair9.html&#34;&gt;Module InAir9 LoRa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bananarobotics.com/shop/US-100-Ultrasonic-Distance-Sensor-Module&#34;&gt;Capteur de distance et de température&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;common local shop&#34;&gt;Batterie AA&lt;/a&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;développement-description-du-matériel&#34;&gt;Développement - description du matériel&lt;/h2&gt;
+
+&lt;h2 id=&#34;arduino&#34;&gt;Arduino&lt;/h2&gt;
+
+&lt;p&gt;La carte Arduino Pro Mini 3.3V (8MHz) avec son microcrouleur 328P est le &amp;ldquo;cœur&amp;rdquo; de l&amp;rsquo;assemblage électronique. Il contient la boucle de direction centrale: il lit les informations du capteur via une connexion série et les envoie
+Via le module LoRa. Dans ce qui suit, il est montré comment connecter le capteur à l&amp;rsquo;Arduino, puis il sera montré comment le programmer. &lt;img src=&#34;./images/mvps/water_farming/arduino.JPG&#34; alt=&#34;Arduino&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;lora-module&#34;&gt;LoRa module&lt;/h2&gt;
+
+&lt;p&gt;La puce LoRa utilisée ici est le module inAir9.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/inAir9.jpg&#34; alt=&#34;InAir9 and wires&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Au-dessous de la table filaire du module InAir9 est montré comment le relier à l&amp;rsquo;arduino.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/inAir9_table.jpg&#34; alt=&#34;InAir9 and wires&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;capteur-ultrasonique-de-distance-us-100&#34;&gt;Capteur ultrasonique de distance US-100&lt;/h2&gt;
+
+&lt;p&gt;L&amp;rsquo;utilisation de l&amp;rsquo;US-100 en mode de données série fournit une grande précision et une faible puissance de calcul à la carte mère arduino:&lt;/p&gt;
+
+&lt;p&gt;Sélectionnez le mode de fonctionnement du capteur de distance ultrasonique US-100 en utilisant le cavalier à l&amp;rsquo;arrière du module. Lorsque le cavalier est présent (choisir le mode de données série), le capteur émet la distance en tant que données binaires en série. Configuration de l&amp;rsquo;interface série du mode UART Vitesse de transmission 9600, démarrage d&amp;rsquo;un, et arrêt des bits a, bits de données, huit et contrôle de parité blanche, pas de contrôle de flux.&lt;/p&gt;
+
+&lt;p&gt;Attachez le module à un port série sur votre microcontrôleur. La broche Trig / TX se connecte à la ligne de transmission série TX de votre microcontrôleur. La broche Echo / RX se connecte à la ligne de réception série RX de votre microcontrôleur. Définissez le port série du microcontrôleur pour utiliser 9600 baud à 8-N-1 (huit bits de données, sans parité, un bit d&amp;rsquo;arrêt).&lt;/p&gt;
+
+&lt;p&gt;Pour commencer à mesurer la distance, sortez un 0x55 sur le port série et relisez la distance de deux octets en octet haut, format octet bas. La distance renvoyée est mesurée en millimètres. Utilisez la formule suivante pour obtenir la distance en millimètres:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Millimetres = PremierOctetLu * 256 + DeuxiemeOctetLu
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ce module peut également émettre la température en utilisant le mode de sortie série. Pour lire la température, émettre un octet 0x50 sur le port série et lire un seul octet de température. La température réelle est obtenue en utilisant la formule suivante:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Celsius = OctetLu - 45
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;développement-connexion-matérielle&#34;&gt;Développement - connexion matérielle&lt;/h2&gt;
+
+&lt;h1 id=&#34;logiciel&#34;&gt;Logiciel&lt;/h1&gt;
+
+&lt;h2 id=&#34;programmer-l-arduino&#34;&gt;Programmer l&amp;rsquo;Arduino&lt;/h2&gt;
+
+&lt;p&gt;Arduino peut être programmé en envoyant un ensemble d&amp;rsquo;instructions au microcroller sur la carte.
+Pour réaliser que le logiciel IDE Arduino qui utilise une version simplifiée de C ++ est appliqué. Le logiciel Arduino peut être téléchargé &lt;a href=&#34;https://www.arduino.cc/en/main/software&#34;&gt;here&lt;/a&gt;.
+Ensuite, pour connecter l&amp;rsquo;Arduino Pro Mini à l&amp;rsquo;ordinateur une puce USB-FTDI comme ci-dessous a été utilisé.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/mvps/water_farming/ftdi_arduino.png&#34; alt=&#34;FTDI Arduino&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;bibliothèques&#34;&gt;Bibliothèques&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.arduino.cc/en/Reference/SoftwareSerial&#34;&gt;SoftwareSerial library&lt;/a&gt; est utilisé avec le capteur de distance US-100 via une communication série&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/CongducPham/LowCostLoRaGw&#34;&gt;SX1272 library&lt;/a&gt; est utilisé avec le module LoRa&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;module-lora&#34;&gt;Module LoRa&lt;/h3&gt;
+
+&lt;p&gt;Pour envoyer les données de niveau de remplissage mesurées via la radio LoRa, la bibliothèque SX1272 est utilisée. Des exemples d&amp;rsquo;utilisation de cette bibliothèque sont disponibles &lt;a href=&#34;https://github.com/CongducPham/LowCostLoRaGw/tree/master/Arduino&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;module-capteur-de-distance&#34;&gt;Module capteur de distance&lt;/h3&gt;
+
+&lt;p&gt;Pour obtenir la mesure de distance (et par nature de température) à partir du capteur US-100, la bibliothèque SoftwareSerial est utilisée pour l&amp;rsquo;exécuter en mode série (plus précis que le PWM).
+Voici un exemple de code utilisé:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Essai de distance et de température pour module capteur US-100
+// utilisant Arduino Pro Mini de 3,3 V alimentant le US-100 via ArduinoGPIO
+// adapté de Zeisberg, janvier 2017
+// Original de RafaG, 2014  
+
+#include &amp;lt;SoftwareSerial.h&amp;gt;;
+
+const int US100_TX = 6;
+const int US100_RX = 5;
+
+// instntiation of a new serial channel
+SoftwareSerial portUS100(US100_RX, US100_TX);
+
+unsigned int MSByteDist = 0;
+unsigned int LSByteDist = 0;
+unsigned int mmDist = 0;
+int temp = 0;
+
+void setup() {
+    // provide VCC to US100 via GPIO 4 to enable later energy saving function 
+    pinMode(4, OUTPUT);
+    digitalWrite(4, HIGH);
+
+Serial.begin(9600);
+portUS100.begin(9600);
+
+}
+
+void loop() {
+
+portUS100.flush(); // limpia el buffer del puerto serie
+portUS100.write(0x55); // orden de medición de distancia
+
+delay(500);
+
+if(portUS100.available() &amp;gt;= 2) // comprueba la recepción de 2 bytes
+{
+    MSByteDist = portUS100.read(); // lectura de ambos bytes
+    LSByteDist  = portUS100.read();
+    mmDist  = MSByteDist * 256 + LSByteDist; // distancia
+    if((mmDist &amp;gt; 1) &amp;amp;&amp;amp; (mmDist &amp;lt; 10000)) // comprobación de la distancia dentro de rango
+    {
+        Serial.print(&amp;quot;Distance: &amp;quot;);
+        Serial.print(mmDist, DEC);
+        Serial.println(&amp;quot; mm&amp;quot;);
+    }
+}
+
+portUS100.flush(); // limpia el buffer del puerto serie
+portUS100.write(0x50); // orden de medición de distancia
+
+delay(500);
+if(portUS100.available() &amp;gt;= 1) // comprueba la recepción de 1 byte
+{
+    temp = portUS100.read(); // lectura del byte
+    if((temp &amp;gt; 1) &amp;amp;&amp;amp; (temp &amp;lt; 130)) // comprobación de rango válido
+    {
+        temp -= 45; // corrige offset de 45º
+        Serial.print(&amp;quot;Temperature: &amp;quot;);
+        Serial.print(temp, DEC);
+        Serial.println(&amp;quot; Grad Celsius.&amp;quot;);
+    }
+}
+
+delay(1000);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;scénario-de-test&#34;&gt;Scénario de test&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/waste_images/20170209_115618_resized.jpg&#34; alt=&#34;bin front view&#34; /&gt;
+Vue de face du système expérimental de gestion des déchets urbains de MVP avec bac souple et toit rigide.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/waste_images/20170209_115629_resized.jpg&#34; alt=&#34;bin inside top&#34; /&gt;
+Vue de dessus à l&amp;rsquo;intérieur depuis le bas - montrant le capteur en regardant vers le bas pour estimer la distance entre le haut et la surface des déchets.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/waste_images/20170209_115643_resized.jpg&#34; alt=&#34;bin almost empty&#34; /&gt;
+Poubelle allemande presque vide à l&amp;rsquo;intérieur - vue de dessous.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/waste_images/20170209_115720_resized.jpg&#34; alt=&#34;bin comp-62cm&#34; /&gt;
+Distance mesurée 62cm pour la comparaison pour la poubelle presque vide.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/waste_images/20170209_115752_resized.jpg&#34; alt=&#34;bin meas-65cm&#34; /&gt;
+Distance mesurée 65cm avec capteur ultrasonique US-100 pour poubelle presque vide.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/waste_images/20170209_115856_resized.jpg&#34; alt=&#34;bin comp-44cm&#34; /&gt;
+Distance mesurée 44cm pour comparaison pour &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; rempli poubelle.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/waste_images/20170209_115912_resized.jpg&#34; alt=&#34;bin meas-44cm&#34; /&gt;
+Distance mesurée 44cm avec capteur ultrasonore US-100 pour &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; rempli poubelle.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Prototypage d&#39;applications réelles</title>
+      <link>/fr/documentation/mvps/</link>
+      <pubDate>Wed, 22 Mar 2017 00:39:56 +0000</pubDate>
+      
+      <guid>/fr/documentation/mvps/</guid>
+      <description>&lt;p&gt;Dans cette section, vous allez voir comment créer des prototypes d&amp;rsquo;application IoT réels.
+Nous proposons plusieurs exemples:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/mvps/water&#34;&gt;Fish Farming&lt;/a&gt;: Découvrez comment surveiller la qualité de l&amp;rsquo;eau des étangs.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/mvps/agri&#34;&gt;Weather station&lt;/a&gt;: Construire une station météo dédiée à l&amp;rsquo;agriculture.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/mvps/cattle&#34;&gt;Cattle management&lt;/a&gt;: Construire un collier d&amp;rsquo;IoT pour les vaches.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/mvps/urban&#34;&gt;Urban waste&lt;/a&gt;: Créer des poubelles intelligentes.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gestion des bovins</title>
+      <link>/fr/documentation/mvps/cattle</link>
+      <pubDate>Wed, 22 Mar 2017 00:39:48 +0000</pubDate>
+      
+      <guid>/fr/documentation/mvps/cattle</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Découvrez ici comment construire un collier pour suivre les bovins&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Le vol de bétail est un phénomène récurrent causant de nombreux problèmes aux agriculteurs en Afrique.
+Afin de prévenir le broutage des bovins en Afrique, WAZIUP a proposé un prototype basé sur des avancées technologiques récentes, notamment LoRa.
+Ce prototype repose sur une plate-forme LoRa IoT à faible coût intégrée qui se compose d&amp;rsquo;une seule passerelle low-cost (LoRa) avec des capacités de post-traitement, communiquant avec des terminaux low-cost (LoRa) et back-ended avec un IoT plate-forme cloud.&lt;/p&gt;
+
+&lt;h1 id=&#34;principe&#34;&gt;Principe&lt;/h1&gt;
+
+&lt;p&gt;Le prototype est basé sur le réseau LoRa avec une communication single hop où les bovins sont assimilés comme noeuds finaux qui envoient périodiquement des données à une passerelle LoRa.
+La passerelle envoie des informations relatives à la situation des vaches au fermier via la plateforme WAZIUP en nuage si la connectivité Internet est disponible, ou directement au smartphone ou à la tablette du fermier via WiFi ou Bluetooth autrement.
+Un collier conçu intégrant notre dispositif LoRa intégré est fixé autour du cou de la vache.
+Ce collier intègre un système de balise qui déclenchera une alarme dans le cas où un risque est observé.&lt;/p&gt;
+
+&lt;h2 id=&#34;collier-conçu&#34;&gt;Collier conçu&lt;/h2&gt;
+
+&lt;p&gt;L&amp;rsquo;idée de collier peut ne pas être l&amp;rsquo;innovation majeure dans la construction de ce prototype.
+Cependant, la grande majorité des colliers conçus pour la gestion des bovins ne correspondent pas bien à ce qui est attendu dans le contexte du broutage des bovins en Afrique.
+Cela est dû à plusieurs raisons, et le plus important est qu&amp;rsquo;ils sont facilement amovibles et les voleurs peuvent couper le collier sans la sensibilisation des agriculteurs.
+Pour surmonter ce problème, nous concevons le collier de telle sorte que lorsqu&amp;rsquo;il est coupé ou enlevé, l&amp;rsquo;agriculteur sera informé.
+Nous avons d&amp;rsquo;abord choisi une ceinture robuste et, plus important encore, nous avons passé le fil d&amp;rsquo;alimentation du périphérique LoRa autour du cou avec la ceinture (Fig 2b).
+Un message de balise est envoyé à la passerelle lorsque le connecteur mâle (MC) et le connecteur femelle (FC) du câble d&amp;rsquo;alimentation sont connectés.
+Lorsque la passerelle reçoit le message balise cela signifie que tout va bien avec le collier.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/cattle_images/collar.png&#34; alt=&#34;collar&#34; /&gt;
+&lt;img src=&#34;./documentation/mvps/cattle_images/strap.png&#34; alt=&#34;strap&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;système-de-balisage&#34;&gt;Système de balisage&lt;/h2&gt;
+
+&lt;p&gt;Un message de balise est envoyé par les périphériques finaux à la passerelle quand theye MC est connecté au FC.
+Le message de balise est un compteur BC (Beacon Counter) qui prend une valeur comprise entre 0 et 65536.
+Les étoiles BC à 0, augmente de 1 à chaque balise, retourne à 0 après 65536 balises.
+L&amp;rsquo;appareil final est conçu pour envoyer, lorsqu&amp;rsquo;il est sous tension, un message de balise toutes les 10 min.
+La passerelle LoRa stocke le message de balise reçu et le traite afin de détecter si une alarme doit être déclenchée ou non.
+Le résultat du traitement peut être envoyé au nuage WAZIUP si la connectivité Internet est disponible ou directement au smartphone ou à la tablette du fermier (via bluetooth ou wifi) sinon.
+La réception d&amp;rsquo;un message balise signifie que le dispositif terminal qui l&amp;rsquo;envoie est dans la plage de la passerelle.
+Si les vaches sont hors de portée, ou le collier est déconnecté ou endommagé, une alarme sera soulevée.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/cattle_images/moo.png&#34; alt=&#34;Moo&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;déploiement&#34;&gt;Déploiement&lt;/h2&gt;
+
+&lt;p&gt;Les Prototypes sont déployés au CIMEL (Mbakhana, à 6 km de l&amp;rsquo;UGB) au Sénégal.
+Une passerelle LoRa sera placée jusqu&amp;rsquo;à l&amp;rsquo;édifice de la bibliothèque UGB (hauteur de 90 mètres) et quelques colliers avec des périphériques LoRa mis en place autour du cou d&amp;rsquo;un animal identifié.
+Un collier va envoyer activement et périodiquement des &amp;ldquo;balises&amp;rdquo; à la passerelle.&lt;/p&gt;
+
+&lt;h2 id=&#34;matériaux&#34;&gt;Matériaux&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Passerelle LoRa&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Raspberry PI (1B / 1B + / 2B / 3B)&lt;/li&gt;
+&lt;li&gt;Module radio LoRa: Notre prototype est testé et peut fonctionner avec différents modules radio LoRa: Libelium SX1272 LoRa, le HopeRF RFM92W / 95W, le Modronix inAir9 / 9B et le NiceRF SX1276.&lt;/li&gt;
+&lt;li&gt;Antenne: Longue antenne de l&amp;rsquo;Antenne Scan fonctionnant sur 824-894 MHz&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/cattle_images/antenna.png&#34; alt=&#34;Antenna&#34; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Dispositifs terminaux LoRa&lt;/li&gt;
+&lt;li&gt;Arduino Nano ou Pro Mini: Pour réduire la taille du collier, les terminaux doivent être petits, alors nous devons utiliser de très petits microcontrôleurs comme arduino nano ou pro mini.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/cattle_images/nano.png&#34; alt=&#34;Nano&#34; /&gt;
+&lt;img src=&#34;./documentation/mvps/cattle_images/pro_mini.png&#34; alt=&#34;Pro Mini&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Module radio LoRa + antenne&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Notre prototype est testé et il peut fonctionner avec différents modules radio LoRa: Libelium SX1272 LoRa, le HopeRF RFM92W / 95W, le Modronix inAir9 / 9B et le NiceRF SX1276.
+Pour les terminaux, nous utilisons une petite antenne fonctionnant sur 868MHz.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/mvps/cattle_images/antennas.jpg&#34; alt=&#34;Antennas&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>/fr/documentation/installation/</link>
+      <pubDate>Wed, 22 Mar 2017 00:25:08 +0000</pubDate>
+      
+      <guid>/fr/documentation/installation/</guid>
+      <description>
+
+&lt;p&gt;Comment installer Waziup?&lt;/p&gt;
+
+&lt;h4 id=&#34;exigences&#34;&gt;Exigences&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/how-waziup-works/requirements&#34;&gt;Les exigences de Waziup&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;installer-waziup&#34;&gt;Installer Waziup&lt;/h4&gt;
+
+&lt;h4 id=&#34;configuration&#34;&gt;Configuration&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/installation/configure-waziup/&#34;&gt;Configurer Waziup&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;essayez-waziup&#34;&gt;Essayez Waziup&lt;/h2&gt;
+
+&lt;p&gt;Nous avons mis en place un &lt;a href=&#34;./documentation/installation/hello-world/&#34;&gt;guide pratique&lt;/a&gt; pour vous permettre d&amp;rsquo;essayer certaines des principales fonctionnalités de Waziup&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>La plateforme</title>
+      <link>/fr/documentation/installation/hello-world</link>
+      <pubDate>Wed, 22 Mar 2017 00:25:01 +0000</pubDate>
+      
+      <guid>/fr/documentation/installation/hello-world</guid>
+      <description>&lt;p&gt;Le tableau de bord(dashboard) Waziup est en construction.&lt;/p&gt;
+
+&lt;p&gt;En attendant, vous pouvez accéder à toutes les fonctionnalités de Waziup en utilisant les &lt;a href=&#34;./documentation/tutorials/&#34;&gt;tutoriels&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./documentation/installation/Waziup-dashboard.png&#34; alt=&#34;Dashboard&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>/fr/documentation/installation/docker</link>
+      <pubDate>Wed, 22 Mar 2017 00:24:46 +0000</pubDate>
+      
+      <guid>/fr/documentation/installation/docker</guid>
+      <description>&lt;p&gt;Les fichiers Docker de WAZIUP.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Configurer Waziup</title>
+      <link>/fr/documentation/installation/configure-waziup</link>
+      <pubDate>Wed, 22 Mar 2017 00:24:36 +0000</pubDate>
+      
+      <guid>/fr/documentation/installation/configure-waziup</guid>
+      <description>&lt;p&gt;Fichier de configuration de WAZIUP.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Comment fonctionne Waziup?</title>
+      <link>/fr/documentation/how-waziup-works/</link>
+      <pubDate>Tue, 21 Mar 2017 23:55:53 +0000</pubDate>
+      
+      <guid>/fr/documentation/how-waziup-works/</guid>
+      <description>&lt;p&gt;Regardons à l&amp;rsquo;intérieur de la grande machine.
+Dans cette section vous pouvez trouver:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/how-waziup-works/architecture&#34;&gt;L&amp;rsquo;architecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/how-waziup-works/localglobal&#34;&gt;Concepts Cloud locaux et globaux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./documentation/how-waziup-works/requirements&#34;&gt;Les exigences&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Clouds locaux et mondiaux</title>
+      <link>/fr/documentation/how-waziup-works/localglobal</link>
+      <pubDate>Tue, 21 Mar 2017 23:55:38 +0000</pubDate>
+      
+      <guid>/fr/documentation/how-waziup-works/localglobal</guid>
+      <description>&lt;p&gt;WAZIUP utilise le concept des Nuages locaux et globaux.
+L&amp;rsquo;objectif est que, même sans accès à Internet, votre déploiement IoT devrait continuer à fonctionner!&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt; &lt;img src=&#34;./images/localglobal.png&#34; alt=&#34;Waziup local et global&#34; /&gt;&lt;/center&gt;
+&lt;center&gt; &lt;em&gt;Déploiement Waziup local et global&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Sur le côté gauche de l&amp;rsquo;image, l&amp;rsquo;application est conçue par le développeur.
+Il est poussé sur la plateforme Waziup Cloud.
+L&amp;rsquo;orchestre s&amp;rsquo;occupe ensuite de la compilation et du déploiement de l&amp;rsquo;application dans les différents environnements d&amp;rsquo;exécution Cloud.
+En outre, l&amp;rsquo;orchestreur pilote l&amp;rsquo;instanciation des services dans le Cloud.
+Un fichier spécial appelé &lt;em&gt;manifest&lt;/em&gt; décrit également la partie de l&amp;rsquo;application qui doit être installée localement, ainsi que les services correspondants.
+L&amp;rsquo;application locale peut alors se connecter à la passerelle et collecter des données à partir des capteurs.
+Cette partie d&amp;rsquo;application locale s&amp;rsquo;occupera de la fourniture du service, même en cas d&amp;rsquo;interruption de l&amp;rsquo;accès à Internet.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exigences</title>
+      <link>/fr/documentation/how-waziup-works/requirements</link>
+      <pubDate>Tue, 21 Mar 2017 23:55:26 +0000</pubDate>
+      
+      <guid>/fr/documentation/how-waziup-works/requirements</guid>
+      <description>&lt;p&gt;Les composants Waziup fonctionnent avec des éléments de votre architecture pour gérer l&amp;rsquo;orchestration, le routage, la persistance et l&amp;rsquo;agrégation de métriques.&lt;/p&gt;
+
+&lt;div class=&#34;admonition note&#34;&gt;
+  &lt;p class=&#34;admonition-title&#34;&gt;Quoi de neuf?&lt;/p&gt;
+  &lt;p&gt;&lt;ul&gt;
+&lt;li&gt;Découvrez comment &lt;a href=&#34;./documentation/installation&#34;&gt;installer Waziup&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>La mise en oeuvre</title>
+      <link>/fr/documentation/how-waziup-works/implementation</link>
+      <pubDate>Tue, 21 Mar 2017 23:55:13 +0000</pubDate>
+      
+      <guid>/fr/documentation/how-waziup-works/implementation</guid>
+      <description>&lt;p&gt;La plate-forme Waziup Cloud a été mise en œuvre avec une technologie de pointe, tout en gardant à l&amp;rsquo;esprit les défis à relever.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt; &lt;img src=&#34;./images/implem.png&#34; alt=&#34;Implémentation de Waziup&#34; /&gt;&lt;/center&gt;
+&lt;center&gt;&lt;em&gt;Implémentation de Waziup&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;La figure présente la mise en œuvre de la pile de plateforme Waziup.
+La plate-forme Waziup utilise trois couches de nuages distinctes (en bleu dans l&amp;rsquo;image):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Infrastructure en tant que service&amp;rdquo; (IaaS),&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Conteneur en service&amp;rdquo; (CaaS),&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Plate-forme en tant que service&amp;rdquo; (PaaS).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La première couche est fournie par &lt;a href=&#34;https://www.openstack.org/&#34;&gt;OpenStack&lt;/a&gt;.
+Its main role is to provide Virtual Machines (VMs), in which we run the full platform.
+Son rôle principal est de fournir des machines virtuelles (VM), dans lequel nous exécutons la plate-forme complète.
+Cette couche est utile car la plupart des fournisseurs de Cloud (Amazon, Rackspace &amp;hellip;) utilisent les machines virtuelles comme unités de base de vente.
+La deuxième couche est fournie par &lt;a href=&#34;http://kubernetes.io/&#34;&gt;Kubernetes&lt;/a&gt;.
+Le rôle de cette couche est de fournir des conteneurs, tels que des conteneurs Docker.
+Ces conteneurs offrent une virtualisation légère et ultra-rapide pour les applications et les micro-services.
+Les conteneurs eux-mêmes fonctionnent à l&amp;rsquo;intérieur des machines virtuelles.
+La troisième et dernière couche de nuages est fournie par &lt;a href=&#34;http://deis.io/&#34;&gt;Deis&lt;/a&gt;.
+Il fournit des services aux développeurs, tels que la compilation et le déploiement et l&amp;rsquo;application.
+Toutes les applications poussées par les utilisateurs seront compilées avec Deis et hébergées dans des conteneurs sur Kubernetes.&lt;/p&gt;
+
+&lt;p&gt;Pour accéder à la plate-forme, les utilisateurs et les composants externes doivent passer par le gestionnaire d&amp;rsquo;authentification et d&amp;rsquo;autorisation, qui est &lt;a href=&#34;http://www.keycloak.org/&#34;&gt;KeyCloak&lt;/a&gt;.
+Les composants externes doivent également passer par l&amp;rsquo;API.
+Les téléphones mobiles peuvent se connecter à la plate-forme via le back-end mobile.
+Le back-end mobile dessert les données vers les terminaux mobiles, et interfère également avec les composants SMS et les commandes vocales.
+Enfin, la passerelle peut envoyer ses données au courtier de données, qui est &lt;a href=&#34;https://fiware-orion.readthedocs.io&#34;&gt;FIWARE Orion&lt;/a&gt;.
+Les données sont distribuées aux applications qui le demandent.
+Orion interface avec la base de données et le traitement des données (&lt;a href=&#34;https://www.elastic.co/&#34;&gt;Elastic Search&lt;/a&gt;), pour l&amp;rsquo;analyse des données historiques.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

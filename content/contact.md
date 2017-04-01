@@ -1,6 +1,7 @@
 ---
 date: 2017-10-28T09:00:00+00:00
-title: contact
+title: Contact
+url: /contact
 ---
 
 Waziup is being developped by the WAZIUP consortium.

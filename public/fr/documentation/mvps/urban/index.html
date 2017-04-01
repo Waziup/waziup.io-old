@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+
+
+
+ <html class="no-js" lang=""> 
+<head>
+<script type="text/javascript">
+theBaseUrl = "http://" + location.host + "/";
+document.write('<base href="' + theBaseUrl + '"/>');
+</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+  <title>Gestion des déchets urbains - La plateforme Waziup</title>
+  <meta name="generator" content="Hugo 0.18.1" />
+
+  
+  <link rel="canonical" href="./fr/documentation/mvps/urban">
+  
+  <meta name="author" content="waziup.io">
+  
+
+  <meta property="og:url" content="/fr/documentation/mvps/urban">
+  <meta property="og:title" content="La plateforme Waziup">
+  <meta property="og:image" content="/images/logo-waziup.png">
+  <meta name="apple-mobile-web-app-title" content="La plateforme Waziup">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="shortcut icon" type="image/x-icon" href="./images/logo-waziup.png">
+  <link rel="icon" type="image/x-icon" href="./images/logo-waziup.png">
+
+
+  <style>
+    @font-face {
+      font-family: 'Icon';
+      format('embedded-opentype'),
+      format('woff'),
+      format('truetype'),
+      format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/vendor.js"></script>
+
+  <script src="js/app.js"></script>
+
+</head>
+<body class="palette-primary-pink palette-accent-pink">
+
+
+<div class="single-page">
+  <nav aria-label="Header" id="header" class="top-menu">
+  <div class="left">
+    <a href="#">
+      <div id="logo" class="logo"></div>
+    </a>
+  </div>
+
+  <div class="center">
+          <a href="./" ><img src="img/lang/gb.png" alt="English"></a>
+          <a href="./fr" ><img src="img/lang/fr.png" alt="Français"></a>
+  </div>
+
+  <div class="right">
+    <div class="top-menu-items" id="top-menu-items">
+
+    </div>
+
+    <div class="download">
+      <a href="http://dashboard.waziup.io" class="button button--red">
+        Essayer Waziup
+      </a>
+    </div>
+    
+    <a href="https://github.com/Waziup/platform" target="_blank" class="github-logo">
+      <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+    </a>
+
+    <div class="search-button">
+      <i class="fa fa-lg fa-search"></i>
+    </div>
+
+  </div>
+</nav>
+
+<ul id="mobile-menu" style="display: none">
+</ul>
+
+<div id="search">
+  <div class="search-bar">
+    <div class="search-bar__back">
+      <i class="fa fa-lg fa-times"></i>
+    </div>
+    <input class="search-bar__input" placeholder='Entrer votre recherche ici...'>
+  </div>
+  <div class="search-results">
+    <ul></ul>
+  </div>
+</div>
+
+
+</div>
+
+<div class="page documentation">
+    <div class="menu" id="side-menu">
+    </div>
+    <div class="content">
+      <h1 class="content-header">Gestion des déchets urbains </h1>
+      <div class="markdowned">
+        
+
+<p>Découvrez ici comment prototype d&rsquo;une application pour la gestion des déchets à l&rsquo;aide de Waziup.</p>
+
+<p><strong>En construction.</strong>
+Le but de ce prototype MVP est de fournir une vue d&rsquo;ensemble et un début rapide sur la façon de développer un dispositif IoT pour la gestion écologique des déchets urbains. Le dispositif permet la lecture périodique d&rsquo;informations de niveau de remplissage pour des poubelles équipées d&rsquo;un toit rigide. Ceci se fait par mesure ultrasonore de distance du niveau de remplissage et communication radio de cette valeur via des dispositifs LoRa sans licence à une station de surveillance.</p>
+
+<p>Vous trouverez ci-dessous quelques impressions, une description de scénario et quelques conseils pour commencer à développer la partie électronique et logicielle de la solution.</p>
+
+<h2 id="déchets-locaux-africains">Déchets locaux africains</h2>
+
+<p><img src="./documentation/mvps/waste_images/waste_bin.jpg" alt="bin" /></p>
+
+<p>Poubelle</p>
+
+<p><img src="./documentation/mvps/waste_images/waste_bin_elec.jpg" alt="bin elec" /></p>
+
+<p>Circuit électronique de premières expériences en cours localement.</p>
+
+<h1 id="développement">Développement</h1>
+
+<h2 id="développement-aperçu-électronique">Développement - aperçu électronique</h2>
+
+<p><img src="./documentation/mvps/waste_images/20170208_163157_resized.jpg" alt="elec" /></p>
+
+<p>Capteur de distance à compensation de température US-100 (tension 2.4 à 5.5V), version Arduino Pro Mini 3.3V (8MHz), source d&rsquo;énergie (2 ou 3 batteries de type AA ), (Module radio - non visible).</p>
+
+<p><img src="./documentation/mvps/waste_images/20170209_115554_resized.jpg" alt="bin top" /></p>
+
+<p>Vue de dessus de l&rsquo;électronique de poubelle montée sur un support de poubelle.</p>
+
+<p><img src="./documentation/mvps/waste_images/20170209_115600_resized.jpg" alt="bin top detail" /></p>
+
+<p>Vue de dessus détaillée de l&rsquo;électronique montée pour des expériences de niveau de remplissage de poubelle.</p>
+
+<h2 id="développement-liste-des-matériels">Développement - liste des matériels</h2>
+
+<ul>
+<li><a href="https://www.sparkfun.com/products/11114">Arduino Pro Mini 3.3V</a></li>
+<li><a href="http://modtronix.com/inair9.html">Module InAir9 LoRa</a></li>
+<li><a href="https://www.bananarobotics.com/shop/US-100-Ultrasonic-Distance-Sensor-Module">Capteur de distance et de température</a></li>
+<li><a href="common local shop">Batterie AA</a>
+<br /></li>
+</ul>
+
+<h2 id="développement-description-du-matériel">Développement - description du matériel</h2>
+
+<h2 id="arduino">Arduino</h2>
+
+<p>La carte Arduino Pro Mini 3.3V (8MHz) avec son microcrouleur 328P est le &ldquo;cœur&rdquo; de l&rsquo;assemblage électronique. Il contient la boucle de direction centrale: il lit les informations du capteur via une connexion série et les envoie
+Via le module LoRa. Dans ce qui suit, il est montré comment connecter le capteur à l&rsquo;Arduino, puis il sera montré comment le programmer. <img src="./images/mvps/water_farming/arduino.JPG" alt="Arduino" /></p>
+
+<h2 id="lora-module">LoRa module</h2>
+
+<p>La puce LoRa utilisée ici est le module inAir9.</p>
+
+<p><img src="./images/mvps/water_farming/inAir9.jpg" alt="InAir9 and wires" /></p>
+
+<p>Au-dessous de la table filaire du module InAir9 est montré comment le relier à l&rsquo;arduino.</p>
+
+<p><img src="./images/mvps/water_farming/inAir9_table.jpg" alt="InAir9 and wires" /></p>
+
+<h2 id="capteur-ultrasonique-de-distance-us-100">Capteur ultrasonique de distance US-100</h2>
+
+<p>L&rsquo;utilisation de l&rsquo;US-100 en mode de données série fournit une grande précision et une faible puissance de calcul à la carte mère arduino:</p>
+
+<p>Sélectionnez le mode de fonctionnement du capteur de distance ultrasonique US-100 en utilisant le cavalier à l&rsquo;arrière du module. Lorsque le cavalier est présent (choisir le mode de données série), le capteur émet la distance en tant que données binaires en série. Configuration de l&rsquo;interface série du mode UART Vitesse de transmission 9600, démarrage d&rsquo;un, et arrêt des bits a, bits de données, huit et contrôle de parité blanche, pas de contrôle de flux.</p>
+
+<p>Attachez le module à un port série sur votre microcontrôleur. La broche Trig / TX se connecte à la ligne de transmission série TX de votre microcontrôleur. La broche Echo / RX se connecte à la ligne de réception série RX de votre microcontrôleur. Définissez le port série du microcontrôleur pour utiliser 9600 baud à 8-N-1 (huit bits de données, sans parité, un bit d&rsquo;arrêt).</p>
+
+<p>Pour commencer à mesurer la distance, sortez un 0x55 sur le port série et relisez la distance de deux octets en octet haut, format octet bas. La distance renvoyée est mesurée en millimètres. Utilisez la formule suivante pour obtenir la distance en millimètres:</p>
+
+<pre><code>Millimetres = PremierOctetLu * 256 + DeuxiemeOctetLu
+</code></pre>
+
+<p>Ce module peut également émettre la température en utilisant le mode de sortie série. Pour lire la température, émettre un octet 0x50 sur le port série et lire un seul octet de température. La température réelle est obtenue en utilisant la formule suivante:</p>
+
+<pre><code>Celsius = OctetLu - 45
+</code></pre>
+
+<h2 id="développement-connexion-matérielle">Développement - connexion matérielle</h2>
+
+<h1 id="logiciel">Logiciel</h1>
+
+<h2 id="programmer-l-arduino">Programmer l&rsquo;Arduino</h2>
+
+<p>Arduino peut être programmé en envoyant un ensemble d&rsquo;instructions au microcroller sur la carte.
+Pour réaliser que le logiciel IDE Arduino qui utilise une version simplifiée de C ++ est appliqué. Le logiciel Arduino peut être téléchargé <a href="https://www.arduino.cc/en/main/software">here</a>.
+Ensuite, pour connecter l&rsquo;Arduino Pro Mini à l&rsquo;ordinateur une puce USB-FTDI comme ci-dessous a été utilisé.</p>
+
+<p><img src="./images/mvps/water_farming/ftdi_arduino.png" alt="FTDI Arduino" /></p>
+
+<h2 id="bibliothèques">Bibliothèques</h2>
+
+<ul>
+<li><a href="https://www.arduino.cc/en/Reference/SoftwareSerial">SoftwareSerial library</a> est utilisé avec le capteur de distance US-100 via une communication série</li>
+<li><a href="https://github.com/CongducPham/LowCostLoRaGw">SX1272 library</a> est utilisé avec le module LoRa</li>
+</ul>
+
+<h3 id="module-lora">Module LoRa</h3>
+
+<p>Pour envoyer les données de niveau de remplissage mesurées via la radio LoRa, la bibliothèque SX1272 est utilisée. Des exemples d&rsquo;utilisation de cette bibliothèque sont disponibles <a href="https://github.com/CongducPham/LowCostLoRaGw/tree/master/Arduino">here</a>.</p>
+
+<h3 id="module-capteur-de-distance">Module capteur de distance</h3>
+
+<p>Pour obtenir la mesure de distance (et par nature de température) à partir du capteur US-100, la bibliothèque SoftwareSerial est utilisée pour l&rsquo;exécuter en mode série (plus précis que le PWM).
+Voici un exemple de code utilisé:</p>
+
+<pre><code>// Essai de distance et de température pour module capteur US-100
+// utilisant Arduino Pro Mini de 3,3 V alimentant le US-100 via ArduinoGPIO
+// adapté de Zeisberg, janvier 2017
+// Original de RafaG, 2014  
+
+#include &lt;SoftwareSerial.h&gt;;
+
+const int US100_TX = 6;
+const int US100_RX = 5;
+
+// instntiation of a new serial channel
+SoftwareSerial portUS100(US100_RX, US100_TX);
+
+unsigned int MSByteDist = 0;
+unsigned int LSByteDist = 0;
+unsigned int mmDist = 0;
+int temp = 0;
+
+void setup() {
+    // provide VCC to US100 via GPIO 4 to enable later energy saving function 
+    pinMode(4, OUTPUT);
+    digitalWrite(4, HIGH);
+
+Serial.begin(9600);
+portUS100.begin(9600);
+
+}
+
+void loop() {
+
+portUS100.flush(); // limpia el buffer del puerto serie
+portUS100.write(0x55); // orden de medición de distancia
+
+delay(500);
+
+if(portUS100.available() &gt;= 2) // comprueba la recepción de 2 bytes
+{
+    MSByteDist = portUS100.read(); // lectura de ambos bytes
+    LSByteDist  = portUS100.read();
+    mmDist  = MSByteDist * 256 + LSByteDist; // distancia
+    if((mmDist &gt; 1) &amp;&amp; (mmDist &lt; 10000)) // comprobación de la distancia dentro de rango
+    {
+        Serial.print(&quot;Distance: &quot;);
+        Serial.print(mmDist, DEC);
+        Serial.println(&quot; mm&quot;);
+    }
+}
+
+portUS100.flush(); // limpia el buffer del puerto serie
+portUS100.write(0x50); // orden de medición de distancia
+
+delay(500);
+if(portUS100.available() &gt;= 1) // comprueba la recepción de 1 byte
+{
+    temp = portUS100.read(); // lectura del byte
+    if((temp &gt; 1) &amp;&amp; (temp &lt; 130)) // comprobación de rango válido
+    {
+        temp -= 45; // corrige offset de 45º
+        Serial.print(&quot;Temperature: &quot;);
+        Serial.print(temp, DEC);
+        Serial.println(&quot; Grad Celsius.&quot;);
+    }
+}
+
+delay(1000);
+}
+</code></pre>
+
+<h2 id="scénario-de-test">Scénario de test</h2>
+
+<p><img src="./documentation/mvps/waste_images/20170209_115618_resized.jpg" alt="bin front view" />
+Vue de face du système expérimental de gestion des déchets urbains de MVP avec bac souple et toit rigide.</p>
+
+<p><img src="./documentation/mvps/waste_images/20170209_115629_resized.jpg" alt="bin inside top" />
+Vue de dessus à l&rsquo;intérieur depuis le bas - montrant le capteur en regardant vers le bas pour estimer la distance entre le haut et la surface des déchets.</p>
+
+<p><img src="./documentation/mvps/waste_images/20170209_115643_resized.jpg" alt="bin almost empty" />
+Poubelle allemande presque vide à l&rsquo;intérieur - vue de dessous.</p>
+
+<p><img src="./documentation/mvps/waste_images/20170209_115720_resized.jpg" alt="bin comp-62cm" />
+Distance mesurée 62cm pour la comparaison pour la poubelle presque vide.</p>
+
+<p><img src="./documentation/mvps/waste_images/20170209_115752_resized.jpg" alt="bin meas-65cm" />
+Distance mesurée 65cm avec capteur ultrasonique US-100 pour poubelle presque vide.</p>
+
+<p><img src="./documentation/mvps/waste_images/20170209_115856_resized.jpg" alt="bin comp-44cm" />
+Distance mesurée 44cm pour comparaison pour <sup>1</sup>&frasl;<sub>3</sub> rempli poubelle.</p>
+
+<p><img src="./documentation/mvps/waste_images/20170209_115912_resized.jpg" alt="bin meas-44cm" />
+Distance mesurée 44cm avec capteur ultrasonore US-100 pour <sup>1</sup>&frasl;<sub>3</sub> rempli poubelle.</p>
+
+      </div>
+    </div>
+</div>
+
+<div class="lander-row lander-row--blue footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-3">
+        <h2 class="h2">Apprendre plus</h2>
+        <a href='fr/why-use-waziup/'>
+          <p class="text">Pourquoi utiliser Waziup?</p>
+        </a>
+        <a href='fr/documentation/how-waziup-works/'>
+          <p class="text">Documentation</p>
+        </a>
+        <a href='fr/about'>
+          <p class="text">A propos de nous</p>
+        </a>
+        <a href='fr/resources/news/'>
+          <p class="text">Nouveautées</p>
+        </a>
+        <a href='fr/contact'>
+          <p class="text">Contact</p>
+        </a>
+      </div>
+        <div class="col col-6">
+        <h2 class="h2">Tout code</h2>
+          <a href='fr/support'>
+            <p class="text">Support</p>
+          </a>
+          <a href='fr/resources/community'>
+            <p class="text">Communauté</p>
+          </a>
+          <a href="https://github.com/waziup/platform" target="_blank">
+            <p class="text">GitHub</p>
+          </a>
+      </div>
+      <div class="col col-6">
+        <h2 class="h2">Rester à jour</h2>
+        <p class="text">
+          Laisser votre email pour être notifier: We won’t spam you and won’t go off topic.
+        </p>
+
+        
+
+        <div class="social-buttons">
+          <p class="text">Nous suivre sur</p>
+          <a href="https://twitter.com/waziupIOT" target="_blank">
+            <i class="fa fa-2x fa-twitter"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/company/magnetic-io" target="_blank">
+            <i class="fa fa-2x fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer-bottom lander-row--blue">
+  <div class="container">
+    <div class="part">
+      <a href='fr/about'><img class="waziup-logo" src="./img/005-waziup/Logo/logo-waziup-white.svg" alt=""></a>
+    </div>
+
+    <div class="part">
+      <a href="./" class="button button--red" style="text-decoration:none">
+        English
+      </a>
+    </div>
+
+    <div class="part">
+      <p class="text">Code sous licence<a type="application/rss+xml" href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache 2</a> © 2016 <a href='fr/about'>Waziup.io</a></p>
+    </div>
+  </div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59948816-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+

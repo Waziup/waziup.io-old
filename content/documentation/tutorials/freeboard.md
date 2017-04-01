@@ -1,3 +1,7 @@
+---
+url: /documentation/tutorials/freeboard
+---
+
 # TUTORIAL FOR FREEBOARD VISUALISATION
 
 This tutorial will help you to create your Freeboard dashboard to visualize the data you are pushing on WAZIUP platform.

@@ -1,3 +1,6 @@
+---
+url: /documentation/tutorials/create-app
+---
 
 Create an App with Waziup
 =========================

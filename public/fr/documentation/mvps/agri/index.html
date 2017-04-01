@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+
+
+
+ <html class="no-js" lang=""> 
+<head>
+<script type="text/javascript">
+theBaseUrl = "http://" + location.host + "/";
+document.write('<base href="' + theBaseUrl + '"/>');
+</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+  <title> - La plateforme Waziup</title>
+  <meta name="generator" content="Hugo 0.18.1" />
+
+  
+  <link rel="canonical" href="./fr/documentation/mvps/agri">
+  
+  <meta name="author" content="waziup.io">
+  
+
+  <meta property="og:url" content="/fr/documentation/mvps/agri">
+  <meta property="og:title" content="La plateforme Waziup">
+  <meta property="og:image" content="/images/logo-waziup.png">
+  <meta name="apple-mobile-web-app-title" content="La plateforme Waziup">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="shortcut icon" type="image/x-icon" href="./images/logo-waziup.png">
+  <link rel="icon" type="image/x-icon" href="./images/logo-waziup.png">
+
+
+  <style>
+    @font-face {
+      font-family: 'Icon';
+      format('embedded-opentype'),
+      format('woff'),
+      format('truetype'),
+      format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/vendor.js"></script>
+
+  <script src="js/app.js"></script>
+
+</head>
+<body class="palette-primary-pink palette-accent-pink">
+
+
+<div class="single-page">
+  <nav aria-label="Header" id="header" class="top-menu">
+  <div class="left">
+    <a href="#">
+      <div id="logo" class="logo"></div>
+    </a>
+  </div>
+
+  <div class="center">
+          <a href="./" ><img src="img/lang/gb.png" alt="English"></a>
+          <a href="./fr" ><img src="img/lang/fr.png" alt="Français"></a>
+  </div>
+
+  <div class="right">
+    <div class="top-menu-items" id="top-menu-items">
+
+    </div>
+
+    <div class="download">
+      <a href="http://dashboard.waziup.io" class="button button--red">
+        Essayer Waziup
+      </a>
+    </div>
+    
+    <a href="https://github.com/Waziup/platform" target="_blank" class="github-logo">
+      <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+    </a>
+
+    <div class="search-button">
+      <i class="fa fa-lg fa-search"></i>
+    </div>
+
+  </div>
+</nav>
+
+<ul id="mobile-menu" style="display: none">
+</ul>
+
+<div id="search">
+  <div class="search-bar">
+    <div class="search-bar__back">
+      <i class="fa fa-lg fa-times"></i>
+    </div>
+    <input class="search-bar__input" placeholder='Entrer votre recherche ici...'>
+  </div>
+  <div class="search-results">
+    <ul></ul>
+  </div>
+</div>
+
+
+</div>
+
+<div class="page documentation">
+    <div class="menu" id="side-menu">
+    </div>
+    <div class="content">
+      <h1 class="content-header"> </h1>
+      <div class="markdowned">
+        
+
+<h3 id="découvrez-ici-comment-prototype-d-une-station-météo-à-l-aide-de-waziup">Découvrez ici comment prototype d&rsquo;une station météo à l&rsquo;aide de Waziup.</h3>
+
+<p>L&rsquo;objectif est de développer une solution économique et durable capable de lire en temps réel des données typiques d&rsquo;une station météorologique, en utilisant différents capteurs et capables de communiquer via LoRa. La sous-section suivante est un tutoriel Getting Strated. Vous trouverez la documentation détaillée <a href="https://github.com/unparallel-innovation/UI_Waziup_Weather_Station&gt;">ici</a>.</p>
+
+<h4 id="matériel">Matériel</h4>
+
+<p>Le matériel suivant, il est nécessaire pour développer votre propre station:</p>
+
+<p>• <a href="https://www.adafruit.com/product/3078&gt;">Feather Adafruit 32u4 RFM95 LoRa</a>
+• <a href="https://www.adafruit.com/product/3013&gt;">Adafruit RTC DS3231</a>
+• <a href="https://www.sparkfun.com/products/12081&gt;">Shield météo Sparkfun</a>
+• <a href="https://www.sparkfun.com/products/8942&gt;">Kit capteurs de pluie et de vent</a>
+• <a href="https://www.cooking-hacks.com/868mhz-antenna&gt;">Antenne 868 Mhz</a>
+• <a href="https://www.cooking-hacks.com/interface-cable-rp-sma-to-u-fl&gt;">Câble SMA</a></p>
+
+<h4 id="bibliothèques">Bibliothèques</h4>
+
+<p>Vous aurez besoin des bibliothèques suivantes. Ils sont disponibles <a href="https://github.com/unparallel-innovation/UI_Waziup_Weather_Station/tree/master/WAZIUP%20Weather%20Station%20Client/lib&gt;">ici</a>.</p>
+
+<p>• SparkFunHTU21D
+• SparkFunMPL3115A2
+• RTClib
+• LowPower
+• Feather_Lib</p>
+
+<h4 id="construction-et-implémentation">Construction et implémentation</h4>
+
+<p>Vous devez suivre les prochaines étapes pour construire et mettre en œuvre la Station météorologique:</p>
+
+<p>1) <strong>Connecter les capteurs de vent et de pluie au Weather Shield</strong>;
+Le Weather Shield est livré avec deux espaces de connecteur RJ11 peu peuplés que vous devez souder. Vous devez connecter les câbles Wind et Rain au connecteur RJ11.
+<a href="https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/WeatherStationRJ11.jpg"><img src="https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/WeatherStationRJ11.jpg" alt="Sparkfun Weather Station" /></a></p>
+
+<p>2) <strong>Connectez la plume Adafruit 32u4 avec le bouclier météo Sparkfun</strong>;
+<a href="https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/pin_connection.png"><img src="https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/pin_connection.png" alt="Adafruit Feather 32u4 with Sparkfun Weather" /></a>
+<a href="https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/pin_connection2.png"><img src="https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/pin_connection2.png" alt="Adafruit Feather 32u4 with Sparkfun connection Scheme" /></a></p>
+
+<p><a href="https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/all_connection.png"><img src="https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/all_connection.png" alt="Overall Connection Scheme" /></a></p>
+
+<p>3) <strong>Connectez l&rsquo;Antenne 868 MHz à Feather</strong>;
+<a href="https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/antenna2feather.png"><img src="https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/antenna2feather.png" alt="Antenna 868 MHz to Feather" /></a></p>
+
+<p>4) <strong>Station météorologique construite avec des composants</strong>;
+<a href="https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/implemented.png"><img src="https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/implemented.png" alt="Weather Station built with components" /></a></p>
+
+<p>5) <strong>Télécharger l&rsquo;IDE et le logiciel spécifique</strong>;
+N&rsquo;oubliez pas d&rsquo;inclure les bibliothèques spécifiques. Pour ce faire, utilisez le gestionnaire de bibliothèque de votre IDE.</p>
+
+<p>6) <strong>Compilez le logiciel</strong>;
+Pour cette étape, vous devez compiler le fichier &ldquo;WAZIUP_Weather_Station_v1.ino&rdquo;. Il s&rsquo;agit d&rsquo;un fichier &ldquo;ready-to-run&rdquo; qui contient le dernier &ldquo;firmware&rdquo; pour échantillonner les capteurs et les données de sortie avec la communication LoRa. Vous donnera toutes les données du capteur: température, humidité, luminosité, pression, alimentation, direction du vent, vitesse du vent et la quantité de pluie. Vous pouvez voir les informations dans votre IDE Serial Monitor et vous pouvez également changer le fichier que vous voulez.</p>
+
+<h4 id="fonctionnement-du-système">Fonctionnement du système</h4>
+
+<p>Les étapes suivantes concernent le fonctionnement du système:</p>
+
+<p>1) Allumez la plume. Le script démarre automatiquement lorsque la plume est sous tension;</p>
+
+<p>2) Au début et au cours de son processus de calibrage automatique des capteurs, le voyant vert s&rsquo;allume (prenez environ 5 secondes).</p>
+
+<p>3) Prevoyez un reveil toutes les 15 minutes, prenez toutes les mesures et envoyez à Gateway.</p>
+
+<p>4) Au moment de la lecture des valeurs par les capteurs et d&rsquo;envoyer un message à la passerelle LoRa, le voyant bleu s&rsquo;allume et ensuite: Si la plume ne reçoit pas d&rsquo;accusé de réception, le voyant bleu s&rsquo;éteint et Feather dort. Si la plume reçoit l&rsquo;acquittement de la passerelle maître alors le commutateur bleu de vert au vert pendant 2 secondes, et les plumes commencent à dormir.</p>
+
+<p>5) Quand Plume dort tous les led sont éteints.</p>
+
+<p>6) Plume se réveille après quatre minutes (par défaut), obtenir les mesures et renvoyer à la passerelle maître jusqu&rsquo;à ce que le sommeil à nouveau.</p>
+
+      </div>
+    </div>
+</div>
+
+<div class="lander-row lander-row--blue footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-3">
+        <h2 class="h2">Apprendre plus</h2>
+        <a href='fr/why-use-waziup/'>
+          <p class="text">Pourquoi utiliser Waziup?</p>
+        </a>
+        <a href='fr/documentation/how-waziup-works/'>
+          <p class="text">Documentation</p>
+        </a>
+        <a href='fr/about'>
+          <p class="text">A propos de nous</p>
+        </a>
+        <a href='fr/resources/news/'>
+          <p class="text">Nouveautées</p>
+        </a>
+        <a href='fr/contact'>
+          <p class="text">Contact</p>
+        </a>
+      </div>
+        <div class="col col-6">
+        <h2 class="h2">Tout code</h2>
+          <a href='fr/support'>
+            <p class="text">Support</p>
+          </a>
+          <a href='fr/resources/community'>
+            <p class="text">Communauté</p>
+          </a>
+          <a href="https://github.com/waziup/platform" target="_blank">
+            <p class="text">GitHub</p>
+          </a>
+      </div>
+      <div class="col col-6">
+        <h2 class="h2">Rester à jour</h2>
+        <p class="text">
+          Laisser votre email pour être notifier: We won’t spam you and won’t go off topic.
+        </p>
+
+        
+
+        <div class="social-buttons">
+          <p class="text">Nous suivre sur</p>
+          <a href="https://twitter.com/waziupIOT" target="_blank">
+            <i class="fa fa-2x fa-twitter"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/company/magnetic-io" target="_blank">
+            <i class="fa fa-2x fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer-bottom lander-row--blue">
+  <div class="container">
+    <div class="part">
+      <a href='fr/about'><img class="waziup-logo" src="./img/005-waziup/Logo/logo-waziup-white.svg" alt=""></a>
+    </div>
+
+    <div class="part">
+      <a href="./" class="button button--red" style="text-decoration:none">
+        English
+      </a>
+    </div>
+
+    <div class="part">
+      <p class="text">Code sous licence<a type="application/rss+xml" href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache 2</a> © 2016 <a href='fr/about'>Waziup.io</a></p>
+    </div>
+  </div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59948816-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+

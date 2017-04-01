@@ -1,3 +1,6 @@
+---
+url: /documentation/tutorials/use-sms
+---
 
 SMS API Tutorial
 =========================

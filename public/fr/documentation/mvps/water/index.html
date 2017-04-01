@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+
+
+
+
+ <html class="no-js" lang=""> 
+<head>
+<script type="text/javascript">
+theBaseUrl = "http://" + location.host + "/";
+document.write('<base href="' + theBaseUrl + '"/>');
+</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+  <title>Prototype de pisciculture - La plateforme Waziup</title>
+  <meta name="generator" content="Hugo 0.18.1" />
+
+  
+  <link rel="canonical" href="./fr/documentation/mvps/water">
+  
+  <meta name="author" content="waziup.io">
+  
+
+  <meta property="og:url" content="/fr/documentation/mvps/water">
+  <meta property="og:title" content="La plateforme Waziup">
+  <meta property="og:image" content="/images/logo-waziup.png">
+  <meta name="apple-mobile-web-app-title" content="La plateforme Waziup">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="shortcut icon" type="image/x-icon" href="./images/logo-waziup.png">
+  <link rel="icon" type="image/x-icon" href="./images/logo-waziup.png">
+
+
+  <style>
+    @font-face {
+      font-family: 'Icon';
+      format('embedded-opentype'),
+      format('woff'),
+      format('truetype'),
+      format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/vendor.js"></script>
+
+  <script src="js/app.js"></script>
+
+</head>
+<body class="palette-primary-pink palette-accent-pink">
+
+
+<div class="single-page">
+  <nav aria-label="Header" id="header" class="top-menu">
+  <div class="left">
+    <a href="#">
+      <div id="logo" class="logo"></div>
+    </a>
+  </div>
+
+  <div class="center">
+          <a href="./" ><img src="img/lang/gb.png" alt="English"></a>
+          <a href="./fr" ><img src="img/lang/fr.png" alt="Français"></a>
+  </div>
+
+  <div class="right">
+    <div class="top-menu-items" id="top-menu-items">
+
+    </div>
+
+    <div class="download">
+      <a href="http://dashboard.waziup.io" class="button button--red">
+        Essayer Waziup
+      </a>
+    </div>
+    
+    <a href="https://github.com/Waziup/platform" target="_blank" class="github-logo">
+      <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+    </a>
+
+    <div class="search-button">
+      <i class="fa fa-lg fa-search"></i>
+    </div>
+
+  </div>
+</nav>
+
+<ul id="mobile-menu" style="display: none">
+</ul>
+
+<div id="search">
+  <div class="search-bar">
+    <div class="search-bar__back">
+      <i class="fa fa-lg fa-times"></i>
+    </div>
+    <input class="search-bar__input" placeholder='Entrer votre recherche ici...'>
+  </div>
+  <div class="search-results">
+    <ul></ul>
+  </div>
+</div>
+
+
+</div>
+
+<div class="page documentation">
+    <div class="menu" id="side-menu">
+    </div>
+    <div class="content">
+      <h1 class="content-header">Prototype de pisciculture </h1>
+      <div class="markdowned">
+        
+
+<p><img src="https://github.com/Waziup/waziup.io/blob/master/content/documentation/mvps/water_images/presentation_buoy_ghana.jpg?raw=true" alt="buoy_ghana" /></p>
+
+<p><strong>Découvrez ici comment prototype d&rsquo;une application de pisciculture à l&rsquo;aide de Waziup.</strong></p>
+
+<p>Le but de ce prototype est de donner un premier aperçu de la façon de développer un dispositif IoT pour la pisciculture. Le dispositif est capable de donner une lecture en temps réel des informations pertinentes pour les étangs de poissons tels que l&rsquo;acidité,
+Oxygène dissous et communiquer ces données via LoRa. Vous trouverez ci-dessous un didacticiel de démarrage: comment développer la partie électronique et logicielle de la solution.</p>
+
+<h2 id="mesure">Mesure</h2>
+
+<p>Les mesures prises par le dispositif sont la température, l&rsquo;oxygène dissous et l&rsquo;acidité de l&rsquo;eau. L&rsquo;appareil est alimenté par un panneau solaire avec une batterie.
+La solution sera placée dans une boîte étanche pour protéger l&rsquo;électronique, nous obtenons également la température et l&rsquo;humidité dans la boîte. La dernière valeur contrôlée
+Est la tension de la batterie.</p>
+
+<h2 id="matériel">Matériel</h2>
+
+<ul>
+<li><a href="https://www.sparkfun.com/products/11114">Arduino Pro Mini 3.3V</a></li>
+<li><a href="http://modtronix.com/inair9.html">Module InAir9 LoRa</a></li>
+<li><a href="https://www.sparkfun.com/products/11050">Capteur de température (pour eau)</a></li>
+<li><a href="http://www.robotshop.com/eu/fr/capteur-humidite-temperature-dht22.html">Capteur de température et d&rsquo;humidité</a></li>
+<li><a href="https://www.sparkfun.com/products/11194">Capteur DO</a></li>
+<li><a href="http://www.atlas-scientific.com/product_pages/kits/ph-kit.html">Capteur de PH</a></li>
+<li><a href="https://www.sparkfun.com/products/13781">Panneau Solaire 2W</a></li>
+<li><a href="https://www.sparkfun.com/products/8483">Batterie 2000mAh</a></li>
+<li><a href="https://www.sparkfun.com/products/12885">Chargeur pour panneau solaire et batterie</a></li>
+<li>Résistance:
+
+<ul>
+<li>4k7 ohm x2</li>
+<li>47k ohm x1</li>
+<li>10k ohm x1
+    </li>
+</ul></li>
+</ul>
+
+<h1 id="construction-électronique">Construction électronique</h1>
+
+<h2 id="arduino">Arduino</h2>
+
+<p>La carte Arduino avec son microcroller est la partie centrale de l&rsquo;assemblage électronique. Il contient toute la logique: il recueille des informations capteurs, le traiter et l&rsquo;envoyer
+Via le module LoRa. Dans cette première section, nous allons voir comment connecter les capteurs à l&rsquo;Arduino, sur une seconde main, nous allons voir comment le programmer.
+<img src="./images/mvps/water_farming/arduino.JPG" alt="Arduino" /></p>
+
+<h2 id="capteurs-ph-et-do">Capteurs PH et DO</h2>
+
+<p>    
+Les capteurs PH et DO fonctionnent avec un petit circuit pour des mesures précises et calibrent le capteur: <a href="http://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf">DO EZO circuit</a> and <a href="http://www.atlas-scientific.com/_files/_datasheets/_circuit/pH_EZO_datasheet.pdf">PH EZO circuit</a>.</p>
+
+<p><img src="./images/mvps/water_farming/ezo_circuits.png" alt="EZO Circuits" /></p>
+
+<p>Les deux circuits sont connectés au fil I2C de l&rsquo;arduino (broche A4 et A5 sur arduino pro mini).
+Pour fonctionner avec I2C, les circuits doivent être commutés en mode I2C.</p>
+
+<p>Ce sont les instructions pour commuter un circuit EZO en mode I2C:</p>
+
+<ul>
+<li>Connecter le circuit à l&rsquo;arduino comme suit:
+
+<ul>
+<li>VCC d&rsquo;arduino à VCC du circuit EZO</li>
+<li>GND de l&rsquo;arduino au GND du circuit EZO</li>
+<li>PGND du circuit EZO vers TX du circuit EZO</li>
+</ul></li>
+<li>Alimentation de l&rsquo;arduino</li>
+<li>Attendre que le voyant du circuit passe du vert au bleu</li>
+<li>Débrancher le connecteur de la broche PGND à la broche TX</li>
+<li>L&rsquo;appareil est maintenant en mode I2C</li>
+</ul>
+
+<p>L&rsquo;adresse I2C par défaut pour l&rsquo;EZO DO est 97, pour le EZO PH c&rsquo;est 99.</p>
+
+<p>Plutôt que d&rsquo;alimenter les capteurs avec la sortie VCC de l&rsquo;arduino, nous préférons l&rsquo;alimenter avec les broches de sortie numérique.
+Ce choix facilite la gestion de l&rsquo;économie d&rsquo;énergie.
+Dans notre prototype, nous choisissons la broche 6 pour alimenter le circuit EZO DO et la broche 7 pour alimenter le PH EZO.</p>
+
+<p>Table de fil:
+<img src="./images/mvps/water_farming/ezo_table.png" alt="EZO Circuits" /></p>
+
+<p>Ensuite, il faut connecter chaque capteur à son circuit EZO. Chaque capteur est équipé d&rsquo;une prise de courant continu pour se connecter au circuit.
+Branchez la broche GND du connecteur de barillet avec la broche PGND du circuit EZO et connectez la broche à côté du GND du connecteur de barillet au compartiment PRB du circuit EZO comme ci-dessous.</p>
+
+<p><img src="./images/mvps/water_farming/wired_sensors.jpg" alt="Sensors Connection" /></p>
+
+<h2 id="sonde-de-température-de-l-eau">Sonde de température de l&rsquo;eau</h2>
+
+<p>Le capteur que nous utilisons pour contrôler la température de l&rsquo;eau est le DS18B20.</p>
+
+<p><img src="./images/mvps/water_farming/DS18B20.jpg" alt="DS18B20" /></p>
+
+<p>Comme nous l&rsquo;avons fait pour le capteur PH et DO, nous alimentons ce capteur en utilisant la broche de sortie numérique de l&rsquo;arduino. Cependant, vous pouvez utiliser la broche VCC selon vos préférences.
+Ici, la broche numérique 8 est utilisée pour l&rsquo;alimentation et la broche numérique 2 est utilisée pour les données. Une résistance de 4k7 ohms est requise entre la broche VCC et la broche Data. Ci-dessous, le schéma de câblage du capteur.</p>
+
+<p><img src="./images/mvps/water_farming/DS18B20_wire.jpg" alt="DS18B20 Wire" /></p>
+
+<h2 id="lora-module">LoRa module</h2>
+
+<p> La puce LoRa que nous utilisons est le module inAir9.</p>
+
+<p><img src="./images/mvps/water_farming/inAir9.jpg" alt="InAir9 and wires" /></p>
+
+<p>En dessous de la table filaire du module InAir9 avec arduino.</p>
+
+<p><img src="./images/mvps/water_farming/inAir9_table.jpg" alt="InAir9 and wires" /></p>
+
+<h2 id="capteur-de-température-et-d-humidité-en-option">Capteur de température et d&rsquo;humidité (en option)</h2>
+
+<p>Notre premier prototype est testé au Ghana qui est un pays particulièrement chaud donc nous décidons d&rsquo;ajouter un capteur de température et d&rsquo;humidité pour vérifier conditions dans la boîte.
+Vous pouvez choisir de l&rsquo;ajouter ou non comme votre convenance. Le capteur que nous utilisons à cet effet est le capteur DHT22.</p>
+
+<p><img src="./images/mvps/water_farming/DHT22.png" alt="DHT22" /></p>
+
+<p>La broche VCC du capteur est connectée à la broche numérique 8 de l&rsquo;arduino, mais vous pouvez également utiliser la broche VCC.
+La broche DATA du capteur est connectée à la broche numérique 3 de l&rsquo;arduino.
+Comme nous l&rsquo;avons fait avec le capteur DS18B20, une résistance de 4k7 ohms est nécessaire entre VCC et DATA.</p>
+
+<p><img src="./images/mvps/water_farming/dht_table.jpg" alt="DHT22 table" /></p>
+
+<h2 id="mesure-de-la-tension">Mesure de la tension</h2>
+
+<p>Nous voulons connaître la tension aux sorties de batterie pour estimer le niveau de charge.
+Nous utilisons une batterie Li-ion de sorte que la tension varie de 3V (vide) à 4,2V (entièrement chargée) à 25 ° C. Nous atteignons un niveau de charge de 50% à environ 3,8 V à 25 ° C.
+Pour obtenir la tension aux entrées arduino nous utilisons un diviseur de tension. Nous choisissons la broche analogique 1 de l&rsquo;arduino pour calculer la tension réelle.
+Ci-dessous se trouve le schéma du diviseur de tension. Nous utilisons une résistance de haute valeur pour minimiser les déchets actuels.</p>
+
+<p><img src="./images/mvps/water_farming/voltage_divider.png" alt="Voltage divider" /></p>
+
+<h2 id="chargeur-batterie-et-panneau-solaire">Chargeur, batterie et panneau solaire</h2>
+
+<p>  Nous prenons une carte de chargeur de sparkfun pour relier le panneau solaire, la batterie et l&rsquo;arduino ensemble.
+  Cette carte chargeur nous fournir la capacité d&rsquo;obtenir la puissance la plus possible hors de notre panneau solaire et dans une rechargeable batterie Li-ion.
+  La mise en place est facile, il suffit de brancher le panneau solaire dans un côté du circuit, la batterie et l&rsquo;arduino en parallèle de l&rsquo;autre côté.</p>
+
+<p><img src="./images/mvps/water_farming/charger_chip.jpg" alt="Charger board" /></p>
+
+<h2 id="schéma-général">Schéma général</h2>
+
+<p>Ici vous pouvez voir le schéma de l&rsquo;ensemble du circuit sans la partie chargeur.</p>
+
+<p><img src="./images/mvps/water_farming/schematic.png" alt="Schematic" /></p>
+
+<h2 id="implementation">Implementation</h2>
+
+
+<figure >
+    
+        <img src="./images/mvps/water_farming/prototype_board.png" />
+    
+    
+    <figcaption>
+        <h4>Prototype Board</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Dans notre mise en œuvre, nous décidons de créer une carte PCB du circuit pour faciliter l&rsquo;assemblage des composants.</p>
+
+
+<figure >
+    
+        <img src="./images/mvps/water_farming/pcb_board.png" />
+    
+    
+    <figcaption>
+        <h4>PCB Board</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+<figure >
+    
+        <img src="./images/mvps/water_farming/assemblied_board.jpg" />
+    
+    
+    <figcaption>
+        <h4>Final assembly</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<h1 id="logiciel">Logiciel</h1>
+
+<h2 id="programmer-l-arduino">Programmer l&rsquo;Arduino</h2>
+
+<p>Nous pouvons programmer l&rsquo;Arduino en envoyant un jeu d&rsquo;instructions au microcrouleur sur le tableau.
+Pour ce faire, nous utilisons le logiciel IDE Arduino qui utilise une version simplifiée de C ++. Le logiciel Arduino peut être téléchargé <a href="https://www.arduino.cc/en/main/software">here</a>.
+Ensuite, pour connecter l&rsquo;Arduino Mini à l&rsquo;ordinateur, nous utilisons une puce USB-FTDI comme ci-dessous.</p>
+
+<p><img src="./images/mvps/water_farming/ftdi_arduino.png" alt="FTDI Arduino" /></p>
+
+<h2 id="libraries">Libraries</h2>
+
+<ul>
+<li><a href="https://github.com/PaulStoffregen/OneWire">OneWire library</a> est utilisé avec la température DS18B20 capteur</li>
+<li><a href="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib">DHT library</a> est utilisé avec la température et l&rsquo;humidité DHT22 capteur</li>
+<li><a href="https://github.com/CongducPham/LowCostLoRaGw">SX1272 library</a> est utilisé avec le module LoRa</li>
+</ul>
+
+<h2 id="echantillons-de-codage-de-capteur">Echantillons de codage de capteur</h2>
+
+<h3 id="capteur-do">Capteur DO</h3>
+
+<p>L&rsquo;exemple de code permettant de gérer le capteur DO peut être trouvé <a href="http://www.atlas-scientific.com/_files/code/do-i2c.pdf">here</a>.</p>
+
+<p>Attention, si vous avez utilisé la broche numérique 6 pour l&rsquo;alimentation, n&rsquo;oubliez pas d&rsquo;ajouter ce code dans la section de configuration pour allumer l&rsquo;alimentation:</p>
+
+<pre><code>    void setup()
+    {
+     Serial.begin(9600);
+     Wire.begin();
+     pinMode(6,OUTPUT);
+     digitalWrite(6,HIGH);
+    }
+</code></pre>
+
+<p>Capteur PH ###</p>
+
+<p>L&rsquo;exemple de code pour gérer le capteur PH peut être trouvé <a href="http://www.atlas-scientific.com/_files/code/ph-i2c.pdf">here</a>.</p>
+
+<p>Attention, si vous avez utilisé la broche numérique 6 pour l&rsquo;alimentation, n&rsquo;oubliez pas d&rsquo;ajouter ce code dans la section de configuration pour allumer l&rsquo;alimentation:</p>
+
+<pre><code>    void setup()
+    {
+     Serial.begin(9600);
+     Wire.begin();
+     pinMode(7,OUTPUT);
+     digitalWrite(7,HIGH);
+    }
+</code></pre>
+
+<h3 id="capteur-de-température-de-l-eau">Capteur de température de l&rsquo;eau</h3>
+
+<p>Pour obtenir la température du capteur DS18B20, nous utilisons la bibliothèque OneWire.
+Voici un exemple de code:</p>
+
+<pre><code>    #include &lt;OneWire.h&gt; 
+
+    #define TemperatureSensorsPowerPin 8
+
+    int DS18S20_Pin = 2; //DS18S20 Signal pin on digital 2
+
+    //Temperature chip i/o
+    OneWire ds(DS18S20_Pin);  // on digital pin 2
+
+    void setup(void) {
+      Serial.begin(19200);
+        pinMode(TemperatureSensorsPowerPin,OUTPUT);    // Switch on power for temp and humdity sensor
+        digitalWrite(TemperatureSensorsPowerPin,HIGH);
+    }
+
+    void loop(void) {
+      float temperature = getTemp(); //will take about 750ms to run
+      Serial.println(temperature);
+      delay(2000);
+    }
+
+
+    float getTemp(){
+      //returns the temperature from one DS18S20 in DEG Celsius
+
+      byte data[12];
+      byte addr[8];
+
+      if ( !ds.search(addr)) {
+          //no more sensors on chain, reset search
+          ds.reset_search();
+          return -1000;
+      }
+
+      if ( OneWire::crc8( addr, 7) != addr[7]) {
+          Serial.println(&quot;CRC is not valid!&quot;);
+          return -1000;
+      }
+
+      if ( addr[0] != 0x10 &amp;&amp; addr[0] != 0x28) {
+          Serial.print(&quot;Device is not recognized&quot;);
+          return -1000;
+      }
+
+      ds.reset();
+      ds.select(addr);
+      ds.write(0x44,1); // start conversion, with parasite power on at the end
+
+      delay(750); // Wait for temperature conversion to complete
+
+      byte present = ds.reset();
+      ds.select(addr);    
+      ds.write(0xBE); // Read Scratchpad
+
+
+      for (int i = 0; i &lt; 9; i++) { // we need 9 bytes
+        data[i] = ds.read();
+      }
+
+      ds.reset_search();
+
+      byte MSB = data[1];
+      byte LSB = data[0];
+
+      float tempRead = ((MSB &lt;&lt; 8) | LSB); //using two's compliment
+      float TemperatureSum = tempRead / 16;
+
+      return TemperatureSum;
+
+    }
+</code></pre>
+
+<h3 id="capteur-de-température-et-d-humidité">Capteur de température et d&rsquo;humidité</h3>
+
+<p>Pour obtenir la mesure de température et d&rsquo;humidité du capteur DHT22, nous utilisons la bibliothèque DHT.
+Voici un exemple de code:</p>
+
+<pre><code>    #include &quot;DHT.h&quot;
+
+    #define DHT_PIN 3
+
+    const byte DHT_SUCCESS = 0;
+    const byte DHT_TIMEOUT_ERROR = 1;
+    const byte DHT_CHECKSUM_ERROR = 2;
+    DHT dht(DHT_PIN);
+
+
+    void setup()
+    {
+      Serial.begin(19200);
+      pinMode(8,OUTPUT);
+      digitalWrite(8,HIGH);
+    }
+
+    void loop()
+    {
+      float temperature, humidity;
+
+
+      switch (dht.readDHT22(&amp;temperature, &amp;humidity)) {
+      case DHT_SUCCESS: 
+
+        Serial.print(F(&quot;Humidity (%): &quot;));
+        Serial.println(humidity, 2);
+        Serial.print(F(&quot;Temperature (C): &quot;));
+        Serial.println(temperature, 2);
+        break;
+
+      case DHT_TIMEOUT_ERROR: 
+        Serial.println(F(&quot;No response!&quot;)); 
+        break;
+
+      case DHT_CHECKSUM_ERROR: 
+        Serial.println(F(&quot;Communication pb&quot;)); 
+        break;
+      }
+
+      delay(1000);
+    }
+</code></pre>
+
+<h3 id="module-lora">Module LoRa</h3>
+
+<p>Pour envoyer des données via LoRa, nous utilisons la bibliothèque SX1272.</p>
+
+<p>Vous trouverez tous les échantillons pour utiliser cette bibliothèque <a href="https://github.com/CongducPham/LowCostLoRaGw/tree/master/Arduino">here</a>.</p>
+
+<h3 id="voltage-de-batterie">Voltage de batterie</h3>
+
+<p>Ci-dessous nous avons un échantillon pour calculer la tension de la batterie de sortie.</p>
+
+<pre><code>#define RESISTOR1 47000.0        // RESISTOR to calculate voltage
+#define RESISTOR2 10000.0
+
+#define VoltagePin  A2
+
+
+float batteryVoltage;
+
+void setup() {
+  Serial.begin(38400);
+
+}
+
+void loop() {
+
+  batteryVoltage = getBatteryVoltage();
+  Serial.println(batteryVoltage);
+
+  delay(2000);
+
+}
+
+float getBatteryVoltage()
+{
+   int rawVin;
+   int sumRawVin = 0;
+   analogReference(INTERNAL);
+
+  for (byte y=0; y&lt;30; y++){
+    rawVin = analogRead(VoltagePin);
+    sumRawVin=sumRawVin+rawVin;
+    delay(5);
+  }
+
+  rawVin = sumRawVin/30;
+  float real_v = (rawVin * 1.1 / 1024.0) / (RESISTOR2/(RESISTOR1+RESISTOR2));
+  if (real_v &lt; 0.1) {  real_v=0.0; }
+
+  return real_v;
+}
+</code></pre>
+
+<h2 id="mode-veille-arduino">Mode veille Arduino</h2>
+
+<p>Afin d&rsquo;économiser de la batterie, vous devrez certainement mettre l&rsquo;Arduino et les capteurs en mode veille.
+Il existe 5 modes de sommeil différents dans arduino du moins au mode d&rsquo;économie d&rsquo;énergie:</p>
+
+<ul>
+<li>SLEEP_MODE_IDLE</li>
+<li>SLEEP_MODE_ADC</li>
+<li>SLEEP_MODE_PWR_SAVE</li>
+<li>SLEEP_MODE_STANDBY</li>
+<li>SLEEP_MODE_PWR_DOWN</li>
+</ul>
+
+<p>Lorsque l&rsquo;arduino est dans le mode SLEEP_MODE_PWR_DOWN la seule façon de le réveiller est avec soit une interruption temporisateur watchdog, une interruption de niveau sur les broches 2 ou 3, ou une interruption de changement de broche. Donc, dans notre cas, nous avons besoin d&rsquo;utiliser le watchdog minuterie interruption.</p>
+
+<h3 id="activer-l-interruption-du-temporisateur-watchdog">Activer l&rsquo;interruption du temporisateur Watchdog</h3>
+
+<p>Vous pouvez sauter cette section si vous n&rsquo;utilisez pas de mini carte Arduin Pro.</p>
+
+<p>Malheureusement, l&rsquo;interruption de la minuterie de surveillance est défectueuse sur la mini carte Arduino Pro. Pour résoudre le problème, un nouveau chargeur d&rsquo;amorçage doit être installé.
+Nous installerons le bootloader de l&rsquo;UNO d&rsquo;Arduino qui utilise la même puce de microprocesseur (atmega328).</p>
+
+<p>Voici comment installer ce bootloader:</p>
+
+<ul>
+<li>Premier Ouvrir le fichier bootloader boards.txt qui est situé</li>
+</ul>
+
+<p>Sur Windows:</p>
+
+<blockquote>
+<p>C:\Users\{userName}\AppData\Local\Arduino\packages\arduino\hardware\avr\{version}\boards.txt</p>
+</blockquote>
+
+<p>Sur Linux :</p>
+
+<blockquote>
+<p>/usr/share/arduino/hardware/arduino/avr/boards.txt</p>
+</blockquote>
+
+<p>Dans ce fichier, trouvez les lignes de l&rsquo;Arduino pro mini 3.3V</p>
+
+<pre><code>## Arduino Pro or Pro Mini (3.3V, 8 MHz) w/ ATmega328
+## --------------------------------------------------
+pro.menu.cpu.8MHzatmega328=ATmega328 (3.3V, 8 MHz)
+
+pro.menu.cpu.8MHzatmega328.upload.maximum_size=30720
+pro.menu.cpu.8MHzatmega328.upload.maximum_data_size=2048
+pro.menu.cpu.8MHzatmega328.upload.speed=57600
+
+pro.menu.cpu.8MHzatmega328.bootloader.low_fuses=0xFF
+pro.menu.cpu.8MHzatmega328.bootloader.high_fuses=0xDA
+pro.menu.cpu.8MHzatmega328.bootloader.extended_fuses=0xfd
+pro.menu.cpu.8MHzatmega328.bootloader.file=atmega/ATmegaBOOT_168_atmega328.hex
+
+pro.menu.cpu.8MHzatmega328.build.mcu=atmega328p
+pro.menu.cpu.8MHzatmega328.build.f_cpu=8000000L
+</code></pre>
+
+<p>Remplacer la ligne: &ldquo;<strong><em>pro.menu.cpu.8MHzatmega328.bootloader.file=atmega/ATmegaBOOT_168_atmega328.hex</em></strong>&ldquo;</p>
+
+<p>Par la ligne :  &ldquo;<strong><em>pro.menu.cpu.8MHzatmega328.bootloader.file=optiboot/optiboot_atmega328.hex</em></strong>&ldquo;</p>
+
+<p>Enregistrez et fermez le fichier.</p>
+
+<ul>
+<li>Alors nous avons besoin de clignoter la botte en utilisant un programmeur dans le système.</li>
+</ul>
+
+<p>Dans ce tutoriel, nous utilisons un Arduino UNO en tant que FAI mais il fonctionne également avec d&rsquo;autres cartes Arduino.
+Nous commençons par connecter l&rsquo;Arduino UNO à l&rsquo;ordinateur. Dans Arduino IDE, nous allons au répertoire <strong><em>file</em></strong>-&gt;<strong><em>examples</em></strong> et sélectionnez <strong><em>ArduinoISP</em></strong>. Il ouvre l&rsquo;esquisse pour utiliser Arduino comme un programmeur système.
+Nous téléversons ce croquis sur l&rsquo;Arduino UNO.</p>
+
+<p>Ensuite, nous connectons l&rsquo;Arduino UNO et l&rsquo;Arduino Pro mini comme suit.</p>
+
+<table>
+<thead>
+<tr>
+<th><strong><em>Arduino UNO</em></strong></th>
+<th><strong><em>Arduino Pro mini</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>3V3</td>
+<td>VCC</td>
+</tr>
+
+<tr>
+<td>GND</td>
+<td>GND</td>
+</tr>
+
+<tr>
+<td>Digital 10</td>
+<td>RST</td>
+</tr>
+
+<tr>
+<td>Digital 11</td>
+<td>Digital 11</td>
+</tr>
+
+<tr>
+<td>Digital 12</td>
+<td>Digital 12</td>
+</tr>
+
+<tr>
+<td>Digital 13</td>
+<td>Digital 13</td>
+</tr>
+</tbody>
+</table>
+
+<p>Puis nous sélectionnons &ldquo;Arduino Pro or Pro mini&rdquo; dans <strong><em>tools-&gt;Board</em></strong> et &ldquo;ATmega328 (3.3v, 8 MHz)&rdquo; dans <strong><em>tools-&gt;processor</em></strong>. Enfin, cliquez sur <strong><em>tools-&gt;Burn Bootloader</em></strong>.</p>
+
+<p>L&rsquo;Arduino Pro mini est maintenant prêt.</p>
+
+<h3 id="exemple-de-code-pour-le-mode-veille">Exemple de code pour le mode veille</h3>
+
+<p>L&rsquo;intervalle le plus long que la minuterie du chien de garde peut être réglé est de 8 sec.</p>
+
+<p>Ici vous trouverez un échantillon sur la façon de mettre l&rsquo;Arduino Pro mini en mode veille pour une période plus longue.</p>
+
+<pre><code>#include &lt;avr/interrupt.h&gt;
+#include &lt;avr/wdt.h&gt;
+#include &lt;avr/sleep.h&gt;
+#include &lt;avr/power.h&gt;
+
+
+#define SLEEP_LOOP 4  // one loop = 8 sec. Example sleep_loop = 4 -&gt; 4*8 = 32 sec
+
+volatile int nbr_remaining; 
+
+void setup()
+{
+
+  Serial.begin(38400);
+  configure_wdt();
+  nbr_remaining=0;
+
+}
+
+
+void loop(void)
+{
+
+  Serial.println(&quot;Loop Start&quot;);
+  while (1) {
+      Serial.println(F(&quot;System awake&quot;));
+      wdt_reset(); // Reset the watchdog timer to not trigger when not needed
+
+      // Put your code here
+      delay(2000);
+      // if your code take more than 8 sec to process 
+      //  dont forget to put some wdt_reset() or the watchdog will be triggered
+
+
+      Serial.println(F(&quot;System sleep&quot;));
+      Serial.flush(); // always put a Serial.flush() before sleep
+                      // to let the serial finished its task before starting sleep mode
+      sleep(SLEEP_LOOP);
+  }
+
+}
+
+// Init the watchdog timer interrupt
+void configure_wdt(void)
+{
+
+  cli();                           // disable interrupts for changing the registers
+
+  MCUSR = 0;                       // reset status register flags
+
+                                   // Put timer in interrupt-only mode:                                       
+  WDTCSR |= 0b00011000;            // Set WDCE (5th from left) and WDE (4th from left) to enter config mode,
+                                   // using bitwise OR assignment (leaves other bits unchanged).
+  WDTCSR =  0b01000000 | 0b100001; // set WDIE: interrupt enabled
+                                   // clr WDE: reset disabled
+                                   // and set delay interval (right side of bar) to 8 seconds
+
+  sei();                           // re-enable interrupts 
+}
+
+// interrupt raised by the watchdog firing
+ISR(WDT_vect)
+{
+    if(nbr_remaining &gt; 0)
+    {
+        nbr_remaining = nbr_remaining - 1;
+        wdt_reset();
+    }
+    else
+    {
+        MCUSR = 0;                          // reset flags
+
+        WDTCSR |= 0b00011000;               // Enter config mode.
+        WDTCSR =  0b00001000 | 0b000000;    // clr WDIE (interrupt enable...7th from left)
+                                              // set WDE (reset enable...4th from left), and set delay interval
+                                              // reset system in 16 ms...
+                                              // unless wdt_disable() in loop() is reached first
+       while(1);          
+
+    }
+}
+
+
+void sleep(int ncycles)
+{ 
+  nbr_remaining = ncycles;
+  set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+
+  power_adc_disable();
+
+  while (nbr_remaining &gt; 0){ 
+    sleep_mode();
+    sleep_disable();
+  }
+  power_all_enable();
+
+}
+</code></pre>
+
+<h2 id="la-mise-en-oeuvre">La mise en oeuvre</h2>
+
+<p>Le schéma Arduino utilisé dans l&rsquo;eau MVP peut être trouvé <a href="https://github.com/blissillour/MVPWater">here</a>.
+Dans cette esquisse nous utilisons une bibliothèque que nous avons créée pour faciliter la mise en œuvre des capteurs.
+La bibliothèque peut être trouvé <a href="https://github.com/blissillour/water-sensors">here</a>.</p>
+
+<p>Vous trouverez ci-dessous un exemple d&rsquo;utilisation de la bibliothèque:</p>
+
+<pre><code>#include &lt;WaterSensor.h&gt;
+
+#define address_PH 99         // default PH sensor adress on I2C port
+#define address_DO 97         // default DO sensor adress on I2C port
+#define DS18S20_Pin 2         // digital pin of the temperature sensor (outside the box)
+#define DHT_PIN 3             // digital pin of the humidity and temperature sensor (inside the box)
+
+#define TemperatureSensorsPowerPin 8
+#define EzoDOSensorPowerPin 6
+#define EzoPHSensorPowerPin 7
+
+float temperatureBox, humidityBox, temperature;
+char dataPH[10] , dataDO[10];
+
+WaterSensor waterSensor(DS18S20_Pin,DHT_PIN, address_PH,address_DO);
+
+void setup()
+{
+  // Open serial communications and wait for port to open:
+  Serial.begin(38400);
+
+  Wire.begin();           //enable I2C port.
+
+  pinMode(TemperatureSensorsPowerPin,OUTPUT);    // Switch on power for temp and humdity sensor
+  pinMode(EzoDOSensorPowerPin,OUTPUT);          // Switch on power for DO sensor
+  pinMode(EzoPHSensorPowerPin,OUTPUT);          // Switch on power for PH sensor
+
+  digitalWrite(TemperatureSensorsPowerPin,HIGH);
+  digitalWrite(EzoPHSensorPowerPin,HIGH);
+  digitalWrite(EzoDOSensorPowerPin,HIGH);
+
+}
+
+void loop(void)
+{
+  dataPH[0] = '\0';
+  dataDO[0] = '\0';
+
+  delay(200);
+
+  // Wake up DO and PH sensors 
+  waterSensor.wakeUpPHSensor();
+  waterSensor.wakeUpDOSensor();
+
+  temperature = waterSensor.getTemperatureValue();
+  Serial.print(F(&quot;Temp in water : &quot;));
+  Serial.println(temperature);
+
+  delay(1000);
+
+  waterSensor.getInboxTemperatureHumidityValue(&amp;temperatureBox,&amp;humidityBox);
+  Serial.print(F(&quot;Temp in box : &quot;));
+  Serial.println(temperatureBox);
+  Serial.print(F(&quot;Humidity : &quot;));
+  Serial.println(humidityBox);
+
+  delay(1000);
+
+  waterSensor.sendTempToDOSensor(temperature);   // Send the temperature to DO sensor to precise the reading value
+  waterSensor.getDOSensorValue(dataDO);          // Receive the DO value
+  Serial.print(F(&quot;DO : &quot;));
+  Serial.println(dataDO);
+
+  delay(1000);
+
+  waterSensor.sendTempToPHSensor(temperature);     // Send the temperature to PH sensor to precise the reading of the value
+  waterSensor.getPHSensorValue(dataPH);            // Receive the PH value
+  Serial.print(F(&quot;PH : &quot;));
+  Serial.println(dataPH);
+
+  delay(1000);
+
+  waterSensor.sleepPHSensor();             // Put the PH sensor in sleep mode to save battery power
+  waterSensor.sleepDOSensor();             // Put the DO sensor in sleep mode to save battery power
+  delay(4000);
+}
+</code></pre>
+
+      </div>
+    </div>
+</div>
+
+<div class="lander-row lander-row--blue footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-3">
+        <h2 class="h2">Apprendre plus</h2>
+        <a href='fr/why-use-waziup/'>
+          <p class="text">Pourquoi utiliser Waziup?</p>
+        </a>
+        <a href='fr/documentation/how-waziup-works/'>
+          <p class="text">Documentation</p>
+        </a>
+        <a href='fr/about'>
+          <p class="text">A propos de nous</p>
+        </a>
+        <a href='fr/resources/news/'>
+          <p class="text">Nouveautées</p>
+        </a>
+        <a href='fr/contact'>
+          <p class="text">Contact</p>
+        </a>
+      </div>
+        <div class="col col-6">
+        <h2 class="h2">Tout code</h2>
+          <a href='fr/support'>
+            <p class="text">Support</p>
+          </a>
+          <a href='fr/resources/community'>
+            <p class="text">Communauté</p>
+          </a>
+          <a href="https://github.com/waziup/platform" target="_blank">
+            <p class="text">GitHub</p>
+          </a>
+      </div>
+      <div class="col col-6">
+        <h2 class="h2">Rester à jour</h2>
+        <p class="text">
+          Laisser votre email pour être notifier: We won’t spam you and won’t go off topic.
+        </p>
+
+        
+
+        <div class="social-buttons">
+          <p class="text">Nous suivre sur</p>
+          <a href="https://twitter.com/waziupIOT" target="_blank">
+            <i class="fa fa-2x fa-twitter"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/company/magnetic-io" target="_blank">
+            <i class="fa fa-2x fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer-bottom lander-row--blue">
+  <div class="container">
+    <div class="part">
+      <a href='fr/about'><img class="waziup-logo" src="./img/005-waziup/Logo/logo-waziup-white.svg" alt=""></a>
+    </div>
+
+    <div class="part">
+      <a href="./" class="button button--red" style="text-decoration:none">
+        English
+      </a>
+    </div>
+
+    <div class="part">
+      <p class="text">Code sous licence<a type="application/rss+xml" href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache 2</a> © 2016 <a href='fr/about'>Waziup.io</a></p>
+    </div>
+  </div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59948816-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+

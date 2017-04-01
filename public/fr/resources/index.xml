@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resources on La plateforme Waziup</title>
+    <link>/fr/resources/index.xml</link>
+    <description>Recent content in Resources on La plateforme Waziup</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 22 Mar 2017 15:45:47 +0000</lastBuildDate>
+    <atom:link href="/fr/resources/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Rejoindre la communauté</title>
+      <link>/fr/resources/community</link>
+      <pubDate>Wed, 22 Mar 2017 15:45:47 +0000</pubDate>
+      
+      <guid>/fr/resources/community</guid>
+      <description>
+
+&lt;p&gt;Waziup est un projet open source, activement développé par le consortium Waziup.
+Nous encourageons quiconque à contribuer avec des pull requests, des rapports de bug etc.&lt;/p&gt;
+
+&lt;h2 id=&#34;contribuer-à-waziup&#34;&gt;Contribuer à Waziup&lt;/h2&gt;
+
+&lt;p&gt;Le code source de Waziup est sur Github: (&lt;a href=&#34;https://github.com/waziup/platform&#34;&gt;github.com - Waziup&lt;/a&gt;).&lt;br /&gt;
+Vous êtes libre donc d&amp;rsquo;y contriubuer avec des pull requests de Github.&lt;/p&gt;
+
+&lt;h2 id=&#34;soumettre-des-modifications-ou-des-demandes-de-fonctionnalités&#34;&gt;Soumettre des modifications ou des demandes de fonctionnalités&lt;/h2&gt;
+
+&lt;p&gt;Mettez nous au courant de vos améliorations ou de demandes de fonctionnalités.
+&lt;a href=&#34;https://github.com/waziup/platform/issues&#34;&gt;Soumettre une issue sur Github&lt;/a&gt; en taggée &amp;ldquo;feature&amp;rdquo;.&lt;/p&gt;
+
+&lt;h2 id=&#34;rapport-de-bogues&#34;&gt;Rapport de bogues&lt;/h2&gt;
+
+&lt;p&gt;Si vous trouver un bogue, merci de le signaler.&lt;br /&gt;
+&lt;a href=&#34;https://github.com/waziup/platform/issues&#34;&gt;Soumettre une issue sur Github&lt;/a&gt;, en ajoutant des details sur le bogue perçu.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nouveautées</title>
+      <link>/fr/resources/news/</link>
+      <pubDate>Wed, 22 Mar 2017 15:45:33 +0000</pubDate>
+      
+      <guid>/fr/resources/news/</guid>
+      <description>&lt;p&gt;Index de la page des nouveautées.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IoT Challenge Fish Farming</title>
+      <link>/fr/resources/iot-challenge/overall</link>
+      <pubDate>Wed, 22 Mar 2017 15:45:09 +0000</pubDate>
+      
+      <guid>/fr/resources/iot-challenge/overall</guid>
+      <description>
+
+&lt;h2 id=&#34;description-du-projet&#34;&gt;Description du projet&lt;/h2&gt;
+
+&lt;p&gt;L&amp;rsquo;objectif du projet est de donner des informations aux pisciculteurs situés dans les pays à faible revenu sur la qualité de l&amp;rsquo;eau dans leurs étangs et de soutenir les décisions. À partir des informations recueillies dans la littérature, les informations pertinentes pour la surveillance des étangs piscicoles sont: température de l&amp;rsquo;eau, oxygène dissous, PH, alcalinité, ammoniac, solides dissous totaux, dioxyde de carbone. Cependant, couvrir tous ces paramètres est très coûteux alors qu&amp;rsquo;aucune mesure n&amp;rsquo;est actuellement faite dans l&amp;rsquo;étang africain ciblé. Pour notre premier prototype, nous allons simplement récupérer la température, l&amp;rsquo;oxygène dissous et le PH et cibler un essai dans une pisciculture en Afrique, au Ghana.&lt;/p&gt;
+
+&lt;h2 id=&#34;la-solution&#34;&gt;La solution&lt;/h2&gt;
+
+&lt;p&gt;Notre solution est divisée en 3 parties:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Une bouée équipée de capteurs pour la qualité de l&amp;rsquo;eau et la surveillance du système, ainsi qu&amp;rsquo;une récolte d&amp;rsquo;énergie renouvelable et une connectivité basée sur LoRa à la passerelle&lt;/li&gt;
+&lt;li&gt;Une passerelle intelligente pour collecter, prétraiter et envoyer en toute sécurité des données vers le cloud. Les fonctionnalités avancées liées à la gestion des périphériques et à la prise en charge du débranchement des nuages ​​avec la livraison des applications locales sont prévues pour être ajoutées au deuxième tour.&lt;/li&gt;
+&lt;li&gt;Un nuage pour traiter, stocker et fournir l&amp;rsquo;accès aux données via des interfaces Web ou des applications mobiles&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;L&amp;rsquo;appareil électronique avec les capteurs sera attaché à une bouée flottante et placé dans un étang. L&amp;rsquo;appareil sera alimenté par l&amp;rsquo;énergie solaire avec un panneau solaire sur le dessus de la bouée. L&amp;rsquo;appareil recueillera les informations nécessaires et l&amp;rsquo;enverra à la passerelle IoT.
+ Des discussions initiales ont eu lieu avec le pisciculteur africain (pisciculture de chats) pour discuter de la conception de la bouée.
+ 
+La passerelle assure la connectivité entre les capteurs et le nuage. Il prétraite les données, les stocke dans une base de données locale et les envoie au nuage. Plusieurs options sont disponibles pour la sécurité, parmi lesquelles la clé d&amp;rsquo;authentification et le cryptage des données.&lt;/p&gt;
+
+&lt;p&gt;Le cloud est composé d&amp;rsquo;un courtier IoT et d&amp;rsquo;un gestionnaire de stockage. Le courtier Iot fournit des mécanismes pub / sub pour gérer (recevoir et fournir) des informations. Il fournit également un système de messagerie basé sur l&amp;rsquo;abonnement. Le gestionnaire de stockage du nuage est destiné à stocker et récupérer des données. Le nuage fournira également une API pour obtenir un accès aux données.
+À la fin, les services fournis aux clients seront:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Visualisation et exploration de données sur une interface Internet&lt;/li&gt;
+&lt;li&gt;L&amp;rsquo;envoi d&amp;rsquo;un sms ou voicecall quand une donnée dépasse les seuils définis par l&amp;rsquo;utilisateur. L&amp;rsquo;application mobile est également une option, mais la pénétration des smartphones est encore faible du côté des utilisateurs finaux.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ces services aideront le fermier à maintenir son étang. Cela l&amp;rsquo;aidera à savoir quand traiter l&amp;rsquo;eau, changer le niveau d&amp;rsquo;eau ou nourrir les poissons. L&amp;rsquo;amélioration de la qualité de l&amp;rsquo;eau augmentera la productivité de la ferme en réduisant le taux de mortalité des poissons et en fournissant un état de croissance optimal pour les poissons.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IoT Challenge Fish Farming</title>
+      <link>/fr/resources/iot-challenge/</link>
+      <pubDate>Wed, 22 Mar 2017 15:45:01 +0000</pubDate>
+      
+      <guid>/fr/resources/iot-challenge/</guid>
+      <description>
+
+&lt;h4 id=&#34;22-12-2016&#34;&gt;22/12/2016&lt;/h4&gt;
+
+&lt;p&gt;Bienvenue sur le blog du projet IoT Waziup Fish Farming&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;équipe de &lt;a href=&#34;http://www.eglobalmark.com/&#34;&gt;Easy Global Market&lt;/a&gt; Composé de Sabrine, Charlotte, Franck et moi Benjamin travaillons actuellement sur le projet Waziup et plus précisément sur la partie eau du MVP du projet. Nous décidons de participer au Challenge Eclipse IoT 3.0 avec ce MVP. Ce blog vous présentera notre projet.&lt;/p&gt;
+
+&lt;h3 id=&#34;nouveaux-articles&#34;&gt;Nouveaux articles&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./resources/iot-challenge/overall/&#34;&gt;Project overall&lt;/a&gt; (22/12/2016)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./resources/iot-challenge/endDevice/&#34;&gt;Sensor node description&lt;/a&gt; (16/01/2017)&lt;/li&gt;
+&lt;li&gt;Description de la passerelle&lt;/li&gt;
+&lt;li&gt;Description de Cloud&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;description-du-projet&#34;&gt;Description du projet&lt;/h2&gt;
+
+&lt;p&gt;L&amp;rsquo;objectif du projet est de donner des informations aux pisciculteurs situés dans les pays à faible revenu sur la qualité de l&amp;rsquo;eau dans leurs étangs et de soutenir les décisions. À partir des informations recueillies dans la littérature, les informations pertinentes pour la surveillance des étangs piscicoles sont: température de l&amp;rsquo;eau, oxygène dissous, PH, alcalinité, ammoniac, solides dissous totaux, dioxyde de carbone. Cependant, couvrir tous ces paramètres est très coûteux alors qu&amp;rsquo;aucune mesure n&amp;rsquo;est actuellement faite dans l&amp;rsquo;étang africain ciblé. Pour notre premier prototype, nous allons simplement récupérer la température, l&amp;rsquo;oxygène dissous et le PH et cibler un essai dans une pisciculture en Afrique, au Ghana.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IoT Challenge L&#39;élevage du poisson</title>
+      <link>/fr/resources/iot-challenge/enddevice</link>
+      <pubDate>Wed, 22 Mar 2017 15:44:56 +0000</pubDate>
+      
+      <guid>/fr/resources/iot-challenge/enddevice</guid>
+      <description>
+
+&lt;h2 id=&#34;dispositif-de-noeud-final&#34;&gt;Dispositif de noeud final&lt;/h2&gt;
+
+&lt;p&gt;Notre équipe a déjà commencé le projet pendant plusieurs semaines.
+Maintenant, nous avons la première version de notre périphérique (passerelle et noeud de périphérique final). Dans cet article, je présente le nœud du périphérique final avec le matériau utilisé, l&amp;rsquo;assemblage électronique et la partie logicielle.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;partie-électronique&#34;&gt;Partie électronique&lt;/h2&gt;
+
+&lt;p&gt;Le dispositif d&amp;rsquo;extrémité (noeud de capteur) est une bouée contenant une boîte avec l&amp;rsquo;ensemble électronique.
+Ce dispositif recueille des informations sur l&amp;rsquo;eau (température, PH et oxygène dissous) et l&amp;rsquo;envoie à la passerelle IoT via une connexion LoRa.&lt;/p&gt;
+
+&lt;p&gt;Comme il ne peut pas être branché à une prise électrique, l&amp;rsquo;appareil doit avoir sa propre alimentation électrique pour fonctionner.
+Nous décidons d&amp;rsquo;ajouter une batterie et un panneau solaire fixé sur le haut de la bouée.&lt;/p&gt;
+
+&lt;p&gt;Pour le microcontrôleur nous utilisons un arduino Pro Mini dans sa version 3.3V. Ce choix a été fait pour la comsuption basse puissance du Pro Mini, sa petite taille et la facilité de développement sur elle (Arduino).
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/iot-challenge/20161118_164330.jpg&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Un des défis dans ces zones rurales isolées était la nécessité de travailler sur une longue distance et des infrastructures pauvres. Le déploiement d&amp;rsquo;IoT dans ce contexte doit utiliser une communication sans fil longue portée entre le périphérique et la passerelle et des dispositifs autonomes à faible coût d&amp;rsquo;énergie. Nous décidons d&amp;rsquo;utiliser les réseaux étendus de faible puissance &lt;em&gt;LoRa&lt;/em&gt;. Dans ce but, nous ajoutons un module LoRa sur le noeud: le module inAir9.&lt;/p&gt;
+
+&lt;p&gt;Nous utilisons les capteurs atlas DO oxygène, et l&amp;rsquo;atlas PH pour l&amp;rsquo;oxygène dissous et les mesures PH. Les deux capteurs viennent avec un petit circuit pour préciser la mesure et le calibrer (Ezo PH et Ezo DO).
+Ces deux capteurs sont câblés au bus arduino via I2C qui est un bus série maître-esclave.&lt;/p&gt;
+
+&lt;p&gt;Pour la température, nous choisissons le DS28BT qui utilisent le bus 1 fil. Nous décidons également d&amp;rsquo;ajouter un capteur de température et d&amp;rsquo;humidité dans notre boîte pour détecter un pic élevé probable de température ou d&amp;rsquo;humidité qui va endommager notre circuit.&lt;/p&gt;
+
+&lt;p&gt;La dernière chose que nous ajoutons au circuit est un diviseur de tension pour obtenir la tension de sortie de la batterie et ainsi contrôler son niveau de charge.&lt;/p&gt;
+
+&lt;p&gt;Après un prototype de montage de circuit, nous choisissons de commander une carte de circuit imprimé plutôt que de souder directement le composant ensemble.&lt;/p&gt;
+
+&lt;p&gt;Ci-dessous nous avons le schéma de circuit et le schéma Pcb.&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/iot-challenge/circuit.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Circuit Schema&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/iot-challenge/pcb.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;PCB Schema&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Pendant la période de réception de notre carte de circuit, nous construisons la bouée. Il est composé d&amp;rsquo;une boîte étanche, de flotteur de polystyrène et de plaques de plexigas pour lier l&amp;rsquo;ensemble.
+Le flotteur est bloqué en deux plaques de plexiglas et la boîte est vissée sur une dalle.
+Une tige de plastique a également été ajoutée sous la bouée pour y fixer les capteurs. Ainsi, les capteurs seront entièrement submergés sous 30 cm d&amp;rsquo;eau.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/iot-challenge/box_polystyrene.png&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Et quelques jours plus tard, nous avons reçu notre circuit imprimé et commencer à souder les composants.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/iot-challenge/20170116_170718.jpg&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;PCB Schema&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Après la soudure, la coupe et le forage, c&amp;rsquo;est notre dernière boîte.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;./images/iot-challenge/final_box.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Final Box&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;partie-logicielle&#34;&gt;Partie logicielle&lt;/h2&gt;
+
+&lt;h3 id=&#34;bibliothèque-utilisée&#34;&gt;Bibliothèque utilisée&lt;/h3&gt;
+
+&lt;p&gt;Pour communiquer via le bus I2C entre le capteur PH, le capteur DO et l&amp;rsquo;Arduino, &lt;a href=&#34;https://www.arduino.cc/en/Reference/Wire&#34;&gt;wire&lt;/a&gt; library.&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;une des parties délicates était de gérer la communication LoRa avec la passerelle. Nous utilisons la &lt;a href=&#34;https://github.com/CongducPham/LowCostLoRaGw&#34;&gt;bibliothèque LoRa&lt;/a&gt; Ce qui a grandement facilité le travail. Cette bibliothèque est développée par Congduc Pham qui est également membre du projet Waziup.&lt;/p&gt;
+
+&lt;h3 id=&#34;économie-d-énergie&#34;&gt;Économie d&amp;rsquo;énergie&lt;/h3&gt;
+
+&lt;p&gt;L&amp;rsquo;une des plus grandes contraintes auxquelles nous sommes confrontés est la nécessité de sauver le pouvoir.
+Donc nous décidons d&amp;rsquo;obtenir des données de capteur à un taux d&amp;rsquo;environ 2 lectures par heure. Le reste du temps, le microcontrôleur et les capteurs doivent être dans une sorte de &amp;ldquo;mode veille&amp;rdquo;. Cependant, nous choisissons de ne pas utiliser le mode veille disponible sur les capteurs (PH et DO) qui consomment encore un peu.
+ Nous venons de couper l&amp;rsquo;approvisionnement en cas de besoin.
+ 
+Sur l&amp;rsquo;arduino le mode veille est assisté par des interruptions, sans eux juste une réinitialisation peut réveiller l&amp;rsquo;Arduino.
+Dans notre cas, nous utilisons l&amp;rsquo;interruption temporisateur du chien de garde pour gérer le mode veille.
+Le minuteur de chien de garde est une petite minuterie qui force un redémarrage complet du système si elle ne reçoit pas un signal &amp;ldquo;ok&amp;rdquo; du microcontrôleur. L&amp;rsquo;avantage de cette minuterie est
+Que c&amp;rsquo;est toujours runing même lorsque le système est entièrement mis en mode veille. C&amp;rsquo;est donc un bon moyen de contrôler et de réveiller le système périodiquement.&lt;/p&gt;
+
+&lt;h3 id=&#34;défaillance-du-système&#34;&gt;Défaillance du système&lt;/h3&gt;
+
+&lt;p&gt;Nous utilisons également la minuterie watchdog dans son but principal: détecter et récupérer de dysfonctionnement informatique. En cas de boucles instables, le chien de garde ne reçoit pas de signal «ok» du microcontrôleur
+Et ainsi déclenchera un redémarrage de l&amp;rsquo;arduino. Il empêche les défaillances matérielles ou logicielles.&lt;/p&gt;
+
+&lt;p&gt;Malheureusement, j&amp;rsquo;ai passé plusieurs heures à déboguer un problème ennuyeux avec le minuteur de surveillance Arduino Pro Mini. Je découvre finalement que le problème ne provient pas de mon code, mais du bootloader original de ma carte Arduino.&lt;/p&gt;
+
+&lt;p&gt;Je simule une boucle infinie qui déclenche le chien de garde mais au lieu de reseting une fois l&amp;rsquo;arduino, il bloque le chargeur de démarrage dans une boucle de réinitialisation infinie.
+Et donc rien ne fonctionne plus sur l&amp;rsquo;Arduino:
+Je ne peux pas télécharger de nouveaux Sketch et ne peut pas réinitialiser l&amp;rsquo;arduino manuellement avec le bouton de réinitialisation. J&amp;rsquo;ai du couper déconnecter l&amp;rsquo;alimentation pour pourvoir récupérer l&amp;rsquo;Arduino.
+La solution que j&amp;rsquo;ai utilisée est de clignoter un nouveau bootloader sur la carte. J&amp;rsquo;ai pris le bootloader (optiboot) de l&amp;rsquo;Arduino UNO qui utilise la même puce (atmega328) que l&amp;rsquo;arduino Pro Mini et il résout le problème.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Téléchargements</title>
+      <link>/fr/resources/downloads/</link>
+      <pubDate>Wed, 22 Mar 2017 15:43:47 +0000</pubDate>
+      
+      <guid>/fr/resources/downloads/</guid>
+      <description>&lt;p&gt;Liste des téléchargements de Waziup.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
