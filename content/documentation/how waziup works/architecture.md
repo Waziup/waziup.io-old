@@ -10,7 +10,7 @@ Let's look inside to see how it is built.
 <center> *Waziup architecture*</center>
 
 
-Waziup have four functional domains:
+Waziup has four functional domains:
 
 - Application platform,
 - IoT platform,
@@ -33,9 +33,9 @@ IoT platform
 ------------
 
 The sensor discovery module is in charge of retrieving a list of sensors that matches the application need.
-On the left side of the diagram, the sensor owners can register their sensors with the platform.
+On the left side of the diagram, sensor owners can register their sensors with the platform.
 The sensors selected for each application will deliver their data through the IoT bridge and pre-processor.
-The IoT bridge is in charge of connecting directly to the sensors though the wireless network.
+The IoT bridge is in charge of connecting directly to the sensors through the wireless network.
 The pre-processor contains the routines for pre-processing the data, such as cleaning, extrapolating, aggregating and averaging the sensors measures.
 
 Stream & data analytic
@@ -44,7 +44,7 @@ Stream & data analytic
 The data broker is in charge of collecting and distributing the data from the sensors to the applications.
 Historical data can be stored using the Storage manager. 
 External data sources such as Internet APIs can also be connected directly to the data broker.
-Furthermore data analytics and visualizations are performed using the dedicated component.
+Furthermore, data analytics and visualizations are performed using the dedicated component.
 
 Security and privacy
 --------------------
