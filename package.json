@@ -15,6 +15,7 @@
     "gulp-if": "^2.0.1",
     "gulp-imagemin": "^3.0.3",
     "gulp-inject-string": "^1.1.0",
+    "gulp-install": "^0.6.0",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
@@ -24,10 +25,12 @@
     "remove-markdown": "^0.1.0"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-build": "~0.5.3",
     "gulp-install": "^0.6.0",
     "gulp-shell": "^0.5.2",
-    "gulp-useref": "^3.1.2"
+    "gulp-useref": "^3.1.2",
+    "gulp-util": "^3.0.8"
   },
   "scripts": {
     "build-index": "hugo-lunr -o themes/waziup-theme/static/lunr.json"

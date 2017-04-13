@@ -208,6 +208,19 @@
             }
           ]
         },
+	{
+          "path": "documentation/developmentguide",
+          "text": "Development Guide",
+          "visible": true,
+          "children": [
+            {
+              "path": "documentation/developmentguide/software",
+              "text": "Software Platform",
+              "visible": true
+            }
+          ]
+        },
+
         {
           "path": "documentation/cli/cli-reference",
           "text": "CLI",

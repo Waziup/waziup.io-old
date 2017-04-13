@@ -4,4 +4,4 @@ title: News
 url: /resources/news
 ---
 
-Index of the news
+WAZIUP review meeting for second year will happen in Brussels, on April, 11th.
