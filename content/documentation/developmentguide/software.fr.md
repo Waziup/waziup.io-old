@@ -1,5 +1,5 @@
 ---
-url: /documentation/developmentguide/software/
+url: /fr/documentation/developmentguide/software
 ---
 
 # Development Guideline for Software Platform

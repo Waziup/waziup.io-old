@@ -4,6 +4,13 @@ var menuTree = {};
 var topMenuItemTemplate;
 var sideMenuItemTemplate;
 var thePath;
+var subDomain; // For multiligual purpose
+
+
+// Build the subdomain string according to the language
+subDomain = '/';
+if(theLang != 'en')
+  subDomain = theLang;
 
 
 //Side menu template
@@ -38,7 +45,7 @@ function documentReady() {
 
   setColorMenu();
   function setColorMenu() {
-    if ($(window).scrollTop() > 0 || thePath !== '/') {
+   if ($(window).scrollTop() > 0 || thePath !== subDomain) { // with the subdomain the function will be respectfull with all the languages
       $("#header").addClass("active");
     } else {
       //remove the background property so it comes transparent again (defined in your css)
@@ -82,9 +89,17 @@ function documentReady() {
 }
 
 function getMenuFile(callback) {
-  $.getJSON(theBaseUrl + '/menu.json', function (data) {
-    callback(data);
-  });
+  // Each language has its menu file
+  // English is the default language so its menu file stays same
+  // Contrary to other languages we should have: menu_lang.js (menu_fr.json for example)
+  if(theLang == 'en')
+    $.getJSON(theBaseUrl + '/menu.json', function (data) {
+      callback(data);
+    });
+  else
+    $.getJSON(theBaseUrl + '/menu_'+subDomain+'.json', function (data) {
+      callback(data);
+    });
 
 
   //unsticky menu
