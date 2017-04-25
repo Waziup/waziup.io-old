@@ -14,7 +14,7 @@ Principe
 =========
 
 Le prototype est basé sur le réseau LoRa avec une communication single hop où les bovins sont assimilés comme noeuds finaux qui envoient périodiquement des données à une passerelle LoRa.
-La passerelle envoie des informations relatives à la situation des vaches au fermier via la plateforme WAZIUP en nuage si la connectivité Internet est disponible, ou directement au smartphone ou à la tablette du fermier via WiFi ou Bluetooth autrement.
+La passerelle envoie des informations relatives à la situation des vaches au fermier via la plate-forme WAZIUP en nuage si la connectivité Internet est disponible, ou directement au smartphone ou à la tablette du fermier via WiFi ou Bluetooth autrement.
 Un collier conçu intégrant notre dispositif LoRa intégré est fixé autour du cou de la vache.
 Ce collier intègre un système de balise qui déclenchera une alarme dans le cas où un risque est observé.
 

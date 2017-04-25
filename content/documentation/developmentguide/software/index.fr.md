@@ -2,4 +2,4 @@
 url: /fr/documentation/developmentguide/software/
 ---
 
-# Development Guideline for Software Platform
+# Guide de développement pour la plate-forme logicielle

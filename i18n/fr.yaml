@@ -1,7 +1,7 @@
 ####################### index.html ############################
 #   <!--HEROSPACE ROW-->
 - id: herospace_text1
-  translation: "WAZIUP: La plateforme du BigData et du Cloud"
+  translation: "WAZIUP: La plate-forme du BigData et du Cloud"
 - id: herospace_text2
   translation: "Essayer Waziup"
 - id: herospace_text3

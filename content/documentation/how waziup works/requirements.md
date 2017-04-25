@@ -8,8 +8,7 @@ Waziup components work together with elements in your architecture to handle orc
 
 * [WAZIUP: An Internet of Things and Big Data platform to boost innovation in rural Africa] (/content/resources/downloads/WAZIUP687607_D1.1.pdf)
 
-#
-#{{< note title="What next?" >}}
+{{< note title="What next?" >}}
 * Find out how to [install Waziup](/documentation/installation)
 {{< /note >}}
 

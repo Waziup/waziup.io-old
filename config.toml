@@ -17,10 +17,10 @@ copyright = "Released under the Apache 2 license"
 
 
 [Languages.fr]
-title = "La plateforme Waziup"
+title = "La plate-forme Waziup"
 weight = 2
 [Languages.fr.params]
-description = "Waziup - La plateforme du Cloud et de l'IoT"
+description = "Waziup - La plate-forme du Cloud et de l'IoT"
 copyright = "Sous licence Apache 2"
 
 

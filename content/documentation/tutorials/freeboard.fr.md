@@ -12,7 +12,7 @@ Il y a 2 options:
 
 2- vous pouvez utiliser votre propre compte Freeboar
 
-## Option 1 - Créer un tableau de bord sur la plateforme waziup
+## Option 1 - Créer un tableau de bord sur la plate-forme waziup
 ### Création de votre tableau de bord
 Avec cette option, il est obligatoire d'utiliser un google chrome navigateur web.
 Rendez-vous sur http://freeboard.waziup.io/
@@ -108,7 +108,7 @@ Il vous suffit de remplacer "example_dashboard" par le nom réel de votre fichie
 
 C'est tout ! Si vous souhaitez le modifier, vous devez procéder à l'étape 3 à nouveau.
 
-## Option 2 - Créer un tableau de bord en dehors de la plateforme waziup
+## Option 2 - Créer un tableau de bord en dehors de la plate-forme waziup
 ### Création de votre tableau de bord
 Rendez-vous sur https://freeboard.io/. Créez un compte ou utilisez le vôtre si vous en avez déjà un.
 

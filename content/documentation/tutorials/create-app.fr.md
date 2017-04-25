@@ -18,7 +18,7 @@ $ curl -sSL http://deis.io/deis-cli/install-v2.sh | bash
 $ sudo ln -fs $PWD/deis /usr/local/bin/deis
 ```
 
-Inscrivez-vous à la plateforme:
+Inscrivez-vous à la plate-forme:
 ```
 $ deis register http://deis.waziup.io
 ```

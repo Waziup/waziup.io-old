@@ -6,7 +6,7 @@ Pousser les données des capteurs
 ================================
 
 Ce tutoriel vous aidera à transférer vos données de capteurs sur la plate-forme Waziup.
-Pour communiquer avec la plateforme waziup, vous utiliserez le protocole **Http**, toute bibliothèque capable d'envoyer une requête Http peut être utilisée.
+Pour communiquer avec la plate-forme Waziup, vous utiliserez le protocole **Http**, toute bibliothèque capable d'envoyer une requête Http peut être utilisée.
 
 Créez votre capteur
 -------------------

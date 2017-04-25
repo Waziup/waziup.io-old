@@ -10,7 +10,7 @@ La plate-forme Waziup Cloud a été mise en œuvre avec une technologie de point
 <center>*Implémentation de Waziup*</center>
 
 
-La figure présente la mise en œuvre de la pile de plateforme Waziup.
+La figure présente la mise en œuvre de la pile de la plate-forme Waziup.
 La plate-forme Waziup utilise trois couches de nuages distinctes (en bleu dans l'image):
 
 - "Infrastructure en tant que service" (IaaS),

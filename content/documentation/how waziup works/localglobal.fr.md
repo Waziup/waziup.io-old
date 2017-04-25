@@ -12,7 +12,7 @@ L'objectif est que, même sans accès à Internet, votre déploiement IoT devrai
 <center> *Déploiement Waziup local et global*</center>
 
 Sur le côté gauche de l'image, l'application est conçue par le développeur.
-Il est poussé sur la plateforme Waziup Cloud.
+Il est poussé sur la plate-forme Waziup Cloud.
 L'orchestre s'occupe ensuite de la compilation et du déploiement de l'application dans les différents environnements d'exécution Cloud.
 En outre, l'orchestreur pilote l'instanciation des services dans le Cloud.
 Un fichier spécial appelé *manifest* décrit également la partie de l'application qui doit être installée localement, ainsi que les services correspondants.

@@ -2,31 +2,31 @@
 url: /fr/documentation/developmentguide/
 ---
 
-# Development Guideline for Software Platform
+# Guide de Développement pour la plate-forme logicielle
 
-## Experiment with swagger for WAZIUP REST API
+## Expérience avec swagger pour WAZIUP REST API
 
-We have developed Waziup APIs with Swagger. You can find complete information at [github](https://github.com/Waziup/Platform/tree/master/APIs).
+Nous avons développé Waziup API avec Swagger. Vous pouvez trouver des informations complètes sur [github](https://github.com/Waziup/Platform/tree/master/APIs).
 
-## WAZIUP broker 
+## Le courtier WAZIUP (broker)
 
-The WAZIUP broker is a [data broker](https://github.com/Waziup/Platform/tree/master/broker). [FIWARE Orion](https://github.com/Waziup/Platform/tree/master/broker/orion) is used as the context broker for Waziup.
-
-
-### Historical Data
-
-This API provides historical data of sensor measurements. More [info](https://github.com/Waziup/Platform/tree/master/broker/comet)
-
-### Sensor Subscription
-
-[Cygnus](https://github.com/Waziup/Platform/tree/master/broker/cygnus) is used as an Orion subscriber and data sink, in order to save historical data into MongoDB.
+Le courtier WAZIUP est un [courtier de données](https://github.com/Waziup/Platform/tree/master/broker). [FIWARE Orion](https://github.com/Waziup/Platform/tree/master/broker/orion) est utilisé comme courtier de contexte pour Waziup.
 
 
-Test of the broker and historical APIs can be found here.
+### Données historiques
 
-## Visualization
-More [information](https://github.com/Waziup/Platform/tree/master/visualisation).
+Cette API fournit des données historiques sur les mesures des capteurs. Plus d'[info](https://github.com/Waziup/Platform/tree/master/broker/comet)
 
-## Identity Management and Access Control
-More [information](https://github.com/Waziup/Platform/tree/master/identity).
+### Enregistrement des capteurs
+
+[Cygnus](https://github.com/Waziup/Platform/tree/master/broker/cygnus) Cygnus est utilisé comme abonné et évier de données Orion, afin de sauvegarder les données historiques dans MongoDB.
+
+
+Le test du courtier et les API historiques peuvent être trouvés ici.
+
+## Visualisation
+Plus d'[information](https://github.com/Waziup/Platform/tree/master/visualisation).
+
+## Gestion de l'identité et contrôle d'accès
+Plus d'[information](https://github.com/Waziup/Platform/tree/master/identity).
 
