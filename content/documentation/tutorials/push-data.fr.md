@@ -1,5 +1,6 @@
 ---
 url: /fr/documentation/tutorials/push-data
+
 ---
 
 Pousser les données des capteurs
