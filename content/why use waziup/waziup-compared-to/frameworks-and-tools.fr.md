@@ -104,7 +104,7 @@ Possibilité de consolider et d'analyser des données, et de créer des rapports
 * Eclipse Hono contribue à exposer des API cohérentes pour consommer des données de télémétrie ou envoyer des commandes à des périphériques afin de rationaliser le développement d'applications IoT.
 
 {{< note title="What next?" >}}
-* [Try Waziup](/documentation/installation/hello-world)
-* [Use cases](/why-use-wziup/use-cases/) -  auelques solutions de Waziup aux problèmes pratiques.
-* Find out [how Waziup works](/documentation/how-waziup-works/architecture-and-components)
+* [Essayer Waziup](/documentation/installation/hello-world)
+* [Cas d'utilisation](/why-use-wziup/use-cases/) -  auelques solutions de Waziup aux problèmes pratiques.
+* Trouver [comment fonctionne Waziup](/documentation/how-waziup-works/architecture)
 {{< /note >}}
