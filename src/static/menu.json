@@ -191,6 +191,11 @@
             }
           ]
         },
+	{
+          "path": "documentation/userguide",
+          "text": "User Guide",
+          "visible": true
+        },
         {
           "path": "documentation/api/api-reference",
           "text": "API",
