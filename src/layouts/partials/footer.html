@@ -2,39 +2,39 @@
   <div class="container">
     <div class="row">
       <div class="col col-3">
-        <h2 class="h2">Learn more</h2>
-        <a href="/why-use-waziup/">
-          <p class="text">Why use Waziup?</p>
+        <h2 class="h2">{{ i18n "herospace_text3" }}</h2>
+        <a href='{{ "/why-use-waziup/" | absLangURL }}'>
+          <p class="text">{{ i18n "footer_text2" }}</p>
         </a>
-        <a href="/documentation/how-waziup-works">
-          <p class="text">Documentation</p>
+        <a href='{{ "/documentation/how-waziup-works/" | absLangURL }}'>
+          <p class="text">{{ i18n "footer_text3" }}</p>
         </a>
-        <a href="/about/">
-          <p class="text">About us</p>
+        <a href='{{ "/about" | absLangURL }}'>
+          <p class="text">{{ i18n "footer_text4" }}</p>
         </a>
-        <a href="/resources/news/">
-          <p class="text">News</p>
+        <a href='{{ "/resources/news/" | absLangURL }}'>
+          <p class="text">{{ i18n "footer_text5" }}</p>
         </a>
-        <a href="/contact/">
-          <p class="text">Contact</p>
+        <a href='{{ "/contact" | absLangURL }}'>
+          <p class="text">{{ i18n "footer_text6" }}</p>
         </a>
       </div>
         <div class="col col-6">
-        <h2 class="h2">All things code</h2>
-          <a href="/support/">
-            <p class="text">Support</p>
+        <h2 class="h2">{{ i18n "footer_text7" }}</h2>
+          <a href='{{ "/support" | absLangURL }}'>
+            <p class="text">{{ i18n "footer_text8" }}</p>
           </a>
-          <a href="/resources/community/">
-            <p class="text">Community</p>
+          <a href='{{ "/resources/community" | absLangURL }}'>
+            <p class="text">{{ i18n "footer_text9" }}</p>
           </a>
           <a href="https://github.com/waziup/platform" target="_blank">
             <p class="text">GitHub</p>
           </a>
       </div>
       <div class="col col-6">
-        <h2 class="h2">Stay up to date</h2>
+        <h2 class="h2">{{ i18n "footer_text10" }}</h2>
         <p class="text">
-          Leave your email for the latest news: We won’t spam you and won’t go off topic.
+          {{ i18n "footer_text11" }}
         </p>
 
         <!-- <form action="//magnetic.us9.list-manage.com/subscribe/post?u=c709b3ab8cce9e00d617e01b6&amp;id=c1465e21d0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" style="display: inline" target="_blank" novalidate="">
@@ -49,7 +49,7 @@
         -->
 
         <div class="social-buttons">
-          <p class="text">Follow us on: </p>
+          <p class="text">{{ i18n "footer_text12" }}</p>
           <a href="https://twitter.com/waziupIOT" target="_blank">
             <i class="fa fa-2x fa-twitter"></i><!--<img src="/img/003-Small-icons/Dark-blue/Twitter.svg" alt="">-->
           </a>
@@ -65,10 +65,16 @@
 <div class="footer-bottom lander-row--blue">
   <div class="container">
     <div class="part">
-      <a href="/about/"><img class="waziup-logo" src="/img/005-waziup/Logo/logo-waziup-white.svg" alt=""></a>
+      <a href='{{ "/about" | absLangURL }}'><img class="waziup-logo" src="/img/005-waziup/Logo/logo-waziup-white.svg" alt=""></a>
     </div>
+
     <div class="part">
-      <p class="text">Code licensed under <a type="application/rss+xml" href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache 2</a> © 2016 <a href="/about/">Waziup.io</a></p>
+        <a style="margin-right:5px;" href="/" ><img src="img/lang/en.png" alt="English"></a>
+        <a href="/fr" ><img src="img/lang/fr.png" alt="Français"></a>
+    </div>
+
+    <div class="part">
+      <p class="text">{{ i18n "footer_text13" }}<a type="application/rss+xml" href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache 2</a> © 2016 <a href='{{ "/about" | absLangURL }}'>Waziup.io</a></p>
     </div>
   </div>
 </div>

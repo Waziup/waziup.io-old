@@ -1,0 +1,198 @@
+####################### index.html ############################
+#   <!--HEROSPACE ROW-->
+- id: herospace_text1
+  translation: "WAZIUP: IoT and Big Data platform"
+- id: herospace_text2
+  translation: "Try Waziup"
+- id: herospace_text3
+  translation: "Learn More"
+- id: herospace_or
+  translation: "or"
+
+#   <!--ABOUT Waziup ROW-->
+- id: about_w_text1
+  translation: "Create your own IoT Gateway"
+- id: about_w_text2
+  translation: "Create a low cost DIY gateway and sensor nodes.
+            Based on LoRa wireless networks, with 15Km of coverage with low power."
+- id: about_w_text3
+  translation: "Create and host your IoT app"
+- id: about_w_text4
+  translation: "Waziup allows you to create your own IoT application.
+            Your IoT application will be hosted in the Cloud and in the local gateways."
+- id: about_w_text5
+  translation: "low cost, long range, low power"
+- id: about_w_text6
+  translation: "Waziup is adapted to tough conditions: robustness and long battery duration.
+            Cost is low with DIY components and Cloud self-hosting."
+- id: about_w_text8
+  translation: "Waziup partners and friends"
+
+  #   <!--FEATURES LIST ROW 01-->
+- id: features_1_text1
+  translation: "Features"
+- id: features_1_text2
+  translation: "What more do we offer"
+- id: features_1_text3
+  translation: "Gateway management and automatic connexion"
+- id: features_1_text4
+  translation: "Easy creation of personnalized IoT applications"
+- id: features_1_text5
+  translation: "Integrated metrics and events system exposed through APIs."
+- id: features_1_text6
+  translation: "Provision of IoT applications"
+- id: features_1_text7
+  translation: "Big Data management and visualization"
+- id: features_1_text8
+  translation: "CLI and REST API for app integration"
+
+#   <!--FEATURES LIST ROW 02-->
+- id: features_2_text1
+  translation: "Apache 2.0 opensource license"
+- id: features_2_text2
+  translation: "Manages dependencies, environment variables and resources"
+- id: features_2_text3
+  translation: "Scalable, high available and modular architecture"
+
+#   <!--PARTNERS ROW-->
+- id: partners_text1
+  translation: "Technology Partners"
+- id: partners_text2
+  translation: "Waziup works with"
+####################################### End of index.html ###############################
+
+
+####################################### 404.html ########################################
+- id: not_found_text1
+  translation: "Page not found"
+- id: not_found_text2
+  translation: "Or is it.."
+####################################### End of 404.html #################################
+
+
+####################################### Partial footer.html #############################
+- id: footer_text2
+  translation: "Why use Waziup?"
+- id: footer_text3
+  translation: "Documentation"
+- id: footer_text4
+  translation: "About us"
+- id: footer_text5
+  translation: "News"
+- id: footer_text6
+  translation: "Contact"
+- id: footer_text7
+  translation: "All things code"
+- id: footer_text8
+  translation: "Support"
+- id: footer_text9
+  translation: "Community"
+- id: footer_text10
+  translation: "Stay up to date"
+- id: footer_text11
+  translation: "Leave your email for the latest news: We won’t spam you and won’t go off topic."
+- id: footer_text12
+  translation: "Follow us on"
+- id: footer_text13
+  translation: "Code licensed under"
+####################################### End of Partial footer.html ##########################
+
+
+####################################### Partial nav.html ####################################
+- id: nav_search_placeholder
+  translation: "Type your search here..."
+######################################## End of Partial nav.html ############################
+
+
+######################################## menu.json ##########################################
+- id: menu_text1
+  translation: "About"
+- id: menu_text2
+  translation: "Community"
+- id: menu_text3
+  translation: "Contact"
+- id: menu_text4
+  translation: "Draft"
+- id: menu_text5
+  translation: "Instructions"
+- id: menu_text6
+  translation: "Why use Waziup? "
+- id: menu_text8
+  translation: "Use cases"
+- id: menu_text9
+  translation: "Waziup compared to..."
+- id: menu_text10
+  translation: "Frameworks and tools"
+- id: menu_text11
+  translation: "See Waziup in action"
+- id: menu_text12
+  translation: "Feature list"
+- id: menu_text13
+  translation: "Get started"
+- id: menu_text14
+  translation: "Documentation"
+- id: menu_text15
+  translation: "Tutorials"
+- id: menu_text16
+  translation: "Create a low cost IoT gateway"
+- id: menu_text17
+  translation: "Create an App"
+- id: menu_text18
+  translation: "Visualize you data"
+- id: menu_text19
+  translation: "Upload your sensor Data"
+- id: menu_text20
+  translation: "Send and receive SMS"
+- id: menu_text21
+  translation: "Real-world application prototyping"
+- id: menu_text22
+  translation: "Fish Farming"
+- id: menu_text23
+  translation: "Weather station"
+- id: menu_text24
+  translation: "Cattle management"
+- id: menu_text25
+  translation: "Urban waste"
+- id: menu_text26
+  translation: "How Waziup works"
+- id: menu_text27
+  translation: "Architecture"
+- id: menu_text28
+  translation: "Local and global Clouds"
+- id: menu_text29
+  translation: "Implementation"
+- id: menu_text30
+  translation: "Requirements"
+- id: menu_text31
+  translation: "API reference"
+- id: menu_text32
+  translation: "Using the Waziup API"
+- id: menu_text33
+  translation: "CLI reference"
+- id: menu_text34
+  translation: "Using the Waziup CLI"
+- id: menu_text35
+  translation: "Installation"
+- id: menu_text36
+  translation: "Overview"
+- id: menu_text37
+  translation: "Platform"
+- id: menu_text38
+  translation: "Notes de version"
+- id: menu_text39
+  translation: "Release notes"
+- id: menu_text40
+  translation: "Resources"
+- id: menu_text41
+  translation: "Downloads"
+- id: menu_text42
+  translation: "News"
+- id: menu_text43
+  translation: "IoT Challenge"
+- id: menu_text44
+  translation: "Project overall (22/12/2016)"
+- id: menu_text45
+  translation: "Sensor node (16/01/2017)"
+- id: menu_text46
+  translation: "Support"
+######################################## Fin menu.json ##########################################

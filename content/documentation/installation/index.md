@@ -1,6 +1,7 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: Installation
+url: /documentation/installation/
 ---
 
 How to install Waziup?

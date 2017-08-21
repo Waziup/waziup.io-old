@@ -1,6 +1,7 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: Feature list
+url: /why-use-waziup/feature-list
 ---
 
 Waziup 0.1.0 includes:

@@ -1,3 +1,6 @@
+---
+url: /documentation/developmentguide/
+---
 
 # Development Guideline for Software Platform
 

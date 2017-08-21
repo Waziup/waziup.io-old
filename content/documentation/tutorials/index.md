@@ -1,6 +1,7 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: Tutorials
+url: /documentation/tutorials/
 ---
 
 ## Getting started

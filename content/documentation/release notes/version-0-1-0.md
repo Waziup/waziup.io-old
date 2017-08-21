@@ -1,6 +1,7 @@
 ---
 date: 2016-10-19T09:00:00+00:00
 title: version 0.1.0
+url: /documentation/release-notes/version-0-1-0
 ---
 
 Release notes for Waziup 0.1.0
