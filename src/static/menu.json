@@ -16,38 +16,9 @@
       "visible": false
     },
     {
-      "path": "draft",
-      "text": "Draft",
-      "visible": false,
-      "children": [
-        {
-          "path": "draft/api",
-          "text": "0.8.5",
-          "visible": true
-        }
-      ]
-    },
-    {
       "path": "index.json",
       "text": "Index.json",
       "visible": false
-    },
-    {
-      "path": "index",
-      "text": "Index",
-      "visible": false
-    },
-    {
-      "path": "instructions",
-      "text": "Instructions",
-      "visible": false,
-      "children": [
-        {
-          "path": "instructions/index",
-          "text": "Index",
-          "visible": false
-        }
-      ]
     },
     {
       "path": "why-use-waziup",
@@ -106,65 +77,6 @@
       "visible": true,
       "children": [
         {
-          "path": "documentation/tutorials",
-          "text": "Tutorials",
-          "visible": true,
-          "children": [
-            {
-              "path": "documentation/tutorials/lora-gateway",
-              "text": "Create a low cost IoT gateway",
-              "visible": true
-            },
-            {
-              "path": "documentation/tutorials/create-app",
-              "text": "Create an App",
-              "visible": true
-            },
-            {
-              "path": "documentation/tutorials/freeboard",
-              "text": "Visualize you data",
-              "visible": true
-            },
-            {
-              "path": "documentation/tutorials/push-data",
-              "text": "Upload your sensor Data",
-              "visible": true
-            },
-            {
-              "path": "documentation/tutorials/use-sms",
-              "text": "Send and receive SMS",
-              "visible": true
-            }
-          ]
-        },
-        {
-          "path": "documentation/mvps",
-          "text": "Real-world application prototyping",
-          "visible": true,
-          "children": [
-            {
-              "path": "documentation/mvps/water",
-              "text": "Fish Farming",
-              "visible": true
-            },
-            {
-              "path": "documentation/mvps/agri",
-              "text": "Weather station",
-              "visible": true
-            },
-            {
-              "path": "documentation/mvps/cattle",
-              "text": "Cattle management",
-              "visible": true
-            },
-            {
-              "path": "documentation/mvps/urban",
-              "text": "Urban waste",
-              "visible": true
-            }
-          ]
-        },
-        {
           "path": "documentation/how-waziup-works",
           "text": "How Waziup works",
           "visible": true,
@@ -214,61 +126,13 @@
           ]
         },
 	{
-          "path": "documentation/developmentguide",
+          "path": "documentation/devguide",
           "text": "Development Guide",
           "visible": true,
           "children": [
             {
-              "path": "documentation/developmentguide/software",
-              "text": "Software Platform",
-              "visible": true
-            }
-          ]
-        },
-
-        {
-          "path": "documentation/cli/cli-reference",
-          "text": "CLI",
-          "visible": true,
-          "children": [
-            {
-              "path": "documentation/cli/cli-reference",
-              "text": "CLI reference",
-              "visible": true
-            },
-            {
-              "path": "documentation/cli/using-the-cli",
-              "text": "Using the Waziup CLI",
-              "visible": true
-            }
-          ]
-        },
-        {
-          "path": "documentation/installation",
-          "text": "Installation",
-          "visible": true,
-          "children":
-          [
-            {
-              "path": "documentation/installation",
-              "text": "Overview",
-              "visible": true
-            },
-            {
-              "path": "documentation/installation/hello-world",
-              "text": "Platform",
-              "visible": true
-            }
-          ]
-        },
-        {
-          "path": "documentation/release-notes/version-0-1-0",
-          "text": "Release notes",
-          "visible": true,
-          "children": [
-            {
-              "path": "documentation/release-notes/version-0-1-0",
-              "text": "version 0.1.0",
+              "path": "documentation/devguide/software",
+              "text": "Development guide",
               "visible": true
             }
           ]
@@ -276,37 +140,76 @@
       ]
     },
     {
-      "path": "resources/downloads",
-      "text": "Resources",
+      "path": "tutorials",
+      "text": "Tutorials",
       "visible": true,
       "children": [
         {
-          "path": "resources/downloads",
-          "text": "Downloads",
-          "visible": true
+          "path": "tutorials/hardware",
+          "text": "Hardware prototyping",
+          "visible": true,
+          "children": [
+            {
+              "path": "tutorials/hardware/lora-gateway",
+              "text": "Create a low cost IoT gateway",
+              "visible": true
+            },
+            {
+              "path": "tutorials/hardware/mvps/water",
+              "text": "Fish Farming",
+              "visible": true
+            },
+            {
+              "path": "tutorials/hardware/mvps/agri",
+              "text": "Weather station",
+              "visible": true
+            },
+            {
+              "path": "tutorials/hardware/mvps/cattle",
+              "text": "Cattle management",
+              "visible": true
+            },
+            {
+              "path": "tutorials/hardware/mvps/urban",
+              "text": "Urban waste",
+              "visible": true
+            },
+            {
+              "path": "tutorials/hardware/videos",
+              "text": "Video tutorials",
+              "visible": true
+            }
+          ]
         },
         {
-          "path": "resources/community",
-          "text": "Community",
-          "visible": true
+          "path": "tutorials/software",
+          "text": "Software prototyping",
+          "visible": true,
+          "children": [
+            {
+              "path": "tutorials/software/push-data",
+              "text": "Upload your sensor Data",
+              "visible": true
+            },
+            {
+              "path": "tutorials/software/use-sms",
+              "text": "Send and receive SMS",
+              "visible": true
+            }
+          ]
         },
         {
-          "path": "resources/news",
-          "text": "News",
-          "visible": true
-        },
-        {
-          "path": "resources/iot-challenge",
+          "path": "tutorials/iot-challenge",
           "text": "IoT Challenge",
           "visible": true,
 		  "children": [
 		    {
-              "path": "resources/iot-challenge/overall",
+              "path": "tutorials/iot-challenge/overall",
               "text": "Project overall (22/12/2016)",
               "visible": true
             },
             {
-              "path": "resources/iot-challenge/endDevice",
+              "path": "tutorials/iot-challenge/endDevice",
               "text": "Sensor node (16/01/2017)",
               "visible": true
             }
@@ -317,7 +220,15 @@
     {
       "path": "support",
       "text": "Support",
-      "visible": true
+      "visible": true,
+      "children": [
+        {
+          "path": "resources/community",
+          "text": "Community",
+          "visible": true
+        }
+      ]
     }
   ]
 }
+
