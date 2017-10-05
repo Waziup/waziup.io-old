@@ -3,7 +3,6 @@ WAZIUP website
 
 This is the source for the [waziup.io](http://waziup.io) site.
 
-
 Writing content
 ---------------
 
