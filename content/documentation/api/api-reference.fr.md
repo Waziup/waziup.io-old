@@ -4,10 +4,9 @@ title: Référence de l'API
 url: /fr/documentation/api/api-reference
 ---
 
-Les points d'extrémité de l'API WAZIUP sont en cours de développement. Donc, vous devriez fréquemment visiter cette page pour des mises à jour. La version actuelle est v1. Actuellement, pour chaque service, nous attribuons une dénomination distincte, et nous utilisons les accès v1 pour API.
-Dans ce qui suit, nous énumérons le point final de chaque service ainsi que sa traduction dans un service cible de Kubernetes.
+l'API WAZIUP est en cours de développement.
 
-## Courtier contextuel:
+## context broker:
 * Endpoint: orion.waziup.io
 * URI: /v1/data
 * Service cible dans Kubernetes: http://orion.waziup:1026/v2
@@ -29,12 +28,12 @@ Dans ce qui suit, nous énumérons le point final de chaque service ainsi que sa
     * Recevoir: http://smsserver.waziup:80/v1/sms/receive 
     * Enregistrement: http://smsserver.waziup:80/v1/sms/register
 
-## Kubernetes Web UI(Interface d'utilisateur)
+## Kubernetes Web UI (Interface d'utilisateur)
 * Endpoint: cloudplatform.waziup.io
 * URI: /
 * Target Service in Kubernetes: http://10.103.21.61/
 
-## WAZIUP Dashboard Web(tableau de board Web)
+## WAZIUP Dashboard Web (tableau de board Web)
 * Endpoint: dashboard.waziup.io
 * URI: /
 * Service cible dans Kubernetes: http://dashboard.waziup:3000/
