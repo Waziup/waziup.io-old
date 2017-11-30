@@ -1,10 +1,11 @@
 ---
 date: 2016-09-13T09:00:00+00:00
-title: Local and global Clouds
+title: Clouds locaux et mondiaux
+url: /documentation/how-waziup-works/localglobal
 ---
 
-WAZIUP use the concept of local and global Clouds.
-The objective is that, even without Internet access, your IoT deployement should continue working!
+WAZIUP utilise le concept des Clouds locaux et globaux.
+L'objectif est que, même sans accès à Internet, votre déploiement IoT devrait continuer à fonctionner!
 
 <center> ![Waziup local and global](/images/localglobal.png)</center>
 <center> *Waziup local and global deployements*</center>

@@ -108,6 +108,12 @@ gulp.task('move:menu', function() {
     .pipe(gulp.dest('./themes/waziup-theme/static'))
 });
 
+// Building the menu file for french language
+gulp.task('move:menu_fr', function() {
+  return gulp.src('./src/static/menu_fr.json')
+    .pipe(gulp.dest('./themes/waziup-theme/static'))
+});
+
 gulp.task('move:toml', function() {
   return gulp.src('./src/theme.toml')
     .pipe(gulp.dest('./themes/waziup-theme'))
@@ -157,5 +163,4 @@ gulp.task('hugo', ['dependencies', ], shell.task(['hugo'])); //'build-search-ind
 
 gulp.task('build:prod', ['build:files', 'set-base:production', 'images', 'build-search-index', 'hugo']);
 gulp.task('build:dev', ['build:files', 'set-base:development', 'images', 'hugo']); //'build-search-index', 
-gulp.task('build:files', ['dependencies', 'move:js', 'move:css', 'move:fonts', 'clean:moved', 'move:menu', 'move:rest', 'move:toml']);
-
+gulp.task('build:files', ['dependencies', 'move:js', 'move:css', 'move:fonts', 'clean:moved', 'move:menu', 'move:menu_fr', 'move:rest', 'move:toml']);

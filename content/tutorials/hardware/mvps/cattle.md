@@ -1,6 +1,7 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: Cattle management
+url: /documentation/mvps/cattle
 ---
 
 **Discover here how to build a collar to track cattles**
