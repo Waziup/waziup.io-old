@@ -3,8 +3,13 @@
 <!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
 <!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
 <!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{.Lang}}"> <!--<![endif]-->
 <head>
+  <!-- Variable containing the language string -->
+  <script type="text/javascript">
+    theLang = '{{.Lang}}';
+  </script>
+  <!-- End of definition -->
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">

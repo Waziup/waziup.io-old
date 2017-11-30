@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col">
           <h1 class="header center">
-            WAZIUP: IoT and Big Data platform
+          {{ i18n "herospace_text1" }}
           </h1>
         </div>
       </div>
@@ -21,20 +21,20 @@
         <div class="col center">
           <div class="hero-space-buttons">
             <a href="http://dashboard.waziup.io" class="button button--red">
-                Try Waziup
+            {{ i18n "herospace_text2" }}
             </a>
 
-            <p class="text dark-it-up">or</p>
+            <p class="text dark-it-up"> {{ i18n "herospace_or" }} </p>
 
-            <a href="/why-use-waziup" class="button button--grey">
-                Learn More
+            <a href='{{ "why-use-waziup/" | absLangURL }}' class="button button--grey">
+            {{ i18n "herospace_text3" }}
             </a>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col center">
-        <a href="/documentation/installation/hello-world"><img class="laptop" src="images/iot.png" alt=""></a>
+        <a href='{{ "/documentation/installation/hello-world" | absLangURL }}' ><img class="laptop" src="images/iot.png" alt=""></a>
         </div>
       </div>
 
@@ -55,34 +55,31 @@
     <div class="container">
       <div class="row">
         <div class="col center">
-          <a href="documentation/tutorials/" class="image--smaller"><img src="img/001-Big-icons/illustration-01.svg" alt="Easy canary releasing"></a>
-          <h2 class="h2">Create your own IoT Gateway</h2>
+          <a href='{{ "documentation/tutorials/" | absLangURL }}' class="image--smaller"><img src="img/001-Big-icons/illustration-01.svg" alt="Easy canary releasing"></a>
+          <h2 class="h2">{{ i18n "about_w_text1" }}</h2>
           <p class="text">
-            Create a low cost DIY gateway and sensor nodes.
-            Based on LoRa wireless networks, with 15Km of coverage with low power.
+            {{ i18n "about_w_text2" }}
           </p>
         </div>
         <div class="col center">
-          <a href="documentation/using-waziup/sla/" class="image--smaller second-icon"><img src="img/001-Big-icons/illustration-02.svg" alt="Powerful autoscaling"></a>
-          <h2 class="h2">Create and host your IoT app</h2>
+          <a href='{{ "documentation/using-waziup/sla/" | absLangURL }}' class="image--smaller second-icon"><img src="img/001-Big-icons/illustration-02.svg" alt="Powerful autoscaling"></a>
+          <h2 class="h2">{{ i18n "about_w_text3" }}</h2>
           <p class="text">
-            Waziup allows you to create your own IoT application.
-            Your IoT application will be hosted in the Cloud and in the local gateways.
+            {{ i18n "about_w_text4" }}
           </p>
         </div>
         <div class="col center">
-          <a href="documentation/installation/" class="image--smaller third-icon"><img src="img/001-Big-icons/illustration-03.svg" alt="Container agnostic deploys"></a>
-          <h2 class="h2">low cost, long range, low power</h2>
+          <a href='{{ "documentation/installation/" | absLangURL }}' class="image--smaller third-icon"><img src="img/001-Big-icons/illustration-03.svg" alt="Container agnostic deploys"></a>
+          <h2 class="h2">{{ i18n "about_w_text5" }}</h2>
           <p class="text">
-            Waziup is adapted to tough conditions: robustness and long battery duration.
-            Cost is low with DIY components and Cloud self-hosting.
+            {{ i18n "about_w_text6" }}
           </p>
         </div>
       </div>
       <div class="row">
         <div class="col center">
-          <a href="/why-use-waziup" class="button button--red--ghost">
-              <p>Learn More</p>
+          <a href='{{ "/why-use-waziup" | absLangURL }}' class="button button--red--ghost">
+              <p>{{ i18n "herospace_text3" }}</p>
               <div class="button__icon button__icon--arrow">
               </div>
           </a>
@@ -95,7 +92,7 @@
     <div class="container">
       <div class="row">
         <div class="col center">
-          <h3 class="h3">Waziup partners and friends</h3>
+          <h3 class="h3">{{ i18n "about_w_text8" }}</h3>
         </div>
       </div>
 
@@ -112,8 +109,8 @@
     <div class="container">
       <div class="row">
         <div class="col center">
-          <h3 class="h3">Features</h3>
-          <h1 class="h1">What more do we offer</h1>
+          <h3 class="h3">{{ i18n "features_1_text1" }}</h3>
+          <h1 class="h1">{{ i18n "features_1_text2" }}</h1>
         </div>
       </div>
 
@@ -122,7 +119,7 @@
           <div class="offer-item">
             <img src="/img/002-Medium-icons/Medium-icons-05.svg" alt="">
             <p class="text">
-              Gateway management and automatic connexion
+              {{ i18n "features_1_text3" }}
             </p>
           </div>
         </div>
@@ -131,7 +128,7 @@
           <div class="offer-item">
             <img src="/img/002-Medium-icons/Medium-icons-06.svg" alt="">
             <p class="text">
-              Easy creation of personnalized IoT applications 
+              {{ i18n "features_1_text4" }} 
             </p>
           </div>
         </div>
@@ -140,7 +137,7 @@
           <div class="offer-item">
             <img src="/img/002-Medium-icons/Medium-icons-03.svg" alt="">
             <p class="text">
-              Integrated metrics and events system exposed through APIs.
+              {{ i18n "features_1_text5" }}
             </p>
           </div>
         </div>
@@ -149,7 +146,7 @@
           <div class="offer-item">
             <img src="/img/002-Medium-icons/Medium-icons-02.svg" alt="">
             <p class="text">
-              Provisioning of IoT applications
+              {{ i18n "features_1_text6" }}
             </p>
           </div>
         </div>
@@ -158,7 +155,7 @@
           <div class="offer-item">
             <img src="/img/002-Medium-icons/Medium-icons-01.svg" alt="">
             <p class="text">
-              Big Data management and visualization
+              {{ i18n "features_1_text7" }}
             </p>
           </div>
         </div>
@@ -166,7 +163,7 @@
           <div class="offer-item">
             <img src="/img/002-Medium-icons/Medium-icons-04.svg" alt="">
             <p class="text">
-              CLI and REST API for app integration
+              {{ i18n "features_1_text8" }}
             </p>
           </div>
         </div>
@@ -183,7 +180,7 @@
           <div class="lower-offer-item">
             <img src="/img/003-Small-icons/block-03.svg" alt="">
             <p class="text">
-              Apache 2.0 opensource license
+              {{ i18n "features_2_text1" }}
             </p>
           </div>
         </div>
@@ -191,7 +188,7 @@
           <div class="lower-offer-item">
             <img src="/img/003-Small-icons/block-03.svg" alt="">
             <p class="text">
-              Manages dependencies, environment variables and resources
+              {{ i18n "features_2_text2" }}
             </p>
           </div>
         </div>
@@ -199,15 +196,15 @@
           <div class="lower-offer-item">
             <img src="/img/003-Small-icons/block-03.svg" alt="">
             <p class="text">
-              Scalable, high available and modular architecture
+              {{ i18n "features_2_text3" }}
             </p>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col center">
-          <a href="/why-use-waziup" class="button button--red">
-              <p>Learn More</p>
+          <a href='{{ "/why-use-waziup" | absLangURL }}' class="button button--red">
+              <p>{{ i18n "herospace_text3" }}</p>
               <div class="button__icon button__icon--arrow-white">
               </div>
           </a>
@@ -221,17 +218,17 @@
     <div class="container">
       <div class="row">
         <div class="col center">
-          <h3 class="h3">Technology Partners</h3>
-          <h1 class="h1">Waziup works with</h1>
+          <h3 class="h3">{{ i18n "partners_text1" }}</h3>
+          <h1 class="h1">{{ i18n "partners_text2" }}</h1>
         </div>
       </div>
 
       <div class="row logos-row">
         <div class="col center">
-          <a href="documentation/installation/"><img src="/img/004-Logos/001-dark-blue/Kubernetes-vertical.svg" alt="Google"></a>
+          <a href='{{ "documentation/installation/" | absLangURL }}' ><img src="/img/004-Logos/001-dark-blue/Kubernetes-vertical.svg" alt="Google"></a>
         </div>
         <div class="col center">
-          <a href="documentation/how-waziup-works/architecture-and-components"><img src="/img/004-Logos/001-dark-blue/Docker-vertical.svg" alt="Docker"></a>
+          <a href='{{ "documentation/how-waziup-works/architecture" | absLangURL }}' ><img src="/img/004-Logos/001-dark-blue/Docker-vertical.svg" alt="Docker"></a>
         </div>
       </div>
     </div>

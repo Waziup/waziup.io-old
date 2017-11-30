@@ -1,3 +1,6 @@
+---
+url: /documentation/tutorials/push-data
+---
 
 Pushing data from sensors
 =========================
