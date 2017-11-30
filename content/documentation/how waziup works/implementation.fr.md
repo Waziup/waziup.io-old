@@ -10,15 +10,14 @@ La plate-forme Waziup Cloud a été mise en œuvre avec une technologie de point
 <center>*Implémentation de Waziup*</center>
 
 
-La figure présente la mise en œuvre de la pile de la plate-forme Waziup.
-La plate-forme Waziup utilise trois couches de nuages distinctes (en bleu dans l'image):
+La figure présente la mise en œuvre de la plate-forme Waziup.
+La plate-forme Waziup utilise trois couches "Cloud" distinctes (en bleu dans l'image):
 
 - "Infrastructure en tant que service" (IaaS),
-- "Conteneur en service" (CaaS),
+- "Conteneur en tant que service" (CaaS),
 - "Plate-forme en tant que service" (PaaS).
 
 La première couche est fournie par [OpenStack](https://www.openstack.org/). 
-Its main role is to provide Virtual Machines (VMs), in which we run the full platform.
 Son rôle principal est de fournir des machines virtuelles (VM), dans lequel nous exécutons la plate-forme complète.
 Cette couche est utile car la plupart des fournisseurs de Cloud (Amazon, Rackspace ...) utilisent les machines virtuelles comme unités de base de vente.
 La deuxième couche est fournie par [Kubernetes] (http://kubernetes.io/).
