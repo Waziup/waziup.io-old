@@ -1,0 +1,198 @@
+####################### index.html ############################
+#   <!--HEROSPACE ROW-->
+- id: herospace_text1
+  translation: "WAZIUP: La plate-forme du BigData et du Cloud"
+- id: herospace_text2
+  translation: "Essayer Waziup"
+- id: herospace_text3
+  translation: "Apprendre plus"
+- id: herospace_or
+  translation: "ou"
+
+#   <!--ABOUT Waziup ROW-->
+- id: about_w_text1
+  translation: "Créer votre propre passerelle IoT"
+- id: about_w_text2
+  translation: "Créer une passerelle DIY(Do It Yourself) à faible coût et des nœuds de capteurs.
+            Basé sur les réseaux sans fil LoRa, avec 15Km de couverture avec faible puissance."
+- id: about_w_text3  
+  translation: "Créer et héberger votre application IoT"
+- id: about_w_text4
+  translation: "Waziup vous permet de créer votre application IoT.
+            Votre application sera hébergée dans le Cloud et dans la passerelle IoT."
+- id: about_w_text5
+  translation: "faible coût, longue portée, faible consommation d'énergie"
+- id: about_w_text6
+  translation: "Waziup est adapté aux conditions difficiles: robustesse et longue durée de la batterie.
+            Le coût est faible avec les composants de bricolage et l'auto-hébergement Cloud."
+- id: about_w_text8
+  translation: "Les Amis et les Partenaires de Waziup"
+
+#   <!--FEATURES LIST ROW 01-->
+- id: features_1_text1
+  translation: "Fonctionnalités"
+- id: features_1_text2
+  translation: "Qu'offrons nous de plus"
+- id: features_1_text3
+  translation: "Gestion du Gateway(la passerrelle) et de la connexion automatique"
+- id: features_1_text4
+  translation: "Création des applications IoT personnalisées avec toute facilité"
+- id: features_1_text5
+  translation: "Système intégré de métriques et d'événements exposé par les API."
+- id: features_1_text6
+  translation: "Fourniture d'applications IoT"
+- id: features_1_text7
+  translation: "Big Data de gestion et de visualisation"
+- id: features_1_text8
+  translation: "API CLI et REST pour l'intégration d'applications"
+
+#   <!--FEATURES LIST ROW 02-->
+- id: features_2_text1
+  translation: "Licence opensource Apache 2.0"
+- id: features_2_text2
+  translation: "Gère les dépendances, les variables d'environnement et les ressources"
+- id: features_2_text3
+  translation: "Architecture évolutive, haute disponibilité et modulaire"
+
+#   <!--PARTNERS ROW-->
+- id: partners_text1
+  translation: "Partenaires technologiques"
+- id: partners_text2
+  translation: "Waziup fonctionne avec"
+####################################### End of index.html ###############################
+
+
+####################################### 404.html ########################################
+- id: not_found_text1
+  translation: "Page non trouvé"
+- id: not_found_text2
+  translation: "Ou est ce.."
+####################################### End of 404.html #################################
+
+
+####################################### Partial footer.html #############################
+- id: footer_text2
+  translation: "Pourquoi utiliser Waziup?"
+- id: footer_text3
+  translation: "Documentation"
+- id: footer_text4
+  translation: "A propos de nous"
+- id: footer_text5
+  translation: "Nouveautées"
+- id: footer_text6
+  translation: "Contact"
+- id: footer_text7
+  translation: "Tout code"
+- id: footer_text8
+  translation: "Support"
+- id: footer_text9
+  translation: "Communauté"
+- id: footer_text10
+  translation: "Rester à jour"
+- id: footer_text11
+  translation: "Laisser votre email pour être notifier: Nous ne vous enverrons pas de spam et nous ne passerons pas hors sujet."
+- id: footer_text12
+  translation: "Nous suivre sur"
+- id: footer_text13
+  translation: "Code sous licence"
+####################################### End Partial footer.html #############################
+
+
+######################################## Partial nav.html ####################################
+- id: nav_search_placeholder
+  translation: "Entrer votre recherche ici..."
+######################################## End of Partial nav.html ############################
+
+
+######################################## menu.json ##########################################
+- id: menu_text1
+  translation: "A propos de nous"
+- id: menu_text2
+  translation: "Communauté"
+- id: menu_text3
+  translation: "Contact"
+- id: menu_text4
+  translation: "Draft"
+- id: menu_text5
+  translation: "Instructions"
+- id: menu_text6
+  translation: "Pourquoi utiliser Waziup?"
+- id: menu_text8
+  translation: "Cas d'utilisation"
+- id: menu_text9
+  translation: "Waziup comparé à..."
+- id: menu_text10
+  translation: "Frameworks et Outils"
+- id: menu_text11
+  translation: "Voir Waziup en action"
+- id: menu_text12
+  translation: "Liste des fonctionnalités"
+- id: menu_text13
+  translation: "Commencer"
+- id: menu_text14
+  translation: "Documentation"
+- id: menu_text15
+  translation: "Tutoriels"
+- id: menu_text16
+  translation: "Créer une passerrelle IoT à fible coût"
+- id: menu_text17
+  translation: "Créer une application"
+- id: menu_text18
+  translation: "Visualiser vos données"
+- id: menu_text19
+  translation: "Uploader les données de vos capteur"
+- id: menu_text20
+  translation: "Envoyer et recevoir des SMS"
+- id: menu_text21
+  translation: "Prototype des applications réalisées"
+- id: menu_text22
+  translation: "Fish Farming(pisciculture)"
+- id: menu_text23
+  translation: "Weather station(station météo)"
+- id: menu_text24
+  translation: "Cattle management(gestion des bovins)"
+- id: menu_text25
+  translation: "Urban waste(déchets urbain)"
+- id: menu_text26
+  translation: "Comment fonctionne Waziup?"
+- id: menu_text27
+  translation: "Architecture"
+- id: menu_text28
+  translation: "Nos Clouds en local et global"
+- id: menu_text29
+  translation: "Implementation"
+- id: menu_text30
+  translation: "Exigences"
+- id: menu_text31
+  translation: "Référence de l'API"
+- id: menu_text32
+  translation: "Utiliser l'API Waziup"
+- id: menu_text33
+  translation: "Référence de la CLI"
+- id: menu_text34
+  translation: "Utiliser la CLI Waziup"
+- id: menu_text35
+  translation: "Installation"
+- id: menu_text36
+  translation: "Aperçu"
+- id: menu_text37
+  translation: "La Platforme"
+- id: menu_text38
+  translation: "Notes de version"
+- id: menu_text39
+  translation: "La version 0.1.0"
+- id: menu_text40
+  translation: "Ressources"
+- id: menu_text41
+  translation: "Téléchargements"
+- id: menu_text42
+  translation: "Nouveautées"
+- id: menu_text43
+  translation: "IoT Challenge"
+- id: menu_text44
+  translation: "Projet en global (22/12/2016)"
+- id: menu_text45
+  translation: "Noeud de capteurs (16/01/2017)"
+- id: menu_text46
+  translation: "Support"
+######################################## Fin menu.json ##########################################

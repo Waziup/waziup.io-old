@@ -1,6 +1,7 @@
 ---
 date: 2017-01-16T09:00:00+00:00
 title: IoT Challenge Fish Farming
+url: /resources/iot-challenge/overall
 ---
 
 ## Description of the project

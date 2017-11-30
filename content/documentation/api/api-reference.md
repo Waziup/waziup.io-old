@@ -1,6 +1,7 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: API Reference
+url: /documentation/api/api-reference
 ---
 
 WAZIUP API endpoints are under development. So, you should frequently visit this page for updates. The current version is v1. Currently, for each service we allocate a distinct naming, and we use the v1 for API accesses. 

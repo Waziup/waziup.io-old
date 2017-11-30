@@ -1,45 +1,48 @@
+---
+url: /documentation/mvps/agri
+---
 
-### Discover here how to prototype a weather station using Waziup.
+### Découvrez ici comment prototype d'une station météo à l'aide de Waziup.
 
-The objective is to develop a low-cost and sustainable solution capable of reading real-time data typical of a weather station, using different sensors, and capable of communicating via LoRa. The following subsection are a Getting Strated tutorial. You can find detailed documentation [here] [WeatherStationGitHub]. 
+L'objectif est de développer une solution économique et durable capable de lire en temps réel des données typiques d'une station météorologique, en utilisant différents capteurs et capables de communiquer via LoRa. La sous-section suivante est un tutoriel Getting Strated. Vous trouverez la documentation détaillée [here] [WeatherStationGitHub].
+
+#### Matériel
+
+Le matériel suivant, il est nécessaire pour développer votre propre station:
+
+• [Feather Adafruit 32u4 RFM95 LoRa] [Feather]
+• [Adafruit RTC DS3231] [RTC]
+• [Bouclier météo Sparkfun] [Bouclier]
+• [Kit capteurs de pluie et de vent] [WindRain]
+• [Antenne 868 Mhz] [Antenne]
+• [Câble SMA] [SMA]
+
+#### Bibliothèques
+Vous aurez besoin des bibliothèques suivantes. Ils sont disponibles [ici] [Bibliothèques].
+
+• SparkFunHTU21D
+• SparkFunMPL3115A2
+• RTClib
+• LowPower
+• Feather_Lib
 
 
-#### Hardware
+#### Construction et implémentation
 
-The following hardware it's needed to develop your own station:
+Vous devez suivre les prochaines étapes pour construire et mettre en œuvre la Station météorologique:
 
-•	[Adafruit Feather 32u4 RFM95 LoRa Radio] [Feather]
-•	[Adafruit RTC DS3231] [RTC]
-•	[Sparkfun Weather Shield] [Shield]
-•	[Wind and Rain sensors Kit] [WindRain]
-•	[Antenna 868 Mhz] [Antenna]
-•	[SMA cable] [SMA] 
-
-#### Libraries
-You will need that following specific libraries. They are available [here] [Libraries].
-
-•	SparkFunHTU21D
-•	SparkFunMPL3115A2
-•	RTClib
-•	LowPower
-•	Feather_Lib
-
-
-#### Build & Implementation
-
-You need to follow the next steps to build and implement the Weather Station:
-
-1) **Connect the Wind and Rain sensors to the Weather Shield**;
-The Weather Shield come with two unpopulated RJ11 connector spaces that you need to soldering. You need to connect the Wind and the Rain cables to the RJ11 connector.
+1) ** Connecter les capteurs de vent et de pluie au Weather Shield **;
+Le Weather Shield est livré avec deux espaces de connecteur RJ11 peu peuplés que vous devez souder.Vous devez connecter les câbles Wind et Rain au connecteur RJ11
 [![Sparkfun Weather Station](https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/WeatherStationRJ11.jpg)](https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/WeatherStationRJ11.jpg)
 
-2) **Connect the Adafruit Feather 32u4 with Sparkfun Weather Shield**;
+#### Bibliothèques
+2) ** Reliez la plume Adafruit 32u4 avec le bouclier météo Sparkfun **;
 [![Adafruit Feather 32u4 with Sparkfun Weather](https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/pin_connection.png)](https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/pin_connection.png)
 [![Adafruit Feather 32u4 with Sparkfun connection Scheme](https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/pin_connection2.png)](https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/pin_connection2.png)
 
 [![Overall Connection Scheme](https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/all_connection.png)](https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/all_connection.png)
 
-3) **Connect the Antenna 868 MHz to Feather**;
+3) ** Connectez l'antenne 868 MHz à Feather **;
 [![Antenna 868 MHz to Feather](https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/antenna2feather.png)](https://raw.githubusercontent.com/Waziup/waziup.io/master/content/documentation/mvps/agri_images/antenna2feather.png)
 
 4) **Weather Station built with components**;
