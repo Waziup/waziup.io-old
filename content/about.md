@@ -1,6 +1,7 @@
 ---
 date: 2016-10-28T09:00:00+00:00
-title: about us
+title: About Us
+url: /about
 ---
 
 Waziup is...

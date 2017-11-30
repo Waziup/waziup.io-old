@@ -1,8 +1,13 @@
 <nav aria-label="Header" id="header" class="top-menu">
   <div class="left">
-    <a href="/">
+    <a href="{{.Lang}}"> <!-- the en/ will be return to / because not exists-->
       <div id="logo" class="logo"></div>
     </a>
+  </div>
+
+  <div class="top-menu-items">
+        <a style="margin-right:5px;" href="/" ><img src="img/lang/en.png" alt="English"></a>
+        <a href="/fr" ><img src="img/lang/fr.png" alt="Français"></a>
   </div>
 
   <div class="right">
@@ -12,10 +17,10 @@
 
     <div class="download">
       <a href="http://dashboard.waziup.io" class="button button--red">
-        Try Waziup
+        {{ i18n "herospace_text2" }}
       </a>
     </div>
-
+    
     <a href="https://github.com/Waziup/platform" target="_blank" class="github-logo">
       <i class="fa fa-2x fa-github" aria-hidden="true"></i>
     </a>
@@ -35,7 +40,7 @@
     <div class="search-bar__back">
       <i class="fa fa-lg fa-times"></i>
     </div>
-    <input class="search-bar__input" placeholder="Type your search here...">
+    <input class="search-bar__input" placeholder='{{ i18n "nav_search_placeholder" }}'>
   </div>
   <div class="search-results">
     <ul></ul>

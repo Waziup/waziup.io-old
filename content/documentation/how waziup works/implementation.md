@@ -1,6 +1,7 @@
 ---
 date: 2016-09-13T09:00:00+00:00
-title: Implementation 
+title: Implementation
+url: /documentation/how-waziup-works/implementation
 ---
 
 The Waziup Cloud platform has been implemented with state of the art technology, while keeping in mind the challenges at hand.

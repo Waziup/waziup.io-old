@@ -1,6 +1,7 @@
 ---
 date: 2016-09-13T09:00:00+00:00
-title: Urban waste management
+title: Gestion des déchets urbains
+url: /documentation/mvps/urban
 ---
 
 Discover here how to prototype an application for waste management using Waziup. 

@@ -1,6 +1,7 @@
 ---
 date: 2017-10-28T09:00:00+00:00
-title: support
+title: Support
+url: /support
 ---
 Waziup is actively developed by the Waziup consortium. Licence is...
 
