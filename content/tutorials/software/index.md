@@ -8,4 +8,5 @@ We propose several examples:
 
 - [Upload sensor data](tutorials/software/push-data)
 - [Weather station](tutorials/software/use-sms)
+- [Kibana tutorial](tutorials/software/kibana_tutorial.pdf)
 
