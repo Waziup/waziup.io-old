@@ -3,9 +3,9 @@
 - id: herospace_text1
   translation: "WAZIUP: La plate-forme du BigData et du Cloud"
 - id: herospace_text2
-  translation: "Essayer Waziup"
+  translation: "Go to dashboard"
 - id: herospace_text3
-  translation: "Apprendre plus"
+  translation: "En savoir plus"
 - id: herospace_or
   translation: "ou"
 
