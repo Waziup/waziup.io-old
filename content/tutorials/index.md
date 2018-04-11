@@ -1,13 +1,12 @@
 ---
-date: 2016-09-13T09:00:00+00:00
-title: Tutorials
+date: 2018-01-31T09:00:00+00:00
+title: WAZIUP Tutorials
 ---
 
-## Getting started
-We propose several tutorials to get you started with Waziup:
+## Tutorials
+In order to build a full-stack and end-to-end IoT solution, WAZIUPers need to learn about software-, and hardware- platforms of WAZIUP. Software is where WAZIUP provide an interface toward users offering applications, and providing several services such as software services, data management (coming from IoT devices). Instead, Hardware deals with sensing environment with IoT devices and storing collected data in WAZIUP software platform to feed users' applications.
 
-- [Create a low cost IoT gateway](tutorials/hardware/lora-gateway)
-- [Upload your sensor data](tutorials/software/push-data)
-- [Visualize you data](tutorials/software/freeboard)
-- [Create and host an IoT application on Waziup platform](tutorials/software/create-app)
-- [Send and receive SMS](tutorials/software/use-sms)
+Please refer to the following pages for more information:
+
+- [Software Platform Tutorials](software/index)
+- [Hardware Platform Tutorials](hardware/index)
