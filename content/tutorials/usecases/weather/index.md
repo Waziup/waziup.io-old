@@ -1,20 +1,22 @@
 ## Discover here how to prototype a weather station using Waziup.
 
-The objective is to develop a low-cost and sustainable solution capable of reading real-time data typical of a weather station, using different sensors, and capable of communicating via LoRa. The following subsection are a Getting Strated tutorial. You can find detailed documentation [here] [WeatherStationGitHub]. 
+The objective is to develop a low-cost and sustainable solution capable of reading real-time data typical of a weather station, using different sensors, and capable of communicating via LoRa.
+The following subsection are a Getting Strated tutorial.
+You can find detailed documentation (here)[WeatherStationGitHub]. 
 
 #### Hardware
 
 The following hardware it's needed to develop your own station:
 
-- [Adafruit Feather 32u4 RFM95 LoRa Radio] [Feather]
-- [Adafruit RTC DS3231] [RTC]
-- [Sparkfun Weather Shield] [Shield]
-- [Wind and Rain sensors Kit] [WindRain]
-- [Antenna 868 Mhz] [Antenna]
-- [SMA cable] [SMA] 
+- (Adafruit Feather 32u4 RFM95 LoRa Radio)[Feather]
+- (Adafruit RTC DS3231)[RTC]
+- (Sparkfun Weather Shield)[Shield]
+- (Wind and Rain sensors Kit)[WindRain]
+- (Antenna 868 Mhz)[Antenna]
+- (SMA cable)[SMA] 
 
 #### Libraries
-You will need that following specific libraries. They are available [here] [Libraries].
+You will need that following specific libraries. They are available (here)[Libraries].
 
 - SparkFunHTU21D
 - SparkFunMPL3115A2
@@ -61,11 +63,11 @@ The following steps are about how the system works:
 6. Feather wakes up after four minute (by default), get the measurements and send back to master gateway until sleeping again.
 
 
-   [Feather]: <https://www.adafruit.com/product/3078>
-   [Shield]: <https://www.sparkfun.com/products/12081>
-   [RTC]: <https://www.adafruit.com/product/3013>  
-   [WindRain]: <https://www.sparkfun.com/products/8942>
-   [Antenna]: <https://www.cooking-hacks.com/868mhz-antenna>
-   [SMA]: <https://www.cooking-hacks.com/interface-cable-rp-sma-to-u-fl>
-   [Libraries]: <https://github.com/unparallel-innovation/UI_Waziup_Weather_Station/tree/master/WAZIUP%20Weather%20Station%20Client/lib>
-   [WeatherStationGitHub]: <https://github.com/unparallel-innovation/UI_Waziup_Weather_Station>
+[Feather]: <https://www.adafruit.com/product/3078>
+[Shield]: <https://www.sparkfun.com/products/12081>
+[RTC]: <https://www.adafruit.com/product/3013>  
+[WindRain]: <https://www.sparkfun.com/products/8942>
+[Antenna]: <https://www.cooking-hacks.com/868mhz-antenna>
+[SMA]: <https://www.cooking-hacks.com/interface-cable-rp-sma-to-u-fl>
+[Libraries]: <https://github.com/unparallel-innovation/UI_Waziup_Weather_Station/tree/master/WAZIUP%20Weather%20Station%20Client/lib>
+[WeatherStationGitHub]: <https://github.com/unparallel-innovation/UI_Waziup_Weather_Station>
