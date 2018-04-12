@@ -53,7 +53,7 @@ via the LoRa module. In this first section we will just see how to connect the s
 The PH and DO sensors work with a small circuit to precise measures and calibrate the sensor : [DO EZO circuit](http://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf) and [PH EZO circuit](http://www.atlas-scientific.com/_files/_datasheets/_circuit/pH_EZO_datasheet.pdf).
 
 
-![EZO Circuits](/images/mvps/water_farming/ezo_circuits.png)
+![EZO Circuits](images/ezo_circuits.png)
 
 Both circuits are connect to I2C wire of arduino (pin A4 and A5 on arduino pro mini).
 In order to works with I2C, the circuits need to be switch in I2C mode.
@@ -76,36 +76,36 @@ This choice makes power saving management easier.
 In our prototype we choose the pin 6 to power the EZO DO circuit and pin 7 to power the EZO PH.
 
 Wire table :
-![EZO Circuits](/images/mvps/water_farming/ezo_table.png)
+![EZO Circuits](images/ezo_table.png)
 
 Then we have to connect each sensor to their EZO circuit. Each sensor come with a DC barrel jack to connect to the circuit.
 Connect the GND pin of the barrel connector with the PGND pin of the EZO circuit and connect the pin next to the GND of the barrel connector to PRB bin of the EZO circuit as below.
 
 
 
-![Sensors Connection](/images/mvps/water_farming/wired_sensors.jpg)
+![Sensors Connection](images/wired_sensors.jpg)
 
 ## Water temperature sensor
 
 The sensor we use to control water temperature is the DS18B20.
 
-![DS18B20](/images/mvps/water_farming/DS18B20.jpg)
+![DS18B20](images/DS18B20.jpg)
 
 As we did for PH and DO sensor, we power this sensor using digital output pin of the arduino. However you can use the VCC pin to your own preference.
 Here the digital pin 8 is used for power and the digital pin 2 is used for data. A 4k7 ohms resistor is required between VCC pin and Data pin. Below it's the wire schema of the sensor. 
 
-![DS18B20 Wire] (/images/mvps/water_farming/DS18B20_wire.jpg)
+![DS18B20 Wire] (images/DS18B20_wire.jpg)
 
 ## LoRa module
 
 
  The LoRa chip we use is the inAir9 module.
  
- ![InAir9 and wires](/images/mvps/water_farming/inAir9.jpg)
+ ![InAir9 and wires](images/inAir9.jpg)
 
  Below the wire table of the InAir9 module with the arduino.
  
- ![InAir9 and wires](/images/mvps/water_farming/inAir9_table.jpg)
+ ![InAir9 and wires](images/inAir9_table.jpg)
 
 
 ## Temperature and Humidity sensor (optional)
@@ -114,13 +114,13 @@ Our first prototype is test in Ghana which is a particulary hot country thus we 
  conditions into the box.
 You can choose to add it or not as your convenience. The sensor we use to this purpose is the DHT22 sensor.
 
- ![DHT22] (/images/mvps/water_farming/DHT22.png)
+ ![DHT22] (images/DHT22.png)
 
 The VCC pin of the sensor is connected to the digital pin 8 of the arduino, but you can use the VCC pin also.
 The DATA pin of the sensor is connected to the digital pin 3 of the arduino. 
 As we did with the DS18B20 sensor, a 4k7 ohms resistor is needed between VCC and DATA.
 
-![DHT22 table](/images/mvps/water_farming/dht_table.jpg)
+![DHT22 table](images/dht_table.jpg)
 
 ## Voltage measure
 
@@ -129,7 +129,7 @@ We use a li-ion battery so the voltage ranges from 3V (empty) to 4.2V (fully cha
 To get voltage at the arduino inputs we use a voltage divider. We choose the analog pin 1 of the arduino to calculate the real voltage.
 Below this is the schema of the voltage divider. We use high-value resistor to minimize the current waste.
 
-![Voltage divider](/images/mvps/water_farming/voltage_divider.png)
+![Voltage divider](images/voltage_divider.png)
 
 ## Charger, battery and solar panel
 
@@ -137,13 +137,13 @@ Below this is the schema of the voltage divider. We use high-value resistor to m
  This charger board provide us the ability to get the most possible power out of our solar panel and into a rechargable Li-ion battery. 
  The set up is easy, just plug the solar panel into one side of the circuit, the battery and the arduino in parallel on the other side.
  
- ![Charger board](/images/mvps/water_farming/charger_chip.jpg)
+ ![Charger board](images/charger_chip.jpg)
 
 ## General schematic
 
 Here you can see the schematic of the entire circuit without the charger part.
 
-![Schematic](/images/mvps/water_farming/schematic.png)
+![Schematic](images/schematic.png)
 
 ## Implementation
 
@@ -163,7 +163,7 @@ We can program the Arduino by sending a set of instructions to the microcrontrol
 To do so we use the IDE Arduino Software which uses a simplified version of C++. The Arduino software can be download [here](https://www.arduino.cc/en/main/software).
 Then to connect the Arduino Mini to the computer we use an USB-FTDI chip as below.
 
-![FTDI Arduino](/images/mvps/water_farming/ftdi_arduino.png)
+![FTDI Arduino](images/ftdi_arduino.png)
 
 ## Libraries
 
