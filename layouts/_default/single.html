@@ -6,6 +6,7 @@
 
 <div class="page documentation">
     <div class="menu" id="side-menu">
+      {{ partial "sidebar" . }}
     </div>
     <div class="content">
       <h1 class="content-header">{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>

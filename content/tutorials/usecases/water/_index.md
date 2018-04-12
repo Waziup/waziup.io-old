@@ -4,7 +4,7 @@ title: Fish farming prototype
 url: /tutorials/usecases/water
 ---
 
-![buoy_ghana](./presentation_buoy_ghana.jpg)
+![buoy_ghana](images/presentation_buoy_ghana.jpg)
 
 **Discover here how to prototype an application of fish farming using Waziup.**
 
