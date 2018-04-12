@@ -168,9 +168,9 @@ Then to connect the Arduino Mini to the computer we use an USB-FTDI chip as belo
 ## Libraries
 
 
-- [OneWire library] (https://github.com/PaulStoffregen/OneWire) is used with temperature DS18B20 sensor
-- [DHT library] (https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib) is used with temperature and humidity DHT22 sensor
-- [SX1272 library] (https://github.com/CongducPham/LowCostLoRaGw) is used with LoRa module
+- [OneWire library](https://github.com/PaulStoffregen/OneWire) is used with temperature DS18B20 sensor
+- [DHT library](https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib) is used with temperature and humidity DHT22 sensor
+- [SX1272 library](https://github.com/CongducPham/LowCostLoRaGw) is used with LoRa module
 
 ## Sensor coding samples
 
