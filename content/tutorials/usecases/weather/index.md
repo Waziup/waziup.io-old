@@ -2,21 +2,21 @@
 
 The objective is to develop a low-cost and sustainable solution capable of reading real-time data typical of a weather station, using different sensors, and capable of communicating via LoRa.
 The following subsection are a Getting Strated tutorial.
-You can find detailed documentation (here)[WeatherStationGitHub]. 
+You can find detailed documentation [here](WeatherStationGitHub). 
 
 #### Hardware
 
 The following hardware it's needed to develop your own station:
 
-- (Adafruit Feather 32u4 RFM95 LoRa Radio)[Feather]
-- (Adafruit RTC DS3231)[RTC]
-- (Sparkfun Weather Shield)[Shield]
-- (Wind and Rain sensors Kit)[WindRain]
-- (Antenna 868 Mhz)[Antenna]
-- (SMA cable)[SMA] 
+- [Adafruit Feather 32u4 RFM95 LoRa Radio)](Feather)
+- [Adafruit RTC DS3231](RTC)
+- [Sparkfun Weather Shield](Shield)
+- [Wind and Rain sensors Kit](WindRain)
+- [Antenna 868 Mhz](Antenna)
+- [SMA cable](SMA)
 
 #### Libraries
-You will need that following specific libraries. They are available (here)[Libraries].
+You will need that following specific libraries. They are available [here](Libraries).
 
 - SparkFunHTU21D
 - SparkFunMPL3115A2
