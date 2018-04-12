@@ -147,13 +147,13 @@ Here you can see the schematic of the entire circuit without the charger part.
 
 ## Implementation
 
-{{< figure src="/images/mvps/water_farming/prototype_board.png" title="Prototype Board">}}
+![figure](images/prototype_board.png)
 
 In our implementation we decide to create a PCB board of the circuit to make the component assembly easier.
 
-{{< figure src="/images/mvps/water_farming/pcb_board.png" title="PCB Board">}}
+![figure](images/pcb_board.png)
 
-{{< figure src="/images/mvps/water_farming/assemblied_board.jpg" title="Final assembly">}}
+![figure](images/assemblied_board.jpg)
 
 # Software
 
