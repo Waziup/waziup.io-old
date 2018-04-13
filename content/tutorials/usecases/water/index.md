@@ -1,9 +1,6 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: Fish farming prototype
-resources:
-  - name: logo
-    src: images/presentation_buoy_ghana.jpg
 ---
 
 ![buoy_ghana](images/presentation_buoy_ghana.jpg)
