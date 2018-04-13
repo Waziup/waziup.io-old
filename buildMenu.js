@@ -1,8 +1,5 @@
 var url = './themes/waziup-theme/static/menu.json';
 
-// The menu file for french language
-var url_fr = './themes/waziup-theme/static/menu_fr.json';
-
 var fs = require('fs')
 var path = require('path');
 var dirTree = require('directory-tree');
@@ -25,12 +22,6 @@ var data = JSON.stringify({children: tree.children}, null, 2);
 fs.writeFile(url, data, function(err)  {
   if(err) return console.log(err.red);
   console.log(('menu.json has been generated at: ' + url.underline).green);
-})
-
-// Generating the french menu file also
-fs.writeFile(url_fr, data, function(err)  {
-  if(err) return console.log(err.red);
-  console.log(('menu_fr.json has been generated at: ' + url.underline).green);
 })
 
 function parseTree(data) {

@@ -1,7 +1,6 @@
 ---
 date: 2018-01-31T09:00:00+00:00
 title: WAZIUP Tutorials
-url: /tutorials
 ---
 
 ## Tutorials
