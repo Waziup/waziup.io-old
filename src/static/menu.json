@@ -167,13 +167,18 @@
           "visible": true,
           "children": [
             {
-              "path": "tutorials/software/push-data",
-              "text": "Upload your sensor Data",
+              "path": "tutorials/software/dashboard",
+              "text": "Dashboard & Kibana",
               "visible": true
             },
             {
-              "path": "tutorials/software/use-sms",
-              "text": "Send and receive SMS",
+              "path": "tutorials/software/browserapp",
+              "text": "Browser app",
+              "visible": true
+            },
+            {
+              "path": "tutorials/software/fullstackapp",
+              "text": "Full stack app",
               "visible": true
             }
           ]
@@ -199,7 +204,7 @@
               "visible": true
             },
             {
-              "path": "tutorials/usecases/urban",
+              "path": "tutorials/usecases/waste",
               "text": "Urban waste",
               "visible": true
             }
