@@ -3,11 +3,9 @@ date: 2016-09-13T09:00:00+00:00
 title: Tutorials
 ---
 
-## Getting started
-We propose several tutorials to get you started with Waziup:
+We propose several tutorials based on real-world use cases to get you started with Waziup:
 
-- [Create a low cost IoT gateway](tutorials/hardware/lora-gateway)
-- [Upload your sensor data](tutorials/software/push-data)
-- [Visualize you data](tutorials/software/freeboard)
-- [Create and host an IoT application on Waziup platform](tutorials/software/create-app)
-- [Send and receive SMS](tutorials/software/use-sms)
+- [Fish farming](tutorials/usecases/water): Develop a buoy able to monitor the quality of the water in fish basins.
+- [Weather station](tutorials/usecases/weather): Develop a complete weather station.
+- [Cattle management](tutorials/usecases/cattle): Monitor cattle position with this special collar.
+- [Waste management](tutorials/usecases/waste): Build a smart bin warning you when it is full.
