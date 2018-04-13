@@ -2,9 +2,6 @@
 title: Create your App with Waziup
 ---
 
-Create an App with Waziup
-=========================
-
 Waziup allows you to develop and host you own IoT applications.
 The WaziApp is an HTML5 application and will be hosted directly on Github.
 Only a few steps are necessary to get your application running with Waziup!
