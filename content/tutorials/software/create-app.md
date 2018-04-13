@@ -1,68 +1,66 @@
 ---
-url: /documentation/tutorials/create-app
+title: Create your App with Waziup
 ---
 
 Create an App with Waziup
 =========================
 
 Waziup allows you to develop and host you own IoT applications.
-This short tutorial will show you how to create an application in go language, and host it on Waziup.
-All you need is a Linux (or equivalent) machine.
+The WaziApp is an HTML5 application and will be hosted directly on Github.
+Only a few steps are necessary to get your application running with Waziup!
 
-Install the tools
------------------
+Fork the template WaziApp
+-------------------------
 
-First install Deis client:
-```
-$ curl -sSL http://deis.io/deis-cli/install-v2.sh | bash
-$ sudo ln -fs $PWD/deis /usr/local/bin/deis
-```
+The first step is to create an account on GitHub.
+For this go to www.github.com and click on “Sign Up”.
+Then, open the template WaziApp: https://github.com/Waziup/Waziup-Application.
+Click on the button “Fork” in the top right corner.
 
-Register with the platform:
-```
-$ deis register http://deis.waziup.io
-```
+![Fork Waziapp](images/forkwaziapp.png)
 
-Generate an SSH key and add it to the agent:
-```
-$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-$ eval "$(ssh-agent -s)"
-$ ssh-add ~/.ssh/id_rsa
-```
-
-Add your new ssh key to Deis:
-```
-$ deis keys:add ~/.ssh/id_rsa.pub
-```
-
-If you are already registered, you can just login:
-```
-$ deis login http://deis.waziup.io
-```
-
-Now that the setup is done, let's create our app.
-We'll download a sample application and associate it with deis:
-```
-$ git clone https://github.com/Waziup/exemple-go.git
-$ cd example-go
-$ deis create myapp
-```
-Please replace the myapp with any name that you like for your application.
-You can already push the example application:
-
-```
-$ git push deis master
-```
+![Fork Waziapp](images/forkaccount.png)
 
 
-Feel free to modify the app as you wish.
-When you're ready, commit and push again the application:
+You can fork the app in your own Github account.
+This operation will duplicate the “Waziup-Application” in your account.
+
+![Waziapp settings](images/waziappsettings.png)
+
+Once this is done, go in the newly created application and click on “Settings”.
+Scroll down to “Github pages” and select “Master branch” in the sources, and click on “Save”.
+
+![Waziapp settings](images/waziappsettings2.png)
+
+Your application is ready! You can view it on: https://your_account.github.io/Waziup-Application/www/editor.html. 
+This is the default application. Now is time to update it!
+
+Modify your WaziApp
+-------------------
+
+The application can be modified directly on Github.
+For that, click on the file you want to modify and click on the small pen on the right.
+Once the modifications done, click on the “commit” button at the bottom of the page.
+For heavy modifications, it is better to first clone the application on your own PC.
+You need to install git  first.
+Then issue the command :
 ```
-$ git add web.go
-$ git commit -m "test"
-$ git push deis master
+git clone git@github.com:<your_account>/Waziup-Application.git
 ```
 
-Your application is now available on the following address: [http://myapp.waziup.io](http://myapp.waziup.io).
-Attention! Due to [this bug](https://github.com/Waziup/Platform/issues/32), the routing of the apps does not work yet.
-So, once the application is pushed, you need to send [a mail](waziup.community@create-net.org) to enable it.
+This will clone your new app on your computer.
+You can then freely modify your applications.
+When ready, you can upload it:
+```
+git add <your_modified_files>
+git commit -m “my modifications”
+git push
+```
+
+After the push is complete, your application is updated!
+You can already view it on the URL : https://your_account.github.io/Waziup-Application/www/editor.html. 
+
+
+Have fun with Waziup.
+
+
