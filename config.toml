@@ -1,9 +1,28 @@
 baseurl = "."
-languageCode = "en-us"
-title = "WAZIUP Platform"
 theme = "waziup-theme"
 metadataformat = "yaml"
 canonifyurls = true
+
+# Multilingual Mode settings
+#defaultContentLanguage = "en"
+
+
+#[Languages]
+#[Languages.en]
+#title = "WAZIUP Platform"
+#weight = 1
+#[Languages.en.params]
+#description = "Waziup - Cloud and IoT platform"
+#copyright = "Released under the Apache 2 license"
+#
+#
+#[Languages.fr]
+#title = "La plate-forme Waziup"
+#weight = 2
+#[Languages.fr.params]
+#description = "Waziup - La plate-forme du Cloud et de l'IoT"
+#copyright = "Sous licence Apache 2"
+
 
 # Enable Google Analytics by entering your tracking id
 googleAnalytics = ""
@@ -11,9 +30,7 @@ googleAnalytics = ""
 [params]
 	# General information
 	author = "waziup.io"
-	description = "Waziup - Cloud and IoT platform"
-	copyright = "Released under the Apache 2 license"
-
+	
 	# Repository
 	provider = "GitHub"
 	repo_url = "https://github.com/Waziup/waziup.io"

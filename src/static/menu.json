@@ -146,32 +146,12 @@
       "children": [
         {
           "path": "tutorials/hardware",
-          "text": "Hardware prototyping",
+          "text": "IoT LoRa prototyping",
           "visible": true,
           "children": [
             {
               "path": "tutorials/hardware/lora-gateway",
               "text": "Create a low cost IoT gateway",
-              "visible": true
-            },
-            {
-              "path": "tutorials/hardware/mvps/water",
-              "text": "Fish Farming",
-              "visible": true
-            },
-            {
-              "path": "tutorials/hardware/mvps/agri",
-              "text": "Weather station",
-              "visible": true
-            },
-            {
-              "path": "tutorials/hardware/mvps/cattle",
-              "text": "Cattle management",
-              "visible": true
-            },
-            {
-              "path": "tutorials/hardware/mvps/urban",
-              "text": "Urban waste",
               "visible": true
             },
             {
@@ -183,34 +163,49 @@
         },
         {
           "path": "tutorials/software",
-          "text": "Software prototyping",
+          "text": "Web application prototyping",
           "visible": true,
           "children": [
             {
-              "path": "tutorials/software/push-data",
-              "text": "Upload your sensor Data",
+              "path": "tutorials/software/dashboard",
+              "text": "Dashboard & Kibana",
               "visible": true
             },
             {
-              "path": "tutorials/software/use-sms",
-              "text": "Send and receive SMS",
+              "path": "tutorials/software/browserapp",
+              "text": "Browser app",
+              "visible": true
+            },
+            {
+              "path": "tutorials/software/fullstackapp",
+              "text": "Full stack app",
               "visible": true
             }
           ]
         },
         {
-          "path": "tutorials/iot-challenge",
-          "text": "IoT Challenge",
+          "path": "tutorials/usecases",
+          "text": "Use case tutorials",
           "visible": true,
-		  "children": [
-		    {
-              "path": "tutorials/iot-challenge/overall",
-              "text": "Project overall (22/12/2016)",
+          "children": [
+            {
+              "path": "tutorials/usecases/water",
+              "text": "Fish Farming",
               "visible": true
             },
             {
-              "path": "tutorials/iot-challenge/endDevice",
-              "text": "Sensor node (16/01/2017)",
+              "path": "tutorials/usecases/weather",
+              "text": "Weather station",
+              "visible": true
+            },
+            {
+              "path": "tutorials/usecases/cattle",
+              "text": "Cattle management",
+              "visible": true
+            },
+            {
+              "path": "tutorials/usecases/waste",
+              "text": "Urban waste",
               "visible": true
             }
           ]
