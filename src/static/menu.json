@@ -150,8 +150,13 @@
           "visible": true,
           "children": [
             {
-              "path": "tutorials/hardware/lora-gateway",
-              "text": "Create a low cost IoT gateway",
+              "path": "tutorials/hardware/sensors",
+              "text": "Sensor nodes",
+              "visible": true
+            },
+            {
+              "path": "tutorials/hardware/gateways",
+              "text": "Gateway",
               "visible": true
             },
             {
