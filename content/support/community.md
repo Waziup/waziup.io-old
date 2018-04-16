@@ -1,6 +1,7 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: Join the Waziup community
+url: /resources/community
 ---
 Waziup is an open source project, actively developed by the Waziup consortium. We encourage anyone to pitch in with pull requests, bug reports etc. 
 

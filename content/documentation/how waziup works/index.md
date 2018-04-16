@@ -1,6 +1,7 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: How Waziup works?
+url: /documentation/how-waziup-works/
 ---
 
 Let's look inside the big machine.
