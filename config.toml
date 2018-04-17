@@ -1,7 +1,10 @@
-baseurl = "."
+baseurl = "http://example.org"
 theme = "waziup-theme"
-metadataformat = "yaml"
-canonifyurls = true
+title = "WAZIUP Platform"
+languageCode = "en-us"
+
+#metadataformat = "yaml"
+#canonifyurls = true
 
 # Multilingual Mode settings
 #defaultContentLanguage = "en"
@@ -25,43 +28,43 @@ canonifyurls = true
 
 
 # Enable Google Analytics by entering your tracking id
-googleAnalytics = ""
-
-[params]
-	# General information
-	author = "waziup.io"
-	
-	# Repository
-	provider = "GitHub"
-	repo_url = "https://github.com/Waziup/waziup.io"
-
-	version = "0.1.0"
-	logo = "images/logo-waziup.png"
-	favicon = "images/logo-waziup.png"
-
-	permalink = "#"
-
-	# Custom assets
-	custom_css  = [
-	  "stylesheets/dropdown.css"
-	]
-	custom_js   = [
-	  "javascripts/lunr.min.js",
-	  "javascripts/version.js"
-	]
-
-	custom_menu = [
-    "API"
-  ]
-
-	# Syntax highlighting theme
-	highlight_css  = ""
-
-	[params.palette]
-    	primary = "pink"
-    	accent  = "pink"
-
-    [params.font]
-    	text = "Roboto"
-    	code = "Roboto Mono"
-
+#googleAnalytics = ""
+#
+#[params]
+#	# General information
+#	author = "waziup.io"
+#	
+#	# Repository
+#	provider = "GitHub"
+#	repo_url = "https://github.com/Waziup/waziup.io"
+#
+#	version = "0.1.0"
+#	logo = "images/logo-waziup.png"
+#	favicon = "images/logo-waziup.png"
+#
+#	permalink = "#"
+#
+#	# Custom assets
+#	custom_css  = [
+#	  "stylesheets/dropdown.css"
+#	]
+#	custom_js   = [
+#	  "javascripts/lunr.min.js",
+#	  "javascripts/version.js"
+#	]
+#
+#	custom_menu = [
+#    "API"
+#  ]
+#
+#	# Syntax highlighting theme
+#	highlight_css  = ""
+#
+#	[params.palette]
+#    	primary = "pink"
+#    	accent  = "pink"
+#
+#    [params.font]
+#    	text = "Roboto"
+#    	code = "Roboto Mono"
+#
