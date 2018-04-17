@@ -1,73 +1,168 @@
-## Discover here how to prototype a weather station using Waziup.
+---
+title: LoRa Weather Station
+---
 
-The objective is to develop a low-cost and sustainable solution capable of reading real-time data typical of a weather station, using different sensors, and capable of communicating via LoRa.
-The following subsection are a Getting Strated tutorial.
-You can find detailed documentation [here](WeatherStationGitHub). 
+The objective is to develop a low-cost and sustainable solution capable of reading real-time data typical of a Weather Station, using different sensors, and capable of communicating via LoRa.
+The following steps provide a Getting Started tutorial. Detailed documentation, such as the complete Assembly guide and the Technical guide, can be found [here](https://github.com/Waziup/WAZIUP-WeatherStation/tree/master/extra/documents).
 
-#### Hardware
+Hardware
+--------
 
-The following hardware it's needed to develop your own station:
+The following hardware is required to develop the LoRa Weather Station and can be found in [IoT-Catalogue](https://www.iot-catalogue.com/products/59b1797c763cfc066f6d092b) as well.
 
-- [Adafruit Feather 32u4 RFM95 LoRa Radio)](Feather)
-- [Adafruit RTC DS3231](RTC)
-- [Sparkfun Weather Shield](Shield)
-- [Wind and Rain sensors Kit](WindRain)
-- [Antenna 868 Mhz](Antenna)
-- [SMA cable](SMA)
-
-#### Libraries
-You will need that following specific libraries. They are available [here](Libraries).
-
-- SparkFunHTU21D
-- SparkFunMPL3115A2
-- RTClib
-- LowPower
-- Feather_Lib
-
-#### Build & Implementation
-
-You need to follow the next steps to build and implement the Weather Station:
-
-1. **Connect the Wind and Rain sensors to the Weather Shield**;
-The Weather Shield come with two unpopulated RJ11 connector spaces that you need to soldering. You need to connect the Wind and the Rain cables to the RJ11 connector.
-![Sparkfun Weather Station](images/WeatherStationRJ11.jpg)
-
-2. **Connect the Adafruit Feather 32u4 with Sparkfun Weather Shield**;
-![Adafruit Feather 32u4 with Sparkfun Weather](images/pin_connection.png)
-![Adafruit Feather 32u4 with Sparkfun connection Scheme](images/pin_connection2.png)
-
-![Overall Connection Scheme](images/all_connection.png)
-
-3. **Connect the Antenna 868 MHz to Feather**;
-![Antenna 868 MHz to Feather](images/antenna2feather.png)
-
-4. **Weather Station built with components**;
-![Weather Station built with components](images/implemented.png)
+<p align="center">
+  <img src="images/hardware_list.png"/>
+</p>
 
 
-5. **Download the IDE and specific software**;
-Don't forget to include the specific libraries. To did this use the Library Manager of your IDE.
 
-6. **Compile the software**;
-To this step you need to compile the "WAZIUP_Weather_Station_v1.ino" file. This is a "ready-to-run" file that contains the latest "firmware" to sample the sensors and output data with LoRa communication. Will give you all the sensor data: Temperature, Humidity, Luminosity, Pressor, Supply, Wind Direction, Wind speed and the Amount of Rain. You can see the info in your IDE Serial Monitor and you can also change the file has you want.
+Assembly
+--------
 
-#### System Running
-
-The following steps are about how the system works:
-
-1. Power-on the Feather. The script starts automatically when feather is powered on;
-2. At the start and during its automatic sensors calibration process the green led appears on (take about 5 seconds). 
-3. Wakes-up every 15 min, take all the measurements and send to Gateway.
-4. At the moment of reading values by the sensors and send a message to LoRa gateway the blue led turns on and then: If feather does not receive acknowledge then the blue led turns off and Feather sleeps. If feather receive acknowledge from master gateway then the blue led switch to green for 2 seconds, and feathers start sleeping.
-5. When Feather sleeps all led’s are off.
-6. Feather wakes up after four minute (by default), get the measurements and send back to master gateway until sleeping again.
+Follow the next steps to build the LoRa Weather Station.
+To connect the cables in the respective places as shown in the following figures it is recommended to use a breadboard and cables with different colors.
+In the initial two steps is necessary to solder some components. To help in the solder task can be consulted this [guide](https://learn.adafruit.com/adafruit-guide-excellent-soldering).
 
 
-[Feather]: <https://www.adafruit.com/product/3078>
-[Shield]: <https://www.sparkfun.com/products/12081>
-[RTC]: <https://www.adafruit.com/product/3013>  
-[WindRain]: <https://www.sparkfun.com/products/8942>
-[Antenna]: <https://www.cooking-hacks.com/868mhz-antenna>
-[SMA]: <https://www.cooking-hacks.com/interface-cable-rp-sma-to-u-fl>
-[Libraries]: <https://github.com/unparallel-innovation/UI_Waziup_Weather_Station/tree/master/WAZIUP%20Weather%20Station%20Client/lib>
-[WeatherStationGitHub]: <https://github.com/unparallel-innovation/UI_Waziup_Weather_Station>
+####  1) Adafruit Feather M0
+Solder the Female Header pins and the uFL SMT Antenna Connector in Feather.
+
+<p align="center">
+  <img src="images/feather_solder.png"/>
+</p>
+
+Once soldered the uFL SMT Antenna Connector can be connected the 868MHZ Antenna.
+
+<p align="center">
+  <img src="images/connect_antenna.png"/>
+</p>
+
+#### 2) Sparkfun Weather Shield
+Solder the female header pins and the two RJ11 connectors in the Sparkfun Weather Shield.
+
+<p align="center">
+  <img src="images/weather_shield_solder.png"/>
+</p>
+
+#### 3) Power the Weather Shield
+<p align="center">
+  <img src="images/power_shield.png"/>
+</p>
+
+#### 4) Connect Weather Shield sensors
+<p align="center">
+  <img src="images/shield_sensors_connect.png"/>
+</p>
+
+#### 5) Connect External sensor
+<p align="center">
+  <img src="images/external_sensor_connection.png"/>
+</p>
+
+#### 6) Connect Weather Meters
+Pay attention and connect the Rain and Wind RJ11 cables in the respective places as shown in the following figure.
+
+<p align="center">
+  <img src="images/connect_weather_meters.png"/>
+</p>
+
+#### 7) Connect the Battery
+<p align="center">
+  <img src="images/connect_battery.png"/>
+</p>
+
+If the battery comes with the 2-pin JST connector will facilities the connection in Feather because is only necessary connect the Battery JST pin in the Feather as shown in the following figure.
+
+<p align="center">
+  <img src="images/connect_battery_jst.png"/>
+</p>
+
+#### 8) Connect Solar Panel
+It is necessary to use a Schottky Diode to allow that the current go in the right direction and not to the Solar Panel.
+
+<p align="center">
+  <img src="images/diode_connection.png"/>
+</p>
+
+As represented in the following figure connect the Solar Panel red cable to the Schottky diode and from the diode to the Feather “USB” and also connect the Solar Panel black cable “GND” to the common breadboard “GND”.
+
+<p align="center">
+  <img src="images/solar_panel_connection.png"/>
+</p>
+
+#### 9) Assembly Weather Station
+The assembly LoRa Weather Station according to the previous steps is shown in the following figure.
+
+<p align="center">
+  <img src="images/assembly_ws.png"/>
+</p>
+
+
+Upload Software
+-------------
+
+
+#### 10) Download & Install Arduino
+To download the Arduino IDE 1.6.6 or later go to the Arduino [website](https://www.arduino.cc/en/Main/Software).
+
+#### 11) Add Adafruit Boards to Arduino
+To add the Adafruit Boards in the Arduino IDE go to “Arduino”, “Preferences” and include the link for Adafruit boards in the "Additional Boards Manager URLs".
+This link can be found in the official Adafruit [guide](https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/setup).
+
+#### 12) Install Adafruit Boards in Arduino
+To install the Adafruit Boards in Arduino IDE go to  “Tools”, “Board”, access the “Board Manager” and follow the steps in the official Adafruit [guide](https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/using-with-arduino-ide).
+
+#### 13) Download & Install Weather Station library
+To download the Weather Station library go the [Waziup Github](https://github.com/Waziup/WAZIUP-WeatherStation), click on “Clone or download” green button located in the right side and choose “Download Zip” option to download the “WAZIUP-WeatherStation-master.zip” file.
+To install the Weather Station library go to, in Arduino IDE, “Sketch”, “Include Library” and click in the “Add .ZIP Library” option. Will appear a window where need to be added the zip file.
+
+#### 14) Open Weather Station example code
+To open the Waziup Weather Station code go to “File”, “Examples”, “Waziup Weather Station” and click in the “WaziupWeatherStation” example.
+
+#### 15) Choose Board & USB Port in Arduino
+After connecting the micro-USB cable from the computer to the Feather, it is necessary to choose the correct Adafruit Feather Board in the Arduino IDE.
+To do that go to “Tools”, “Board” and click in the “Adafruit Feather M0”.
+To define the USB port go to "Tools”, “Port” and click in the “Adafruit Feather M0”.
+
+#### 16) Upload the Weather Station software
+To upload the software in the Adafruit Feather M0 just need to click in the “Upload” button presented in the upper left side of the Arduino IDE.
+After concluding the upload with success, a message will appear in the lower left side.
+To open the Arduino Serial Monitor and visualize the LoRa Weather Station workflow click in upper right side button.
+
+
+Deployment
+----
+
+#### 17) Assembly Weather Station in a Box
+It is recommended to use a box to place the assembly Weather Station in the desired location.
+The following figures show, as an example, the Waziup Weather Station in a box that not needs to be the same.
+Pay attention to the material that the box is made.
+To place the Weather Station in locations under the rain, it is convenient to use a waterproof box.
+
+<p align="center">
+  <img src="images/ws_in_box.png"/>
+</p>
+
+
+#### 18) External Sensor outside the box
+Make sure that the external sensor is slightly out of the box, as shown in the box of Figure, and preferably in a shadow location without sun.
+
+<p align="center">
+  <img src="images/external_sensor_ouside_box.png"/>
+</p>
+
+#### 19) Assembly Weather Meters sensors
+The Weather Meters come with material components, to allow their assembly in an auxiliary structure.
+To mount it is recommended to perform the suggested steps in the Sparkfun's [guide](https://learn.sparkfun.com/tutorials/weather-meter-hookup-guide).
+
+#### 20) Solar Panel outside the box
+Place the Solar Panel outside the box in a place where it is possible to guarantee the conditions of implementation.
+To realize and ensure a correct Solar Panel implementation it is recommended to consult the "Solar Panel Deployment" document that is available in folder “documents” in the Waziup Weather Station [Github](https://github.com/Waziup/WAZIUP-WeatherStation).
+
+<p align="center">
+  <img src="images/solar_panel_outside_box.png"/>
+</p>
+
+The hole created for the external sensor can be used to route the Solar Panel cables as well as the RJ11 Rain and Wind sensor cables.
+
+After complete these steps, the Waziup LoRa Weather Station is ready to receive the measurements and send the information to the LoRa gateway.
