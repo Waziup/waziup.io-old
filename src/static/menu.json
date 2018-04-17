@@ -21,61 +21,27 @@
       "visible": false
     },
     {
-      "path": "why-use-waziup",
-      "text": "Why use Waziup? ",
-      "visible": true,
-      "children": [
-        {
-          "path": "why-use-waziup",
-          "text": "Why use Waziup?",
-          "visible": true
-        },
-        {
-          "path": "why-use-waziup/use-cases",
-          "text": "Use cases",
-          "visible": true,
-          "children": [
-            {
-              "path": "index",
-              "text": "Index",
-              "visible": false
-            }
-          ]
-        },
-        {
-          "path": "why-use-waziup/waziup-compared-to/frameworks-and-tools",
-          "text": "Waziup compared to...",
-          "visible": true,
-          "children": [
-            {
-              "path": "why-use-waziup/waziup-compared-to/frameworks-and-tools",
-              "text": "Frameworks and tools",
-              "visible": true
-            }
-          ]
-        },
-        {
-          "path": "why-use-waziup/see-waziup-in-action",
-          "text": "See Waziup in action",
-          "visible": true
-        },
-        {
-          "path": "why-use-waziup/feature-list",
-          "text": "Feature list",
-          "visible": true
-        },
-        {
-          "path": "why-use-waziup/get-started",
-          "text": "Get started",
-          "visible": true
-        }
-      ]
-    },
-    {
       "path": "documentation",
       "text": "Documentation",
       "visible": true,
       "children": [
+        {
+          "path": "documentation/why-use-waziup",
+          "text": "Why use Waziup? ",
+          "visible": true,
+          "children": [
+            {
+              "path": "documentation/why-use-waziup/feature-list",
+              "text": "Features",
+              "visible": true
+            },
+            {
+              "path": "documentation/why-use-waziup/usecases",
+              "text": "Use cases",
+              "visible": true
+            }
+          ]
+        },
         {
           "path": "documentation/how-waziup-works",
           "text": "How Waziup works",
@@ -95,11 +61,6 @@
               "path": "documentation/how-waziup-works/implementation",
               "text": "Implementation",
               "visible": true
-            },
-            {
-              "path": "documentation/how-waziup-works/requirements",
-              "text": "Requirements",
-              "visible": true
             }
           ]
         },
@@ -109,33 +70,9 @@
           "visible": true
         },
         {
-          "path": "documentation/api/api-reference",
+          "path": "documentation/api",
           "text": "API",
-          "visible": true,
-          "children": [
-            {
-              "path": "documentation/api/api-reference",
-              "text": "API reference",
-              "visible": true
-            },
-            {
-              "path": "documentation/api/using-the-api",
-              "text": "Using the Waziup API",
-              "visible": true
-            }
-          ]
-        },
-	{
-          "path": "documentation/devguide",
-          "text": "Development Guide",
-          "visible": true,
-          "children": [
-            {
-              "path": "documentation/devguide/software",
-              "text": "Development guide",
-              "visible": true
-            }
-          ]
+          "visible": true
         }
       ]
     },
@@ -223,8 +160,8 @@
       "visible": true,
       "children": [
         {
-          "path": "resources/community",
-          "text": "Community",
+          "path": "support",
+          "text": "Support",
           "visible": true
         }
       ]

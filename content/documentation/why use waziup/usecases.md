@@ -1,7 +1,6 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: WAZIUP use cases
-url: /why-use-waziup/use-cases/
 ---
 
 WAZIUP cutting-edge IoT PaaS platform and software framework support to develop 1000 of IoT applications, out of the box. Any IoT application that you can imagine. Due to the PaaS nature WAZIUP IoT PaaS platform enable you to easy and rapid IoT application development.
