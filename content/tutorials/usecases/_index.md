@@ -9,3 +9,6 @@ We propose several tutorials based on real-world use cases to get you started wi
 - [Weather station](tutorials/usecases/weather): Develop a complete weather station.
 - [Cattle management](tutorials/usecases/cattle): Monitor cattle position with this special collar.
 - [Waste management](tutorials/usecases/waste): Build a smart bin warning you when it is full.
+
+All the components can be bought from the [IoT catalog](https://www.iot-catalogue.com/usecases).
+

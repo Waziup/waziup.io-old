@@ -67,7 +67,7 @@
 	{
           "path": "documentation/userguide",
           "text": "User Guide",
-          "visible": true
+          "visible": false
         },
         {
           "path": "documentation/api",

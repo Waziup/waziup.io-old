@@ -5,11 +5,8 @@ title: Fish farming prototype
 
 ![buoy_ghana](images/presentation_buoy_ghana.jpg)
 
-**Discover here how to prototype an application of fish farming using Waziup.**
-
 The goal of this prototype is giving a first look on how to develop an IoT device for fish farming. The device is capable of giving real time reading about relevant information for fish ponds such as acidity,
 dissolved oxygen and communicate this data via LoRa. Below you will find a get started tutorial : how to develop the electronic and software part of the solution.
-
 
 ## Measure
 
@@ -17,9 +14,7 @@ The measures taken by the device are the temperature, the dissolved oxygen and t
 The solution will be placed in a watertight box to protect the electronic, we also get temperature and humidity into the box. The last value controled
 is the voltage of the battery. 
 
-
 ## hardware 
-
 
 - [Arduino Pro Mini 3.3V] (https://www.sparkfun.com/products/11114)
 - [InAir9 LoRa module] (http://modtronix.com/inair9.html)

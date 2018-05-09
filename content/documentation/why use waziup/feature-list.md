@@ -25,7 +25,6 @@ WAZIUP IoT Cloud platform offers cutting-edge IoT features and capabilities for 
 
 
 {{< note title="What next?" >}}
-* [Try Waziup](/documentation/installation/hello-world/)
 * [Use cases](/why-use-waziup/use-cases/): Waziup solutions to practical problems
 * [What Waziup offers compared to other tools and services](/why-use-waziup/waziup-compared-to/)
 * [How Waziup works](/documentation/how-waziup-works/architecture-and-components/)
