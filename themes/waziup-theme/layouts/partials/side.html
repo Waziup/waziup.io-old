@@ -1,0 +1,96 @@
+<aside>
+
+{{ $home := .Site.Home }}
+<div class="css-treeview box">
+	<ul>
+		<li><input type="checkbox" id="item-0" checked="checked" /><label for="item-0">Home</label>
+		<ul>
+		{{ template "section-tree-nav" $home }}
+		</ul>
+	</ul>
+</div>
+{{ define "section-tree-nav" }}
+{{ range .Sections.Reverse}}
+<li>
+	<li><input type="checkbox" id="item-0-0" checked="checked"/><label for="item-0-0">{{ .Title }}</label>
+	<ul>
+		{{ range .Pages }}
+		<li><a href="{{ .RelPermalink}}">{{ .Title }}</a></li>
+		{{ end }}
+		<ul>
+		{{ template "section-tree-nav" . }}
+		</ul>
+	</ul>
+</li>
+</li>
+{{ end }}
+{{ end }}
+
+-------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul>
+        {{ $currentPage := . }}
+        {{ range .Site.Sections }}
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    {{ range .Sections }}
+                        <li class="active">
+                            <a href="{{ .URL }}">{{ .Name }}</a>
+                        </li>
+                    {{ end }}
+          {{ end }}
+---------------
+        {{ range .Site.Menus.main }}
+            {{ if .HasChildren }}
+               childs
+                <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                    <a href="#">
+                        {{ .Pre }}
+                        <span>{{ .Name }}</span>
+                    </a>
+                </li>
+                <ul class="sub-menu">
+                    {{ range .Children }}
+                        <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                            <a href="{{ .URL }}">{{ .Name }}</a>
+                        </li>
+                    {{ end }}
+                </ul>
+            {{ else }}
+              no child
+                <li>
+                    <a href="{{ .URL }}">
+                        {{ .Pre }}
+                        <span>{{ .Name }}</span>
+                    </a>
+                </li>
+            {{ end }}
+        {{ end }}
+    </ul>
+</aside>
