@@ -8,6 +8,6 @@ In order to build a full-stack and end-to-end IoT solution, WAZIUPers need to le
 
 Please refer to the following pages for more information:
 
-- [Software Platform Tutorials](software/index)
-- [Hardware Platform Tutorials](hardware/index)
-- [Use cases tutorials](use-cases/index)
+- [Software Platform Tutorials](tutorials/software)
+- [Hardware Platform Tutorials](tutorials/hardware)
+- [Use cases tutorials](tutorials/usecases)
