@@ -2,11 +2,6 @@
 public
 node_modules
 
-# exclude everything
-themes/waziup-theme
-
-# exception to the rule
-!themes/waziup-theme/.gitkeep
 
 # Compiled source #
 ###################
