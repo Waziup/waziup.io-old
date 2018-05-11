@@ -4,10 +4,14 @@ title: WAZIUP Tutorials
 ---
 
 ## Tutorials
-In order to build a full-stack and end-to-end IoT solution, WAZIUPers need to learn about software-, and hardware- platforms of WAZIUP. Software is where WAZIUP provide an interface toward users offering applications, and providing several services such as software services, data management (coming from IoT devices). Instead, Hardware deals with sensing environment with IoT devices and storing collected data in WAZIUP software platform to feed users' applications.
+We propose tutorials to build your IoT solution with Waziup from A to Z.
+You will build your own hardware platform, with a gateway and several sensor nodes:
+[IoT hardware tutorials with LoRa](tutorials/hardware)
 
-Please refer to the following pages for more information:
+Once this is done, it's time to build a real web application!
+With Waziup, you can build your own application, without any programming.
+For more expert WAZIUPers, we propose web-based applications and full-stack applications.
+[Web applications tutorials](tutorials/software)
 
-- [Software Platform Tutorials](tutorials/software)
-- [Hardware Platform Tutorials](tutorials/hardware)
-- [Use cases tutorials](tutorials/usecases)
+Finally, you can find more inspiration in those end-to-end use case tutorials:
+[Use cases tutorials](tutorials/usecases)
