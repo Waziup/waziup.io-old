@@ -1,18 +1,25 @@
-{{ range .Sections }}
-  <a class="side-menu-item" href="{{ .Permalink }}">
-    <div class="bullet">
-      <img src="http://www.waziup.io/img/003-Small-icons/block-03.svg" alt="\">
-    </div>
-    <div class="section-title">
-      <p class="text">{{ .Title }}</p>
-    </div>
-    <div class="folding-indicator">
 
-    </div>
-  </a>
+{{ range .Site.Menus.main }}
+  {{ printf "%#v" .Name }}
+{{ end }}
+
+{{ range .Site.Sections }}
   {{ range .Sections }}
-    <a class="sub-menu-item" href="{{ .URL }}">
-      <p class="text">{{ .Name }}</p>
+    <a class="side-menu-item" href="{{ .Permalink }}">
+      <div class="bullet">
+        <img src="http://www.waziup.io/img/003-Small-icons/block-03.svg" alt="\">
+      </div>
+      <div class="section-title">
+        <p class="text">{{ .Title }}</p>
+      </div>
+      <div class="folding-indicator">
+  
+      </div>
     </a>
+    {{ range .Sections }}
+      <a class="sub-menu-item active" href="{{ .URL }}">
+        <p class="text">{{ .Name }}</p>
+      </a>
+    {{ end }}
   {{ end }}
 {{ end }}
