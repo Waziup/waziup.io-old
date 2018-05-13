@@ -1,8 +1,3 @@
-
-{{ range .Site.Menus.main }}
-  {{ printf "%#v" .Name }}
-{{ end }}
-
 {{ range .Site.Sections }}
   {{ range .Sections }}
     <a class="side-menu-item" href="{{ .Permalink }}">
@@ -22,4 +17,23 @@
       </a>
     {{ end }}
   {{ end }}
+{{ end }}
+
+{{ $currentPage := . }}
+{{ range .Site.Menus.main }}
+    {{ if .HasChildren }}
+        <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+            <a href="#">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+            </a>
+        </li>
+        <ul class="sub-menu">
+            {{ range .Children }}
+                <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                    --> <a href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+            {{ end }}
+        </ul>
+    {{ end }}
 {{ end }}
