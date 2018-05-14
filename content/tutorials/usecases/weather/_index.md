@@ -1,5 +1,10 @@
 ---
 title: LoRa Weather Station
+menu:
+  main:
+    title: Weather station 
+    parent: usecases
+    weight: 2
 ---
 
 The objective is to develop a low-cost and sustainable solution capable of reading real-time data typical of a Weather Station, using different sensors, and capable of communicating via LoRa.

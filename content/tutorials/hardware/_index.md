@@ -6,6 +6,7 @@ menu:
     title: Hardware
     name: hardware
     parent: tutorials
+    weight: 1
 ---
 
 Our tutorials will teach you how to build [sensor nodes](tutorials/hardware/sensors) and [gateways](tutorials/hardware/gateways) based on LoRa technology.

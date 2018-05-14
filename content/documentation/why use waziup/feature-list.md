@@ -1,6 +1,10 @@
 ---
-date: 2016-09-13T09:00:00+00:00
 title: Feature list
+menu:
+  main:
+    title: Features 
+    parent: whyusewaziup 
+    weight: 1
 ---
 
 WAZIUP IoT Cloud platform offers cutting-edge IoT features and capabilities for your IoT products

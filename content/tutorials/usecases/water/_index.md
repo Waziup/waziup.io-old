@@ -1,6 +1,10 @@
 ---
-date: 2016-09-13T09:00:00+00:00
 title: Fish farming prototype
+menu:
+  main:
+    title: Fish farming app 
+    parent: usecases
+    weight: 1
 ---
 
 ![buoy_ghana](images/presentation_buoy_ghana.jpg)

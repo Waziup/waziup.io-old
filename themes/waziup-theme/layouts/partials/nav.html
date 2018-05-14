@@ -7,7 +7,7 @@
 
   <div class="right">
     <div class="top-menu-items" id="top-menu-items">
-      {{ range .Site.Sections }}
+      {{ range .Site.Menus.main }}
         <a href="{{.URL}}" id="top-menu-item-text" class="top-menu-item">{{.Title}}</a>
       {{ end }}
     </div>

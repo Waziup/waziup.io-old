@@ -5,6 +5,7 @@ menu:
   main:
     title: Documentation
     name: documentation
+    weight: 2
 ---
 
 Please find on the left the menu to explore Waziup documentation.

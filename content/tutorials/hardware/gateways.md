@@ -1,5 +1,10 @@
 ---
-title: LoRa gateways
+title: LoRa gateway
+menu:
+  main:
+    title: LoRa gateway
+    parent: hardware
+    weight: 1
 ---
 
 - [Step by step guide on construction and configuration of LoRa gateway with a Raspberry PI] (https://github.com/CongducPham/tutorials/blob/master/Low-cost-LoRa-GW-step-by-step.pdf) Low-cost-LoRa-GW-step-by-step.pdf shows how you can build and configure the LoRa gateway with a Raspberry PI to start pushing data to the cloud.

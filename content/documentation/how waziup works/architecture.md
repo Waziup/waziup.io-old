@@ -4,8 +4,8 @@ title: Architecture and components
 menu:
   main:
     title: Architecture
-    name: architecture
     parent: howwaziupworks
+    weight: 1
 ---
 
 WAZIUP is an IoT and Cloud platform based on Kubernetes.

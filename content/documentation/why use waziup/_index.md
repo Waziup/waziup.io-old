@@ -3,7 +3,7 @@ title: Why use WAZIUP?
 menu:
   main:
     title: Why use waziup?
-    name: why_use_waziup
+    name: whyusewaziup
     parent: documentation
 ---
 
