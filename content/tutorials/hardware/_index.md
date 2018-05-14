@@ -1,6 +1,11 @@
 ---
 date: 2018-04-11T09:00:00+00:00
 title: LoRa sensing and gateway
+menu:
+  main:
+    title: Hardware
+    name: hardware
+    parent: tutorials
 ---
 
 Our tutorials will teach you how to build [sensor nodes](tutorials/hardware/sensors) and [gateways](tutorials/hardware/gateways) based on LoRa technology.

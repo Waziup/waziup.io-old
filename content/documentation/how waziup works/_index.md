@@ -1,7 +1,11 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: How Waziup works?
-url: /documentation/how-waziup-works/
+menu:
+  main:
+    title: How Waziup works?
+    name: howwaziupworks
+    parent: documentation
 ---
 
 Let's look inside the big machine.

@@ -1,7 +1,6 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: Clouds locaux et mondiaux
-url: /documentation/how-waziup-works/localglobal
 ---
 
 WAZIUP utilise le concept des Clouds locaux et globaux.
