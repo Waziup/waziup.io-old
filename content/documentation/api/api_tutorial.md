@@ -1,5 +1,10 @@
 ---
 title: API Tutorial
+menu:
+  main:
+    title: API Tutorial
+    name: apitutorial
+    parent: api
 ---
 
 This tutorial will guide you through the Waziup API, step by step.

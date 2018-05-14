@@ -6,6 +6,7 @@ menu:
     title: Software
     name: software
     parent: tutorials
+    weight: 2
 ---
 
 In this section you will see how to create web applications with Waziup.

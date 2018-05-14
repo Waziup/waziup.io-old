@@ -1,6 +1,11 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: Dashboard application 
+menu:
+  main:
+    title: Dashboard 
+    parent: userguide 
+    weight: 1
 ---
 
 You can build a full application with Waziup, without programming!

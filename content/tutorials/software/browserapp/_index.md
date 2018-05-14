@@ -1,5 +1,10 @@
 ---
 title: Create your App with Waziup
+menu:
+  main:
+    title: Web application 
+    parent: software
+    weight: 2
 ---
 
 Waziup allows you to develop and host you own IoT applications.

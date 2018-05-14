@@ -1,6 +1,10 @@
 ---
-date: 2018-04-11T09:00:00+00:00
 title: LoRa sensors
+menu:
+  main:
+    title: Sensor nodes 
+    parent: hardware
+    weight: 2
 ---
 
 Those tutorials will help you build a low cost and low power sensor platform:

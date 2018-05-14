@@ -1,6 +1,10 @@
 ---
-date: 2016-09-13T09:00:00+00:00
 title: Cattle management
+menu:
+  main:
+    title: Cattle management 
+    parent: usecases
+    weight: 3
 ---
 
 Cattle Rustling is a recurrent phenomenon causing many problems to farmers in Africa.

@@ -1,7 +1,10 @@
 ---
 date: 2017-10-28T09:00:00+00:00
 title: Support
-menu: "support"
+menu:
+  main:
+    title: Support
+    weight: 3
 ---
 
 If you have a question about Waziup, please check the [Waziup documentation](/documentation) first - we're always adding new resources, tutorials and examples.
