@@ -1,39 +1,26 @@
-{{ range .Site.Sections }}
-  {{ range .Sections }}
-    <a class="side-menu-item" href="{{ .Permalink }}">
-      <div class="bullet">
-        <img src="http://www.waziup.io/img/003-Small-icons/block-03.svg" alt="\">
-      </div>
-      <div class="section-title">
-        <p class="text">{{ .Title }}</p>
-      </div>
-      <div class="folding-indicator">
-  
-      </div>
-    </a>
-    {{ range .Sections }}
-      <a class="sub-menu-item active" href="{{ .URL }}">
-        <p class="text">{{ .Name }}</p>
-      </a>
-    {{ end }}
-  {{ end }}
-{{ end }}
-
 {{ $currentPage := . }}
 {{ range .Site.Menus.main }}
-    {{ if .HasChildren }}
-        <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-            <a href="#">
-                {{ .Pre }}
-                <span>{{ .Name }}</span>
+    {{ $inMenu := or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}
+    {{ if $inMenu }}
+      {{ range .Children}}
+        {{ $inSubMenu := or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}
+        <a class="side-menu-item {{ if $inSubMenu }}active{{ end }}" href="{{ .URL }}">
+          <div class="bullet">
+            <img src="http://www.waziup.io/img/003-Small-icons/block-03.svg" alt="\">
+          </div>
+          <div class="section-title">
+            <p class="text active">{{ .Title }}</p>
+          </div>
+          <div class="folding-indicator">
+          </div>
+        </a>
+        {{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}
+          {{ range .Children }}
+            <a class="sub-menu-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">
+              <p class="text">{{ .Title }}</p>
             </a>
-        </li>
-        <ul class="sub-menu">
-            {{ range .Children }}
-                <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                    --> <a href="{{ .URL }}">{{ .Name }}</a>
-                </li>
-            {{ end }}
-        </ul>
+          {{ end }}
+        {{ end }}
+      {{ end }}
     {{ end }}
 {{ end }}
