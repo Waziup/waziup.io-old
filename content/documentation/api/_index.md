@@ -1,5 +1,10 @@
 ---
 title: API Reference
+menu:
+  main:
+    title: API Reference
+    name: api
+    parent: documentation
 ---
 
 The API documentation is available at http://api.waziup.io/docs.

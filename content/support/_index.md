@@ -1,7 +1,7 @@
 ---
 date: 2017-10-28T09:00:00+00:00
 title: Support
-url: /support
+menu: "support"
 ---
 
 If you have a question about Waziup, please check the [Waziup documentation](/documentation) first - we're always adding new resources, tutorials and examples.

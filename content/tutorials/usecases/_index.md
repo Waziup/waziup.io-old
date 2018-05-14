@@ -1,6 +1,11 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: Tutorials
+menu:
+  main:
+    title: Use-cases
+    name: usecases
+    parent: tutorials
 ---
 
 We propose several tutorials based on real-world use cases to get you started with Waziup:
