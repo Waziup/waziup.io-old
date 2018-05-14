@@ -8,4 +8,4 @@ wget --spider -r -o wget.log -e robots=off -p http://localhost:1313
 
 grep -B 2 '404' wget.log
 
-rm wget.log
+#rm wget.log
