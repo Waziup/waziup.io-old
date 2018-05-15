@@ -14,10 +14,6 @@ Writing content
 
         $ brew update && brew install hugo
 
-3. Build the theme by installing node modules and running gulp
-
-        $ npm install && gulp build:dev
-
 4. Run hugo in watch mode and start adding content under the `content/` tree
 
         $ hugo server --watch
@@ -30,7 +26,7 @@ Deploying
 To deploy on Waziup platform:
 
 ```
-$ gulp build:dev && hugo
+$ hugo
 $ docker build -t waziup/website .
 $ docker push waziup/website
 $ kubectl delete -f website.yaml  --now

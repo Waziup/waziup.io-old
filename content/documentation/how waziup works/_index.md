@@ -11,6 +11,6 @@ menu:
 Let's look inside the big machine.
 In this section you can find:
 
-- [The architecture](documentation/how-waziup-works/architecture)
-- [Local and global Clouds concept](documentation/how-waziup-works/localglobal)
-- [The requirements](documentation/how-waziup-works/requirements)
+- [The architecture](architecture)
+- [Local and global Clouds concept](localglobal)
+- [The implementation](implementation)

@@ -10,15 +10,15 @@ menu:
 
 You can build a full application with Waziup, without programming!
 In this tutorial, we'll learn how to build a soil monitoring application able to display the soil moisture and to send notifications on SMS, twitter and voice messages.
-More advanced dashboards can be created with [Kibana](tutorials/software/dashboard/kibana_tutorial.pdf).
+More advanced dashboards can be created with [Kibana](kibana_tutorial.pdf).
 
 Prerequisistes
 --------------
 You should already have a gateway and a sensor node ready and configured.
-If not, please check [this section](tutorials/software/sensors).
+If not, please check [this section](../../hardware).
 Your gateway should be configured with your name for the organisation:
 
-![Waziup login page](/images/gateway_local.png)
+![Waziup login page](images/gateway_local.png)
 
 Switch on your gateway and sensor, and let's exploit your data in the Waziup dashboard!
 
@@ -112,4 +112,4 @@ You should see the number of times this notification was sent, and the time for 
 ![Notification details](images/notif.png)
 
 Your simple application is ready!
-To make more complex dashboards, head to the [Kibana](tutorials/software/dashboard/kibana_tutorial.pdf) tutorial.
+To make more complex dashboards, head to the [Kibana](kibana_tutorial.pdf) tutorial.
