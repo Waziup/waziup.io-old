@@ -1,15 +1,9 @@
 $(window).on('load', documentReady);
 
-var thePath;
-var subDomain; // For multiligual purpose
-
-// Build the subdomain string according to the language
-subDomain = '/';
-if(theLang != 'en')
-  subDomain = theLang;
-
 function documentReady() {
-  thePath = window.location.href.substring(theBaseUrl.length-1, window.location.href.length).split('#')[0];
+  
+  var theBaseUrl = "http://" + location.host + "/";
+  var thePath = window.location.href.substring(theBaseUrl.length-1, window.location.href.length).split('#')[0];
   thePath = thePath.substring(1, thePath.length - 1);
 
   // Top menu color change
@@ -19,7 +13,7 @@ function documentReady() {
 
   setColorMenu();
   function setColorMenu() {
-   if ($(window).scrollTop() > 0 || thePath !== subDomain) { // with the subdomain the function will be respectfull with all the languages
+   if ($(window).scrollTop() > 0 || thePath !== '/') { 
       $("#header").addClass("active");
     } else {
       //remove the background property so it comes transparent again (defined in your css)
