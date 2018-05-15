@@ -26,10 +26,3 @@ WAZIUP IoT Cloud platform offers cutting-edge IoT features and capabilities for 
 - **Container framework**: Developed fully based on container framework 
 
 - **Users interface**:  Offer various users interface like SMS, voice call, mobile app, web app
-
-
-{{< note title="What next?" >}}
-* [Use cases](/why-use-waziup/use-cases/): Waziup solutions to practical problems
-* [What Waziup offers compared to other tools and services](/why-use-waziup/waziup-compared-to/)
-* [How Waziup works](/documentation/how-waziup-works/architecture-and-components/)
-{{< /note >}}
