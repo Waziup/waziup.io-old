@@ -45,7 +45,6 @@ Detailed top view of electronics mounted for waste bin fill level experiments.
 - [Arduino Pro Mini 3.3V] (https://www.sparkfun.com/products/11114)
 - [InAir9 LoRa module] (http://modtronix.com/inair9.html)
 - [Distance and Temperature Sensor] (https://www.bananarobotics.com/shop/US-100-Ultrasonic-Distance-Sensor-Module)
-- [Battery AA] (common local shop)
 	
 ## Development - hardware description
 
