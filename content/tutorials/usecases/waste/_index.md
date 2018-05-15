@@ -7,8 +7,6 @@ menu:
     weight: 4
 ---
 
-**Discover here how to prototype an application for waste management using Waziup.**
-
 The goal of this prototype is to provide an overwiew and quick start on how to develop an IoT device for environmental friendly urban waste manamegement.
 The device is enabling of periodic reading about fill level information for waste bins equipped with a hard top.
 This is done via ultrasonic distance measurment of the fill level and radio communication of this value via license free LoRa devices to a monitor station. 
@@ -53,8 +51,9 @@ Detailed top view of electronics mounted for waste bin fill level experiments.
 
 ## Arduino
 
-The Arduino Pro Mini 3.3V (8MHz) board with his 328P microcrontroller is the "heart" of the electronic assembly. It contains the central steering loop: it reads sensor information via a serial connection and sends it
-via the LoRa module. In the following it is shown how to connect the sensor to the Arduino, afterwards it will be shown how to program it. ![Arduino](/images/mvps/water_farming/arduino.JPG)
+The Arduino Pro Mini 3.3V (8MHz) board with his 328P microcrontroller is the "heart" of the electronic assembly.
+It contains the central steering loop: it reads sensor information via a serial connection and sends it via the LoRa module.
+In the following it is shown how to connect the sensor to the Arduino, afterwards it will be shown how to program it. ![Arduino](images/arduino.JPG)
 
 ## LoRa module
 
