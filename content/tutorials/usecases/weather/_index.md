@@ -1,5 +1,11 @@
-How to prototype a LoRa Weather Station!
-=================== 
+---
+title: How to prototype a LoRa Weather Station!
+menu:
+  main:
+    title: Weather station
+    parent: usecases
+    weight: 2
+---
 
 The objective is to develop a low-cost and sustainable solution capable of reading real-time data typical of a Weather Station, using different sensors, and capable of communicating via LoRa.
 The following steps provide a Getting Started tutorial. Detailed documentation, such as the complete Assembly guide and the Technical guide, can be found [here](https://github.com/Waziup/WAZIUP-WeatherStation/tree/master/extra/documents).
