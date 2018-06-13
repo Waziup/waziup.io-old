@@ -8,12 +8,13 @@ menu:
 ---
 
 The objective is to develop a low-cost and sustainable solution capable of reading real-time data typical of a Weather Station, using different sensors, and capable of communicating via LoRa.
-The following steps provide a Getting Started tutorial. Detailed documentation, such as the complete Assembly guide and the Technical guide, can be found [here](https://github.com/Waziup/WAZIUP-WeatherStation/tree/master/extra/documents).
+The following steps provide a Getting Started tutorial. Detailed documentation, such as the complete Assembly guide and the Technical guide, can be found <a href="https://github.com/Waziup/WAZIUP-WeatherStation/tree/master/extra/documents" target="_blank">here</a>.
+
 
 
 Hardware
 -------------
-The following hardware is required to develop the LoRa Weather Station and can be found in [IoT-Catalogue](https://www.iot-catalogue.com/products/59b1797c763cfc066f6d092b) as well.
+The following hardware is required to develop the LoRa Weather Station and can be found in <a href="https://www.iot-catalogue.com/products/59b1797c763cfc066f6d092b" target="_blank">IoT-Catalogue</a> as well.
 
 <p align="center">
   <img src="images/hardware_list.png"/>
@@ -23,7 +24,7 @@ The following hardware is required to develop the LoRa Weather Station and can b
 
 Assembly
 -------------
-Follow the next steps to build the LoRa Weather Station. In the initial steps is necessary to solder some components. To help in the solder task can be consulted this [guide](https://learn.adafruit.com/adafruit-guide-excellent-soldering).
+Follow the next steps to build the LoRa Weather Station. In the initial steps is necessary to solder some components. To help in the solder task can be consulted this <a href="https://learn.adafruit.com/adafruit-guide-excellent-soldering" target="_blank">guide</a>.
 
 
 ####  1) Adafruit Feather M0
@@ -92,17 +93,17 @@ Upload Software
 
 
 #### 9) Download & Install Arduino
-To download the Arduino IDE 1.6.6 or later go to the Arduino [website](https://www.arduino.cc/en/Main/Software).
+To download the Arduino IDE 1.6.6 or later go to the Arduino <a href="https://www.arduino.cc/en/Main/Software" target="_blank">website</a>.
 
 #### 10) Add Adafruit Boards to Arduino
 To add the Adafruit Boards in the Arduino IDE go to “Arduino”, “Preferences” and include the link for Adafruit boards in the "Additional Boards Manager URLs".
-This link can be found in the official Adafruit [guide](https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/setup).
+This link can be found in the official Adafruit <a href="https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/setup" target="_blank">guide</a>.
 
 #### 11) Install Adafruit Boards in Arduino
-To install the Adafruit Boards in Arduino IDE go to  “Tools”, “Board”, access the “Board Manager” and follow the steps in the official Adafruit [guide](https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/using-with-arduino-ide).
+To install the Adafruit Boards in Arduino IDE go to  “Tools”, “Board”, access the “Board Manager” and follow the steps in the official Adafruit <a href="https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/using-with-arduino-ide" target="_blank">guide</a>.
 
 #### 12) Download & Install Weather Station library
-To download the Weather Station library go the [Waziup Github](https://github.com/Waziup/WAZIUP-WeatherStation), click on “Clone or download” green button located in the right side and choose “Download Zip” option to download the “WAZIUP-WeatherStation-master.zip” file.
+To download the Weather Station library go the <a href="https://github.com/Waziup/WAZIUP-WeatherStation" target="_blank">Waziup Github</a>, click on “Clone or download” green button located in the right side and choose “Download Zip” option to download the “WAZIUP-WeatherStation-master.zip” file.
 To install the Weather Station library go to, in Arduino IDE, “Sketch”, “Include Library” and click in the “Add .ZIP Library” option. Will appear a window where need to be added the zip file.
 
 #### 13) Open Weather Station example code
@@ -137,10 +138,10 @@ Make sure that the external sensor is slightly out of the box, as shown in the b
 </p>
 
 #### 18) Assembly Weather Meters sensors
-The Weather Meters come with material components, to allow their assembly in an auxiliary structure. To mount it is recommended to perform the suggested steps in the Sparkfun's [guide](https://learn.sparkfun.com/tutorials/weather-meter-hookup-guide).
+The Weather Meters come with material components, to allow their assembly in an auxiliary structure. To mount it is recommended to perform the suggested steps in the Sparkfun's <a href="https://learn.sparkfun.com/tutorials/weather-meter-hookup-guide" target="_blank">guide</a>.
 
 #### 19) Solar Panel outside the box
-Place the Solar Panel outside the box in a place where it is possible to guarantee the conditions of implementation. To realize and ensure a correct Solar Panel implementation it is recommended to consult the "Solar Panel Deployment" document that is available in folder “documents” in the Waziup Weather Station [Github](https://github.com/Waziup/WAZIUP-WeatherStation).
+Place the Solar Panel outside the box in a place where it is possible to guarantee the conditions of implementation. To realize and ensure a correct Solar Panel implementation it is recommended to consult the "Solar Panel Deployment" document that is available in folder “documents” in the Waziup Weather Station <a href="https://github.com/Waziup/WAZIUP-WeatherStation" target="_blank">Github</a>.
 
 <p align="center">
   <img src="images/solar_panel_outside_box.png"/>
