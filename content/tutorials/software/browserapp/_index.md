@@ -16,7 +16,7 @@ Fork the template WaziApp
 
 The first step is to create an account on GitHub.
 For this go to www.github.com and click on “Sign Up”.
-Then, open the template WaziApp: https://github.com/Waziup/Waziup-Application.
+Then, open the template WaziApp: https://github.com/Waziup/WaziApps-examples.
 Click on the button “Fork” in the top right corner.
 
 ![Fork Waziapp](images/forkwaziapp.png)
@@ -25,7 +25,7 @@ Click on the button “Fork” in the top right corner.
 
 
 You can fork the app in your own Github account.
-This operation will duplicate the “Waziup-Application” in your account.
+This operation will duplicate the “WaziApps-examples” in your account.
 
 ![Waziapp settings](images/waziappsettings.png)
 
@@ -34,7 +34,7 @@ Scroll down to “Github pages” and select “Master branch” in the sources,
 
 ![Waziapp settings](images/waziappsettings2.png)
 
-Your application is ready! You can view it on: https://your_account.github.io/Waziup-Application/www/editor.html. 
+Your application is ready! You can view it on: https://your_account.github.io/WaziApps-examples/. 
 This is the default application. Now is time to update it!
 
 Modify your WaziApp
@@ -47,7 +47,7 @@ For heavy modifications, it is better to first clone the application on your own
 You need to install git  first.
 Then issue the command :
 ```
-git clone git@github.com:<your_account>/Waziup-Application.git
+git clone git@github.com:<your_account>/WaziApps-examples.git
 ```
 
 This will clone your new app on your computer.
