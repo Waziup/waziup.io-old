@@ -10,4 +10,20 @@ menu:
 The API documentation is available at http://api.waziup.io/docs.
 With this website, you can explore and interact with all the endpoints of the Waziup API.
 
-To learn how to use the API, follow [this tutorial](/documentation/api/api_tutorial).
+
+Preliminaries
+=============
+
+The first step is to install the "cURL" command.
+Curl is a very neat command to interact with REST APIs, using the HTTP protocol.
+If not already installed on your system, it can be found here: https://curl.haxx.se/
+For Windows, it can be downloaded [here](https://curl.haxx.se/windows/).
+Unzip the file somewhere. You can then open a "Command" window, and go in the "bin" folder than you extracted.
+The commands below can now be copy-pasted and executed in the command window.
+You can also install the [jq command](https://stedolan.github.io/jq/download/). It allows to pretty-print JSON informations.
+
+Once the preliminaries completed, head to the following tutorials:
+
+- [Access control](access_control)
+- [Sensor management](sensor_management)
+- [Notifications](notifications)
