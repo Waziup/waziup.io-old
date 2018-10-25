@@ -164,8 +164,7 @@ This will return the full information on that particular sensor:
         "value": "25.6",
         "timestamp": "2016-06-08T18:20:27.873Z",
         "date_received": "2018-10-19T10:16:20.00Z"
-      },
-
+      }
     }
   ]
 }
@@ -189,16 +188,39 @@ Similarly, measurements can be modified:
 curl -X PUT "https://api.waziup.io/api/v1/sensors/MySensor/measurements/TC/name" -H "Content-Type: text/plain" -d "My garden temperature"
 ```
 
-Creating measurements
+Create measurements
 =====================
 
 Measurements can be added individually, even after the sensor has been created.
 This is an example of a correct measurement creation:
 ```
-curl -X POST "https://api.waziup.io/api/v1/sensors/MySensor/measurements" -H  "accept: application/json" -H  "Authorization: Bearer <token>" -H  "Content-Type: application/json" -d ‘{ "id": "SM"}’
+curl -X POST "https://api.waziup.io/api/v1/sensors/MySensor/measurements" -H "accept: application/json" -H  "Content-Type: application/json" -d ‘{ "id": "SM"}’
 ```
 This will add a single measurement called "SM" (for "Soil Moisture") to the sensor named "MySensor".
 
+Check your measurement
+======================
+
+This is an example of a reading a single measurement:
+```
+curl -X GET "https://api.waziup.io/api/v1/sensors/MySensor/measurements/TC" -H "accept: application/json"
+```
+This will return the measurement called "SM" for the sensor named "MySensor".
+```
+{
+  "id": "TC",
+  "name": "My garden temperature",
+  "sensing_device": "SoilThermometer",
+  "quantity_kind": "SoilTemperature",
+  "unit": "DegreeCelsius",
+  "last_value": {
+    "value": "25.6",
+    "timestamp": "2016-06-08T18:20:27.873Z",
+    "date_received": "2018-10-19T10:16:20.00Z"
+  }
+}
+```
+If the measurement doesn't exist, an error "404" will be returned.
 
 Push data to your sensor node
 =============================
@@ -207,7 +229,7 @@ You can push a new datapoint to your sensor.
 For example, here is how you can push the value 22.6 to measurement TC of sensor MySensor:
 
 ```
-curl -X POST "https://api.waziup.io/api/v1/sensors/MySensor/measurements/TC/values" -H  "Content-Type: application/json" -d '{"value": "25.6", "timestamp": "2016-06-08T18:20:27.873Z"}'
+curl -X POST "https://api.waziup.io/api/v1/sensors/MySensor/measurements/TC/values" -H "Content-Type: application/json" -d '{"value": "25.6", "timestamp": "2016-06-08T18:20:27.873Z"}'
 ```
 This will add a new datapoint to your sensor. The field `timestamp` contains the exact date at which this measurement as been taken by your sensor.
 This field is optional.
@@ -220,7 +242,7 @@ Read datapoints
 Once you pushed several datapoints to your sensor, it's time to read them.
 This is performed by the following command:
 ```
-curl -X GET "https://api.waziup.io/api/v1/sensors/MySensor/measurements/TC/values" -H  "Accept: application/json"
+curl -X GET "https://api.waziup.io/api/v1/sensors/MySensor/measurements/TC/values" -H "Accept: application/json"
 ```
 This will return the list of datapoints:
 ```
