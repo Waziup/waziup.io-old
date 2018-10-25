@@ -69,7 +69,7 @@ Creating sensors
 The protocol to create and update sensors has slightly changed in this version. However it remains compatible with gateways that are using version 1.0 of the API.
 As shown before, you can create a sensor this way:
 ```
-curl -X POST "https://api.waziup.io/api/v1/domains/waziup/sensors" -H "accept:application/json" -H "Authorization:Bearer <token>" -H "Content-Type:application/json" -d ‘{"id":"Sensor2","gateway_id":"ea0541de1ab7132a1d45b85f9b2139f5","domain":"waziup",measurements}’
+curl -X POST "https://api.waziup.io/api/v1/domains/waziup/sensors" -H "accept:application/json" -H "Authorization:Bearer <token>" -H "Content-Type:application/json" -d ‘{"id":"Sensor2","gateway_id":"ea0541de1ab7132a1d45b85f9b2139f5","domain":"waziup"}’
 ```
 This will create a sensor with name Sensor2, attached to gateway ea0541de1ab7132a1d45b85f9b2139f5, in domain waziup. You can also create measurements for this sensor:
 ```
@@ -168,16 +168,8 @@ Public sensors can also be shared, in the case you would like to give full privi
 Gateway protocol
 ================
 
-Gateways can create sensors with their measurements. However, a token should be obtained before each call. Once this is done, datapoints can be pushed.
-A suggested protocol is the following:
-
-- Get a token: GET api/v1/auth/token
-- Verify if the sensor exists: `GET /api/v1/sensors/<sensor_id>`
-- If a 404 is received, create it: `POST /api/v1/sensors`
-- Verify if the measurement exists: `GET /api/v1/sensors/<sensor_id>/measurements/<measurement_id`
-- If a 404 is received, create it: `POST /api/v1/sensors/<sensor_id>/measurements`
-- Push the datapoint: `POST /api/v1/sensors/<sensor_id>/measurements/<measurement_id>/values`
-
-This protocol takes care of creating a sensor and measurement for the owner of the sensor. It then pushes the datapoint. A more simplified protocol could do only steps 1 and 6: only pushing the datapoint. In this case, the sensor need to be created manually using the dashboard.
+The gateway protocol does not change in this version.
+The only changes are to remove the domain from each endpoints, and add https to each endpoints.
+The complete gateway protocol can be found [here](../gateways).
 
 
