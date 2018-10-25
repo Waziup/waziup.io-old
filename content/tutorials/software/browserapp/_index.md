@@ -60,7 +60,7 @@ git push
 ```
 
 After the push is complete, your application is updated!
-You can already view it on the URL : https://your_account.github.io/Waziup-Application/www/editor.html. 
+You can already view it on the URL : https://your_account.github.io/WaziApp-examples/. 
 
 
 Have fun with Waziup.

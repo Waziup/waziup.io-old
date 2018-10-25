@@ -22,7 +22,7 @@ You can also follow us on Facebook: [waziup](https://www.facebook.com/waziupIOT/
 
 
 {{< note title="What next?" >}}
-* [Try Waziup](http://dashboard.waziup.io)
+* [Try Waziup](https://dashboard.waziup.io)
 * Learn [how Waziup works](/documentation/how-waziup-works)
 * Get your teeth into the [Waziup documentation](/documentation)
 {{< /note >}}
