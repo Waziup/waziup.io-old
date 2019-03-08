@@ -2,4 +2,6 @@ baseurl: "http://www.waziup.io"
 theme: "waziup-theme"
 title: "WAZIUP Platform"
 languageCode: "en-us"
-
+permalinks:
+  documentation: "/:year/:month/:title/"
+  

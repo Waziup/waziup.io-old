@@ -1,6 +1,5 @@
 ---
 title: About Us
-menu: about
 ---
 
 ## Contact
