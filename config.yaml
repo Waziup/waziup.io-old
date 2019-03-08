@@ -3,5 +3,5 @@ theme: "waziup-theme"
 title: "WAZIUP Platform"
 languageCode: "en-us"
 permalinks:
-  documentation: "/:year/:month/:title/"
+  documentation: /:year/:month/:title/
   
