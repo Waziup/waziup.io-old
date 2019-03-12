@@ -1,9 +1,9 @@
 ---
 date: 2018-04-11T09:00:00+00:00
-title: Documentation
+title: User manuals
 menu:
   main:
-    title: Documentation
+    title: User manuals
     name: documentation 
     weight: 2
 ---
