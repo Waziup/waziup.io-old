@@ -4,4 +4,13 @@ title: "WAZIUP Platform"
 languageCode: "en-us"
 permalinks:
   documentation: /:year/:month/:title/
-  
+
+menu:
+  main:
+    - identifier: arduinolora 
+      parent: trainingmaterial
+      title: Arduino sensors & Lora tutorials 
+      name: about hugo
+      pre: <i class='fa fa-heart'></i>
+      url: /training/arduinolora/
+      weight: 10
