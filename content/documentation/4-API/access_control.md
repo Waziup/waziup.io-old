@@ -4,7 +4,7 @@ menu:
   main:
     title: Access Control
     name: apiaccesscontrol
-    parent: api
+    parent: docapi
     weight: 1
 ---
 

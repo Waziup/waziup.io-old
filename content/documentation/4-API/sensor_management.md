@@ -4,7 +4,7 @@ menu:
   main:
     title: Sensor management
     name: sensormanagement
-    parent: api
+    parent: docapi
     weight: 2
 ---
 
