@@ -4,7 +4,7 @@ menu:
   main:
     title: Gateways
     name: gateways
-    parent: api
+    parent: docapi
     weight: 4
 ---
 
