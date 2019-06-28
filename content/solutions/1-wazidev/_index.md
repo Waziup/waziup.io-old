@@ -21,7 +21,7 @@ It is an ideal solution for start-ups and entrepreneurs who want to rapid protot
 Its features include:
 
 - Arduino Pro Mini compatible CPU
-- LoRa RF95 networking chip
+- RFM95W LoRa module
 - Fully compatible with the Arduino development environment
 - Embedded Lipo battery charger for solar panels and low power options
 - Two pins with high current support (500mA)

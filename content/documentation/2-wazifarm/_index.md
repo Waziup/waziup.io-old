@@ -1,12 +1,12 @@
 ---
 date: 2018-04-11T09:00:00+00:00
 title: WaziFarm Application Platform for Smart Agriculture 
-menu:
-  main:
-    name: docwazifarm
-    title:  WaziFarm
-    parent: documentation 
-    weight: 2
+#menu:
+#  main:
+#    name: docwazifarm
+#    title:  WaziFarm
+#    parent: documentation 
+#    weight: 2
 ---
 
  .RelPermalink

@@ -1,12 +1,12 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: WaziFarm 
-menu:
-  main:
-    title: WaziFarm
-    name: wazifarm
-    parent: solutions
-    weight: 4
+#menu:
+#  main:
+#    title: WaziFarm
+#    name: wazifarm
+#    parent: solutions
+#    weight: 4
 ---
 
 WAZIFARM farming application platform comes with a fully-fledged visualization application and analytics dashboard.
