@@ -9,4 +9,4 @@ menu:
     weight: 6
 ---
 
-Documentation under construction.
+Documentation under construction. Hang tight!
