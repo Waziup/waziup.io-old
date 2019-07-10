@@ -1,21 +1,16 @@
 ---
-title: WAZIUP Tutorials
+date: 2018-04-11T09:00:00+00:00
+title: Tutorials 
 menu:
   main:
     title: Tutorials
     name: tutorials
-    weight: 1
+    weight: 3
 ---
 
-## Tutorials
-We propose tutorials to build your IoT solution with Waziup from A to Z.
-You will build your own hardware platform, with a gateway and several sensor nodes:
-[IoT hardware tutorials with LoRa](hardware)
+Our tutorials will teach you how to build sensor nodes and gateways based on LoRa technology.
+You can build these devices with raw hardware materials that can be bought from online websites.
+The sensor nodes are based on Arduino and the gateways are based on Raspberry PI.
+Those [video tutorials](videos) will guide you through the steps.
+Check-out also our [FAQ on LoRa sensors and gateway](https://github.com/CongducPham/tutorials/blob/master/FAQ.pdf).
 
-Once this is done, it's time to build a real web application!
-With Waziup, you can build your own application, without any programming.
-For more expert WAZIUPers, we propose web-based applications and full-stack applications.
-[Web applications tutorials](software)
-
-Finally, you can find more inspiration in those end-to-end use case tutorials:
-[Use cases tutorials](usecases)

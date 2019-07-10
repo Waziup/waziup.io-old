@@ -43,21 +43,13 @@
   <script src="{{ $.Site.BaseURL }}/js/vendor.js"></script>
   <script src="{{ $.Site.BaseURL }}/js/app.js"></script>
 
-  <script src="{{ $.Site.BaseURL }}/js/jquery-3.2.1.min.js"></script>
-  <script>
-  	//Fixing the images path issue
-  	$(function(){
-  		$('img').each(function(){
-  			var s = $(this).attr('src');
-  			var pURL = '{{ $.Site.BaseURL }}';
-  			if( s.indexOf('/') == 0)
-  			{
-  				$(this).attr('src', pURL + s);
-  			}
-  		});
-  	});
-  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NT276CR');</script>
+  <!-- End Google Tag Manager -->
 
-  
 </head>
 <body class="{{ with .Site.Params.palette.primary }}palette-primary-{{ . }}{{end }} {{ with .Site.Params.palette.accent }}palette-accent-{{ .  }}{{ end }}">
