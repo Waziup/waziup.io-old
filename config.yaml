@@ -1,4 +1,4 @@
-baseurl: "http://www.waziup.io"
+baseurl: "https://www.waziup.io"
 theme: "waziup-theme"
 title: "WAZIUP Platform"
 languageCode: "en-us"
