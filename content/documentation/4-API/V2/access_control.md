@@ -1,5 +1,5 @@
 ---
-title: API V1 Access Control
+title: API V2 Access Control
 menu:
   main:
     title: Access Control
@@ -8,7 +8,7 @@ menu:
     weight: 1
 ---
 
-This tutorial will guide you through the access control features of the Waziup API version 1, step by step.
+This tutorial will guide you through the access control features of the Waziup API version 2, step by step.
 First of all, open the API documentation available at https://api.waziup.io/docs.
 With this website, you can explore and interact with all the endpoints of the Waziup API.
 
@@ -38,9 +38,9 @@ curl -X POST "https://api.waziup.io/api/v1/auth/token" -H "Content-Type:applicat
 
 This will return a token (a big number).
 This token can be included in all subsequent API call. This will allow you to create private sensors and manage their access rights.
-For example, here is how to create a sensor belonging to the user cdupont:
+For example, here is how to create a device belonging to the user cdupont:
 ```
-curl -X POST "https://api.waziup.io/api/v1/sensors" -H  "accept:application/json" -H "Authorization:Bearer <token>" -H  "Content-Type:application/json" -d ‘{"id": "MySensor", "domain":"waziup"}’
+curl -X POST "https://api.waziup.io/api/v2/sensors" -H  "accept:application/json" -H "Authorization:Bearer <token>" -H  "Content-Type:application/json" -d ‘{"id": "MyDevice"}’
 ```
 
 Replace the <token> tag in the above command by the token you receive with the previous command.
