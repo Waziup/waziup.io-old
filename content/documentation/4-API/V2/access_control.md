@@ -4,7 +4,7 @@ menu:
   main:
     title: Access Control
     name: apiaccesscontrol
-    parent: docapi
+    parent: v2docapi
     weight: 1
 ---
 
@@ -33,18 +33,18 @@ Authentication
 
 Once created, you can request an authentication token:
 ```
-curl -X POST "https://api.waziup.io/api/v1/auth/token" -H "Content-Type:application/json" -d ‘{"username":"cdupont","password":"password"}’
+curl -X POST "https://api.waziup.io/api/v2/auth/token" -H "Content-Type:application/json" -d ‘{"username":"cdupont","password":"password"}’
 ```
 
 This will return a token (a big number).
 This token can be included in all subsequent API call. This will allow you to create private sensors and manage their access rights.
 For example, here is how to create a device belonging to the user cdupont:
 ```
-curl -X POST "https://api.waziup.io/api/v2/sensors" -H  "accept:application/json" -H "Authorization:Bearer <token>" -H  "Content-Type:application/json" -d ‘{"id": "MyDevice"}’
+curl -X POST "https://api.waziup.io/api/v2/devices" -H  "accept:application/json" -H "Authorization:Bearer <token>" -H  "Content-Type:application/json" -d ‘{"id": "MyDevice"}’
 ```
 
 Replace the <token> tag in the above command by the token you receive with the previous command.
-Once you created the sensor, it should be visible on the dashboard: https://dashboard.waziup.io/sensors/MySensor.
+Once you created the sensor, it should be visible on the dashboard: https://dashboard.waziup.io/devices/MySensor.
 Token should be used also in other calls, such as datapoint pushing. Tokens should be obtained before each request, as they are short-lived (1 minute).
 If a token is not valid, an error 401 "Unauthorized" will be returned.
 It is still possible to push sensors/data without a token, however they will be created as belonging to user “guest” and visibility will be public.
@@ -54,71 +54,72 @@ Permissions
 
 Permissions can be retrieve using the following command:
 ```
-curl -X GET "https://api.waziup.io/api/v1/auth/permissions" -H "Authorization:Bearer <token>" -H "accept: application/json"
+curl -X GET "https://api.waziup.io/api/v2/auth/permissions/devices" -H "Authorization:Bearer <token>" -H "accept: application/json"
 ```
 This will return the list of all permissions for the owner of the token:
 ```
 [
   {
-    "resource": "PublicSensor",
+    "resource": "PublicDevice",
     "scopes": [
-      "sensors:view"
+      "devices:view"
     ]
   },
   {
-    "resource": "MySensor",
+    "resource": "MyDevice",
     "scopes": [
-      "sensors:delete",
-      "sensors-data:view",
-      "sensors:view",
-      "sensors:update",
-      "sensors-data:create"
+      "devices:delete",
+      "devices-data:view",
+      "devices:view",
+      "devices:update",
+      "devices-data:create"
     ]
   }
 ]
 ```
-In the example above, the user can only view the sensor "PublicSensor".
-He can do more on the sensor "MySensor".
-For a sensor, the following access rights are possible: 
+In the example above, the user can only view the device "PublicDevice".
+He can do more on the device "MyDevice".
+For a device, the following access rights are possible: 
 
-- `sensors:view`: the user can view the sensor,
-- `sensors:update`: the user can update the sensor,
-- `sensors:delete`: the user can delete the sensor,
-- `sensors-data:view`: the user can view the datapoints from the sensor,
-- `sensors-data:create`: the user can push additional datapoints on the sensor.
+- `devices:view`: the user can view the sensor,
+- `devices:update`: the user can update the sensor,
+- `devices:delete`: the user can delete the sensor,
+- `devices-data:view`: the user can view the datapoints from the sensor,
+- `devices-data:create`: the user can push additional datapoints on the sensor.
 
-The access rights to a particular sensor are decided based on the owner, the visibility and the sharing of that sensor.
+The access rights to a particular device are decided based on the owner, the visibility and the sharing of that device.
 
 Ownership
 ---------
 
-Has showed above, a sensor can be created using a token from a specific user.
-This sensor will belong to him. The owner of a sensor has full privilege on it.
-For instance, only him (and admins) can modify or delete the sensor.
-If you don't have permission to modify or delete a sensor, you will receive an error "403 Forbidden".
+Has showed above, a device can be created using a token from a specific user.
+This device will belong to him. The owner of a device has full privilege on it.
+For instance, only him (and admins) can modify or delete the device.
+If you don't have permission to modify or delete a device, you will receive an error "403 Forbidden".
 
 Visibility
 ----------
 
-The API include the concept of sensor visibility. Visibility can be either private or public. For instance, a gateway can create private sensors this way:
+The API include the concept of device visibility. Visibility can be either private or public. For instance, a gateway can create private devices this way:
 ```
-curl -X POST "https://api.waziup.io/api/v1/sensors" -H  "accept:application/json" -H "Authorization:Bearer <token>" -H "Content-Type:application/json" -d ‘{"id":"MySensor", "domain":"waziup", “visibility”:“private”}’
+curl -X POST "https://api.waziup.io/api/v1/devices" -H  "accept:application/json" -H "Authorization:Bearer <token>" -H "Content-Type:application/json" -d ‘{"id":"MyDevice", “visibility”:“private”}’
 ```
 
-In this example, we create a private sensor called MySensor, under the account of cdupont (the owner of the token).
-Private sensors can only be seen by its owner.
-This sensor will appear on the dashboard in the section “My Sensors” when login in with the account of the user “cdupont”.
-Public sensors can be seen by everybody in the “Public sensors” section of the dashboard. However, public sensors can only be updated or deleted by its owner or an admin.
+In this example, we create a private device called MyDevice, under the account of cdupont (the owner of the token).
+Private devices can only be seen by its owner.
+This device will appear on the dashboard when login in with the account of the user “cdupont”.
+Public devices can potentially be seen by everybody in the dashboard. However, public devices can only be updated or deleted by its owner or an admin.
 
-Sharing sensors
+Sharing devices
 ---------------
 
-Using the dashboard, a user can decide to share a sensor with selected users.
-Sharing sensors can be made in the Profile of the user.
-In particular, users can give the following privileges to other users: “sensor:view”, “sensor:update”, “sensor:delete”, “sensor-data:view” and “sensor-data:create”.
+Using the dashboard, a user can decide to share a device with selected users.
+Sharing devices can be made in the Profile of the user.
+In particular, users can give the following privileges to other users: “device:view”, “device:update”, “device:delete”, “device-data:view” and “device-data:create”.
 
-Private sensors can be shared with other users. For example, you can create a private sensors, and share the privilege “sensor:view” with another user. This will allow that user to see your private sensor; however he will still not be able to update or delete it.
-Public sensors can also be shared, in the case you would like to give full privilege to another user (i.e. update or delete the sensor).
+Private devices can be shared with other users. For example, you can create a private device, and share the privilege “device:view” with another user.
+This will allow that user to see your private device; however he will still not be able to update or delete it.
+Public devices can also be shared, in the case you would like to give full privilege to another user (i.e. update or delete the device).
 
 Users
 =====

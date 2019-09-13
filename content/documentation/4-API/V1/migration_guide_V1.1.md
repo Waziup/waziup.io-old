@@ -4,7 +4,7 @@ menu:
   main:
     title: V1.1 Migration guide
     name: migrataion_guideV1.1
-    parent: docapi
+    parent: v1docapi
     weight: 10
 ---
 

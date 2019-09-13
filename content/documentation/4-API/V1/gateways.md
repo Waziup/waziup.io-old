@@ -3,9 +3,8 @@ title: API V1 Gateways
 menu:
   main:
     title: Gateways
-    name: gateways
-    parent: docapi
     weight: 4
+    parent: v1docapi
 ---
 
 This tutorial will show you how to connect your gateway to Waziup.

@@ -4,6 +4,7 @@ menu:
   main:
     title: Access Control
     weight: 1
+    parent: v1docapi
 ---
 
 This tutorial will guide you through the access control features of the Waziup API version 1, step by step.

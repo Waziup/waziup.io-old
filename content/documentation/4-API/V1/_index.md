@@ -3,9 +3,9 @@ date: 2018-04-11T09:00:00+00:00
 title: V1 API Reference
 menu:
   main:
-    title: API Reference
-    name: docapi
-    parent: v1docapi
+    title: V1
+    name: v1docapi
+    parent: docapi
     weight: 4
 ---
 
