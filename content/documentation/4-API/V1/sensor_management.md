@@ -3,9 +3,8 @@ title: API V1 Sensor management
 menu:
   main:
     title: Sensor management
-    name: sensormanagement
-    parent: docapi
     weight: 2
+    parent: v1docapi
 ---
 
 This tutorial will guide you through the Waziup API version 1, step by step.

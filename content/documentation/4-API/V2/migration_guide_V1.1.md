@@ -3,8 +3,8 @@ title: Waziup API V1.1 Migration guide
 menu:
   main:
     title: V1.1 Migration guide
-    name: migrataion_guideV1.1
-    parent: docapi
+    name: migrataion_guideV2
+    parent: v2docapi
     weight: 10
 ---
 

@@ -3,8 +3,7 @@ title: API V1 Notifications
 menu:
   main:
     title: Notifications
-    name: notifications
-    parent: docapi
+    parent: v1docapi
     weight: 3
 ---
 

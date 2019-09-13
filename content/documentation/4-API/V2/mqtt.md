@@ -4,7 +4,7 @@ menu:
   main:
     title: MQTT
     name: apimqtt
-    parent: docapi
+    parent: v2docapi
     weight: 1
 ---
 

@@ -1,10 +1,10 @@
 ---
-title: API V1 Gateways
+title: API V2 Gateways
 menu:
   main:
     title: Gateways
     name: gateways
-    parent: docapi
+    parent: v2docapi
     weight: 4
 ---
 
@@ -15,9 +15,9 @@ With this website, you can explore and interact with all the endpoints of the Wa
 Simple gateway protocol
 =======================
 
-As a simple approach, a gateway can just push datapoints on existing sensors on the platform.
-The sensor and measurement should be created beforehand on the [dashboard](https://dashboard.waziup.io).
-To create the sensor, follow [this tutorial](/tutorials/software/dashboard/).
+As a simple approach, a gateway can just push datapoints on existing devices on the platform.
+The devices and sensors should be created beforehand on the [dashboard](https://dashboard.waziup.io).
+To create the device, follow [this tutorial](/tutorials/software/dashboard/).
 We will not use any authentication, so the sensor need to be public.
 
 We are now ready to push a new datapoint!
@@ -27,17 +27,17 @@ Once pushed, you should alerady see the new value displayed on the dashboard!
 Complex gateway protocol
 ========================
 
-Gateways can create the sensors themselves (instead of having to create them manually on the dashboard).
+Gateways can create the devices themselves (instead of having to create them manually on the dashboard).
 In order to maintain privacy, a token should be obtained before each call.
 Once this is done, datapoints can be pushed.
 A suggested protocol is the following:
 
-1. Get a token: `GET api/v1/auth/token`. See [here](../access_control/#authentication).
-2. Verify if the sensor exists: `GET /api/v1/sensors/<sensor_id>`. See [here](../sensor_management/#read-a-particular-sensor).
-3. If a 404 is received, create it: `POST /api/v1/sensors`. See [here](../sensor_management/#create-a-sensor-node).
-4. Verify if the measurement exists: `GET /api/v1/sensors/<sensor_id>/measurements/<measurement_id`. See [here](../sensor_management/#check-your-measurement).
-5. If a 404 is received, create it: `POST /api/v1/sensors/<sensor_id>/measurements`. See [here](../sensor_management/#create-measurements).
-6. Finally, push the datapoint: `POST /api/v1/sensors/<sensor_id>/measurements/<measurement_id>/values`. See [here](../sensor_management/#push-data-to-your-sensor-node).
+1. Get a token: `GET api/v2/auth/token`. See [here](../access_control/#authentication).
+2. Verify if the sensor exists: `GET /api/v2/devices/<sensor_id>`. See [here](../sensor_management/#read-a-particular-sensor).
+3. If a 404 is received, create it: `POST /api/v2/devices`. See [here](../sensor_management/#create-a-sensor-node).
+4. Verify if the measurement exists: `GET /api/v2/devices/<device_id>/sensors/<sensor_id`. See [here](../sensor_management/#check-your-measurement).
+5. If a 404 is received, create it: `POST /api/v2/devices/<device_id>/sensors`. See [here](../sensor_management/#create-measurements).
+6. Finally, push the datapoint: `POST /api/v2/devices/<device_id>/sensors/<sensor_id>/value`. See [here](../sensor_management/#push-data-to-your-sensor-node).
 
-This protocol takes care of creating a sensor and measurement for the owner of the sensor. It then pushes the datapoint. 
+This protocol takes care of creating a device and sensor for the owner of the device. It then pushes the datapoint. 
 
