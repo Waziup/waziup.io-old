@@ -1437,7 +1437,7 @@ body {
   padding: 0 20px;
   color: white;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400;
   text-decoration: none;
   height: 100%;
 }
@@ -2155,4 +2155,85 @@ pre + pre {
   right: 10px !important;
   border-radius: 15px !important;
   height: 60px !important;
+}
+
+ul#navigation li {
+    display:inline;
+    font-size:12px;
+    font-weight:bold;
+    margin:0;
+    padding: 0 40;
+    float:left;
+    position:relative;
+}
+
+ul#navigation li a.first {
+    border-left: 0 none;
+}
+
+ul#navigation li a.last {
+    border-right: 0 none;
+}
+
+/* Drop-Down Navigation */
+ul#navigation li:hover > ul
+{
+    /*these 2 styles are very important,
+    being the ones which make the drop-down to appear on hover */
+    visibility:visible;
+    opacity:1;
+}
+
+ul#navigation ul { /*, ul#navigation ul li ul {*/
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /*the next 2 styles are very important,
+    being the ones which make the drop-down to stay hidden */
+    visibility:hidden;
+    opacity:0;
+    position: absolute;
+    z-index: 99999;
+    width:200px;
+    background:#F0F5FA;
+    box-shadow:1px 1px 3px #ccc;
+    /* css3 transitions for smooth hover effect */
+    -webkit-transition:opacity 0.2s linear, visibility 0.2s linear;
+    -moz-transition:opacity 0.2s linear, visibility 0.2s linear;
+    -o-transition:opacity 0.2s linear, visibility 0.2s linear;
+    transition:opacity 0.2s linear, visibility 0.2s linear;
+}
+
+ul#navigation ul {
+    top: 20px;
+    left: 1px;
+}
+
+ul#navigation ul li ul {
+    top: 0;
+    left: 201px; /* strong related to width:180px; from above */
+}
+
+ul#navigation ul li {
+    clear:both;
+    width:100%;
+    border:0 none;
+    border-bottom:1px solid #c9c9c9;
+}
+
+ul#navigation ul li a {
+    background:none;
+    padding:7px 5px;
+    color:#616161;
+    text-shadow:1px 1px 0px #fff;
+    text-decoration:none;
+    display:inline-block;
+    border:0 none;
+    float:left;
+    width:150px;
+}
+
+ul#navigation ul li img {
+    float:left;
+    padding:7px 5px;
 }
