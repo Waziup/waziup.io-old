@@ -1,15 +1,14 @@
 ---
 date: 2016-09-13T09:00:00+00:00
-title: WaziGate 
+title: WaziGate Install
 menu:
   main:
-    title: WaziGate
-    name: docwazigate
-    parent: documentation 
-    weight: 7
+    title: Install
+    name: docwazigateinstall
+    parent: docwazigate 
+    weight: 1
 ---
 
-Documentation under construction. Hang tight!
 
 Install
 =======
