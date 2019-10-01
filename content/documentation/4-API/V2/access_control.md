@@ -33,28 +33,34 @@ Authentication
 
 Once created, you can request an authentication token:
 ```
-curl -X POST "https://api.waziup.io/api/v2/auth/token" -H "Content-Type:application/json" -d ‘{"username":"cdupont","password":"password"}’
+curl -X POST "https://api.waziup.io/api/v2/auth/token" -H "Content-Type:application/json" -d '{"username":"cdupont","password":"password"}'
 ```
 
 This will return a token (a big number).
-This token can be included in all subsequent API call. This will allow you to create private sensors and manage their access rights.
+This token can be included in all subsequent API call. This will allow you to create private resources such as devices or gateways and manage their access rights.
 For example, here is how to create a device belonging to the user cdupont:
 ```
-curl -X POST "https://api.waziup.io/api/v2/devices" -H  "accept:application/json" -H "Authorization:Bearer <token>" -H  "Content-Type:application/json" -d ‘{"id": "MyDevice"}’
+curl -X POST "https://api.waziup.io/api/v2/devices" -H  "accept:application/json" -H "Authorization:Bearer <token>" -H  "Content-Type:application/json" -d '{"id": "MyDevice"}'
 ```
 
 Replace the <token> tag in the above command by the token you receive with the previous command.
-Once you created the sensor, it should be visible on the dashboard: https://dashboard.waziup.io/devices/MySensor.
-Token should be used also in other calls, such as datapoint pushing. Tokens should be obtained before each request, as they are short-lived (1 minute).
+Once you created the device, it should be visible on the dashboard: https://dashboard.waziup.io/devices/MyDevice.
+Token should be used also in other calls, such as datapoint pushing. Tokens should be obtained before each request, as they are short-lived (10 minute).
 If a token is not valid, an error 401 "Unauthorized" will be returned.
-It is still possible to push sensors/data without a token, however they will be created as belonging to user “guest” and visibility will be public.
+It is still possible to push devices/data without a token, however they will be created as belonging to user “guest” and visibility will be public.
+
+It is also practical to store the token in a variable and use that variable in any other calls:
+```
+TOKEN=`curl -X POST "https://api.waziup.io/api/v2/auth/token" -H "Content-Type:application/json" -d '{"username":"cdupont","password":"password"}'`
+curl -X POST "https://api.waziup.io/api/v2/devices" -H  "accept:application/json" -H "Authorization:Bearer $TOKEN" -H  "Content-Type:application/json" -d '{"id": "MyDevice"}'
+```
 
 Permissions
 ===========
 
 Permissions can be retrieve using the following command:
 ```
-curl -X GET "https://api.waziup.io/api/v2/auth/permissions/devices" -H "Authorization:Bearer <token>" -H "accept: application/json"
+curl -X GET "https://api.waziup.io/api/v2/auth/permissions/devices" -H "Authorization:Bearer $TOKEN" -H "accept: application/json"
 ```
 This will return the list of all permissions for the owner of the token:
 ```
@@ -77,15 +83,15 @@ This will return the list of all permissions for the owner of the token:
   }
 ]
 ```
-In the example above, the user can only view the device "PublicDevice".
+In the example above, the user can only *view* the device "PublicDevice".
 He can do more on the device "MyDevice".
 For a device, the following access rights are possible: 
 
-- `devices:view`: the user can view the sensor,
-- `devices:update`: the user can update the sensor,
-- `devices:delete`: the user can delete the sensor,
-- `devices-data:view`: the user can view the datapoints from the sensor,
-- `devices-data:create`: the user can push additional datapoints on the sensor.
+- `devices:view`: the user can view the device,
+- `devices:update`: the user can update the device,
+- `devices:delete`: the user can delete the device,
+- `devices-data:view`: the user can view the datapoints from the device,
+- `devices-data:create`: the user can push additional datapoints on the device.
 
 The access rights to a particular device are decided based on the owner, the visibility and the sharing of that device.
 
@@ -100,9 +106,9 @@ If you don't have permission to modify or delete a device, you will receive an e
 Visibility
 ----------
 
-The API include the concept of device visibility. Visibility can be either private or public. For instance, a gateway can create private devices this way:
+The API includes the concept of device visibility. Visibility can be either private or public. For instance, a gateway can create private devices this way:
 ```
-curl -X POST "https://api.waziup.io/api/v1/devices" -H  "accept:application/json" -H "Authorization:Bearer <token>" -H "Content-Type:application/json" -d ‘{"id":"MyDevice", “visibility”:“private”}’
+curl -X POST "https://api.waziup.io/api/v2/devices" -H  "accept:application/json" -H "Authorization:Bearer $TOKEN" -H "Content-Type:application/json" -d '{"id":"MyDevice", "visibility":"private"}'
 ```
 
 In this example, we create a private device called MyDevice, under the account of cdupont (the owner of the token).
@@ -126,7 +132,7 @@ Users
 
 The API allows you to see the list of users. This can be done using the following command:
 ```
-curl -X GET "https://api.waziup.io/api/v1/users" -H  "accept: application/json"
+curl -X GET "https://api.waziup.io/api/v2/users" -H  "accept: application/json"
 ```
 This command will yeld the list of users:
 ```
@@ -148,7 +154,7 @@ This command will yeld the list of users:
 
 You can also retrieve a single user using his user ID:
 ```
-curl -X GET "https://api.waziup.io/api/v1/users/39575669-0fd7-4c01-8461-97252c15e540" -H  "accept: application/json"
+curl -X GET "https://api.waziup.io/api/v2/users/39575669-0fd7-4c01-8461-97252c15e540" -H  "accept: application/json"
 ```
 
 

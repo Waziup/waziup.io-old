@@ -1,13 +1,13 @@
 ---
 date: 2018-04-11T09:00:00+00:00
 title: V2 API Reference
-#menu:
-#  main:
-#    title: V2
-#    name: v2docapi
-#    parent: docapi
-#    weight: 4
-#    hidden: true
+menu:
+  main:
+    title: V2
+    name: v2docapi
+    parent: docapi
+    weight: 4
+    hidden: true
 ---
 
 The API documentation is available at https://api.waziup.io/docs.
@@ -31,9 +31,10 @@ Tutorials
 Once the preliminaries completed, head to the following tutorials:
 
 - [Access control](access_control)
-- [Sensor management](sensor_management)
+- [Device management](device_management)
 - [Notifications](notifications)
 - [Gateways](gateways)
+- [MQTT access](mqtt)
 
 
 Library
@@ -46,6 +47,6 @@ All documentation is provided in the README files in the repository.
 Migration from previous version
 ===============================
 
-If you have an application using previous versions of the API, use the [migration guide](./migration_guide_v1.1).
+If you have an application using previous versions of the API, use the [migration guide](./migration_guide_v2).
 
 

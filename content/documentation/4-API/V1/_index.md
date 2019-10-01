@@ -1,12 +1,12 @@
 ---
 date: 2018-04-11T09:00:00+00:00
 title: V1 API Reference
-menu:
-  main:
-    title: V1
-    name: v1docapi
-    parent: docapi
-    weight: 4
+#menu:
+#  main:
+#    title: V1
+#    name: v1docapi
+#    parent: docapi
+#    weight: 4
 ---
 
 The API documentation is available at https://api.waziup.io/docs.
