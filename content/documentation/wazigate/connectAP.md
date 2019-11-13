@@ -22,4 +22,5 @@ On your laptop, go in the Wifi settings and select the access point starting wit
 
 ![Access point selection](../images/SelectAP.png)
 
-
+The default password is `loragateway`.
+Once connected, you can open the [WaziGate UI](http://wazigate.local)

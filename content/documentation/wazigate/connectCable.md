@@ -13,14 +13,13 @@ This tutorial will guide you to configure and test your Waziup gateway for the f
 You should have the following hardware:
 
 - A WaziGate with power cable (mini USB),
-- A WaziDev with batteries,
 - A laptop PC with Internet access,
 - A RJ45 cable (simple network cable).
 
 Share the internet
 ==================
 
-**Just connecting the cable between your PC and the gateway is NOT enough to access the gateway.
+**Attention: just connecting the cable between your PC and the gateway is NOT enough to access the gateway.
 You NEED to configure "internet sharing" on the PC, in order to attribute an IP to your gateway.**
 
 The first step is to configure your PC to provide connectivity to your gateway. Follow those steps:

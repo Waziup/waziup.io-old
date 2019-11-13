@@ -1,6 +1,6 @@
 ---
 date: 2016-09-13T09:00:00+00:00
-title: WaziGate configure 
+title: WaziGate configuration 
 menu:
   main:
     title: Configure
@@ -8,6 +8,8 @@ menu:
     parent: docwazigate
     weight: 4
 ---
+
+In this section, we will configure your new WaziGate!!
 
 Configure Waziup Cloud
 ======================
