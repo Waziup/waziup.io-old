@@ -5,7 +5,7 @@ menu:
     title: WaziDev
     name: docwazidev
     parent: documentation
-    weight: 6
+    weight: 1
 ---
 
 ![WaziDev Board](images/wazidev_01.jpg)

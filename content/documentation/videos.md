@@ -1,11 +1,11 @@
 ---
 date: 2018-04-11T09:00:00+00:00
 title: Hardware video tutorials
-menu:
-  main:
-    title: Videos 
-    parent: hardware
-    weight: 3
+#menu:
+#  main:
+#    title: Videos 
+#    parent: hardware
+#    weight: 3
 ---
 
 Our video tutorials demonstrate in the form of images all the steps to build the whole framework from scratch.

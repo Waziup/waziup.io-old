@@ -11,6 +11,7 @@ menu:
 
 This document will guide you through the update of your gateway or application to the new API V2 (see https://github.com/Waziup/Platform/blob/master/ChangeLog).
 This version brings a lot of novelties:
+
 - Gateway registration
 - Actuators support
 - Projects support
@@ -23,6 +24,7 @@ All endpoints are described in the various sections.
 Renamings
 =========
 If you have an application working with V1.1, in this version two renamings has been done:
+
 - Everthing previously named "Sensor" has been renamed "Device".
 - Everything previously named "Measurement" has been renamed "Sensor".
 

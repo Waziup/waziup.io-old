@@ -1,12 +1,12 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: Deployment assistant
-menu:
-  main:
-    title: Deployment assistant
-    name: deployassistdoc
-    parent: documentation
-    weight: 3
+#menu:
+#  main:
+#    title: Deployment assistant
+#    name: deployassistdoc
+#    parent: documentation
+#    weight: 3
 ---
 
 The idea of the deployment assistant is to guide the engineering team in the deployment process when installing sensors.

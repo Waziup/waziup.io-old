@@ -14,11 +14,25 @@
           <div class="folding-indicator">
           </div>
         </a>
-        {{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}
-          {{ range .Children }}
-            <a class="sub-menu-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">
-              <p class="text">{{ .Title }}</p>
+        {{ $inSubMenu := or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}
+        {{ if $inSubMenu }}
+          {{ range .Children}}
+            {{ $inSubSubMenu := or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}
+            <a class="sub-menu-item {{ if $inSubSubMenu }}active{{ end }}" href="{{ .URL }}">
+              <div class="section-title">
+                <p class="text active">{{ .Title }}</p>
+              </div>
+              <div class="folding-indicator">
+              </div>
             </a>
+            {{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}
+              {{ range .Children }}
+                {{ $inSubSubMenu := or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}
+                <a class="sub-sub-menu-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">
+                  <p class="text">{{ .Title }}</p>
+                </a>
+              {{ end }}
+            {{ end }}
           {{ end }}
         {{ end }}
       {{ end }}

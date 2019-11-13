@@ -32,16 +32,6 @@ The libraries of the zip should go in the "libraries" Arduino folder:
 For instance, the folder "libraries" should contain a subfolder "SX1272".
 Your programs will not compile if you don't make sure.
 
-Install the drivers
--------------------
-
-Then install the CH340 driver on your computer:
-
-- Windows: https://cdn.sparkfun.com/assets/learn_tutorials/5/9/7/Windows-CH340-Driver.zip
-- Linux: https://github.com/juliagoda/CH341SER
-- Mac: https://cdn.sparkfun.com/assets/learn_tutorials/5/9/7/CH341SER_MAC.ZIP
-
-If the CH340 driver is not properly installed, the "port" will not show up in the Arduino IDE.
 
 Configure the Arduino IDE
 -------------------------
@@ -54,9 +44,13 @@ In the menu "Tools", you need to select:
 
 The **port** depends on the system:
 
-- Linux: **Port** `/dev/ttyUSB0
+- Linux: **Port** `/dev/ttyUSB0`
 - MacOS: **Port** `/dev/cu.usbserialXXXXX`
 - Windows: **Port** `COM3` or higher.
+
+When the WaziDev USB cable is connected to the laptop, the port should appear, and disappear when disconnected.
+
+**Atention: If you don't see the corresponding port in the Port menu, [you need to install the drivers](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/)**
 
 
 Your Arduino Tools menu should look like this:

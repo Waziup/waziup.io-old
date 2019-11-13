@@ -1,11 +1,11 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: Clouds locaux et mondiaux
-menu:
-  main:
-    title: Local and global Clouds
-    parent: howwaziupworks
-    weight: 2
+#menu:
+#  main:
+#    title: Local and global Clouds
+#    parent: howwaziupworks
+#    weight: 2
 ---
 
 WAZIUP utilise le concept des Clouds locaux et globaux.

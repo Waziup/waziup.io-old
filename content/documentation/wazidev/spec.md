@@ -1,13 +1,14 @@
 ---
-title: WaziDev wiring
+title: WaziDev specification
 menu:
   main:
-    title: Wire your WaziDev 
+    title: Specification 
     parent: docwazidev
-    weight: 2
+    weight: 10
 ---
 
-In this section you will find out to wire your WaziDev to your sensors.
+You can find below the specification of the WaziDev.
+
 
 Pinout description
 ==================
@@ -52,12 +53,49 @@ Jumpers
 | JS         | Power Switch                     | Open      |
 | JR*        | Radio Interrupt                  | Open      |
 
-\*When connected, connects the LoRa interrupt pin to **D2**
+When connected, connects the LoRa interrupt pin to **D2**
 
+Characteristics
+===============
 
+**Processor System**
 
-An wxample wiring diagram for WaziDev with sensors and a relay.
-==============================================================
+- MCU:  ATmega328p 8Mhz
+- RAM: 2 KB
+- FLASH: 32 KB
 
-![WaziDev Wiring Example](../images/WiringExample.png)
+**Wireless Network**
+
+- Standard: LoRa
+- Frequency Band: 863-870MHz for Europe/Africa
+- Channelsi: 1
+- Transmit Power: +20dBm -100mW constant RF output
+- Receiver Sensitivity: -148dBm
+- RF Data Rate: 300kbps
+- Modulation: FSK, GFSK, GMSK, MSK, OOK
+- Function: Sensor Node
+- Antenna connector: Integrated PCB antenna / External UFL
+
+**Indicator and Button**
+
+- LED: PWR LED, Indicator LED, Charging/Full battery
+- Button: 1 reset button 
+- On/OFF switch: 1, two pins for on/off switch + a jumper to keep the board always on
+- Regulator Switch: 1, A jumper that can be used to bypass the regulator for low power applications
+
+**I/O**
+- UART: 1
+- ICSP: 1
+- I2C: 1
+- Analog input: 8 (Arduino standard pins: A0-A7)
+- Digital I/O: 9  (Arduino pins, some are used by LoRa) 
+- Extra GND
+- High Current output
+- USB
+- Input power
+| 1 <br /> 1 <br /> 1 <br /> 8  <br /> <br /> 8 (a Ground Rail) <br /> 2 (max 500mA): M8, M9 <br /> 1, USB micro Type for programming and power <br /> 1, LiPo/Regular Battery |
+| Power | Supply voltage <br /> Battery support <br /> Battery charger <br /> Power Consumption <br /> Battery Level monitor <br />  Optimization Jumpers  | 3.3V - 5V <br /> 3v (max 3.6v DIRECT and 6v Regulated) <br /> Max 1A input current (through Micro USB port) <br /> - <br /> LOW active on pin D7 and read BAT level on A7  <br /> 2, Disabling: Status LEDs, Charger LEDs <br /> |
+| Environment | Operational Temperature  <br /> Operating Humidity | -20 ~ 70° C <br /><br /> 5% ~ 95% Relative Humidity, non-condensing |
+| Mechanical | Dimensions | 70 x 40 mm |
+| Programming | IDE | Arduino compatible (Select **Pro Mini 3.3V 8Mhz**) |
 

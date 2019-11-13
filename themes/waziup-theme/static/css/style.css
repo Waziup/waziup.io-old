@@ -1169,10 +1169,21 @@ body {
   display: block;
   width: 100%;
   text-decoration: none;
-  padding: 7px 0 7px 60px;
+  padding: 7px 0 7px 50px;
   color: #142D3C;
 }
 .sub-menu-item.active .text, .sub-menu-item.active .date, .sub-menu-item.active .markdowned td, .markdowned .sub-menu-item.active td, .sub-menu-item.active .markdowned li, .markdowned .sub-menu-item.active li {
+  font-weight: 500;
+}
+
+.sub-sub-menu-item {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding: 7px 0 7px 70px;
+  color: #142D3C;
+}
+.sub-sub-menu-item.active .text, .sub-sub-menu-item.active .date, .sub-sub-menu-item.active .markdowned td, .markdowned .sub-sub-menu-item.active td, .sub-sub-menu-item.active .markdowned li, .markdowned .sub-sub-menu-item.active li {
   font-weight: 500;
 }
 

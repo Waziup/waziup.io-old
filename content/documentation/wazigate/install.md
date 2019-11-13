@@ -1,22 +1,24 @@
 ---
 date: 2016-09-13T09:00:00+00:00
-title: WaziGate 
+title: WaziGate Install
 menu:
   main:
-    title: WaziGate
-    name: docwazigate
-    parent: documentation 
-    weight: 7
+    title: Install
+    name: docwazigateinstall
+    parent: docwazigate 
+    weight: 1
 ---
 
-Documentation under construction. Hang tight!
+Installing your WaziGate can be performed in two steps:
 
-Install
-=======
+- Install Raspbian OS
+- Install the WaziGate software itself.
 
-***Install Raspbian***
+Install Raspbian
+================
 
 To install the Wazigate on a Raspberry pi, you need to do the following instructions:
+
 1. Get latest Raspbian Strech image:
 ```
 wget https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2019-04-09/2019-04-08-raspbian-stretch-lite.zip
@@ -58,4 +60,4 @@ Once finished, reboot your gateway:
 ```
 sudo reboot
 ```
-Then you can access your Wazigate UI on http://YourPiIPAddress/
+Then you can access your Wazigate UI on http://wazigate.local/
