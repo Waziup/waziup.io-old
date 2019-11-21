@@ -2,5 +2,4 @@
 title: About Us
 ---
 
-## Contact
-You can contact us at this email: corentin (point) dupont (at) waziup (dot) org
+This website is maintained by the [Waziup foundation](www.waziup.org). You can contact us at this email: corentin (point) dupont (at) waziup (dot) org
