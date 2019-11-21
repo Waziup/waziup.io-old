@@ -794,7 +794,7 @@ body {
 
 .h1 {
   font-size: 26px;
-  font-weight: 300;
+  font-weight: normal;
   letter-spacing: 0.05em;
   color: #142D3C;
 }
@@ -815,7 +815,7 @@ body {
 
 .h2 {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: normal;
   letter-spacing: 0.05em;
   color: #142D3C;
 }
@@ -864,7 +864,7 @@ body {
 }
 
 .text, .date, .markdowned td, .markdowned li {
-  font-weight: 300;
+  font-weight: normal;
   letter-spacing: 0.05em;
   font-size: 15px;
   color: #142D3C;
@@ -1173,7 +1173,7 @@ body {
   color: #142D3C;
 }
 .sub-menu-item.active .text, .sub-menu-item.active .date, .sub-menu-item.active .markdowned td, .markdowned .sub-menu-item.active td, .sub-menu-item.active .markdowned li, .markdowned .sub-menu-item.active li {
-  font-weight: 500;
+  font-weight: 550;
 }
 
 .sub-sub-menu-item {
@@ -1184,7 +1184,7 @@ body {
   color: #142D3C;
 }
 .sub-sub-menu-item.active .text, .sub-sub-menu-item.active .date, .sub-sub-menu-item.active .markdowned td, .markdowned .sub-sub-menu-item.active td, .sub-sub-menu-item.active .markdowned li, .markdowned .sub-sub-menu-item.active li {
-  font-weight: 500;
+  font-weight: 550;
 }
 
 .content {
@@ -1304,7 +1304,7 @@ body {
 }
 .markdowned p {
   font-size: 15px;
-  font-weight: 300;
+  font-weight: normal;
   color: #142D3C;
   line-height: 1.5;
   letter-spacing: 0.025em;
@@ -1318,7 +1318,7 @@ body {
 }
 .markdowned a {
   font-size: 15px;
-  font-weight: 300;
+  font-weight: normal;
   color: #6991AA;
   line-height: 1.7;
   letter-spacing: 0.025em;
@@ -1333,7 +1333,7 @@ body {
   margin: 10px 30px;
 }
 .markdowned li {
-  font-weight: 300;
+  font-weight: normal;
   margin: 10px 0;
 }
 .markdowned li:first-of-type {
@@ -1362,7 +1362,7 @@ body {
   background-color: #F7F8F9;
 }
 .markdowned .hljs span {
-  font-weight: 300;
+  font-weight: normal;
 }
 .markdowned table {
   margin: 40px 0;
@@ -1448,13 +1448,13 @@ body {
   padding: 0 20px;
   color: white;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: normal;
   text-decoration: none;
   height: 100%;
 }
 .top-menu .top-menu-item.active {
   border-bottom: 1px solid #FF405E;
-  font-weight: 500;
+  font-weight: bold;
 }
 .top-menu .github-logo, .top-menu .search-button {
   color: #F0F5FA;
@@ -1462,6 +1462,7 @@ body {
 }
 
 .top-menu.active {
+  font-weight: bold;
   background-color: white;
   border-bottom: none;
   box-shadow: 0 4px 2px -2px rgba(20, 45, 60, 0.25);
@@ -1553,7 +1554,7 @@ body {
   color: #C3D2DC !important;
 }
 .footer .h2 {
-  font-weight: 300;
+  font-weight: normal;
 }
 .footer a {
   text-decoration: none;
@@ -1629,10 +1630,10 @@ body {
 }
 .admonition p {
   display: inline;
-  font-weight: 300;
+  font-weight: normal;
 }
 .admonition li {
-  font-weight: 300;
+  font-weight: normal;
 }
 .admonition.note {
   background-color: #F7F8F9;
@@ -1867,7 +1868,7 @@ body {
   margin: 2px 5px;
   text-decoration: none;
   color: #142D3C;
-  font-weight: 300;
+  font-weight: normal;
 }
 .slicknav_nav a:hover {
   background: transparent;
@@ -2107,7 +2108,7 @@ pre + pre {
 }
 .search-results h2 {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: normal;
   letter-spacing: 0.1em;
   color: #142D3C;
   padding-top: 0;
@@ -2115,7 +2116,7 @@ pre + pre {
 }
 .search-results p.url {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: normal;
   color: #37647D;
   letter-spacing: 0.05em;
   margin-bottom: 2px;
@@ -2124,7 +2125,7 @@ pre + pre {
   color: #142D3C;
   letter-spacing: 0.05em;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: normal;
   line-height: 1.7;
   white-space: nowrap;
   overflow: hidden;
@@ -2143,14 +2144,14 @@ pre + pre {
 #not-found-page h1 {
   font-size: 32px;
   margin-bottom: 10px;
-  font-weight: 300;
+  font-weight: normal;
   letter-spacing: 0.05em;
   color: #FF405E;
 }
 #not-found-page h2 {
   font-size: 18px;
   margin-bottom: 20px;
-  font-weight: 300;
+  font-weight: normal;
 }
 #not-found-page .image-container {
   width: 530px;
