@@ -6,7 +6,7 @@ menu:
     title: Configure
     name: docwazigateconfig
     parent: docwazigate
-    weight: 4
+    weight: 31
 ---
 
 In this section, we will configure your new WaziGate!!

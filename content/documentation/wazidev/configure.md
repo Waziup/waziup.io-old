@@ -19,7 +19,7 @@ After your file download is complete, unzip the file to install the Arduino IDE.
 Install the libraries and examples
 ----------------------------------
 
-Download [this file](http://diy.waziup.io/assets/src/sketch.zip).
+Download [this file](https://github.com/Waziup/iot-course/archive/master.zip).
 Unzip the file and copy the content as follows. All examples from the zip should go in the "exemples" folder or Arduino:
 
 ![Copy exemples](../images/copyExamples.png)

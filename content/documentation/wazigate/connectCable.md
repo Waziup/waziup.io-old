@@ -6,7 +6,7 @@ menu:
     title: Connect by cable
     name: docwazigateconnect
     parent: docwazigate
-    weight: 2
+    weight: 21
 ---
 
 This tutorial will guide you to configure and test your Waziup gateway for the first time.

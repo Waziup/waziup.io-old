@@ -6,7 +6,7 @@ menu:
     title: Connect by Wifi AP
     name: docwazigateconnectWifiAP
     parent: docwazigate
-    weight: 3
+    weight: 20
 ---
 
 This tutorial will guide you to configure and test your Waziup gateway for the first time.

@@ -6,7 +6,7 @@ menu:
     title: Test LoRa
     name: docwazigatelora
     parent: docwazigate
-    weight: 5
+    weight: 41
 ---
 
 You need to get a WaziDev and [install it](/documentation/wazidev/).

@@ -11,3 +11,4 @@ menu:
 
 This documentation will show all the steps to get a WaziGate up and running.
 
+WARNING: WaziGate is still under development and experimental.
