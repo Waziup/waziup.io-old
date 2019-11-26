@@ -12,7 +12,7 @@ This section will guide you through the installation of Arduino IDE and its conf
 Install Arduino IDE
 -------------------
 
-You can get different versions of Arduino IDE from the [Download page](https://www.arduino.cc/en/Main/Software) on the Arduino Official website.
+You can get different versions of Arduino IDE from the [Download page](http://diy.waziup.io/assets/src/sketch.zip) on the Arduino Official website.
 You must select your software, which is compatible with your operating system (Windows, IOS, or Linux).
 After your file download is complete, unzip the file to install the Arduino IDE.
 
