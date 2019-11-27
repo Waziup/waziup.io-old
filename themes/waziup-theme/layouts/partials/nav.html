@@ -7,11 +7,22 @@
 
   <div class="right">
     <div class="top-menu-items" id="top-menu-items">
-      {{ range .Site.Menus.main }}
-        <a href="{{.URL}}" id="top-menu-item-text" class="top-menu-item">{{.Title}}</a>
-      {{ end }}
         <nav id="nav">
           <ul id="navigation">
+           {{ $currentPage := . }}
+           {{ range .Site.Menus.main }}
+             <li>
+               <a href="{{.URL}}" id="top-menu-item-text" class="top-menu-item">{{.Title}}</a>
+               {{ $inMenu := or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}
+               {{ if $inMenu }}
+                 <ul>
+                   {{ range .Children}}
+                     <li><a href="{{.URL}}" id="top-menu-item" class="top-menu-item">{{.Title}}</a></li>
+                   {{ end }}
+                 </ul>
+               {{ end }}
+              </li>
+           {{ end }}
             <li><a href="" id="top-menu-item-text" class="top-menu-item">Explore Waziup!</a>
               <ul>
                 <li><img src="/img/external-link-symbol.png"/><a href="https://www.waziup.io" class="top-menu-item">Cloud IoT platform</a></li>

@@ -1215,7 +1215,8 @@ body {
   color: #FF405E;
   line-height: 1.5;
   letter-spacing: 0.05em;
-  margin: 25px 0;
+  padding-top: 100px;
+  margin-top: -68px;
 }
 .markdowned h2 {
   font-size: 24px;
@@ -2248,4 +2249,48 @@ ul#navigation ul li a {
 ul#navigation ul li img {
     float:left;
     padding:7px 5px;
+}
+
+#TableOfContents>ul>li {
+  border-bottom: 1px solid #96ADAA;
+}
+
+#TableOfContents ul li.active > a {
+  color: red !important;
+}
+
+#TableOfContents>ul>li>a {
+  display: flex;
+  cursor: pointer;
+  padding: 10px 0;
+  align-items: center;
+  text-decoration: none;
+  width: 200px;
+  color: black;
+}
+#TableOfContents>ul>li>a:hover {
+  color: green;
+}
+
+#TableOfContents ul li:first-child {
+  padding-top: 0;
+}
+
+#TableOfContents ul li a {
+  text-decoration: none !important;
+}
+
+#TableOfContents ul li ul li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding: 7px 0 7px 50px;
+  color: #142D3C;
+  font-weight: normal;
+}
+
+.toctitle {
+  font-weight: bold;
+  font-size:14pt;
+  margin-bottom: 20px;
 }

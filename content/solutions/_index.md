@@ -8,6 +8,8 @@ menu:
     weight: 1
 ---
 
+Overview
+========
 
 WAZIUP is an IoT Cloud platform that allows you to create and deploy your IoT applications both in the Cloud and on the IoT gateway. WAZIUP offers "out-of-box" complete solutions from sensors nodes to applicatons. WAZIUP is particularly adapted to tough conditions, for example for low power and long distance applications. 
 
@@ -82,5 +84,78 @@ The Farmer will receive alert for any critical condition especially the theft.
 **Logistic:** WAZIUP Logistic use case may connect “rural” areas (the goods) with the urban areas (the deliveries).
 The supply chain ensure that goods (vegetables, fishes) are delivered in an efficient, safe and timely manner to address food safety.
 The potential case study are tracking the fleet, check the integrity, identification and authentication and traceability of the goods, monitoring the temperature and cooling condition of the goods.
+
+
+WaziDev
+=======
+
+![WaziDev](images/WaziDev.jpg)
+
+
+**Develop your IoT application with WAZIDev!**
+WAZIDev is a development board integrating Arduino CPU and LoRa network.
+Together with the WAZIUP Gateway and Cloud platform, you can develop a wide range of IoT applications.
+The board is highly configurable to support a wide range of sensors.
+
+WAZIDev is a development board with embedded LoRa module that allows you to simply develop IoT sensor node as well as IoT actuator node. 
+It is an ideal solution for start-ups and entrepreneurs who want to rapid prototype a IoT applications.
+Its features include:
+
+- Arduino Pro Mini compatible CPU
+- RFM95W LoRa module
+- Fully compatible with the Arduino development environment
+- Embedded Lipo battery charger for solar panels and low power options
+- Two pins with high current support (500mA)
+
+
+WaziGate
+========
+
+![WaziGate](images/wazigate.jpg)
+
+*WaziGate is a IoT LoRa Gateway, ideal for all your remote IoT applications.*
+
+WaziGate is an affordable solution for developing countries needs’.
+The WaziGate features:
+
+- Edge capacity to host your applications
+- LoRa communication up to 10-12 Km
+- Permanent Wifi hotspot
+- Wifi/3G/Ethernet internet connection
+- Data upload with HTTP, MQTT or even SMS.
+- Low power consumption
+- Automation
+- Remote management
+
+The Gateway can cover up to 100 IoT Sensors and actuator nodes using LoRa radio network: Weather stations, soil monitoring, GPS applications... The possibilities are endless!
+The Gateway can also control your actuators, such as electro-valves.
+You can host your own applications directly in the gateway, and connect to it through WiFi.
+
+
+WaziGate embeds an intuitive web administration interface that can be accessed remotely.
+The gateway can easily work without Internet connectivity and still provides data to end-users through its embedded database and web-based visualization module.
+To build your own WAZIGATE you need a Raspberry-PI, a memory sticks and a WAZIHAT. WAZIGATE uses 3G or Ethernet connection in order to send data to the cloud.
+The Gateway can be connected with both direct power supply as well as solar panel.
+Due to plug and play, one could need less than 15 minutes to setup a complete IoT infrastructure.
+
+
+WaziCloud
+=========
+
+![Dashboard](images/dashboard.png)
+
+*The WAZIUP Cloud platform allows you to manage your sensors, actuators and IoT data.*
+WAZIUP Cloud platform offers everything that you need for your application: 
+
+- Remote connection of your sensors and actuators, 
+- Send, receive, collect, store and analyze the data they generate 
+- Manage your users and their privacy 
+- Turn that data into actionable insights, in real time
+- Using SMS or mobile application for notification 
+- Standard IoT protocols (HTTP and MQTT).
+- Open REST API for application development 
+- Control your gateways from remote
+
+**Try it ;) Just click on the "Go to Dashboard" red button.**
 
 

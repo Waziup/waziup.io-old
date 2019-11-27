@@ -1,19 +1,137 @@
 ---
-title: WaziDev specification
+title: WaziDev
 menu:
   main:
-    title: Specification 
-    parent: docwazidev
-    weight: 10
+    title: WaziDev
+    name: docwazidev
+    parent: documentation
+    weight: 1
 ---
+
+![WaziDev Board](./images/wazidev_01.jpg)
+
+WaziDev is an integrated IoT LoRa device which provides an energy-efficient and integrated board.
+In this section you will find:
+
+- How to program your WaziDev 
+- How to wire your WaziDev
+- Detailed specification
+
+
+Configure
+=========
+
+This section will guide you through the installation of Arduino IDE and its configuration for the WaziDev.
+
+Install Arduino IDE
+-------------------
+
+You can get different versions of Arduino IDE from the [Download page](http://diy.waziup.io/assets/src/sketch.zip) on the Arduino Official website.
+You must select your software, which is compatible with your operating system (Windows, IOS, or Linux).
+After your file download is complete, unzip the file to install the Arduino IDE.
+
+Install the libraries and examples
+----------------------------------
+
+Download [this file](https://github.com/Waziup/iot-course/archive/master.zip).
+Unzip the file and copy the content as follows. All examples from the zip should go in the "exemples" folder or Arduino:
+
+![Copy exemples](./images/copyExamples.png)
+
+The libraries of the zip should go in the "libraries" Arduino folder:
+
+![Copy libraries](./images/copyLibraries.png)
+
+**Attention**: before proceeding, make sure that your Arduino folders contains all the files, as shown on the pictures above.
+For instance, the folder "libraries" should contain a subfolder "SX1272".
+Your programs will not compile if you don't make sure.
+
+
+Configure the Arduino IDE
+-------------------------
+
+Next step is to start the arduino IDE. On Linux, you need to start it in root.
+In the menu "Tools", you need to select:
+
+- **Board**: `Arduino Pro or Mini`,
+- **Processor**: `ATMega328p (3.3v, 8MHz)`.
+
+The **port** depends on the system:
+
+- Linux: **Port** `/dev/ttyUSB0`
+- MacOS: **Port** `/dev/cu.usbserialXXXXX`
+- Windows: **Port** `COM3` or higher.
+
+When the WaziDev USB cable is connected to the laptop, the port should appear, and disappear when disconnected.
+
+**Atention: If you don't see the corresponding port in the Port menu, [you need to install the drivers](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/)**
+
+
+Your Arduino Tools menu should look like this:
+
+![Tools menu](./images/ideConfig.png)
+
+Be **extra careful** when selecting the board, processor, and port.
+You will not be able to program the board if something is wrong here.
+
+Test your configuration
+-----------------------
+
+To test your configuration, select a program in the examples menu.
+For example, Select "Files/Examples/01 Basic/Blink".
+Then click on the arrow button.
+This will compile and upload your program on the WaziDev.
+
+If everything goes well, your WaziDev should display a blue blinking led!
+
+
+For more informations on programming your board with Arduino IDE, go to http://diy.waziup.io.
+
+
+Wiring
+======
+
+
+In this section you will find out to wire your WaziDev to your sensors.
+
+
+
+Example wiring diagram
+----------------------
+
+The example below show how to wire WaziDev with two sensors and a relay.
+The sensors are the DHT11 (humidity and temperature), and a soil moisture sensor.
+The relay commands an electric engine.
+
+![WaziDev Wiring Example](./images/WiringExample.png)
+
+Programming
+===========
+
+In this section we will explain how to program your WaziDev. 
+First of all, connect your Arduino to your laptop via cable.
+
+In the Arduino IDE, select the following program in the menu: `File/Examples/Arduino_LoRa_Demo_Sensor`.
+Then hit "upload" (the arrow button).
+You should see the message "Done uploading.".
+That's it!
+The program will start immediately on the WeziDev and upload data to [the dashboard](http://dashboard.waziup.io/Devices).
+If you [configured your gateway](/documentation/wazigate/) correctly, you should see your device appear under your account.
+
+To go further with arduino programming, open our DIY website)[diy.waziup.io). You can find all the sketchs for the various sensors there!
+
+
+
+Specifications
+==============
 
 You can find below the specification of the WaziDev.
 
 
 Pinout description
-==================
+------------------
 
-![WaziDev Pinout](../images/pinout.jpg)
+![WaziDev Pinout](./images/pinout.jpg)
 
 1. **ON/OFF switch**: This jumper can be used as on/off switch for the board. It is ON by default.
  
@@ -42,7 +160,7 @@ Please note that the solar panel must be connected to either Micro *USB port* or
 10. **Micro USB port**: This port is used to power the board on through USB cable and program the board via Arduino IDE.
 
 Jumpers
-=======
+-------
 
 | Indicator  | Function                         | Default   |
 | ---------- |:---------------------------------|:----------|
@@ -56,7 +174,7 @@ Jumpers
 When connected, connects the LoRa interrupt pin to **D2**
 
 Characteristics
-===============
+---------------
 
 **Processor System**
 
@@ -98,4 +216,3 @@ Characteristics
 | Environment | Operational Temperature  <br /> Operating Humidity | -20 ~ 70° C <br /><br /> 5% ~ 95% Relative Humidity, non-condensing |
 | Mechanical | Dimensions | 70 x 40 mm |
 | Programming | IDE | Arduino compatible (Select **Pro Mini 3.3V 8Mhz**) |
-
