@@ -9,6 +9,8 @@ menu:
     weight: 2
 ---
 
+This documentation is available in [PDF format](/docs/WaziGate_User_Manual-V1.0.pdf)
+
 This documentation will show all the steps to get a WaziGate up and running.
 
 WARNING: WaziGate is still under development and experimental.

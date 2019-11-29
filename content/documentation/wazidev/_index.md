@@ -1,5 +1,5 @@
 ---
-title: WaziDev
+title: WaziDev User Manual
 menu:
   main:
     title: WaziDev
@@ -8,14 +8,19 @@ menu:
     weight: 1
 ---
 
-![WaziDev Board](./images/wazidev_01.jpg)
+This documentation is available in [PDF format](/docs/WaziDev_User_Manual-V1.0.pdf)
 
-WaziDev is an integrated IoT LoRa device which provides an energy-efficient and integrated board.
+Overview
+========
+
+WaziDev is a development board for prototyping IoT devices, using Arduino and LoRa radio network.
 In this section you will find:
 
 - How to program your WaziDev 
 - How to wire your WaziDev
 - Detailed specification
+
+![WaziDev Board](./images/wazidev_01.jpg)
 
 
 Configure
@@ -213,6 +218,6 @@ Characteristics
 - Input power
 | 1 <br /> 1 <br /> 1 <br /> 8  <br /> <br /> 8 (a Ground Rail) <br /> 2 (max 500mA): M8, M9 <br /> 1, USB micro Type for programming and power <br /> 1, LiPo/Regular Battery |
 | Power | Supply voltage <br /> Battery support <br /> Battery charger <br /> Power Consumption <br /> Battery Level monitor <br />  Optimization Jumpers  | 3.3V - 5V <br /> 3v (max 3.6v DIRECT and 6v Regulated) <br /> Max 1A input current (through Micro USB port) <br /> - <br /> LOW active on pin D7 and read BAT level on A7  <br /> 2, Disabling: Status LEDs, Charger LEDs <br /> |
-| Environment | Operational Temperature  <br /> Operating Humidity | -20 ~ 70° C <br /><br /> 5% ~ 95% Relative Humidity, non-condensing |
+| Environment | Operational Temperature  <br /> Operating Humidity | -20 ~ 70 C <br /><br /> 5% ~ 95% Relative Humidity, non-condensing |
 | Mechanical | Dimensions | 70 x 40 mm |
 | Programming | IDE | Arduino compatible (Select **Pro Mini 3.3V 8Mhz**) |
