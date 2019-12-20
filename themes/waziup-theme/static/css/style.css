@@ -2294,3 +2294,13 @@ ul#navigation ul li img {
   font-size:14pt;
   margin-bottom: 20px;
 }
+
+figure {
+  text-align: center;
+
+}
+
+figcaption {
+  font-weight: bold;
+  
+}
