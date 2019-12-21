@@ -35,14 +35,16 @@
     }
   </style>
 
-  <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/style.css">
+  {{ $sass := resources.Get "scss/style.scss" }}
+  {{ $styles := $sass | resources.ToCSS }}  
+  <link rel="stylesheet" href="{{ $styles.Permalink }}">
   <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/font-awesome.css">
   <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/highlight.css">
   <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/roboto.css">
   <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/roboto-mono.css">
   <script src="{{ $.Site.BaseURL }}/js/vendor.js"></script>
   <script src="{{ $.Site.BaseURL }}/js/app.js"></script>
-
+  
 
 </head>
 <body class="{{ with .Site.Params.palette.primary }}palette-primary-{{ . }}{{end }} {{ with .Site.Params.palette.accent }}palette-accent-{{ .  }}{{ end }}">

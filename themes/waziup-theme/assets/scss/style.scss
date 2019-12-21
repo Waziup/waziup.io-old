@@ -46,7 +46,7 @@ body {
 
 .h1 {
   font-size: 26px;
-  font-weight: 300;
+  font-weight: normal;
   letter-spacing: 0.05em;
   color: $color-big-stone;
 
@@ -69,7 +69,7 @@ body {
 
 .h2 {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: normal;
   letter-spacing: 0.05em;
   color: $color-big-stone;
 
@@ -123,7 +123,7 @@ body {
 }
 
 .text {
-  font-weight: 300;
+  font-weight: normal;
   letter-spacing: 0.05em;
   font-size: 15px;
   color: $color-big-stone;
@@ -489,16 +489,29 @@ body {
   display: block;
   width: 100%;
   text-decoration: none;
-  padding: 7px 0 7px 60px;
+  padding: 7px 0 7px 50px;
   color: $color-big-stone;
 
   &.active {
     .text {
-      font-weight: 500;
+      font-weight: 550;
     }
   }
 }
 
+.sub-sub-menu-item {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding: 7px 0 7px 70px;
+  color: $color-big-stone;
+
+  &.active {
+    .text {
+      font-weight: 550;
+    }
+  }
+}
 .content {
   padding: 30px 40px 40px 40px;
   background-color: white;
@@ -531,7 +544,8 @@ body {
    color: $color-radical-red;
    line-height: 1.5;
    letter-spacing: 0.05em;
-   margin: 25px 0;
+   padding-top: 100px;
+   margin-top: -68px
  }
 
   h2 {
@@ -646,7 +660,7 @@ body {
 
   p {
     font-size: 15px;
-    font-weight: 300;
+    font-weight: normal;
     color: $color-big-stone;
     line-height: 1.5;
     letter-spacing: 0.025em;
@@ -664,7 +678,7 @@ body {
 
   a {
     font-size: 15px;
-    font-weight: 300;
+    font-weight: normal;
     color: $color-bermuda-gray;
     line-height: 1.7;
     letter-spacing: 0.025em;
@@ -684,7 +698,7 @@ body {
   }
 
   li {
-    font-weight: 300;
+    font-weight: normal;
     margin: 10px 0;
     @extend .text;
 
@@ -720,7 +734,7 @@ body {
     font-size: 14px;
     background-color: #F7F8F9;
     span {
-      font-weight: 300;
+      font-weight: normal;
     }
   }
 
@@ -848,13 +862,13 @@ body {
 
     color: white;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: normal;
     text-decoration: none;
     height: 100%;
 
     &.active {
       border-bottom: 1px solid $color-radical-red;
-      font-weight: 500;
+      font-weight: bold;
     }
   }
 
@@ -972,7 +986,7 @@ body {
   }
 
   .h2 {
-    font-weight: 300;
+    font-weight: normal;
   }
 
   a {
@@ -1066,11 +1080,11 @@ body {
 
   p {
     display: inline;
-    font-weight: 300;
+    font-weight: normal;
   }
 
   li {
-    font-weight: 300;
+    font-weight: normal;
   }
 
   &.note {
@@ -1328,7 +1342,7 @@ $color_hover_text: $color-big-stone;
     margin: 2px 5px;
     text-decoration: none;
     color: $color_text;
-    font-weight: 300;
+    font-weight: normal;
     &:hover {
 
       background: $color_hover_bg;
@@ -1624,7 +1638,7 @@ pre + pre {
 
   h2 {
     font-size: 18px;
-    font-weight: 300;
+    font-weight: normal;
     letter-spacing: 0.1em;
     color: $color-big-stone;
     padding-top: 0;
@@ -1633,7 +1647,7 @@ pre + pre {
 
   p.url {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: normal;
     color: $color-ming;
     letter-spacing: 0.05em;
     margin-bottom: 2px;
@@ -1643,7 +1657,7 @@ pre + pre {
     color: $color-big-stone;
     letter-spacing: 0.05em;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: normal;
     line-height: 1.7;
     white-space: nowrap;
     overflow: hidden;
@@ -1666,7 +1680,7 @@ pre + pre {
   h1 {
     font-size: 32px;
     margin-bottom: 10px;
-    font-weight: 300;
+    font-weight: normal;
     letter-spacing: 0.05em;
     color: $color-radical-red;
   }
@@ -1674,7 +1688,7 @@ pre + pre {
   h2 {
     font-size: 18px;
     margin-bottom: 20px;
-    font-weight: 300;
+    font-weight: normal;
   }
 
   .image-container {
@@ -1687,6 +1701,121 @@ pre + pre {
     height: 259px;
   }
 }
+
+#navigation {
+ 
+  // Top menu items (solutions, user manuals...)
+  li {
+    display:inline;
+    font-size:12px;
+    font-weight:bold;
+    margin:0;
+    padding: 0 40;
+    float:left;
+    position:relative;
+   
+    // Top menu hover
+    &:hover > ul
+    {
+      visibility:visible;
+      opacity:1;
+    }
+
+    // Drop down list
+    ul { 
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      //Keep the drop-down hidden
+      visibility:hidden;
+      opacity:0;
+      position: absolute;
+      z-index: 99999;
+      width:200px;
+      background:#F0F5FA;
+      box-shadow:1px 1px 3px #ccc;
+      /* css3 transitions for smooth hover effect */
+      -webkit-transition:opacity 0.2s linear, visibility 0.2s linear;
+      -moz-transition:opacity 0.2s linear, visibility 0.2s linear;
+      -o-transition:opacity 0.2s linear, visibility 0.2s linear;
+      transition:opacity 0.2s linear, visibility 0.2s linear;
+      top: 20px;
+      left: 1px;
+
+      // drop down menu items
+      li {
+         clear: both;
+         width: 100%;
+         border: 0 none;
+         border-bottom: 1px solid #c9c9c9;
+        
+         // Link to pages
+         a {
+           background: none;
+           padding: 14px 10px;
+           color: #616161;
+           text-shadow: 1px 1px 0px #fff;
+           text-decoration: none;
+           display: inline-block;
+           border: 0 none;
+           float: left;
+           width: 150px;
+        }
+
+        // Side icon
+        img {
+          float:left;
+          padding:7px 5px;
+        }
+      }
+    }
+  }
+}
+
+#TableOfContents {
+  ul {
+    li {
+      border-bottom: 1px solid #96ADAA;
+
+      .active > a {
+        color: red !important;
+      }
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      a {
+        display: flex;
+        cursor: pointer;
+        padding: 10px 0;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        text-decoration: none !important;
+
+        &:hover {
+          color: blue;
+        }
+      }
+
+      ul {
+        li {
+          display: block;
+          text-decoration: none;
+          padding: 7px 0 7px 50px;
+          color: #142D3C;
+          font-weight: normal;
+
+          a {
+
+          }
+        }
+      }
+    }
+  }
+}
+      
 
 
 // Dev
