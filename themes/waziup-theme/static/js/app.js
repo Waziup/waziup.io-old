@@ -6,12 +6,11 @@ function documentReady() {
   var thePath = window.location.href.substring(theBaseUrl.length-1, window.location.href.length).split('#')[0];
   thePath = thePath.substring(1, thePath.length - 1);
 
-  // Top menu color change
+  // Top menu color change (blue/white fade)
+  setColorMenu();
   $(window).on("scroll", function () {
     setColorMenu();
   });
-
-  setColorMenu();
   function setColorMenu() {
    if ($(window).scrollTop() > 0 || thePath !== '/') { 
       $("#header").addClass("active");
@@ -20,6 +19,27 @@ function documentReady() {
       $("#header").removeClass("active");
     }
   }
+
+  //Add Top menu active class
+  $("[href]").each(function() {
+    console.log(this.href.replace('/',''))
+    if (window.location.href.indexOf(this.href) > -1) {
+      $(this).addClass("active");
+    } else {
+      $(this).removeClass("active");
+    }
+  });
+  
+  //Add "active" class to ToC links
+  $(window).on("scroll", function() {
+    $("[href]").each(function() {
+      if (this.href == window.location.href) {
+        $(this).addClass("active");
+      } else {
+        $(this).removeClass("active");
+      }
+    });
+  });
 
   // Set mobile menu
   $('#menu-toggle').on('click', function (e) {
