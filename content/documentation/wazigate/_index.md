@@ -1,212 +1,329 @@
----
-date: 2016-09-13T09:00:00+00:00
-title: WaziGate 
-menu:
-  main:
-    title: WaziGate
-    name: docwazigate
-    parent: documentation 
-    weight: 2
----
 
-This documentation is available in [PDF format](/docs/WaziGate_User_Manual-V1.0.pdf)
+Overview
+========
 
-This documentation will show all the steps to get a WaziGate up and running.
+This document guides you to assemble your Wazigate and configure it in order to connect to the Waziup Cloud.
 
-WARNING: WaziGate is still under development and experimental.
+Prepare the Gateway Hardware
+============================
 
+{{%warning%}}
+If you have a raspberry pi and want to setup your wazigate yourself this section is for you.
+If you already have your Wazigate in a box, just [skip](#section-2) this section.
+{{%/warning%}}
 
-Install
-=======
+What do you need to start?
+--------------------------
 
-In this section, we'll learn how to install the WaziGate.
+You need the following hardware to start:
 
-Install with ISO
-----------------
+- A Raspberry Pi (Model 3B+ is recommended for this version)
+- An SD card (minimum 8 GB)
+- A power supply for the raspberry pi (usually 5.1V, 2+A)
+- A LoRa antenna
+- A LoRa Hat like WaziHat
 
-Installing your WaziGate with the ISO is simple and easy.
-What you need: a Raspberry PI and a WaziHat. First of all, download the ISO image. 
+![](media/image43.png)
 
-You also need a tool such as [Balena etcher](https://www.balena.io/etcher/) to flash the ISO on your SD card.
-Once flashed, you can insert the SD card in your Raspberry PI and power it.
+Assemble the WaziGate
+---------------------
 
-Install from scratch
---------------------
+{{%action%}}
+**Step \#1:** Attach the heatsink. It is always a good idea to attach a heatsink in order to avoid overheating.
+{{%/action%}}
 
-This tutorial show you haw to install your WaziGate from scratch.
-Installing your WaziGate will be performed in two steps:
 
-- Install Raspbian OS
-- Install the WaziGate software itself.
+![](media/image36.png)
 
-***Install Raspbian***
+{{%action%}}
+**Step \#2:** Mount a Wazihat on the Raspberry pi
+{{%/action%}}
 
-To install the Wazigate on a Raspberry PI, you need to do the following instructions:
+![](media/image28.png)
 
-1. Get latest Raspbian Strech image:
-```
-wget https://downloads.raspberrypi.org/raspbian_lite_latest
-```
 
-2. Flash it on an SD card. You can find the instructions here: https://www.raspberrypi.org/documentation/installation/installing-images/
+{{%warning%}}
+**Note:** If you do not have a ***Wazihat*** board and want to use your own LoRa module, please refer to [this documentation](https://github.com/CongducPham/tutorials/blob/master/Low-cost-LoRa-GW-step-by-step.pdf)
+{{%/warning%}}
 
-3. After flashing the SD card, open it on you PC and create a file named **ssh** without extention on the SD card. If it has multiple partitions, just create it on anyone you are allowed to.
 
-4. Connect the PI with an Ethernet cable to your PC and find it's IP address. You can use either **nmap** or [Angry IP Scanner](http://angryip.org/) which is available for Windows/Mac/Linux/Android to determine the assigned IP addresses.
+Flashing the WaziGate software image 
+====================================
 
-5. SSH into the pi. Windows users can use https://putty.org/
-Usually the default credential for raspbian is:
+{{%action%}}
+**Step \#1:** Download the latest version of [Wazigate ISO image](https://www.waziup.io/downloads/WaziGate_V1.0.zip)
+{{%/action%}}
 
-```
-- user: pi
-- password: raspberry
-```
-**Note:** Alternatively, you can just connect a screen, a keyboard and a mouse to your raspberry PI and work with it just like a regular computer.
+![Downloading Wazigate ISO image](media/image34.png)
 
-***Install WaziGate***
+{{%action%}}
+**Step \#2:** Download [Balena Etcher](https://www.balena.io/etcher/) and install it on your PC.
+{{%/action%}}
 
-Run the following code on your raspberry PI terminal:
 
-```
-{ curl -fsSL https://raw.githubusercontent.com/Waziup/waziup-gateway/master/setup/get_waziup.sh ;} | bash
-```
-This script downloads and installs everything that your PI needs to turn it into a Wazigate.
+![Balena etcher](media/image10.png)
 
 
-This will take a while. Time to grab a cup of tea.
-Once finished, reboot your gateway:
-```
-sudo reboot
-```
+{{%action%}}
+**Step \#3:** Open the ***Balena Etcher*** tool and select the downloaded zip file
+{{%/action%}}
 
-Then you can access your Wazigate UI on http://wazigate.local/
+![](media/image22.png)
 
+{{%action%}}
+**Step \#4:** Insert your SD card to your PC and when appear, select it in **Etcher**
+{{%/action%}}
 
-Connect
-=======
+![](media/image17.png)
 
-In this section, we'll show several possibilities to connect to your WaziGate, in order to configure it.
+{{%warning%}}
+ **Note 1:** Your Micro SD card must be at least **8 GB**.      
+{{%/warning%}}
+          
+{{%tip%}}
+ **Note 2:** If your laptop does not have the SD card reader, you need a USB adapter to connect your Micro SD card to your PC.  
+{{%/tip%}}
 
-Connect by Wifi AP
-------------------
+{{%action%}}
+**Step \#5:** Click on **Flash** to start flashing.
+{{%/action%}}
 
-This tutorial will guide you to configure and test your Waziup gateway for the first time.
-You should have the following hardware:
+![](media/image42.png)
 
-- A WaziGate with power cable (mini USB),
-- A laptop PC with Internet access.
+![](media/image27.png)
 
-On your laptop, go in the Wifi settings and select the access point starting with "WAZIUP".
+{{%action%}}
+**Step \#6:** When Flashing is done, remove your Micro SD card and insert it into your raspberry pi.
+{{%/action%}}
 
-![Access point selection](./images/SelectAP.png)
+![](media/image15.png)
 
-The default password is `loragateway`.
-Once connected, you can open the [WaziGate UI](http://wazigate.local)
-    
-Connect by cable
-----------------
+Congratulations! Your hardware is now ready.
 
-This tutorial will guide you to configure and test your Waziup gateway for the first time.
-You should have the following hardware:
 
-- A WaziGate with power cable (mini USB),
-- A laptop PC with Internet access,
-- A RJ45 cable (simple network cable).
+Powering up Wazigate
+====================
 
-***Share the internet***
+{{%action%}}
+**Step \#1:** Attach the antenna
+{{%/action%}}
 
-**Attention: just connecting the cable between your PC and the gateway is NOT enough to access the gateway.
-You NEED to configure "internet sharing" on the PC, in order to attribute an IP to your gateway.**
+![](media/image29.png)
 
-The first step is to configure your PC to provide connectivity to your gateway. Follow those steps:
+{{%warning%}}
+**Very Important**: always connect the antenna first, before powering up your device.
+{{%/warning%}}
 
-- Connect gateway to power. The gateway should boot automatically.
-- Connect RJ45 cable between the PC and the gateway.
-- Configure the network sharing panel on your PC.
+![](media/image41.png)
 
+{{%action%}}
+**Step \#2:** Plug the power cable (micro usb) into the gateway and plug the adapter to the outlet.
+{{%/action%}}
 
-***For a MAC***
+![](media/image14.png)
 
-Go to System Preferences > Sharing:
+You should see a light is on and another light next to it is actively blinking.
 
-![Mac sharing](./images/MacSharing.png)
 
-Select the connection you want to share from, and select Ethernet:
+Configuration
+=============
 
-![Mac sharing2](./images/MacSharing2.png)
+Find the Wazigate Web UI
+------------------------
 
-Click again on “Internet sharing”. The green light will show and Internet Sharing will change to On.
+{{%action%}}
+**Step \#1:** Find the wazigate hotspot to connect to
+{{%/action%}}
 
+When you power up Wazigate for the first time, it usually does some self-configs and reboots itself.
+So, be patient, it might take a couple of minutes for you to see the Wazigate WiFi hotspot to connect to.                  
+                                
+The WiFi hotspot has a similar name of what you see in the photo: ***WAZIGATE\_XXXXX**. 
+xxxxx usually is the ID of your gateway.                   
 
-***For Linux***
+![](media/image26.png)
 
-Open the program `nm-connection-editor`.
-You may need to install the package `network-manager-gnome`. 
+{{%action%}}
+**Step \#2:** Connect to the Wazigate WiFi hotspot
+{{%/action%}}
 
-![Linux sharing](./images/LinuxSharing.png)
+![](media/image38.png)
 
-Then select the wired connection, and select "Shared to other computers" in IPV4 Settings.
+**Note 1:** The default password for the hotspot is **loragateway**                 
+                                
+Enter the password and click on connect.                        
+                                
+**Note 2:** Depending on the operating system you use, the interface might be different.
 
+![](media/image5.png)
 
-***For Windows***
+{{%action%}}
+**Step \#3:** Opening the Wazigate Web UI
+{{%/action%}}
 
-On windows, go to the Network and Sharing Centre in the Control Panel, “Change adapter settings,” right-click the adapter that has the Internet connection (for example WiFi), and click Properties.
+Wazigate is configured through a web user interface.
+When you connect to the Wazigate hotspot, you need to open your browser and go to one of the following addresses:
 
-In the Properties box, click the sharing tab and tick the “Allow other network users to connect …” box. Next, click the drop-down under “Home networking connection,” and select the ethernet adapter.
+[http://192.168.200.1](http://192.168.200.1)
 
-![Windows sharing](./images/WindowsSharing.jpg)
+[http://wazigate.local/](http://wazigate.local/)
 
+Then you should see something like this.
 
-Login
-=====
+![](media/image6.png)
 
-When connecting to the WaziGate, this screen will appear:
+Please enter the default username and password and click on **Login**.
 
-![Login](./images/login.png)
+{{%warning%}}
+**Note:** For security reasons, please change the default password as soon as you can see the profile page. This page can be found in the menu at the top-right corner of the screen.
+{{%/warning%}}
 
-The default login and password are: admin/loragateway.
-Please change the default password as soon as you can in the profile page.
-This page can be found in the menu at the top-right corner of the screen.
+![](media/image20.png)
 
-![Login](./images/profile.png)
+Gateway Registration to Cloud
+-----------------------------
 
+{{%action%}}
+**Step \#1:** Login for the first time
+{{%/action%}}
 
-Configure
-=========
+When you login for the first time, you should see something like this.
 
-In this section, we will configure your new WaziGate!!
+![](media/image18.png)
 
-Configure Waziup Cloud
-----------------------
+**Note:** Setup wizard is also accessible from the side menu.
 
-First of all, you should connect to http://dashboard.waziup.io and create a username and password. Then open the Waziup configuration panel:
+![](media/image31.png)
 
-![Cloud config](./images/CloudConfig.png)
+**Note:** If you do not have an account on [Waziup dashboard](https://dashboard.waziup.io/), you need to create one first.
+By clicking on **[Register]**, you can create an account.
 
-You should enter there you Waziup login and password.
-Leave the server name untouched.
+![](media/image5.png)
 
-Configure Wifi
---------------
 
-To configure the Wifi, open the wifi configuration panel:
+A Waziup account enables you to receive all your sensor data in your dashboard and manage your Wazigate remotely.
 
-![Wifi config](./images/WifiConfig.png)
+{{%action%}}
+**Step \#2:** Configure Wazigate to be recognized by the cloud
+{{%/action%}}
 
-You need to select your network in the list, and then enter the password.
-When you click on Apply, the gateway will reboot.
+Once you click on Yes in the previous page, you should see something like this:
 
+![](media/image32.png)
 
-Test
-====
+{{%action%}}
+**Step \#3:** Give a nice name to your gateway
+{{%/action%}}
 
-You need to get a WaziDev and [install it](/documentation/wazidev/).
-Make sure to program your WaziDev to send LoRa messages (check the Arduino console to see the messages).
-Once this is done, your WaziGate should already receive them, and forward the messages to the Waziup Cloud.
+![](media/image40.png)
 
-Open the Logs window to see the messages:
+***Gateway Name*** is a custom name that you give to your gateway to be able to identify this particular gateway from your other gateways.
+It can be anything like *Fish Farm gateway*, *Water Control Gateway*, *Ali's Field Gateway*, and so on.
 
-![Lora logs](./images/loraLogs.png)
+**Note:** After writing, hit the **Enter** button on your keyboard or click on the ![](media/image39.png) icon to save your values.
 
-If you see something like: `Received data (from 9):  {'TC': '9.02'}`: Congratulation! Your data is received by the gateway.
+{{%action%}}
+**Step \#4:** Set WaziCloud credentials in Wazigate
+{{%/action%}}
 
+Click on the ***[Empty]*** value next to the *Email Address / Login* and enter your waziup dashboard email address and save it.
+
+![](media/image12.png)
+
+Do the same thing for password as well.
+
+![](media/image1.png)
+
+{{%action%}}
+**Step \#5:** Cloud credentials saved, going Next
+{{%/action%}}
+
+When you save successfully both login and password values, click on the **Next** button.
+
+![](media/image11.png)
+
+ 
+Connecting to the Internet
+--------------------------
+
+{{%action%}}
+**Step \#1:** WiFi Configuration
+{{%/action%}}
+
+If you plan to connect your Wazigate through another way like Ethernet cable or 3G/4G dongle, then just click on **Skip**.
+
+![](media/image9.png)
+
+{{%action%}}
+**Step \#2:** Connecting to WiFi
+{{%/action%}}
+
+![](media/image30.png)
+
+One Wazigate finds all the available WiFi networks in its range, click on the network that you want to connect to and enter its password in the shown box.
+
+{{%action%}}
+**Step \#3:** Click on Connect and Finish
+{{%/action%}}
+
+![](media/image4.png)
+
+{{%warning%}}
+**Warning:** Once you try to connect to a WiFi network, you will lose the control on Wazigate.
+{{%/warning%}}
+
+![](media/image16.png)
+
+If you enter your WiFi password correctly and the internet is available, after a few minutes you will be able to see it in your WaziCloud dashboard.
+
+{{%warning%}}
+**Note:** If Wazigate does not manage to connect to your WiFi due to wrong credentials or not being in the range of the WiFi router, it will rollback to the hotspot mode and you need to connect to it again and start over. *This might take a few minutes depending on the router.*
+{{%warning%}}
+
+Verify Gateway Registration
+---------------------------
+
+{{%action%}}
+**Step \#1:** Open the waziup dashboard
+{{%/action%}}
+
+Go to the [Waziup](https://waziup.io) website.
+
+![](media/image35.png)
+
+{{%action%}}
+**Step \#2:** Click on "Go to Dashboard" and enter your credentials and Login.
+{{%/action%}}
+
+
+![](media/image37.png)
+
+{{%action%}}
+**Step \#3:** Click on Gateways.
+{{%/action%}}
+
+![](media/image19.png)
+
+If everything went well so far, you should see your gateway in the list.
+
+{{%action%}}
+**Step \#4:** Click on your gateway.
+{{%/action%}}
+
+{{%action%}}
+**Step \#5:** Then click on the "Remote access" button.
+{{%action%}}
+
+![](media/image25.png)
+
+{{%action%}}
+**Step \#5:** Logging into your Wazigate.
+{{%/action%}}
+
+![](media/image8.png)
+
+![](media/image24.png)
+
+
+If you see something like this, then Congratulations! :) You made it.                   
+Now you can simply manage your gateway remotely through your Waziup dashboard.
