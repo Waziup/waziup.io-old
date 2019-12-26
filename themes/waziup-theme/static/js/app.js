@@ -22,7 +22,6 @@ function documentReady() {
 
   //Add Top menu active class
   $("[href]").each(function() {
-    console.log(this.href.replace('/',''))
     if (window.location.href.indexOf(this.href) > -1) {
       $(this).addClass("active");
     } else {

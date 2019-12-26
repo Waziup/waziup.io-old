@@ -1483,16 +1483,19 @@ pre + pre {
     float: left;
     position: relative;
 
-    &:hover > a
+    &:hover 
     {
-      color: red;
-    }
-
-    // Top menu hover opens sub menu
-    &:hover > ul
-    {
-      visibility:visible;
-      opacity:1;
+      // link colors in red
+      >a
+      {
+        color: red;
+      }
+      // Top menu hover opens sub menu
+      >ul
+      {
+        visibility: visible;
+        opacity: 1;
+      }
     }
 
     // Drop down list
@@ -1501,20 +1504,21 @@ pre + pre {
       margin: 0;
       padding: 0;
       //Keep the drop-down hidden
-      visibility:hidden;
-      opacity:0;
+      visibility: hidden;
+      opacity: 0;
       position: absolute;
       z-index: 99999;
-      width:200px;
-      background:#F0F5FA;
-      box-shadow:1px 1px 3px #ccc;
+      width: 200px;
+      background: #F0F5FA;
+      box-shadow: 1px 1px 3px #ccc;
       /* css3 transitions for smooth hover effect */
-      -webkit-transition:opacity 0.2s linear, visibility 0.2s linear;
-      -moz-transition:opacity 0.2s linear, visibility 0.2s linear;
-      -o-transition:opacity 0.2s linear, visibility 0.2s linear;
-      transition:opacity 0.2s linear, visibility 0.2s linear;
+      -webkit-transition: opacity 0.2s linear, visibility 0.2s linear;
+      -moz-transition: opacity 0.2s linear, visibility 0.2s linear;
+      -o-transition: opacity 0.2s linear, visibility 0.2s linear;
+      transition: opacity 0.2s linear, visibility 0.2s linear;
       top: 20px;
       left: 1px;
+      display: inline-block;
 
       // drop down menu items
       li {
@@ -1522,25 +1526,11 @@ pre + pre {
          width: 100%;
          border: 0 none;
          border-bottom: 1px solid #c9c9c9;
-        
-         // Link to pages
-         a {
-           background: none;
-           padding: 14px 10px;
-           color: #616161;
-           text-shadow: 1px 1px 0px #fff;
-           text-decoration: none;
-           display: inline-block;
-           border: 0 none;
-           float: left;
-           width: 150px;
-        }
-
-        // Side icon
-        img {
-          float:left;
-          padding:7px 5px;
-        }
+         padding: 14px 10px;
+      
+         ul {
+          left: 200px;
+         }
       }
     }
   }

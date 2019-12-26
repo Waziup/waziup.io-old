@@ -1,3 +1,12 @@
+---
+title: WaziGate 
+menu:
+  main:
+    title: WaziGate
+    name: docwazigate
+    parent: documentation 
+    weight: 2
+---
 
 Overview
 ========
@@ -278,7 +287,7 @@ If you enter your WiFi password correctly and the internet is available, after a
 
 {{%warning%}}
 **Note:** If Wazigate does not manage to connect to your WiFi due to wrong credentials or not being in the range of the WiFi router, it will rollback to the hotspot mode and you need to connect to it again and start over. *This might take a few minutes depending on the router.*
-{{%warning%}}
+{{%/warning%}}
 
 Verify Gateway Registration
 ---------------------------
@@ -312,7 +321,7 @@ If everything went well so far, you should see your gateway in the list.
 
 {{%action%}}
 **Step \#5:** Then click on the "Remote access" button.
-{{%action%}}
+{{%/action%}}
 
 ![](media/image25.png)
 
