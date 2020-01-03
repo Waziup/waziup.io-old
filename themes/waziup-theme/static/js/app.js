@@ -32,7 +32,7 @@ function documentReady() {
   //Add "active" class to ToC links
   $(window).on("scroll", function() {
     $("[href]").each(function() {
-      if (this.href == window.location.href) {
+      if (window.location.href.indexOf(this.href) > -1) {
         $(this).addClass("active");
       } else {
         $(this).removeClass("active");
