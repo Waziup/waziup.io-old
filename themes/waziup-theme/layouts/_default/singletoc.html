@@ -5,6 +5,10 @@
 </div>
 
 <div class="page documentation">
+    <div class="menu">
+      <h1 class=toctitle> Table of Contents </h1>
+      {{.TableOfContents}}
+    </div>
     <div class="content">
       <h1 class="content-header">{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
       <div class="markdowned">

@@ -16,7 +16,17 @@ function setColorMenu() {
 
 // active links (bolded)
 function setActiveLinks() {
-  $("[href]").each(function() {
+  //bold ToC links (anchors)
+  $("#TableOfContents a").each(function() {
+    if (window.location.href == this.href) {
+      $(this).addClass("active");
+    } else {
+      $(this).removeClass("active");
+    }
+  });
+
+  //bold menu links 
+  $("#navigation a").each(function() {
     if (window.location.href.indexOf(this.href) > -1) {
       $(this).addClass("active");
     } else {
@@ -42,13 +52,13 @@ function isElementInViewport (el) {
 // Change URL with anchor
 function setAnchor() {
   jQuery.fn.reverse = [].reverse;
-  $(".markdowned h1, .markdowned h2").reverse().each(function (idx, el) {
+  $(".markdowned h1, .markdowned h2").each(function (idx, el) {
     if ( isElementInViewport(el) ) {
-      console.log("in view port:" + JSON.stringify(el));
       // update the URL hash
       if (window.history.pushState) {
         var urlHash = "#" + $(el).attr("id");
         window.history.pushState(null, null, urlHash);
+        return false;
       }
     }
   });
@@ -59,6 +69,7 @@ function documentReady() {
 
   setColorMenu();
   setActiveLinks();
+  setAnchor();
   $(window).on("scroll", function () {
     setColorMenu();
     setActiveLinks();

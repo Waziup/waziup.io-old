@@ -5,22 +5,10 @@
 </div>
 
 <div class="page documentation">
-    <div class="menu">
-     {{ partial "side" . }}
-    </div>
     <div class="content">
       <h1 class="content-header">{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
       <div class="markdowned">
-          <!-- add HTML for figrue captions -->
-          {{ $reAltIn := "<p><img src=\"([^\"]+)\" alt=\"([^\"]+)\" /></p>" }}
-          {{ $reAltOut := "<figure><img src=\"$1\" alt=\"$2\"><figcaption>$2</figcaption></figure>" }}
-          {{ $altContent := .Content | replaceRE $reAltIn $reAltOut | safeHTML }}
-
-          {{ $reAltTitleIn := "<p><img src=\"([^\"]+)\" alt=\"([^\"]+)\" title=\"([^\"]+)\" /></p>" }}
-          {{ $reAltTitleOut := "<figure><img src=\"$1\" alt=\"$2\" title=\"$3\"><figcaption>$2</figcaption></figure>" }}
-          {{ $finalContent := $altContent | replaceRE $reAltTitleIn $reAltTitleOut | safeHTML }}
-
-          {{ $finalContent }}
+          {{ .Content }}
       </div>
     </div>
 </div>
