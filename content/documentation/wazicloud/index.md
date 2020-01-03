@@ -32,13 +32,13 @@ This will lead you to a page as shown below.
 You can create a new account by clicking on “Register” of by using a social network OpenId procedure.
 All communications will be secured by SSL. 
 
-**IMPORTANT: Once created your login and password, [you need to insert them in your gateway](/documentation/wazigate/configure/)!**
+**IMPORTANT: Once created your login and password, [you need to insert them in your gateway](/documentation/wazigate)!**
 
 Projects
 ========
 
 A project allows you to get all your assets in the same place: gateways, devices, notifications, maps, graphics...
-The first thing to do is to connect your [gateways](/documentation/dashboard/gateways/) and [devices](/documentation/dashboard/gateways/).
+The first thing to do is to connect your [gateways](/documentation/wazigate/) and [devices](/documentation/wazidev/).
 Once they are connected, you can click on the button "Create a project".
 
 ![Project form](./images/project_create.png)
@@ -134,7 +134,7 @@ It also shows all the devices that are connected to that gateway.
 You can click a device to navigate to that device.
 
 You can open the own Gateway UI by clicking on the "Remote access" button.
-This will open the [login screen for your gateway UI](/documentation/wazigate/login).
+This will open the [login screen for your gateway UI](/documentation/wazigate).
 
 Finally, you can edit the paramters of your gateway and delete it, using the corresponding buttons. 
 

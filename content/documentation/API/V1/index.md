@@ -10,6 +10,10 @@ menu:
     weight: 4
 ---
 
+{{%warning%}}
+API V1 is archived. You should use API V2 instead.
+{{%/warning%}}
+
 The API documentation is available at https://api.waziup.io/docs.
 With this website, you can explore and interact with all the endpoints of the Waziup API.
 
