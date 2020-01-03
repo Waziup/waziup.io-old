@@ -1,5 +1,6 @@
 $(window).on('load', documentReady);
 
+//color of the top menu
 function setColorMenu() {
   var theBaseUrl = "http://" + location.host + "/";
   var thePath = window.location.href.substring(theBaseUrl.length-1, window.location.href.length).split('#')[0];
@@ -13,6 +14,7 @@ function setColorMenu() {
   }
 }
 
+// active links (bolded)
 function setActiveLinks() {
   $("[href]").each(function() {
     if (window.location.href.indexOf(this.href) > -1) {
@@ -23,14 +25,44 @@ function setActiveLinks() {
   });
 }
 
+// detects which title is in the viewport
+function isElementInViewport (el) {
+  if (typeof jQuery === "function" && el instanceof jQuery) {
+    el = el[0];
+  }
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+  );
+}
+
+// Change URL with anchor
+function setAnchor() {
+  jQuery.fn.reverse = [].reverse;
+  $(".markdowned h1, .markdowned h2").reverse().each(function (idx, el) {
+    if ( isElementInViewport(el) ) {
+      console.log("in view port:" + JSON.stringify(el));
+      // update the URL hash
+      if (window.history.pushState) {
+        var urlHash = "#" + $(el).attr("id");
+        window.history.pushState(null, null, urlHash);
+      }
+    }
+  });
+}
+
+
 function documentReady() {
-  
-  // Top menu color change (blue/white fade) and active
+
   setColorMenu();
   setActiveLinks();
   $(window).on("scroll", function () {
     setColorMenu();
     setActiveLinks();
+    setAnchor();
   });
 
   // Set mobile menu
