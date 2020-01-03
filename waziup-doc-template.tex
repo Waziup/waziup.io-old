@@ -1,4 +1,5 @@
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+\renewcommand{\familydefault}{\sfdefault}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -15,16 +16,6 @@
 }{}
 \PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
 \usepackage[unicode=true]{hyperref}
-\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
-\hypersetup{
-  pdftitle={$title-meta$},
-  pdfauthor={$author-meta$},
-  pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
-  colorlinks=true,
-  linkcolor=$if(linkcolor)$$linkcolor$$else$Maroon$endif$,
-  citecolor=$if(citecolor)$$citecolor$$else$Blue$endif$,
-  urlcolor=$if(urlcolor)$$urlcolor$$else$Blue$endif$,
-  breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
 \usepackage{listings}
@@ -66,6 +57,7 @@ $endif$
 \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
+
 % set default figure placement to htbp
 \makeatletter
 \def\fps@figure{htbp}
@@ -75,6 +67,51 @@ $endif$
 
 \providecommand{\subtitle}[1]{}
 \subtitle{$subtitle$}
+
+
+\usepackage{calc}
+\usepackage{framed}
+\usepackage{tikz}
+
+\newenvironment{shadedgreen}{%
+   \def\FrameCommand{\colorbox{green!20}}%
+   \MakeFramed {\FrameRestore}}%
+  {\endMakeFramed}
+\newlength\mylena
+\newlength\mylenb
+\setlength\mylena{1.5cm}
+\setlength\mylenb{.9\textwidth - \mylena}
+
+\newenvironment{action}
+{\begin{shadedgreen}%
+    \begin{minipage}[c][1cm][c]{\mylena}
+      \begin{tikzpicture}[remember picture,overlay]
+        \shade[ball color=green!80] (0.4,0) circle (.4cm)
+          node  {\fontsize{8mm}{11mm}\usefont{T1}{put}{b}{b}\color{white}>};
+      \end{tikzpicture}
+    \end{minipage}%
+    \begin{minipage}[t]{\mylenb}}
+{\end{minipage}\end{shadedgreen}}
+
+\newenvironment{shadedred}{%
+   \def\FrameCommand{\colorbox{red!20}}%
+   \MakeFramed {\FrameRestore}}%
+  {\endMakeFramed}
+\newlength\mylenab
+\newlength\mylenbb
+\setlength\mylenab{1.5cm}
+\setlength\mylenbb{.9\textwidth - \mylena}
+
+\newenvironment{warning}
+{\begin{shadedred}%
+    \begin{minipage}[c][1cm][c]{\mylenab}
+      \begin{tikzpicture}[remember picture,overlay]
+        \shade[ball color=red!80] (0.4,0) circle (.4cm)
+          node  {\fontsize{8mm}{11mm}\usefont{T1}{put}{b}{b}\color{white}!};
+      \end{tikzpicture}
+    \end{minipage}%
+    \begin{minipage}[t]{\mylenbb}}
+{\end{minipage}\end{shadedred}}
 
 \begin{document}
 
