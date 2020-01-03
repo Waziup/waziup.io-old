@@ -1,26 +1,19 @@
 $(window).on('load', documentReady);
 
-function documentReady() {
-  
+function setColorMenu() {
   var theBaseUrl = "http://" + location.host + "/";
   var thePath = window.location.href.substring(theBaseUrl.length-1, window.location.href.length).split('#')[0];
   thePath = thePath.substring(1, thePath.length - 1);
 
-  // Top menu color change (blue/white fade)
-  setColorMenu();
-  $(window).on("scroll", function () {
-    setColorMenu();
-  });
-  function setColorMenu() {
-   if ($(window).scrollTop() > 0 || thePath !== '/') { 
-      $("#header").addClass("active");
-    } else {
-      //remove the background property so it comes transparent again (defined in your css)
-      $("#header").removeClass("active");
-    }
+  if ($(window).scrollTop() > 0 || thePath !== '/') { 
+    $("#header").addClass("active");
+  } else {
+    //remove the background property so it comes transparent again (defined in your css)
+    $("#header").removeClass("active");
   }
+}
 
-  //Add Top menu active class
+function setActiveLinks() {
   $("[href]").each(function() {
     if (window.location.href.indexOf(this.href) > -1) {
       $(this).addClass("active");
@@ -28,16 +21,16 @@ function documentReady() {
       $(this).removeClass("active");
     }
   });
+}
+
+function documentReady() {
   
-  //Add "active" class to ToC links
-  $(window).on("scroll", function() {
-    $("[href]").each(function() {
-      if (window.location.href.indexOf(this.href) > -1) {
-        $(this).addClass("active");
-      } else {
-        $(this).removeClass("active");
-      }
-    });
+  // Top menu color change (blue/white fade) and active
+  setColorMenu();
+  setActiveLinks();
+  $(window).on("scroll", function () {
+    setColorMenu();
+    setActiveLinks();
   });
 
   // Set mobile menu
