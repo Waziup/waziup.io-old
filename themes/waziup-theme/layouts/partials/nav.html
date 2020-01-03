@@ -16,11 +16,11 @@
                  <ul>
                    {{ range .Children}}
                      <li>
-                       <a href="{{.URL}}" id="top-menu-item" class="top-menu-item">{{.Title}}</a>
+                       <a href="{{.URL}}" class="sub-menu-item">{{.Title}}</a>
                        <ul>
                          {{ range .Children}}
                            <li>
-                             <a href="{{.URL}}" id="top-menu-item" class="top-menu-item">{{.Title}}</a>
+                             <a href="{{.URL}}" class="sub-menu-item">{{.Title}}</a>
                            </li>
                          {{ end }}
                        </ul>

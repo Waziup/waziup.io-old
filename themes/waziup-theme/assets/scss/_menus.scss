@@ -118,18 +118,23 @@
   }
 }
 
+.sub-menu-item {
+  color: black;
+  font-size: 15px;
+  font-weight: normal;
+  text-decoration: none;
+  height: 100%;
+
+  &.active {
+    font-weight: bold;
+  }
+}
 
 #navigation {
   // Top menu items (solutions, user manuals...)
   li {
-    display: inline;
-    font-size: 12px;
-    font-weight: bold;
-    margin: 0;
-    padding: 0 40;
     float: left;
     position: relative;
-    color: black !important;
 
     &:hover 
     {
