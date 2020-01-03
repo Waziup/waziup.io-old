@@ -1,11 +1,13 @@
 DOC=content/documentation
 OUT=static/docs
-echo "Making WaziDev_User_Manual-V1.0.pdf ..."
-pandoc -o $OUT/WaziDev_User_Manual-V1.0.pdf $DOC/wazidev/_index.md --template waziup-doc-template.tex  --resource-path $DOC/wazidev/ --toc
-echo "Making WaziGate_User_Manual-V1.0.pdf ..."
-pandoc -o $OUT/WaziGate_User_Manual-V1.0.pdf $DOC/wazigate/_index.md --template waziup-doc-template.tex  --resource-path $DOC/wazigate/ --toc
-echo "Making WaziCloud_User_Manual-V2.1.pdf ..."
-pandoc -o $OUT/WaziCloud_User_Manual-V2.1.pdf $DOC/wazicloud/_index.md --template waziup-doc-template.tex  --resource-path $DOC/wazicloud/ --toc
-echo "Making WaziCloud_API_Reference-V2.1.pdf ..."
-pandoc -o $OUT/WaziCloud_API_Reference-V2.1.pdf $DOC/API/V2/_index.md --template waziup-doc-template.tex  --resource-path $DOC/api/v2/ --toc
 
+makePdf () {
+  echo "Making $1 ..."
+  cat $DOC/$2/index.md | sed -f replace_shortcodes.sed | pandoc -o $OUT/$1 --template waziup-doc-template.tex  --resource-path $DOC/$2/ --toc
+  #pandoc -o $OUT/$1 --filter test 
+}
+
+makePdf WaziDev_User_Manual-V1.0.pdf wazidev
+makePdf WaziGate_User_Manual-V1.0.pdf wazigate
+makePdf WaziCloud_User_Manual-V2.1.pdf wazicloud
+makePdf WaziCloud_API_Reference-V2.1.pdf API/V2
