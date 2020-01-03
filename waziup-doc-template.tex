@@ -57,6 +57,13 @@ $endif$
 \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
 
 % set default figure placement to htbp
 \makeatletter
@@ -130,7 +137,6 @@ $endif$
 \end{center}
 \end{titlepage}
 
-\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
 \setcounter{tocdepth}{$toc-depth$}
 \tableofcontents
 \newpage
