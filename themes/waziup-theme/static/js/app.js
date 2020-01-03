@@ -64,7 +64,6 @@ function setAnchor() {
   });
 }
 
-
 function documentReady() {
 
   setColorMenu();
