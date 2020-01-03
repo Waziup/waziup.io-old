@@ -1,5 +1,6 @@
 ---
 title: Urban waste management 
+layout: singletoc
 menu:
   main:
     title: Urban waste 
@@ -13,23 +14,17 @@ This is done via ultrasonic distance measurment of the fill level and radio comm
 Below you find some impressions, a scenario description and some hints how to start developing the electronic and software part of the solution.
 
 
-## Local African waste soft bin
+![The Bin](images/waste_bin.jpg)
 
-![bin](images/waste_bin.jpg)
+![Bin electronics](images/waste_bin_elec.jpg)
 
-Waste Bin
+Overview
+========
 
-![bin elec](images/waste_bin_elec.jpg)
-
-Electronic circuit of early experiments running locally.
-
-# Development
-
-## Development - electronics overview
+Electronic compoonents for the Urban Waste Management MVP after testing several options and final evaluation: Temperature compensated distance sensor US-100 (Voltage 2.4 - 5.5V), Arduino Pro Mini 3.3V (8MHz) version, energy source (2 or 3 battery type AA), (Radio module -- not visible).
 
 ![elec](images/20170208_163157_resized.jpg)
 
-Electronic compoonents for the Urban Waste Management MVP after testing several options and final evaluation: Temperature compensated distance sensor US-100 (Voltage 2.4 - 5.5V), Arduino Pro Mini 3.3V (8MHz) version, energy source (2 or 3 battery type AA), (Radio module -- not visible).
 
 ![bin top](images/20170209_115554_resized.jpg)
 
@@ -40,13 +35,15 @@ Top view of the waste bin electronics mounted on a waste bin holder.
 
 Detailed top view of electronics mounted for waste bin fill level experiments.
 
-## Development - hardware list 
+Hardware
+========
+
+Hardware list:
 
 - [Arduino Pro Mini 3.3V] (https://www.sparkfun.com/products/11114)
 - [InAir9 LoRa module] (http://modtronix.com/inair9.html)
 - [Distance and Temperature Sensor] (https://www.bananarobotics.com/shop/US-100-Ultrasonic-Distance-Sensor-Module)
 	
-## Development - hardware description
 
 ## Arduino
 
@@ -80,8 +77,6 @@ This module can also output the temperature when using serial output mode. To re
 
     Celsius = ByteRead - 45
 	
-## Development - hardware connection
-
 
 # Software
 
@@ -99,11 +94,9 @@ Then to connect the Arduino Pro Mini to the computer an USB-FTDI chip as below w
 - [SoftwareSerial library] (https://www.arduino.cc/en/Reference/SoftwareSerial) is used with the distance sensor US-100 via serial communication
 - [SX1272 library] (https://github.com/CongducPham/LowCostLoRaGw) is used with LoRa module
 
-### LoRa module
-
 To send the measured fill level data via the LoRa radio the SX1272 library is used. Examples to use this library  can be found [here](https://github.com/CongducPham/LowCostLoRaGw/tree/master/Arduino).
 
-### Distance sensor module
+## Distance sensor module
 
 To get the distance (and inherently temperature) measure from the US-100 sensor the SoftwareSerial library is used to run it in the serial (more accurate than the PWM) mode.
 Here is a sample code used:

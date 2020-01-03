@@ -1,6 +1,7 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: Our solutions 
+layout: singletoc
 menu:
   main:
     title: Solutions
@@ -20,6 +21,8 @@ WAZIUP is an IoT Cloud platform that allows you to create and deploy your IoT ap
 - WAZIUP offers very low cost hardware as well as application developmet solutions 
 - Multiple fall-back communicaton options (3G, Wifi, BL)
 - User centric interface design (SME, voice call, mobile app and web app)
+
+![Waziup Ecosystem](./images/ecosys.png)
 
 Ecosystem 
 ---------

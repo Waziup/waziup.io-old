@@ -1,5 +1,6 @@
 ---
 title: Create your App with Waziup
+layout: singletoc
 menu:
   main:
     title: Web application 
@@ -12,7 +13,7 @@ The WaziApp is an HTML5 application and will be hosted directly on Github.
 Only a few steps are necessary to get your application running with Waziup!
 
 Fork the template WaziApp
--------------------------
+=========================
 
 The first step is to create an account on GitHub.
 For this go to www.github.com and click on “Sign Up”.
@@ -38,7 +39,7 @@ Your application is ready! You can view it on: https://your_account.github.io/Wa
 This is the default application. Now is time to update it!
 
 Modify your WaziApp
--------------------
+===================
 
 The application can be modified directly on Github.
 For that, click on the file you want to modify and click on the small pen on the right.

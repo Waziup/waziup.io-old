@@ -1,5 +1,6 @@
 ---
 title: WaziDev User Manual
+layout: singletoc
 menu:
   main:
     title: WaziDev

@@ -1,24 +1,22 @@
 ---
 title: Fish farming prototype
+layout: singletoc
 menu:
   main:
     title: Fish farming app 
     parent: usecases
     weight: 1
 ---
+The goal of this prototype is giving a first look on how to develop an IoT device for fish farming.
+The device is capable of giving real time reading about relevant information for fish ponds such as acidity, dissolved oxygen and communicate this data via LoRa.
+Below you will find a get started tutorial : how to develop the electronic and software part of the solution.
 
-![buoy_ghana](images/presentation_buoy_ghana.jpg)
+![The buoy in Ghana](images/presentation_buoy_ghana.jpg)
 
-The goal of this prototype is giving a first look on how to develop an IoT device for fish farming. The device is capable of giving real time reading about relevant information for fish ponds such as acidity,
-dissolved oxygen and communicate this data via LoRa. Below you will find a get started tutorial : how to develop the electronic and software part of the solution.
-
-## Measure
 
 The measures taken by the device are the temperature, the dissolved oxygen and the acidity of the water. The device is powered by a solar panel with a battery.
 The solution will be placed in a watertight box to protect the electronic, we also get temperature and humidity into the box. The last value controled
-is the voltage of the battery. 
-
-## hardware 
+is the voltage of the battery. The prototype is composed of:
 
 - [Arduino Pro Mini 3.3V] (https://www.sparkfun.com/products/11114)
 - [InAir9 LoRa module] (http://modtronix.com/inair9.html)
@@ -35,7 +33,7 @@ is the voltage of the battery.
 	- 10k ohm x1  
 	
 
-# Electronic Build
+# Hardware
 
 ## Arduino
 

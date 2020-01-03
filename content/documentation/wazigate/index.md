@@ -1,5 +1,6 @@
 ---
 title: WaziGate User Manual 
+layout: singletoc
 menu:
   main:
     title: WaziGate
