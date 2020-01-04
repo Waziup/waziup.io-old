@@ -10,7 +10,6 @@ menu:
     weight: 4
 ---
 
-This documentation is available in [PDF format](/docs/WaziCloud_API_Reference-V2.1.pdf)
 
 Overview
 ========
@@ -25,6 +24,8 @@ Once the preliminaries completed, head to the following sections:
 - [Notifications](#notifications)
 - [Gateways](#gateways)
 - [MQTT access](#mqtt)
+
+This documentation is available in [PDF format](/docs/WaziCloud_API_Reference-V2.1.pdf).
 
 Preliminaries
 =============
@@ -731,7 +732,7 @@ The same can be done for subscription.
 V2 Migration guide
 ==================
 
-This document will guide you through the update of your gateway or application to the new API V2 (see https://github.com/Waziup/Platform/blob/master/ChangeLog).
+This section will guide you through the update of your gateway or application to the new API V2 (see https://github.com/Waziup/Platform/blob/master/ChangeLog).
 This version brings a lot of novelties:
 
 - Gateway registration

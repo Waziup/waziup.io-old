@@ -9,9 +9,6 @@ menu:
     weight: 1
 ---
 
-This documentation is available in [PDF format](/docs/WaziDev_User_Manual-V1.0.pdf)
-
-
 Overview
 ========
 
@@ -25,6 +22,7 @@ It will also show step by step:
 -   how to compile and upload the code,
 -   how to see and use your sensors in the cloud.
 
+This documentation is available in [PDF format](/docs/WaziDev_User_Manual-V1.0.pdf).
 
 What do you need to start?
 ==========================

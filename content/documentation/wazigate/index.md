@@ -13,6 +13,7 @@ Overview
 ========
 
 This document will guide you through the steps to assemble your Wazigate and configure it in order to connect to the Waziup Cloud.
+This documentation is available in [PDF format](/docs/WaziGate_User_Manual-V1.0.pdf).
 
 Prepare the Gateway Hardware
 ============================

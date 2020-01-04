@@ -10,10 +10,10 @@ menu:
     weight: 3
 ---
 
-This documentation is available in [PDF format](/docs/WaziCloud_User_Manual-V2.1.pdf)
 
 You can build a full application with Waziup, without programming!
 In this tutorial, we'll learn how to build a soil monitoring application able to display the soil moisture and to send notifications on SMS, twitter and voice messages.
+This documentation is available in [PDF format](/docs/WaziCloud_User_Manual-V2.1.pdf).
 
 Login
 =====

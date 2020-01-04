@@ -1,11 +1,11 @@
 ---
 date: 2018-04-11T09:00:00+00:00
 title: Tutorials 
-menu:
-  main:
-    title: Tutorials
-    name: tutorials
-    weight: 3
+#menu:
+#  main:
+#    title: Tutorials
+#    name: tutorials
+#    weight: 3
 ---
 
 Our tutorials will teach you how to build sensor nodes and gateways based on LoRa technology.

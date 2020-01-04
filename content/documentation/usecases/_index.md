@@ -5,7 +5,7 @@ menu:
   main:
     title: Use-cases >
     name: usecases
-    parent: tutorials
+    parent: documentation
     weight: 7
 ---
 
