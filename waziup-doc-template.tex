@@ -16,6 +16,7 @@
 \usepackage{graphicx,grffile}
 \usepackage{parskip}
 \usepackage{xcolor}
+\usepackage[bottom]{footmisc}
 
 \renewcommand{\familydefault}{\sfdefault}
 \PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
@@ -30,7 +31,7 @@
 % Scale images if necessary, so that they will not overflow the page
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setkeys{Gin}{width=0.7\maxwidth,height=\maxheight,keepaspectratio}
 % Make links footnotes instead of hotlinks:
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
@@ -68,6 +69,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{$subtitle$}
 
+% Colored boxes
 \renewenvironment{shaded}[1]
 {\def\FrameCommand{\colorbox{#1}}%
    \MakeFramed {\FrameRestore}}%
@@ -79,27 +81,28 @@
 \setlength\mylenb{.9\textwidth - \mylena}
 
 % info boxes
-\newenvironment{action}
-{\begin{shaded}{green!20}%
+\newenvironment{admonition}[2]
+{\begin{shaded}{#1!20}%
     \begin{minipage}[c][1cm][c]{\mylena}
       \begin{tikzpicture}[remember picture,overlay]
-        \draw[green, fill=green!80] (0.4,0) circle (.4cm)
-        node  {\fontsize{8mm}{11mm}\usefont{T1}{put}{b}{b}\color{white}>};
+        \draw[#1, fill=#1!80] (0.4,0) circle (.4cm)
+        node  {\fontsize{8mm}{11mm}\usefont{T1}{put}{b}{b}\color{white}#2};
       \end{tikzpicture}
     \end{minipage}%
     \begin{minipage}[t]{\mylenb}}
 {\end{minipage}\end{shaded}}
 
+\newenvironment{action}
+{\begin{admonition}{green}{>}}%
+{\end{admonition}}%
+
 \newenvironment{warning}
-{\begin{shaded}{red!20}%
-    \begin{minipage}[c][1cm][c]{\mylena}
-      \begin{tikzpicture}[remember picture,overlay]
-        \shade[ball color=red!80] (0.4,0) circle (.4cm)
-          node  {\fontsize{8mm}{11mm}\usefont{T1}{put}{b}{b}\color{white}!};
-      \end{tikzpicture}
-    \end{minipage}%
-    \begin{minipage}[t]{\mylenb}}
-{\end{minipage}\end{shaded}}
+{\begin{admonition}{red}{!}}%
+{\end{admonition}}%
+
+\newenvironment{note}
+{\begin{admonition}{blue}{?}}%
+{\end{admonition}}%
 
 \begin{document}
 
