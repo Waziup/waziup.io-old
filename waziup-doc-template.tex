@@ -1,19 +1,14 @@
-\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+\documentclass[a4paper,18pt]{article}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
-\usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{eurosym}
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-% use microtype if available
-\IfFileExists{microtype.sty}{%
-  \usepackage[$for(microtypeoptions)$$microtypeoptions$$sep$,$endfor$]{microtype}
-  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
 \PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
 \usepackage[unicode=true]{hyperref}
 \urlstyle{same}  % don't use monospace font for urls
@@ -64,6 +59,8 @@ $endif$
     citecolor={blue!50!black},
     urlcolor={blue!80!black}
 }
+
+\graphicspath{{$resourcepath$}}
 
 % set default figure placement to htbp
 \makeatletter
@@ -129,7 +126,7 @@ $endif$
 \includegraphics[width=12cm]{static/images/logo-waziup.png}
 
 \vspace{7cm}
-\textsc{\Huge $title$}
+\text{\Huge $title$}
  
 \vspace{2cm}
 \date{\today}

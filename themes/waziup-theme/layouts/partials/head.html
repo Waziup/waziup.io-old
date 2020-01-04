@@ -37,7 +37,7 @@
 
   {{ $sass := resources.Get "scss/style.scss" }}
   {{ $styles := $sass | resources.ToCSS }}  
-  <link rel="stylesheet" href="{{ $styles.Permalink }}">
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
   <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/font-awesome.css">
   <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/highlight.css">
   <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/roboto.css">
