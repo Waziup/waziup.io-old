@@ -1,5 +1,4 @@
-\documentclass[a4paper,18pt]{article}
-\renewcommand{\familydefault}{\sfdefault}
+\documentclass[12pt]{article}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -7,18 +6,23 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{eurosym}
-% use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage{calc}
+\usepackage{framed}
+\usepackage{tikz}
 \usepackage[unicode=true]{hyperref}
-\urlstyle{same}  % don't use monospace font for urls
-\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+\usepackage[]{geometry}
 \usepackage{listings}
-\lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small\ttfamily}}{}
 \usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\usepackage{parskip}
+\usepackage{xcolor}
+
+\renewcommand{\familydefault}{\sfdefault}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\urlstyle{same}  % don't use monospace font for urls
+\lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small\ttfamily}}{}
 % Fix footnotes in tables (requires footnote package)
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
-\usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -29,15 +33,6 @@
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 % Make links footnotes instead of hotlinks:
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}}
-$if(indent)$
-$else$
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
-$endif$
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -52,7 +47,7 @@ $endif$
 \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
-\usepackage{xcolor}
+% style links
 \hypersetup{
     colorlinks,
     linkcolor={red!50!black},
@@ -60,6 +55,7 @@ $endif$
     urlcolor={blue!80!black}
 }
 
+% use variable from CLI for image paths
 \graphicspath{{$resourcepath$}}
 
 % set default figure placement to htbp
@@ -72,56 +68,43 @@ $endif$
 \providecommand{\subtitle}[1]{}
 \subtitle{$subtitle$}
 
-
-\usepackage{calc}
-\usepackage{framed}
-\usepackage{tikz}
-
-\newenvironment{shadedgreen}{%
-   \def\FrameCommand{\colorbox{green!20}}%
+\renewenvironment{shaded}[1]
+{\def\FrameCommand{\colorbox{#1}}%
    \MakeFramed {\FrameRestore}}%
-  {\endMakeFramed}
+{\endMakeFramed}
+
 \newlength\mylena
 \newlength\mylenb
 \setlength\mylena{1.5cm}
 \setlength\mylenb{.9\textwidth - \mylena}
 
+% info boxes
 \newenvironment{action}
-{\begin{shadedgreen}%
+{\begin{shaded}{green!20}%
     \begin{minipage}[c][1cm][c]{\mylena}
       \begin{tikzpicture}[remember picture,overlay]
-        \shade[ball color=green!80] (0.4,0) circle (.4cm)
-          node  {\fontsize{8mm}{11mm}\usefont{T1}{put}{b}{b}\color{white}>};
+        \draw[green, fill=green!80] (0.4,0) circle (.4cm)
+        node  {\fontsize{8mm}{11mm}\usefont{T1}{put}{b}{b}\color{white}>};
       \end{tikzpicture}
     \end{minipage}%
     \begin{minipage}[t]{\mylenb}}
-{\end{minipage}\end{shadedgreen}}
-
-\newenvironment{shadedred}{%
-   \def\FrameCommand{\colorbox{red!20}}%
-   \MakeFramed {\FrameRestore}}%
-  {\endMakeFramed}
-\newlength\mylenab
-\newlength\mylenbb
-\setlength\mylenab{1.5cm}
-\setlength\mylenbb{.9\textwidth - \mylena}
+{\end{minipage}\end{shaded}}
 
 \newenvironment{warning}
-{\begin{shadedred}%
-    \begin{minipage}[c][1cm][c]{\mylenab}
+{\begin{shaded}{red!20}%
+    \begin{minipage}[c][1cm][c]{\mylena}
       \begin{tikzpicture}[remember picture,overlay]
         \shade[ball color=red!80] (0.4,0) circle (.4cm)
           node  {\fontsize{8mm}{11mm}\usefont{T1}{put}{b}{b}\color{white}!};
       \end{tikzpicture}
     \end{minipage}%
-    \begin{minipage}[t]{\mylenbb}}
-{\end{minipage}\end{shadedred}}
+    \begin{minipage}[t]{\mylenb}}
+{\end{minipage}\end{shaded}}
 
 \begin{document}
 
 \begin{titlepage}
 \begin{center}
-
 
 \includegraphics[width=12cm]{static/images/logo-waziup.png}
 
