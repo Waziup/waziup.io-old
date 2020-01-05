@@ -36,7 +36,7 @@ You need the following *hardware* to start:
 
 You also need the following *software*:
  
-- [Wazigate ISO image](https://www.waziup.io/downloads/WaziGate_V1.0.zip)
+- [Wazigate ISO image](https://downloads.waziup.io/WaziGate_V1.0.zip)
 - [Balena Etcher](https://www.balena.io/etcher/)
 
 Assemble the WaziGate

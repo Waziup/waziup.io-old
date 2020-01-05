@@ -13,7 +13,7 @@ This page lists all the downloads for the Waziup Platform.
 WaziGate
 ========
 
-- ISO image: [Download V1.0](https://www.waziup.io/downloads/WaziGate_V1.0.zip)
+- ISO image: [Download V1.0](https://downloads.waziup.io/WaziGate_V1.0.zip)
 - User Manual: [Download V1.0](/docs/WaziGate_User_Manual-V1.0.pdf)
 
 WaziDev
@@ -26,6 +26,7 @@ WaziCloud
 =========
 
 - User Manual: [Download V2.1](/docs/WaziCloud_User_Manual-V2.1.pdf)
+- API Reference: [Download V2.1](/docs/WaziCloud_API_Reference-V2.1.pdf).
 
 
 Magazine
