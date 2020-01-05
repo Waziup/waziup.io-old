@@ -2,11 +2,7 @@ $(window).on('load', documentReady);
 
 //color of the top menu
 function setColorMenu() {
-  var theBaseUrl = "http://" + location.host + "/";
-  var thePath = window.location.href.substring(theBaseUrl.length-1, window.location.href.length).split('#')[0];
-  thePath = thePath.substring(1, thePath.length - 1);
-
-  if ($(window).scrollTop() > 0 || thePath !== '/') { 
+  if ($(window).scrollTop() > 0 || window.location.pathname !== '/') { 
     $("#header").addClass("active");
   } else {
     //remove the background property so it comes transparent again (defined in your css)
