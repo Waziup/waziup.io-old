@@ -351,7 +351,7 @@ Create sensors
 Sensors can be added individually, even after the device has been created.
 This is an example of a correct sensor creation:
 ```
-curl -X POST "https://api.waziup.io/api/v2/devices/MyDevice/sensors" -H "accept: application/json" -H  "Content-Type: application/json" -d ‘{ "id": "SM"}’
+curl -X POST "https://api.waziup.io/api/v2/devices/MyDevice/sensors" -H "accept: application/json" -H  "Content-Type: application/json" -d '{ "id": "SM"}'
 ```
 This will add a single sensor called "SM" (for "Soil Moisture") to the device named "MyDevice".
 

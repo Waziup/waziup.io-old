@@ -5,6 +5,7 @@
 \usepackage{fixltx2e} % provides \textsubscript
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{textcomp} % provides euro and other symbols
 \usepackage{eurosym}
 \usepackage{calc}
 \usepackage{framed}
@@ -17,6 +18,17 @@
 \usepackage{parskip}
 \usepackage{xcolor}
 \usepackage[bottom]{footmisc}
+\usepackage{listings}
+\newcommand{\passthrough}[1]{#1}
+
+\lstset{
+  basicstyle=\small\ttfamily,
+  columns=flexible,
+  breaklines=true,
+  literate={`}{\textasciigrave}1,
+  inputencoding=latin1,
+  frame = single
+}
 
 \renewcommand{\familydefault}{\sfdefault}
 \PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
@@ -103,6 +115,7 @@
 \newenvironment{note}
 {\begin{admonition}{blue}{?}}%
 {\end{admonition}}%
+
 
 \begin{document}
 
