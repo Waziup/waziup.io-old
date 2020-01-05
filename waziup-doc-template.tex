@@ -20,20 +20,30 @@
 \usepackage[bottom]{footmisc}
 \usepackage{listings}
 \newcommand{\passthrough}[1]{#1}
+\usepackage{titlesec}
 
 \lstset{
+  language=bash,
   basicstyle=\small\ttfamily,
   columns=flexible,
   breaklines=true,
   literate={`}{\textasciigrave}1,
   inputencoding=latin1,
-  frame = single
+  frame=single,
+  showstringspaces=false
 }
+
+\titleformat{\section}
+{\color{red}\normalfont\Large\bfseries}
+{\color{red}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{blue}\normalfont\large\bfseries}
+{\color{blue}\thesubsection}{1em}{}
 
 \renewcommand{\familydefault}{\sfdefault}
 \PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
 \urlstyle{same}  % don't use monospace font for urls
-\lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small\ttfamily}}{}
 % Fix footnotes in tables (requires footnote package)
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
 \makeatletter

@@ -26,7 +26,7 @@ WaziCloud
 =========
 
 - User Manual: [Download V2.1](/docs/WaziCloud_User_Manual-V2.1.pdf)
-- API Reference: [Download V2.1](/docs/WaziCloud_API_Reference-V2.1.pdf).
+- API Reference: [Download V2.1](/docs/WaziCloud_API_Reference-V2.1.pdf)
 
 
 Magazine
