@@ -97,21 +97,21 @@
    \MakeFramed {\FrameRestore}}%
 {\endMakeFramed}
 
-\newlength\mylena
-\newlength\mylenb
-\setlength\mylena{1.5cm}
-\setlength\mylenb{.9\textwidth - \mylena}
-
-% info boxes
+% info boxes.
+% first param: color of the box
+% second param: symbol to use for the icon
 \newenvironment{admonition}[2]
-{\begin{shaded}{#1!20}%
-    \begin{minipage}[c][1cm][c]{\mylena}
+{\begin{shaded}{#1!15}%
+    % minipage for the icon
+    \begin{minipage}[c][1cm][c]{1.5cm}
       \begin{tikzpicture}[remember picture,overlay]
-        \draw[#1, fill=#1!80] (0.4,0) circle (.4cm)
+        % create a colored cricle, with the symbol inside
+        \draw[#1, fill=#1!100] (0.4,0) circle (.4cm)
         node  {\fontsize{8mm}{11mm}\usefont{T1}{put}{b}{b}\color{white}#2};
       \end{tikzpicture}
     \end{minipage}%
-    \begin{minipage}[t]{\mylenb}}
+    % minipage for the text
+    \begin{minipage}[t]{.9\textwidth - 1.5cm}}
 {\end{minipage}\end{shaded}}
 
 \newenvironment{action}
