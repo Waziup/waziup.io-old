@@ -1,6 +1,6 @@
 FROM nginx as build
 
-ENV HUGO_VERSION 0.60.1
+ENV HUGO_VERSION 0.59.1
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 
 # Install Hugo
