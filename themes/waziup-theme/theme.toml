@@ -1,8 +1,8 @@
 name = "Waziup Theme"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+licenselink = "https://github.com/waziup/waziup.io/blob/master/LICENSE"
 description = ""
-homepage = "http://siteforthistheme.com/"
+homepage = "https://github.com/waziup/waziup.io/"
 tags = ["", ""]
 features = ["", ""]
 min_version = 0.14

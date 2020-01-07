@@ -1,0 +1,5 @@
+<div class="admonition action">
+  <div class="admonition-icon"><img src="/img/002-Medium-icons/action.png"></div>
+  <div class="admonition-title"><p>{{ .Get "title" }}</p></div>
+  <div class="admonition-content"><p>{{ printf "%s" .Inner | markdownify }}</p></div>
+</div>

@@ -1,0 +1,152 @@
+\documentclass[12pt]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp} % provides euro and other symbols
+\usepackage{eurosym}
+\usepackage{calc}
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage[unicode=true]{hyperref}
+\usepackage[]{geometry}
+\usepackage{listings}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage[bottom]{footmisc}
+\usepackage{listings}
+\newcommand{\passthrough}[1]{#1}
+\usepackage{titlesec}
+
+\lstset{
+  language=bash,
+  basicstyle=\small\ttfamily,
+  columns=flexible,
+  breaklines=true,
+  literate={`}{\textasciigrave}1,
+  inputencoding=latin1,
+  frame=single,
+  showstringspaces=false
+}
+
+\titleformat{\section}
+{\color{red}\normalfont\Large\bfseries}
+{\color{red}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{blue}\normalfont\large\bfseries}
+{\color{blue}\thesubsection}{1em}{}
+
+\renewcommand{\familydefault}{\sfdefault}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\urlstyle{same}  % don't use monospace font for urls
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=0.7\maxwidth,height=\maxheight,keepaspectratio}
+% Make links footnotes instead of hotlinks:
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% style links
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+% use variable from CLI for image paths
+\graphicspath{{$resourcepath$}}
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\title{$title$}
+
+\providecommand{\subtitle}[1]{}
+\subtitle{$subtitle$}
+
+% Colored boxes
+\renewenvironment{shaded}[1]
+{\def\FrameCommand{\colorbox{#1}}%
+   \MakeFramed {\FrameRestore}}%
+{\endMakeFramed}
+
+% info boxes.
+% first param: color of the box
+% second param: symbol to use for the icon
+\newenvironment{admonition}[2]
+{\begin{shaded}{#1!15}%
+    % minipage for the icon
+    \begin{minipage}[c][1cm][c]{1.5cm}
+      \begin{tikzpicture}[remember picture,overlay]
+        % create a colored cricle, with the symbol inside
+        \draw[#1, fill=#1!100] (0.4,0) circle (.4cm)
+        node  {\fontsize{8mm}{11mm}\usefont{T1}{put}{b}{b}\color{white}#2};
+      \end{tikzpicture}
+    \end{minipage}%
+    % minipage for the text
+    \begin{minipage}[t]{.9\textwidth - 1.5cm}}
+{\end{minipage}\end{shaded}}
+
+\newenvironment{action}
+{\begin{admonition}{green}{>}}%
+{\end{admonition}}%
+
+\newenvironment{warning}
+{\begin{admonition}{red}{!}}%
+{\end{admonition}}%
+
+\newenvironment{note}
+{\begin{admonition}{blue}{?}}%
+{\end{admonition}}%
+
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+
+\includegraphics[width=12cm]{static/images/logo-waziup.png}
+
+\vspace{7cm}
+\text{\Huge $title$}
+ 
+\vspace{2cm}
+\date{\today}
+
+\end{center}
+\end{titlepage}
+
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+\newpage
+
+$body$
+
+\end{document}

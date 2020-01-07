@@ -54,11 +54,6 @@
 - id: features_2_text3
   translation: "Scalable, high available and modular architecture"
 
-#   <!--PARTNERS ROW-->
-- id: partners_text1
-  translation: "Technology Partners"
-- id: partners_text2
-  translation: "Waziup works with"
 ####################################### End of index.html ###############################
 
 
