@@ -38,12 +38,12 @@
   {{ $sass := resources.Get "scss/style.scss" }}
   {{ $styles := $sass | resources.ToCSS }}  
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
-  <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/font-awesome.css">
-  <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/highlight.css">
-  <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/roboto.css">
-  <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/roboto-mono.css">
-  <script src="{{ $.Site.BaseURL }}/js/vendor.js"></script>
-  <script src="{{ $.Site.BaseURL }}/js/app.js"></script>
+  <link rel="stylesheet" href="/css/font-awesome.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <link rel="stylesheet" href="/css/roboto.css">
+  <link rel="stylesheet" href="/css/roboto-mono.css">
+  <script src="/js/vendor.js"></script>
+  <script src="/js/app.js"></script>
   
 
 </head>
