@@ -8,4 +8,3 @@ menu:
     weight: 2
 ---
 
-In this section you can find the documention for all our components.

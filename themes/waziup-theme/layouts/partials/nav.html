@@ -9,26 +9,40 @@
     <div class="top-menu-items" id="top-menu-items">
         <nav id="nav">
           <ul id="navigation">
-           {{ $currentPage := . }}
-           {{ range .Site.Menus.main }}
-             <li>
-               <a href="{{.URL}}" id="top-menu-item-text" class="top-menu-item">{{.Title}}</a>
-                 <ul>
-                   {{ range .Children}}
-                     <li>
-                       <a href="{{.URL}}" class="sub-menu-item">{{.Title}}</a>
-                       <ul>
-                         {{ range .Children}}
-                           <li>
-                             <a href="{{.URL}}" class="sub-menu-item">{{.Title}}</a>
-                           </li>
-                         {{ end }}
-                       </ul>
-                     </li>
-                   {{ end }}
-                 </ul>
-              </li>
-           {{ end }}
+          <!--Range through menus (extracted from content folder structure)-->
+            {{ range .Site.Menus.main }}
+              <!--If has children, create a node and range through children-->
+              {{ if .HasChildren }}
+                <li>
+                  <a href="#" id="top-menu-item-text" class="top-menu-item">{{.Title}}</a>
+                  <ul>
+                    {{ range .Children}}
+                      {{ if .HasChildren }}
+                        <li>
+                          <a href="#" class="sub-menu-item">{{.Title}} ></a>
+                          <ul>
+                            {{ range .Children}}
+                              <li>
+                                <a href="{{.URL}}" class="sub-menu-item">{{.Title}}</a>
+                              </li>
+                            {{ end }}
+                          </ul>
+                        </li>
+                      {{ else }}
+                       <li>
+                         <a href="{{.URL}}" class="sub-menu-item">{{.Title}}</a>
+                       </li>
+                      {{ end }}
+                    {{ end }}
+                  </ul>
+                </li>
+              <!--If doesn't have children, create a link to document-->
+              {{ else }}
+               <li>
+                 <a href="{{.URL}}" id="top-menu-item-text" class="top-menu-item">{{.Title}}</a>
+               </li>
+              {{ end }}
+            {{ end }}
             <li><p href="explore" id="top-menu-item-text" class="top-menu-item">Explore Waziup!</a>
               <ul>
                 <li>
