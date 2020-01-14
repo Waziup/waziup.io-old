@@ -71,7 +71,7 @@ Flash the WaziGate
 ==================
 
 {{%action%}}
-**Step \#1:** Download the latest version of [Wazigate ISO image](https://www.waziup.io/downloads/WaziGate_V1.0.zip)
+**Step \#1:** Download the latest version of the [Wazigate ISO image](https://downloads.waziup.io/WaziGate_V1.0.zip).
 {{%/action%}}
 
 ![Save Wazigate ISO image](media/image34.png)
