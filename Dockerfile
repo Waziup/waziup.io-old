@@ -6,7 +6,7 @@ ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 # Install Hugo
 RUN set -x 
 RUN apt-get update 
-RUN apt-get install -y wget ca-certificates texlive-latex-base texlive-latex-recommended texlive-fonts-recommended 
+RUN apt-get install -y wget ca-certificates texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-fonts-recommended 
 #texlive-fonts-extra
 RUN wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY} && \
     tar xzf ${HUGO_BINARY} && \
