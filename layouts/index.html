@@ -1,0 +1,209 @@
+{{ partial "head" . }}
+
+<div>
+  {{ partial "nav" . }}
+</div>
+
+<!--HEROSPACE ROW-->
+<div class="page">
+  <div class="lander-row lander-row--blue hero-space">
+    <div class="container">
+
+      <div class="row">
+        <div class="col">
+          <h1 class="header center">
+          {{ i18n "herospace_text1" }}
+          </h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col center">
+          <img class="laptop" src="img/Ecosystem2.png" alt=""/>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bottom-background">
+      <div class="left-pixels">
+        <img src="img/herospace/pixels-header-left.gif" alt="">
+      </div>
+      <div class="right-pixels">
+        <img src="img/herospace/pixels-header-right.gif" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!--ABOUT Waziup ROW-->
+  <div id="about-vamp-row" class="lander-row lander-row--white">
+    <div class="container">
+        <h1 class="h1">
+          Rapid prototyping for your IoT applications!
+        </h1>
+      <div class="row">
+        <div class="col">
+          <ul class="h2">
+            <li>
+              Low cost
+            </li>
+            <li>
+              Long range with LoRa network
+            </li>
+            <li>
+              Works with or without Internet!
+            </li>
+          </ul>
+        </div>
+        <div class="col center">
+          <a href='documentation/' class="image--larger"><img src="img/Ecosystem.png" alt="Ecosystem"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="about-vamp-row" class="lander-row lander-row--grey">
+    <div class="container">
+      <h1 class="h1">
+        Our technology
+      </h1>
+      <div class="row">
+        <div class="col center">
+          <a href='documentation/' class="image--smaller"><img src="img/WaziDev-front.png" alt="WaziDev"></a>
+        </div>
+        <div class="col">
+          <h2 class="h2">
+            WaziDev
+          </h2>
+          <ul>
+            <li>
+              Sensing and actuating platform for your applications!
+            </li>
+            <li>
+              Send your data up to 7 Km
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2 class="h2">
+            WaziGate
+          </h2>
+          <ul>
+            <li>
+              Sensing and actuating platform for your applications!
+            </li>
+            <li>
+              Send your data up to 7 Km
+            </li>
+          </ul>
+        </div>
+        <div class="col center">
+          <a href='documentation/' class="image--smaller"><img src="img/WaziGate-black.png" alt="WaziGate"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col center">
+          <a href='documentation/' class="image"><img src="img/WaziCloud.png" alt="WaziCloud"></a>
+        </div>
+        <div class="col">
+          <h2 class="h2">
+            WaziCloud
+          </h2>
+          <ul>
+            <li>
+              Remote control of your application
+            </li>
+            <li>
+              Open API for IoT application development
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div id="about-vamp-row" class="lander-row lander-row--white">
+    <div class="container">
+      <h1 class="h1">
+        Use cases 
+      </h1>
+      <div class="row">
+        <div class="col center">
+          <a href='documentation/' class="image--larger"><img src="img/soil_moisture.jpg" alt="Use cases"></a>
+        </div>
+        <div class="col">
+          <h2 class="h2">
+            Waziup can be used in:
+          </h2>
+          <ul>
+            <li>
+              Agriculture
+            </li>
+            <li>
+              Water management 
+            </li>
+            <li>
+              Logistics
+            </li>
+          </ul>
+          <p>
+            The possibilities are endless!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--PARTNERS ROW-->
+  <div class="lander-row lander-row--white lander-row--small-padding top-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col center">
+          <h3 class="h3">{{ i18n "partners_text1" }}</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col center">
+          <img src="/img/004-Logos/004-Friends/eu-support.png" alt="Eu Commission">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="partners-row" class="lander-row lander-row--white">
+    <div class="container">
+      <div class="row">
+        <div class="col center">
+          <h3 class="h3">{{ i18n "about_w_text8" }}</h3>
+        </div>
+      </div>
+
+      <div class="row logos-row">
+        <div class="col center">
+          <img src="/img/004-Logos/001-dark-blue/fiware.png" alt="FIWARE">
+        </div>
+        <div class="col center">
+          <img src="/img/004-Logos/001-dark-blue/ITU.png" alt="ITU">
+        </div>
+        <div class="col center">
+          <img src="/img/004-Logos/001-dark-blue/ms4africa.png" alt="MICROSOFT 4 Africa">
+        </div>
+        <div class="col center">
+          <img src="/img/004-Logos/001-dark-blue/orange.png" alt="Orange">
+        </div>
+        <div class="col center">
+          <img src="/img/004-Logos/001-dark-blue/smartafrica.png" alt="SmartAfrica">
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+{{ partial "footer" .}}
