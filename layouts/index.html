@@ -39,11 +39,11 @@
   <div id="about-row" class="lander-row lander-row--white">
     <div class="container">
       <div class="row">
-        <div class="col">
-        <h1 class="h1">
-          Rapid prototyping for your IoT applications!
-        </h1>
-          <ul class="h2" >
+        <div id="about-col1" class="col">
+          <h1 class="h1">
+            Rapid prototyping for your IoT applications!
+          </h1>
+          <ul>
             <li type="disk">
               Low cost
             </li>
@@ -69,66 +69,53 @@
         Our technology
       </h1>
       <div class="row">
-        <div class="col center">
-          <a href='documentation/' class="image--smaller"><img src="img/WaziDev-front.png" alt="WaziDev"></a>
-        </div>
-        <div class="col">
+        <div class="col tech-col">
           <h2 class="h2">
             WaziDev
           </h2>
-          <ul>
-            <li>
-              Sensing and actuating platform for your applications!
-            </li>
-            <li>
-              Send your data up to 7 Km
-            </li>
-          </ul>
+          <div class="tech-image">
+            <a href='documentation/'><img src="img/WaziDev-front.png" alt="WaziDev" class="tech-image"></a>
+          </div>
+          <div class="tech-text">
+            WaziDev is a Sensing and Actuation platform for your applications!
+            It can send your data up to 7 Km using the LoRa technology.
+            It is easily programmable and customizable, using Arduino technology.
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col">
+        <div class="col tech-col">
           <h2 class="h2">
             WaziGate
           </h2>
-          <ul>
-            <li>
-              Sensing and actuating platform for your applications!
-            </li>
-            <li>
-              Send your data up to 7 Km
-            </li>
-          </ul>
+          <div class="tech-image">
+            <a href='documentation/' class="image--smaller"><img src="img/WaziGate-black.png" alt="WaziGate" class="tech-image"></a>
+          </div>
+          <div class="tech-text">
+            WaziGate is a LoRa gateway that can receive and emit LoRa messages up to 200 devices!
+            It supports LoRaWAN, edge applications and actuation.
+            You can control is from remote using the WaziCloud.
+          </div>
         </div>
-        <div class="col center">
-          <a href='documentation/' class="image--smaller"><img src="img/WaziGate-black.png" alt="WaziGate"></a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col center">
-          <a href='documentation/' class="image"><img src="img/WaziCloud.png" alt="WaziCloud"></a>
-        </div>
-        <div class="col">
+        <div class="col tech-col">
           <h2 class="h2">
             WaziCloud
           </h2>
-          <ul>
-            <li>
-              Remote control of your application
-            </li>
-            <li>
-              Open API for IoT application development
-            </li>
-          </ul>
+          <div class="tech-image">
+            <a href='documentation/' class="image--smaller"><img src="img/WaziCloud.png" alt="WaziCloud" class="tech-image"></a>
+          </div>
+          <div class="tech-text">
+            WaziCloud allows Remote control of your application!
+            Using the dashboard, you can visualize you data and control you devices and gateways.
+            It offers an Open API for developping your IoT applications.
+          </div>
         </div>
       </div>
     </div>
   </div>
 
 
+<!--
 
-
-  <div id="about-vamp-row" class="lander-row lander-row--white">
+  <div id="about-vamp-row" class="lander-row lander-row--white">ss
     <div class="container">
       <h1 class="h1">
         Use cases 
@@ -159,11 +146,14 @@
       </div>
     </div>
   </div>
-
+-->
 
   <!--PARTNERS ROW-->
   <div class="lander-row lander-row--white lander-row--small-padding top-bar">
     <div class="container">
+      <h1 class="h1">
+        Waziup Partners
+      <h1>
       <div class="row">
         <div class="col center">
           <h3 class="h3">{{ i18n "partners_text1" }}</h3>
@@ -180,26 +170,20 @@
 
   <div id="partners-row" class="lander-row lander-row--white">
     <div class="container">
-      <div class="row">
-        <div class="col center">
-          <h3 class="h3">{{ i18n "about_w_text8" }}</h3>
-        </div>
-      </div>
-
       <div class="row logos-row">
-        <div class="col center">
+        <div class="col center col-logo">
           <img src="/img/004-Logos/001-dark-blue/fiware.png" alt="FIWARE">
         </div>
-        <div class="col center">
+        <div class="col center col-logo">
           <img src="/img/004-Logos/001-dark-blue/ITU.png" alt="ITU">
         </div>
-        <div class="col center">
+        <div class="col center col-logo">
           <img src="/img/004-Logos/001-dark-blue/ms4africa.png" alt="MICROSOFT 4 Africa">
         </div>
-        <div class="col center">
+        <div class="col center col-logo">
           <img src="/img/004-Logos/001-dark-blue/orange.png" alt="Orange">
         </div>
-        <div class="col center">
+        <div class="col center col-logo">
           <img src="/img/004-Logos/001-dark-blue/smartafrica.png" alt="SmartAfrica">
         </div>
     </div>

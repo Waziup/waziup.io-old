@@ -25,8 +25,9 @@
 .row {
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  align-items: strech;
   flex-direction: column;
+
 
   @media all and (min-width: 321px) {
     width: $container-width-mobile-small + $gutter-size;

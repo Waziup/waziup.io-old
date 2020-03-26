@@ -178,7 +178,7 @@ body {
   }
 
   &--grey {
-    background-color: $color-bermuda-gray;
+    background-color: #F2EFE9;
     color: white;
 
     &:hover {
@@ -268,12 +268,12 @@ body {
   }
 
   @media all and (min-width: 1025px) {
-    padding: 80px 0;
+    padding: 40px 0;
 
   }
 
   @media all and (min-width: 1201px) {
-   padding: 80px 0;
+   padding: 40px 0;
   }
 
   &--small-padding {
@@ -337,6 +337,20 @@ body {
 #about-row {
   padding-top: 200px;
   
+}
+
+.tech-text {
+  padding-top: 20px;
+  text-align: justify;
+}
+
+#about-col1 {
+  padding-top: 80px;
+}
+
+.col-logo {
+  padding: 10px;
+  margin-left: 20px;
 }
 
 .hero-space {
@@ -919,9 +933,16 @@ body {
   height: 500px; 
 }
 
-.image--smaller {
-  width: 60%;
+.tech-image {
+  height: 250px;
 }
+
+.tech-col {
+  text-align: center;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
 
 .vamp-bat {
   width: 60%;
