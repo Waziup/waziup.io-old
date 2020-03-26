@@ -248,6 +248,10 @@ body {
   justify-content: center;
   padding: 8px 0;
 
+  ul {
+    list-style-type: square;
+    margin: 10px 30px;
+  }
   @media all and (min-width: 321px) {
     padding: 8px 0;
 
@@ -328,6 +332,11 @@ body {
     text-decoration: none;
   }
 
+}
+
+#about-row {
+  padding-top: 200px;
+  
 }
 
 .hero-space {
@@ -905,7 +914,7 @@ body {
 }
 
 .laptop {
-  transform: translateY(35px);
+  transform: translateY(0px);
   position: relative;
   height: 500px; 
 }
