@@ -333,7 +333,11 @@ body {
 .hero-space {
   padding-top: 14px + 40px;
   padding-bottom: 0;
+  height: 650px;
   background: linear-gradient(45deg, $color-blue-dianne, $color-big-stone);
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  //background-image: url('/images/top.png');
   position: relative;
 
   @media all and (min-width: 321px) {
@@ -903,6 +907,7 @@ body {
 .laptop {
   transform: translateY(35px);
   position: relative;
+  height: 500px; 
 }
 
 .image--smaller {
