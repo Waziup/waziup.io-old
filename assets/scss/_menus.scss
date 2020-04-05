@@ -44,6 +44,22 @@
     display: block;
     transition: 0.3s;
   }
+
+  /* When you mouse over the navigation links, change their color */
+  .mobile-menu-item a:hover {
+    color: #f1f1f1;
+  }
+
+  /* Position and style the close button (top right corner) */
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .top-menu {
