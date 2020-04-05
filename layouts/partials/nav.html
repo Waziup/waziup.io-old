@@ -6,71 +6,9 @@
   </div>
 
   <div class="right">
-    <div class="top-menu-items" id="top-menu-items">
-        <nav id="nav">
-          <ul id="navigation">
-            {{ $currentPage := . }}
-            <!--Range through menus (extracted from content folder structure)-->
-            {{ range .Site.Menus.main }}
-              <!--If menu has children, create a node and range through children-->
-              {{ if .HasChildren }}
-                <li>
-                  <!--Create the node. Add class active (bolded) if the current page corresponds to any children menu entries-->
-                  <a href="#" id="top-menu-item-text" class="top-menu-item{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" >{{.Title}}</a>
-                  <ul>
-                    {{ range .Children}}
-                      {{ if .HasChildren }}
-                        <li>
-                          <a href="#" class="sub-menu-item{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}">{{.Title}} ></a>
-                          <ul>
-                            {{ range .Children}}
-                              <li>
-                                <a href="{{.URL}}" class="sub-menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">{{.Title}}</a>
-                              </li>
-                            {{ end }}
-                          </ul>
-                        </li>
-                      {{ else }}
-                       <li>
-                         <a href="{{.URL}}" class="sub-menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">{{.Title}}</a>
-                       </li>
-                      {{ end }}
-                    {{ end }}
-                  </ul>
-                </li>
-              <!--If doesn't have children, create a link to document-->
-              {{ else }}
-               <li>
-                 <a href="{{.URL}}" id="top-menu-item-text" class="top-menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">{{.Title}}</a>
-               </li>
-              {{ end }}
-            {{ end }}
-            <li><p href="explore" id="top-menu-item-text" class="top-menu-item">Explore Waziup!</a>
-              <ul>
-                <li>
-                  <img src="/img/external-link-symbol.png" class="sub-menu-icon"/>
-                  <a href="https://dashboard.waziup.io" class="sub-menu-item" target="_blank">Cloud IoT platform</a>
-                </li>
-                <li>
-                  <img src="/img/external-link-symbol.png" class="sub-menu-icon"/>
-                  <a href="https://diy.waziup.io" class="sub-menu-item" target="_blank">Do-It-Yourself IoT</a>
-                  </li>
-                <li>
-                  <img src="/img/external-link-symbol.png" class="sub-menu-icon"/>
-                  <a href="https://iot-catalogue.waziup.io" class="sub-menu-item" target="_blank">Buy IoT components</a>
-                  </li>
-                <li>
-                  <img src="/img/external-link-symbol.png" class="sub-menu-icon"/>
-                  <a href="https://www.waziup.org" class="sub-menu-item" target="_blank">Waziup Association</a>
-                  </li>
-                <li>
-                  <img src="/img/external-link-symbol.png" class="sub-menu-icon"/>
-                  <a href="https://www.wazihub.com" class="sub-menu-item" target="_blank">WaziHub EU-Africa project</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+    {{ partial "menu" . }}
+    <div id="menu-toggle">
+      <i class="fa fa-bars"></i>
     </div>
 
     <div class="download">
@@ -84,7 +22,4 @@
     </a>
   </div>
 </nav>
-
-<ul id="mobile-menu" style="display: none">
-</ul>
 

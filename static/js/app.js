@@ -65,11 +65,7 @@ function documentReady() {
 
   // Set mobile menu
   $('#menu-toggle').on('click', function (e) {
-    $('.top-menu-items').toggleClass('open');
-  });
-
-  $('top-menu-item').on('click', function(e) {
-    $('.top-menu-items').removeClass('open');
+    document.getElementById("mobile-menu").style.width = "250px";
   });
 
   $('pre code').each(function(i, block) {

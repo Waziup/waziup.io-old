@@ -1,0 +1,8 @@
+<div id="mobile-menu">
+  {{ $currentPage := . }}
+  {{ range .Site.Menus.main }}
+     <div class="mobile-menu-item">
+       <a href="{{.URL}}" id="mobile-menu-item-text" class="top-menu-item-text">{{.Title}}</a>
+     </div>
+  {{ end }}
+</div>

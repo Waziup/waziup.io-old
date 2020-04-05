@@ -4,34 +4,60 @@
 
 
 // mobile menu
-.slicknav_menu {
+#menu-toggle {
   display: block;
-  position: fixed;
-  top:0;
+  right: 0px;
   width: 100%;
   z-index: 9999;
+  margin: 10px;
   @media all and (min-width: 1025px) {
     display: none;
   }
 
-  border-bottom: 1px solid $color-jungle-mist;
+  .fa {
+    font-size:30pt;
+    color: white;
+  }
+}
+
+/* The side navigation menu */
+#mobile-menu {
+  height: 100%; /* 100% Full-height */
+  width: 0px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Stay on top */
+  top: 75px; /* Stay at the top */
+  left: 0;
+  background-color: #173343; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  position:absolute;
+  text-color: white;
+
+  /* The navigation menu links */
+  .mobile-menu-item a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
 }
 
 .top-menu {
-  display: none;
+  display: flex;
   justify-content: space-between;
   position: fixed;
   height: 80px;
-  width: 100vw;
+  width: 100%;
   padding: 0 10px;
   background-color: transparent;
   z-index: 999;
   border-bottom: 1px solid rgba($color-white-squeeze, 0.1);
   transition: 0.3s ease-in all;
 
-  @media all and (min-width: 1025px) {
-    display: flex;
-  }
 
   // Remove all text decoration on links
   a {
@@ -60,7 +86,10 @@
   }
 
   .top-menu-items, .download, .github-logo, .search-button {
-    display: flex;
+    display: none;
+    @media all and (min-width: 1025px) {
+      display: flex;
+    }
     align-items: center;
     position: relative;
 
@@ -191,6 +220,8 @@
     }
   }
 }
+
+
 
 #TableOfContents ul li {
 
