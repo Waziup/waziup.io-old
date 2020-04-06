@@ -11,6 +11,16 @@
       <div class="markdowned">
           {{ .Content }}
       </div>
+      <nav>
+        <ul>
+          {{ $currentPage := . }}
+          {{ range .Pages }}
+              <li>
+                <a href="{{.Permalink}}">{{.Title}}</a>
+              </li>
+          {{ end }}
+        </ul>
+      </nav>
     </div>
 </div>
 
