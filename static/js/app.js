@@ -3,10 +3,10 @@ $(window).on('load', documentReady);
 //color of the top menu
 function setColorMenu() {
   if ($(window).scrollTop() > 0 || window.location.pathname !== '/') { 
-    $("#header").addClass("active");
+    $(".top-menu").addClass("active");
   } else {
     //remove the background property so it comes transparent again (defined in your css)
-    $("#header").removeClass("active");
+    $(".top-menu").removeClass("active");
   }
 }
 

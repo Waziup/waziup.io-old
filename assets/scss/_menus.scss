@@ -4,7 +4,7 @@
 
 
 // mobile menu
-#menu-toggle {
+.menu-toggle {
   display: block;
   right: 0px;
   width: 100%;
@@ -32,7 +32,7 @@
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  position:absolute;
+  position: absolute;
   text-color: white;
 
   /* The navigation menu links */
@@ -103,14 +103,13 @@
 
   .top-menu-items, .download, .github-logo, .search-button {
     display: none;
+    align-items: center;
+    position: relative;
+    margin: 0 20px;
+    height: 100%;
     @media all and (min-width: 1025px) {
       display: flex;
     }
-    align-items: center;
-    position: relative;
-
-    margin: 0 20px;
-    height: 100%;
   }
 
   .top-menu-items {
@@ -159,7 +158,7 @@
     color: $color-big-stone;
   }
 
-  .search-button {
+  .fa {
     color: $color-big-stone;
   }
 }

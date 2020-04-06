@@ -6,11 +6,10 @@
   </div>
 
   <div class="right">
-    {{ partial "menu" . }}
-    <div id="menu-toggle">
+    <div class="menu-toggle">
       <i class="fa fa-bars" onclick="openNav()"></i>
     </div>
-
+    {{ partial "menu" . }}
     <div class="download">
       <a href="https://dashboard.waziup.io" class="button button--red">
         {{ i18n "herospace_text2" }}
