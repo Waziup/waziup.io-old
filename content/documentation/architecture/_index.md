@@ -8,7 +8,7 @@ title: Architecture and components
 #     weight: 1
 ---
 
-WAZIUP is an IoT and Cloud platform based on Kubernetes.
+WAZIUP is an IoT and Cloud platform.
 Let's look inside to see how it is built.
 
 <center> ![Waziup architecture](/images/archi.png)</center>
@@ -63,3 +63,20 @@ The Security and Privacy domain contains three components:
 The first one is in charge of providing the identification, the roles and the connections of the users.
 The Authorization Manager provides the access policy for each of the WAZIUP resources.
 Finally the Privacy Manager provides services for the privacy of communication and also the anonymization of data. 
+
+
+Local Cloud and global Clouds
+-----------------------------
+
+The architecture of Waziup guaranties that you can continue us it, even without Internet!
+
+<center> ![Waziup local and global](/images/localglobal.png)</center>
+<center> *Waziup local and global deployements*</center>
+
+On the left hand side of the picture, the application is designed by the developer.
+It is pushed on the Waziup Cloud platform.
+The orchestrator then takes care of compiling and deploying the application in the various Cloud execution environments.
+Furthermore, the orchestrator drives the instantiation of the services in the Cloud.
+A special file called the *manifest* is also describing which part of the application need to be installed locally, together with corresponding services.
+The local application can then connect to the gateway and collect data from the sensors.
+This local application part will take care of providing the service, even in the case of interruption of Internet access.
