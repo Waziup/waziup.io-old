@@ -3,65 +3,6 @@
 @import 'grid';
 
 
-// mobile menu
-.menu-toggle {
-  display: block;
-  right: 0px;
-  width: 100%;
-  z-index: 9999;
-  margin: 10px;
-  @media all and (min-width: 1025px) {
-    display: none;
-  }
-
-  .fa {
-    font-size:30pt;
-    color: white;
-  }
-}
-
-/* The side navigation menu */
-#mobile-menu {
-  height: 100%; /* 100% Full-height */
-  width: 0px; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1000; /* Stay on top */
-  top: 80px; /* Stay at the top */
-  left: 0;
-  background-color: #173343; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  position: fixed;
-  text-color: white;
-
-  /* The navigation menu links */
-  .mobile-menu-item a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-  }
-
-  /* When you mouse over the navigation links, change their color */
-  .mobile-menu-item a:hover {
-    color: #f1f1f1;
-  }
-
-  /* Position and style the close button (top right corner) */
-  .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    color: white;
-    text-decoration: none;
-  }
-}
-
 .top-menu {
   display: flex;
   justify-content: space-between;
@@ -138,6 +79,22 @@
     color: $color-white-squeeze;
     cursor: pointer;
   }
+
+  .menu-toggle {
+    display: block;
+    right: 0px;
+    width: 100%;
+    z-index: 9999;
+    margin: 10px;
+    @media all and (min-width: 1025px) {
+      display: none;
+    }
+
+    .fa {
+      font-size:30pt;
+      color: white;
+    }
+  }
 }
 
 // Top menu is considered active when the menu is not on top anymore at the landing page
@@ -177,6 +134,48 @@
 
 .sub-menu-icon {
   padding-right: 7px;
+}
+
+// mobile menu
+#mobile-menu {
+  height: 100%; /* 100% Full-height */
+  width: 0px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Stay on top */
+  top: 80px; /* Stay at the top */
+  left: 0;
+  background-color: #173343; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  position: fixed;
+  text-color: white;
+
+  /* The navigation menu links */
+  .mobile-menu-item a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .mobile-menu-item a:hover {
+    color: #f1f1f1;
+  }
+
+  /* Position and style the close button (top right corner) */
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white;
+    text-decoration: none;
+  }
 }
 
 // Top menu items (solutions, user manuals...)

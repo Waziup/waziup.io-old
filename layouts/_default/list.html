@@ -13,10 +13,10 @@
         <nav>
           <ul>
             {{ $currentPage := . }}
-            {{ range .Pages }}
-                <li>
-                  <a href="{{.Permalink}}">{{.Title}}</a>
-                </li>
+            {{ range $currentPage.Menus.main.Children }}
+              <li>
+                <a href="{{.URL}}">{{.Title}}</a>
+              </li>
             {{ end }}
           </ul>
         </nav>
