@@ -2,40 +2,28 @@
   <nav id="nav">
     <ul id="navigation">
       {{ $currentPage := . }}
-      <!--Range through menus (extracted from content folder structure)-->
       {{ range .Site.Menus.main }}
-        <!--If menu has children, create a node and range through children-->
-        {{ if .HasChildren }}
-          <li>
-            <!--Create the node. Add class active (bolded) if the current page corresponds to any children menu entries-->
-            <a href="#" id="top-menu-item-text" class="top-menu-item{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" >{{.Title}}</a>
-            <ul>
-              {{ range .Children}}
+        <li>
+          <a href="{{.URL}}" id="top-menu-item-text" class="top-menu-item{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" >{{.Title}}</a>
+          {{ if .HasChildren }}
+          <ul>
+            {{ range .Children}}
+              <li>
+                <a href="{{.URL}}" class="sub-menu-item{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}">{{.Title}} ></a>
                 {{ if .HasChildren }}
-                  <li>
-                    <a href="#" class="sub-menu-item{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}">{{.Title}} ></a>
-                    <ul>
-                      {{ range .Children}}
-                        <li>
-                          <a href="{{.URL}}" class="sub-menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">{{.Title}}</a>
-                        </li>
-                      {{ end }}
-                    </ul>
-                  </li>
-                {{ else }}
-                 <li>
-                   <a href="{{.URL}}" class="sub-menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">{{.Title}}</a>
-                 </li>
+                <ul>
+                  {{ range .Children}}
+                    <li>
+                      <a href="{{.URL}}" class="sub-menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">{{.Title}}</a>
+                    </li>
+                  {{ end }}
+                </ul>
                 {{ end }}
-              {{ end }}
-            </ul>
-          </li>
-        <!--If doesn't have children, create a link to document-->
-        {{ else }}
-         <li>
-           <a href="{{.URL}}" id="top-menu-item-text" class="top-menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">{{.Title}}</a>
-         </li>
-        {{ end }}
+              </li>
+            {{ end }}
+          </ul>
+          {{ end }}
+        </li>
       {{ end }}
       <li><p href="explore" id="top-menu-item-text" class="top-menu-item">Explore Waziup!</a>
         <ul>
