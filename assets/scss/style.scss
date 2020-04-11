@@ -4,7 +4,7 @@
 @import 'menus';
 
 body {
-  font-family: 'Circular', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 /* Components */
@@ -12,7 +12,6 @@ body {
 .page {
   min-height: 100vh;
   position: relative;
-  //padding-top: 80px;
 
   &.documentation {
     //background-color: red;
@@ -24,9 +23,9 @@ body {
     }
 
     .content {
-      @media all and (min-width: 1025px) {
-        padding-top: 60px;
-      }
+    //  @media all and (min-width: 1025px) {
+        padding-top: 80px;
+    //  }
 
     }
   }
@@ -34,7 +33,7 @@ body {
 
 // Fonts
 .header {
-  font-weight: 100;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: $color-big-stone;
@@ -47,7 +46,7 @@ body {
 
 .h1 {
   font-size: 26px;
-  font-weight: normal;
+  font-weight: bold;
   letter-spacing: 0.05em;
   color: $color-big-stone;
 
@@ -75,7 +74,7 @@ body {
   color: $color-big-stone;
 
 
-    @media all and (min-width: 1025px) {
+  @media all and (min-width: 1025px) {
     font-size: 22px;
   }
 
@@ -312,6 +311,14 @@ body {
     }
   }
 
+  &--black {
+    background-color: black;
+
+    .header, .h1, .h2, .text-header, .text, .fa {
+      color: $color-white-squeeze;
+    }
+  }
+
   &--white {
     background-color: white;
   }
@@ -334,20 +341,6 @@ body {
 
 }
 
-#about-row {
-  padding-top: 200px;
-  
-}
-
-.tech-text {
-  padding-top: 20px;
-  text-align: justify;
-}
-
-#about-col1 {
-  padding-top: 80px;
-}
-
 .col-logo {
   padding: 10px;
   margin-left: 20px;
@@ -355,32 +348,34 @@ body {
 
 .hero-space {
   padding-top: 14px + 40px;
-  padding-bottom: 0;
+  margin-bottom: 0px;
   height: 650px;
   background: linear-gradient(45deg, $color-blue-dianne, $color-big-stone);
-  //background-repeat: no-repeat;
-  //background-size: cover;
-  //background-image: url('/images/top.png');
   position: relative;
 
   @media all and (min-width: 321px) {
     padding-top: 14px + 80px;
+    margin-bottom: 14px + 80px;
   }
 
   @media all and (min-width: 641px) {
     padding-top: 20px + 80px;
+    margin-bottom: 20px + 80px;
   }
 
   @media all and (min-width: 769px) {
     padding-top: 60px + 80px;
+    margin-bottom: 60px + 80px;
   }
 
   @media all and (min-width: 1025px) {
     padding-top: 80px + 80px;
+    margin-bottom: 80px + 80px;
   }
 
   @media all and (min-width: 1201px) {
     padding-top: 80px + 80px;
+    margin-bottom: 80px + 80px;
   }
 
 
@@ -477,8 +472,8 @@ body {
 
   .content-header {
     font-size: 32px;
-    font-weight: 100;
-    color: $color-radical-red;
+    font-weight: bold;
+    color: $color-big-stone;
     line-height: 1.5;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -490,8 +485,8 @@ body {
 .markdowned {
   h1 {
    font-size: 32px;
-   font-weight: 100;
-   color: $color-radical-red;
+   font-weight: bold;
+   color: $color-big-stone;
    line-height: 1.5;
    letter-spacing: 0.05em;
    padding-top: 100px;
@@ -933,15 +928,35 @@ body {
   max-height: 500px; 
 }
 
-.tech-image {
-  height: 250px;
-}
 
 .tech-col {
   text-align: center;
   margin-right: 20px;
   margin-left: 20px;
+  background-color: $color-white-squeeze;
+  padding: 20px;
+  transition: transform 0.3s;
+  
+  .tech-image {
+    height: 250px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+    &:hover {
+      transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+  .tech-text {
+    padding-top: 20px;
+    text-align: justify;
+    color: $color-big-stone;
+  }
+
+  .h2 {
+    color: $color-big-stone;
+  }
 }
+
 
 
 .vamp-bat {
@@ -1145,7 +1160,7 @@ pre + pre {
   h1 {
     font-size: 32px;
     margin-bottom: 10px;
-    font-weight: normal;
+    font-weight: bold;
     letter-spacing: 0.05em;
     color: $color-radical-red;
   }
