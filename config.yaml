@@ -6,12 +6,15 @@ showVisitedLinks: true
 #permalinks:
 #  documentation: /:year/:month/:title/
 
-#menu:
-#  main:
-#    - identifier: arduinolora 
-#      parent: trainingmaterial
-#      title: Arduino sensors & Lora tutorials 
-#      name: about hugo
-#      pre: <i class='fa fa-heart'></i>
-#      url: /training/arduinolora/
-#      weight: 10
+menu:
+  main:
+    - identifier: forum 
+      title: Forum
+      pre: <i class='fa fa-external-link'></i>
+      url: https://forum.waziup.io
+      weight: 10
+    - identifier: wazihub 
+      title: Wazihub
+      pre: <i class='fa fa-external-link'></i>
+      url: https://www.wazihub.com
+      weight: 11

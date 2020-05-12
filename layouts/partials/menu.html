@@ -4,7 +4,7 @@
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
         <li>
-          <a href="{{.URL}}" id="top-menu-item-text" class="top-menu-item{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" >{{.Title}}</a>
+          <a href="{{.URL}}" id="top-menu-item-text" class="top-menu-item{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" >{{.Title}}&nbsp;{{.Pre}}</a>
           {{ if .HasChildren }}
           <ul>
             {{ range .Children}}
@@ -25,30 +25,6 @@
           {{ end }}
         </li>
       {{ end }}
-      <li><p href="explore" id="top-menu-item-text" class="top-menu-item">Explore Waziup!</a>
-        <ul>
-          <li>
-            <img src="/img/external-link-symbol.png" class="sub-menu-icon"/>
-            <a href="https://dashboard.waziup.io" class="sub-menu-item" target="_blank">Cloud IoT platform</a>
-          </li>
-          <li>
-            <img src="/img/external-link-symbol.png" class="sub-menu-icon"/>
-            <a href="https://diy.waziup.io" class="sub-menu-item" target="_blank">Do-It-Yourself IoT</a>
-            </li>
-          <li>
-            <img src="/img/external-link-symbol.png" class="sub-menu-icon"/>
-            <a href="https://iot-catalogue.waziup.io" class="sub-menu-item" target="_blank">Buy IoT components</a>
-            </li>
-          <li>
-            <img src="/img/external-link-symbol.png" class="sub-menu-icon"/>
-            <a href="https://www.waziup.org" class="sub-menu-item" target="_blank">Waziup Association</a>
-            </li>
-          <li>
-            <img src="/img/external-link-symbol.png" class="sub-menu-icon"/>
-            <a href="https://www.wazihub.com" class="sub-menu-item" target="_blank">WaziHub EU-Africa project</a>
-          </li>
-        </ul>
-      </li>
     </ul>
   </nav>
 </div>

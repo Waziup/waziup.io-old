@@ -217,6 +217,26 @@ body {
     }
   }
 
+  &--orange {
+    background-color: $color-flamingo;
+    color: white;
+
+    &:hover {
+      background-color: $color-tia-maria;
+    }
+
+    &--ghost {
+      background-color: transparent;
+      color: $color-flamingo;
+      border: 1px solid $color-flamingo;
+
+      &:hover {
+        background-color: $color-flamingo;
+        color: white;
+      }
+    }
+  }
+
   &--blue {
     background-color: $color-big-stone;
     color: white;
@@ -262,17 +282,19 @@ body {
   }
 
   @media all and (min-width: 769px) {
-    padding: 40px 0;
+    padding-top: 60px;
+    padding-bottom: 100px;
 
   }
 
   @media all and (min-width: 1025px) {
-    padding: 40px 0;
-
+    padding-top: 60px;
+    padding-bottom: 100px;
   }
 
   @media all and (min-width: 1201px) {
-   padding: 40px 0;
+    padding-top: 60px;
+    padding-bottom: 100px;
   }
 
   &--small-padding {
@@ -306,7 +328,7 @@ body {
   &--blue {
     background-color: $color-big-stone;
 
-    .header, .h1, .h2, .text-header, .text, .fa {
+    .header, .h1, .h2, .h3, .text-header, .text, .fa, .ul {
       color: $color-white-squeeze;
     }
   }
@@ -370,12 +392,12 @@ body {
 
   @media all and (min-width: 1025px) {
     padding-top: 80px + 80px;
-    margin-bottom: 80px + 80px;
+    margin-bottom: 60px + 80px;
   }
 
   @media all and (min-width: 1201px) {
     padding-top: 80px + 80px;
-    margin-bottom: 80px + 80px;
+    margin-bottom: 60px + 80px;
   }
 
 
@@ -744,14 +766,15 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  margin-top: 20px;
 
   .button {
-    min-width: 180px;
+    min-width: 250px;
   }
 
   @media all and (min-width: 641px) {
     flex-direction: row;
-    width: 400px;
+    //width: 400px;
   }
 
 
@@ -815,7 +838,7 @@ body {
     text-decoration: none;
 
     .text {
-      font-weight: 100;
+      font-weight: normal;
       color: $color-jungle-mist !important;
 
     }
@@ -936,6 +959,7 @@ body {
   background-color: $color-white-squeeze;
   padding: 20px;
   transition: transform 0.3s;
+  border: 2px solid orange;
   
   .tech-image {
     height: 250px;
