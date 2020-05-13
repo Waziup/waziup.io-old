@@ -254,11 +254,8 @@ body {
         background-color: $color-big-stone;
         color: white;
       }
-
     }
   }
-
-
 }
 
 // Lander rows
@@ -367,12 +364,20 @@ body {
   margin-left: 20px;
 }
 
+
 .hero-space {
   padding-top: 14px + 40px;
-  margin-bottom: 0px;
-  height: 650px;
-  background: linear-gradient(45deg, $color-blue-dianne, $color-big-stone);
+  margin-bottom: 0px !important;
+  height: 750px;
+  background: none; 
   position: relative;
+
+  #bgvideo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -100;
+  }
 
   @media all and (min-width: 321px) {
     padding-top: 14px + 80px;
@@ -402,7 +407,6 @@ body {
 
   .bottom-background {
     position: absolute;
-    //background-color: red;
     left: 0;
     right: 0;
     bottom: 0;
@@ -411,10 +415,8 @@ body {
     display: flex;
 
     .left-pixels {
-      //background-color: red;
       height: 100%;
       width: 50%;
-
       img {
         height: 100%;
       }
@@ -423,7 +425,6 @@ body {
     .right-pixels {
       height: 100%;
       width: 50%;
-
       img {
         float: right;
         height: 100%;
