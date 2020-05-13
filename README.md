@@ -31,5 +31,19 @@ $ docker build -t waziup/website .
 $ docker push waziup/website
 ```
 
+Documentation
+-------------
+
+To generate the dcumentation, you need to install TexLive and pandoc:
+```
+sudo apt-get update
+sudo apt-get install -y wget ca-certificates texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-fonts-recommended
+sudo apt-get install -y pandoc
+```
+
+You can then generate the PDF documentation this way:
+```
+./makeDocs.sh
+```
 
 
