@@ -3,7 +3,7 @@
   {{ $currentPage := . }}
   {{ range .Site.Menus.main }}
      <div class="mobile-menu-item">
-       <a href="{{.URL}}" class="mobile-menu-item-text">{{.Title}}</a>
+       <a href="{{.URL}}" class="mobile-menu-item-text">{{.Title}}&nbsp;{{.Pre}}</a>
      </div>
   {{ end }}
 </div>

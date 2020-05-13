@@ -33,7 +33,7 @@ WAZIDev is a development board integrating Arduino CPU and LoRa network.
 Together with the WAZIUP Gateway and Cloud platform, you can develop a wide range of IoT applications.
 The board is highly configurable to support a wide range of sensors.
 
-![WaziDev development board](images/WaziDev.jpg)
+![WaziDev development board](images/WaziDev.png)
 
 WAZIDev is a development board with embedded LoRa module that allows you to simply develop IoT sensor node as well as IoT actuator node. 
 It is an ideal solution for start-ups and entrepreneurs who want to rapid prototype a IoT applications.
@@ -53,7 +53,7 @@ WaziGate
 *WaziGate is a IoT LoRa Gateway, ideal for all your remote IoT applications.*
 WaziGate is an affordable solution for developing countries needs’.
 
-![WaziGate](images/wazigate.jpg)
+![WaziGate](images/WaziGate.png)
 
 The WaziGate features:
 

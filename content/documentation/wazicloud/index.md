@@ -8,6 +8,9 @@ menu:
     title: WaziCloud
     parent: documentation 
     weight: 3
+aliases:
+  - /tutorials/software/dashboard/
+
 ---
 
 

@@ -42,7 +42,7 @@ If your application is written in Javascript, you can use the [Waziup library](h
 It's easier!
 All documentation is provided in the README files in the repository.
 
-If you have an application using previous versions of the API, use the [migration guide](./migration_guide_v2).
+If you have an application using previous versions of the API, use the [migration guide](#v2-migration-guide).
 
 Access control
 ==============
@@ -172,7 +172,7 @@ Device management
 This tutorial will guide you through the Waziup API version 2, step by step.
 We will create a device, update its attributes and then delete it.
 We will perform all the commands without authentication, so the sensor created will be public.
-If you want to know more about private sensors, see [this tutorial](../access_control).
+If you want to know more about private sensors, see [this tutorial](#access-control).
 
 First of all, open the API documentation available at https://api.waziup.io/docs.
 With this website, you can explore and interact with all the endpoints of the Waziup API.
@@ -502,11 +502,11 @@ Simple gateway protocol
 
 As a simple approach, a gateway can just push datapoints on existing devices on the platform.
 The devices and sensors should be created beforehand on the [dashboard](https://dashboard.waziup.io).
-To create the device, follow [this tutorial](/tutorials/software/dashboard/).
+To create the device, follow [this tutorial](/documentation/wazicloud).
 We will not use any authentication, so the sensor need to be public.
 
 We are now ready to push a new datapoint!
-Follow [those instructions](../device_management/#push-data-to-your-sensor-node) to push the datapoint.
+Follow [those instructions](#push-data-to-your-sensor) to push the datapoint.
 Once pushed, you should alerady see the new value displayed on the dashboard!
 
 Complex gateway protocol
@@ -517,12 +517,12 @@ In order to maintain privacy, a token should be obtained before each call.
 Once this is done, datapoints can be pushed.
 A suggested protocol is the following:
 
-1. Get a token: `GET api/v2/auth/token`. See [here](../access_control/#authentication).
-2. Verify if the sensor exists: `GET /api/v2/devices/<device_id>`. See [here](../sensor_management/#read-a-particular-sensor).
-3. If a 404 is received, create it: `POST /api/v2/devices`. See [here](../sensor_management/#create-a-sensor-node).
-4. Verify if the measurement exists: `GET /api/v2/devices/<device_id>/sensors/<sensor_id`. See [here](../sensor_management/#check-your-measurement).
-5. If a 404 is received, create it: `POST /api/v2/devices/<device_id>/sensors`. See [here](../sensor_management/#create-measurements).
-6. Finally, push the datapoint: `POST /api/v2/devices/<device_id>/sensors/<sensor_id>/value`. See [here](../sensor_management/#push-data-to-your-sensor-node).
+1. Get a token: `GET api/v2/auth/token`. See [here](#access-control).
+2. Verify if the sensor exists: `GET /api/v2/devices/<device_id>`. See [here](#read-a-particular-device).
+3. If a 404 is received, create it: `POST /api/v2/devices`. See [here](#create-a-device).
+4. Verify if the measurement exists: `GET /api/v2/devices/<device_id>/sensors/<sensor_id`. See [here](#check-your-sensor).
+5. If a 404 is received, create it: `POST /api/v2/devices/<device_id>/sensors`. See [here](#create-sensors).
+6. Finally, push the datapoint: `POST /api/v2/devices/<device_id>/sensors/<sensor_id>/value`. See [here](#push-data-to-your-sensor).
 
 This protocol takes care of creating a device and sensor for the owner of the device. It then pushes the datapoint. 
 
@@ -535,7 +535,7 @@ We will create and manage notifications.
 
 Let's imagine that we want to monitor the temperature in your fridge.
 If the temperature is too high, you should receive a message on your phone!
-First of all, let's create a device in [this tutorial](../device_management).
+First of all, let's create a device in [this tutorial](#device-management).
 The device should have name "MyDevice" with a sensor called "TC1".
 We will monitor this temperature measurement and create a notification.
 This notification will send us message via SMS if the temperature goes above 10 Degree Celsius.
@@ -646,7 +646,7 @@ Notifications should be triggered when sensors are updated. Let's update our sen
 curl -X POST "https://api.waziup.io/api/v2/devices/MyDevice/sensors/TC/value" -H  "Content-Type: application/json" -d '{"value": "25.6", "timestamp": "2016-06-08T18:20:27.873Z"}'
 ```
 Since we sent a value inferior to 40C, it should trigger the notification and send an SMS!
-For more information on how to create sensor and push datapoints, see this [tutorial](../sensor_management).
+For more information on how to create sensor and push datapoints, see this [tutorial](#device-management).
 
 Pause/restart the notification
 ------------------------------
