@@ -1,0 +1,57 @@
+{{ partial "head" . }}
+
+<div>
+  {{ partial "nav" . }}
+</div>
+{{ partial "mobile-menu" . }}
+
+<!--HEROSPACE ROW-->
+<div class="page">
+  <div class="lander-row lander-row--white" style="height: 1000px; overflow: hidden; padding-top: 120px;">
+    <div class="container">
+      <h1 class="h1">
+        Twitter feed
+      </h1>
+      <div class="row">
+        <div class="col col-15">
+          <div class="twitts">
+            <a class="twitter-timeline"
+               href="https://twitter.com/waziupiot"
+               data-tweet-limit="10"
+               data-width="1000"
+               data-height="300"
+               >
+               Tweets by @waziupIOT
+            </a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="lander-row lander-row--blue">
+    <div class="container">
+      <h1 class="h1">
+        Our Videos
+      </h1>
+      <div class="row row--wrap">
+        {{ $urlPre := "https://www.googleapis.com" }}
+        {{ $data := getJSON $urlPre "/youtube/v3/search?key=AIzaSyA572aZ-VMatfSZfGs7wjaZ-2dc39_meGY&channelId=UCGbGcMnBxiJG6Q29LyuKOJQ&part=snippet,id&order=date&maxResults=20" }}
+        {{ range $data.items }}
+          <div class="col-5" style="padding:10px; overflow:hidden;">
+            <div style="height: 4em; line-height: 1.3em; overflow: hidden;">
+              <h2 class="h2 center">
+                {{ htmlUnescape .snippet.title }}
+              </h2>
+            </div>
+            <iframe width="400" height="350" src="https://www.youtube.com/embed/{{ .id.videoId }}">
+            </iframe>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ partial "footer" .}}
