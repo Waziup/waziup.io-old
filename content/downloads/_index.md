@@ -5,7 +5,7 @@ menu:
   main:
     title: Downloads
     name: downloads
-    weight: 2
+    weight: 5
 ---
 
 This page lists all the downloads for the Waziup Platform.

@@ -42,7 +42,7 @@
     height: 100%;
   }
 
-  .top-menu-items, .download, .github-logo, .search-button {
+  .top-menu-items {
     display: none;
     align-items: center;
     position: relative;
@@ -75,11 +75,6 @@
     }
   }
 
-  .github-logo, .search-button {
-    color: $color-white-squeeze;
-    cursor: pointer;
-  }
-
   .menu-toggle {
     display: block;
     right: 0px;
@@ -108,10 +103,6 @@
   }
 
   .top-menu-item {
-    color: $color-big-stone;
-  }
-
-  .github-logo{
     color: $color-big-stone;
   }
 

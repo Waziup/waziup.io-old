@@ -1,11 +1,11 @@
 ---
 date: 2018-04-11T09:00:00+00:00
-title: User manuals
+title: Documentation
 menu:
   main:
-    title: User manuals
+    title: Documentation
     name: documentation 
-    weight: 2
+    weight: 4
 ---
 
 All the documentation is listed here:

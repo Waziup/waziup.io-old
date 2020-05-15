@@ -1,12 +1,6 @@
 ---
 date: 2016-09-13T09:00:00+00:00
 title: Our solutions 
-layout: singletoc
-menu:
-  main:
-    title: Solutions
-    name: solutions
-    weight: 1
 ---
 
 WAZIUP is an IoT and Cloud platform that allows you to create and deploy your IoT applications both in the Cloud and on the IoT gateway.

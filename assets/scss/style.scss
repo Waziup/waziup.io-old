@@ -368,15 +368,20 @@ body {
 .hero-space {
   padding-top: 14px + 40px;
   margin-bottom: 0px !important;
-  height: 750px;
-  background: none; 
+  height: 700px;
   position: relative;
+  background: none;
 
   #bgvideo {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: -100;
+    filter: brightness(80%);
+  }
+
+  &--dark {
+    background: linear-gradient(45deg, $color-blue-dianne, $color-big-stone);
   }
 
   @media all and (min-width: 321px) {
@@ -825,6 +830,7 @@ body {
 .footer {
   position: relative;
   z-index: 999;
+  padding-bottom: 50px;
 
   .text {
     color: $color-jungle-mist !important;
@@ -952,22 +958,26 @@ body {
 }
 
 
-.tech-col {
-  text-align: center;
+.card {
   margin-right: 20px;
   margin-left: 20px;
-  background-color: $color-white-squeeze;
+  background-color: white;
   padding: 20px;
   transition: transform 0.3s;
   border: 2px solid orange;
+  border-radius: 5px;
+  max-height: 450px !important;
+  overflow: hidden;
+  text-align: center;
   
   .tech-image {
     height: 250px;
     margin-top: 10px;
     margin-bottom: 20px;
+
   }
     &:hover {
-      transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      transform: scale(1.05);
     }
 
   .tech-text {
@@ -975,16 +985,6 @@ body {
     text-align: justify;
     color: $color-big-stone;
   }
-
-  .h2 {
-    color: $color-big-stone;
-  }
-}
-
-
-
-.vamp-bat {
-  width: 60%;
 }
 
 .social-buttons {
@@ -993,7 +993,7 @@ body {
   align-items: center;
   height: 30px;
   margin-top: 20px;
-  width: 45%;
+  width: 70%;
   line-height: 30px;
 
   a {
@@ -1001,6 +1001,7 @@ body {
 
     i {
       line-height: inherit;
+      color: white;
     }
   }
 }
