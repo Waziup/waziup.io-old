@@ -37,17 +37,22 @@
         Our Videos
       </h1>
       <div class="row row--wrap">
+        <!-- Retrieving Video list from Waziup Youtube channel. 
+        Get the key from here: https://console.developers.google.com/apis/credentials -->
         {{ $urlPre := "https://www.googleapis.com" }}
         {{ $data := getJSON $urlPre "/youtube/v3/search?key=AIzaSyA572aZ-VMatfSZfGs7wjaZ-2dc39_meGY&channelId=UCGbGcMnBxiJG6Q29LyuKOJQ&part=snippet,id&order=date&maxResults=20" }}
         {{ range $data.items }}
-          <div class="col-5" style="padding:10px; overflow:hidden;">
-            <div style="height: 4em; line-height: 1.3em; overflow: hidden;">
-              <h2 class="h2 center">
+          <div class="col-5" style="padding:20px; overflow:hidden;">
+            <div style="height: 4em; line-height: 1.3em; overflow: hidden; padding-bottom:30px;">
+              <h2 class="h2 center" style="font-size: larger;">
                 {{ htmlUnescape .snippet.title }}
               </h2>
             </div>
-            <iframe width="400" height="350" src="https://www.youtube.com/embed/{{ .id.videoId }}">
-            </iframe>
+            <div style="margin-top: 0px; margin-bottom: 30px">
+              <a href="https://www.youtube.com/watch?v={{ .id.videoId }}" target="_blank">
+                <img src="https://img.youtube.com/vi/{{ .id.videoId }}/0.jpg"></img>
+              </a>
+            </div>
           </div>
         {{ end }}
       </div>
