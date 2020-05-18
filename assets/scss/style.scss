@@ -983,14 +983,19 @@ body {
   overflow: hidden;
   text-align: center;
   width: 340px;
-  height: 350px;
+  height: 440px;
   position: relative;
   
-  img {
+  .team-image {
+    width: 100%;
     height: 100%;
   }
+
   &:hover {
     transform: scale(1.05);
+    .team-overlay {
+      display: block;
+    }
   }
 
   .team-overlay {
@@ -1002,6 +1007,7 @@ body {
     right:0;
     text-align: center;
     color: black;
+    display: none;
   }
 }
 
