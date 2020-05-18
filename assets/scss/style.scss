@@ -340,6 +340,10 @@ body {
 
   &--white {
     background-color: white;
+
+    .header, .h1, .h2, .h3, .text-header, .text, .fa, .ul, i {
+      color: $color-big-stone;
+    }
   }
 
   &--grey {
@@ -968,6 +972,37 @@ body {
   max-height: 700px;
   overflow: scroll;
   text-align: center;
+}
+
+.team {
+  background-color: white;
+  transition: transform 0.3s;
+  border: 2px solid orange;
+  border-radius: 5px;
+  max-height: 450px !important;
+  overflow: hidden;
+  text-align: center;
+  width: 340px;
+  height: 350px;
+  position: relative;
+  
+  img {
+    height: 100%;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .team-overlay {
+    color: $color-big-stone;
+    z-index: 100;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    text-align: center;
+    color: black;
+  }
 }
 
 .card {
