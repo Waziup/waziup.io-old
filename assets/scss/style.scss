@@ -380,9 +380,12 @@ body {
   #bgvideo {
     position: fixed;
     top: 0;
-    width: 100%;
     z-index: -100;
     filter: brightness(80%);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
+    min-height: 760px;
   }
 
   &--gradient {
