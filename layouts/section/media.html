@@ -42,7 +42,10 @@
         <!-- Retrieving Video list from Waziup Youtube channel. 
         Get the key from here: https://console.developers.google.com/apis/credentials -->
         {{ $urlPre := "https://www.googleapis.com" }}
-        {{ $data := getJSON $urlPre "/youtube/v3/search?key=AIzaSyA572aZ-VMatfSZfGs7wjaZ-2dc39_meGY&channelId=UCGbGcMnBxiJG6Q29LyuKOJQ&part=snippet,id&order=date&maxResults=30&type=video" }}
+        {{ $key := "AIzaSyA572aZ-VMatfSZfGs7wjaZ-2dc39_meGY" }}
+        {{ $channel := "UCGbGcMnBxiJG6Q29LyuKOJQ" }}
+        {{ $urlPath := print "/youtube/v3/search?key=" $key "&channelId=" $channel "&part=snippet,id&order=date&maxResults=30&type=video" }}
+        {{ $data := getJSON $urlPre $urlPath }}
         {{ range $data.items }}
           <div class="col-5" style="padding:20px; overflow:hidden;">
             <div style="height: 4em; line-height: 1.3em; overflow: hidden; padding-bottom:30px;">
