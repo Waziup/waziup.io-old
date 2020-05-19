@@ -14,19 +14,9 @@ body {
   position: relative;
 
   &.documentation {
-    //background-color: red;
-    //background: linear-gradient(90deg, $light-grey 33%, white 33%);
-
     .header {
       color: $color-radical-red;
       margin: 40px 0;
-    }
-
-    .content {
-    //  @media all and (min-width: 1025px) {
-        padding-top: 80px;
-    //  }
-
     }
   }
 }
@@ -34,7 +24,7 @@ body {
 // Fonts
 .header {
   font-weight: bold;
-  text-transform: uppercase;
+  font-variant: small-caps;
   letter-spacing: 0.1em;
   color: $color-big-stone;
   font-size: 26px;
