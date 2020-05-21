@@ -12,13 +12,11 @@ body {
 .page {
   min-height: 100vh;
   position: relative;
+  margin-top: 80px; //margin to compensate space used by menu bar
+}
 
-  &.documentation {
-    .header {
-      color: $color-radical-red;
-      margin: 40px 0;
-    }
-  }
+.documentation {
+  padding-top: 60px;  
 }
 
 // Fonts
@@ -363,8 +361,8 @@ body {
 .hero-space {
   padding-top: 14px + 40px;
   padding-bottom: 60px;
-  margin-bottom: 0px !important;
-  height: 700px;
+  margin-bottom: 0px;
+  height: 620px;
   position: relative;
   background: none;
 
@@ -383,29 +381,25 @@ body {
     background: linear-gradient(45deg, $color-blue-dianne, $color-big-stone);
   }
 
+  //Less padding for smaller screens
   @media all and (min-width: 321px) {
-    padding-top: 14px + 80px;
-    margin-bottom: 14px + 80px;
+    padding-top: 14px;
   }
 
   @media all and (min-width: 641px) {
-    padding-top: 20px + 80px;
-    margin-bottom: 20px + 80px;
+    padding-top: 20px;
   }
 
   @media all and (min-width: 769px) {
-    padding-top: 60px + 80px;
-    margin-bottom: 60px + 80px;
+    padding-top: 60px;
   }
 
   @media all and (min-width: 1025px) {
-    padding-top: 80px + 80px;
-    margin-bottom: 60px + 80px;
+    padding-top: 80px;
   }
 
   @media all and (min-width: 1201px) {
-    padding-top: 80px + 80px;
-    margin-bottom: 60px + 80px;
+    padding-top: 80px;
   }
 
 
@@ -503,7 +497,6 @@ body {
     line-height: 1.5;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    margin-top: 50px;
   }
 }
 

@@ -4,7 +4,7 @@
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
         <li>
-          <a href="{{.URL}}" id="top-menu-item-text" class="top-menu-item{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}" >{{.Title}}&nbsp;{{.Pre}}</a>
+          <a href="{{.URL}}" id="top-menu-item-text" class="top-menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}" >{{.Title}}&nbsp;{{.Pre}}</a>
           {{ if .HasChildren }}
           <ul>
             {{ range .Children}}

@@ -1,8 +1,5 @@
 {{ partial "head" . }}
-
-<div>
-  {{ partial "nav" . }}
-</div>
+{{ partial "nav" . }}
 
 <!--HEROSPACE ROW-->
 <div class="page">
@@ -14,7 +11,7 @@
     </div>
     <div class="container" style="position:relative">
       <div style="position:absolute; width:100%; bottom:0;"> 
-        <h1 class="header center">
+        <h1 class="header center" style="font-variant:none">
           WAZIUP e.V.
         </h1>
         <h2 class="h2 center">
@@ -211,4 +208,5 @@
     </div>
   </div>
 </div>
+
 {{ partial "footer" .}}
