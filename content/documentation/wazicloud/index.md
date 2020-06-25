@@ -27,8 +27,7 @@ If not, please check [this section](/documentation/wazigate/).
 Create a user
 -------------
 The first thing you need to do is to create a login and a password.
-Click on the “Go to dashboard” button on top of this page.
-This will lead you to a page as shown below.
+First, [open the WaziCloud dashboard](https://dashboard.waziup.io/).
  
 ![Waziup login page](./images/login.png)
 
