@@ -320,3 +320,15 @@ Your gateway details will open.
 
 If you see something like this, then Congratulations! :) You made it.                   
 Now you can simply manage your gateway remotely through your Waziup dashboard.
+
+Developpers
+===========
+
+Connect with Ethernet cable
+---------------------------
+
+**Windows**
+
+**Linux**
+
+**Mac**
