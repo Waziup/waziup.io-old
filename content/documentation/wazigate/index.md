@@ -321,14 +321,89 @@ Your gateway details will open.
 If you see something like this, then Congratulations! :) You made it.                   
 Now you can simply manage your gateway remotely through your Waziup dashboard.
 
-Developpers
-===========
+Annex
+=====
 
-Connect with Ethernet cable
----------------------------
+Connect with Ethernet cable to PC
+---------------------------------
 
-**Windows**
+This section will guide you to connect your Wazigate to your PC using an Ethernet cable. You should have the following hardware:
 
-**Linux**
+-	A Waziup gateway with power cable (mini USB)
+-	A laptop/PC with an RJ45 slot or adapter
+-	A RJ45 cable (simple network cable)
+- Internet access on your laptop/PC
 
-**Mac**
+### Windows
+
+{{%action%}}
+**Step \#1:** Open Control panel.
+{{%/action%}}
+
+Press  shortcut key combination Windows + R , type “control” and click ok button
+
+![Control panel](media/image44.png)
+
+Here click on "Network and Internet" menù and then "Network and sharing center".
+
+{{%action%}}
+**Step \#2:** Select sharing connection.
+{{%/action%}}
+
+Click on your internet connection and go to “Properties”.
+
+![Select connection](media/image46.png)
+
+{{%action%}}
+**Step \#3:** Allow sharing connection.
+{{%/action%}}
+
+Switch to the “Sharing” tab and check the box to allow other users to connect to the internet through your computer.
+
+![Allow sharing W.](media/image47.png)
+
+### Linux
+
+
+{{%action%}}
+**Step \#1:** Open connection editor.
+{{%/action%}}
+
+Open the connection editor  through the terminal using the comand:
+```
+  nm-connection-editor
+```
+<br>
+
+{{%action%}}
+**Step \#2:** Sharing connection.
+{{%/action%}}
+
+When it opens, select the wired connection item, clicking the edit button . In that menu, switch to the IPv4 tab, and select the method: ‘shared to other computers’
+
+![Allow sharing L.](media/image48.jpg)
+
+After that, save everything and connect your cable if you haven’t already, and DHCP should kick-in and set everything up for you
+
+**Note:** if you need to get the IP address of the connection, you can use ifconfig. You’ll only need this if DHCP doesn’t automatically configure everything.
+
+### Mac
+
+
+{{%action%}}
+**Step \#1:** Open Sharing menu.
+{{%/action%}}
+
+-	Open System Preferences. It’s typically found on your dock, if not, it’s in your Applications folder.
+-	In System Preferences, under Internet & Wireless, go into the Sharing menu.
+
+{{%action%}}
+**Step \#2:** Sharing connection.
+{{%/action%}}
+
+In the Sharing menu, choose Internet Sharing from the list on the left. You will see Internet Sharing options
+
+![Allow sharing M.](media/image49.jpg)
+
+Select to share your connection from Wi-Fi, to computers using Ethernet.After that, click on the Internet Sharing checkbox to enable the service
+
