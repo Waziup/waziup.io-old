@@ -8,7 +8,7 @@ Writing content
 
 1. Clone this repo
 
-        $ git clone https://github.com/waziup.io/waziup.io.git
+        $ git clone https://github.com/waziup/waziup.io
 
 2. Download Hugo from [http://gohugo.io](http://gohugo.io) or install using Homebrew:
 
