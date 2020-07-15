@@ -3,6 +3,16 @@ title: "WAZIUP e.V."
 languageCode: "en-us"
 showVisitedLinks: true
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    ordered: false
+    startLevel: 1
+    endLevel: 3
+
+
 menu:
   main:
     - identifier: forum 
