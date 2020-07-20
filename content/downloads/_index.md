@@ -23,7 +23,7 @@ ISO image
 WaziDev
 =======
 
-- Library and sketchbook: [Download V1.0](https://github.com/Waziup/WaziDev/archive/V1.0.zip)
+- Library and sketchbook: [Download V1.0](https://github.com/Waziup/WaziDev/archive/master.zip)
 - User Manual: [Download V1.0](/docs/WaziDev_User_Manual-V1.0.pdf)
 
 WaziCloud
