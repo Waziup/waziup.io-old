@@ -43,7 +43,7 @@ Some cable sold on the market are just for power, and they won't work for the Wa
 In terms of software, you need:
 
 -   [Arduino IDE](https://www.arduino.cc/en/Main/Software)
--   [Waziup examples, libraries and drivers](https://github.com/Waziup/WaziDev/archive/V1.0.zip)
+-   [Waziup examples, libraries and drivers](https://github.com/Waziup/WaziDev/archive/master.zip)
 
 For the examples using the cloud, one also needs a configured [WaziGate](https://www.waziup.io/documentation/wazigate/).
 
@@ -94,7 +94,7 @@ Install the WaziDev sketchbook
 In this section one will configure the Arduino IDE to use the WaziDev sketchbook.
 
 {{%action%}}
-**Step \#1:** Download the [WaziDev sketchbook](https://github.com/Waziup/WaziDev/archive/V1.0.zip). Unzip the file to the location of your choice.        
+**Step \#1:** Download the [WaziDev sketchbook](https://github.com/Waziup/WaziDev/archive/master.zip). Unzip the file to the location of your choice.        
 {{%/action%}}
 
 ![WaziDev sketchbook files extraction](./media/image17.png)

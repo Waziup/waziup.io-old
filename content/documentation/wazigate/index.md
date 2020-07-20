@@ -346,14 +346,25 @@ Annex
 Connect with Ethernet cable to PC
 ---------------------------------
 
-This section will guide you to connect your Wazigate to your PC using an Ethernet cable. You should have the following hardware:
+This section will guide you to connect your Wazigate to your PC using an Ethernet cable.
+This is useful to access the WaziGate UI for configuration.
+You should have the following hardware:
 
--	A Waziup gateway with power cable (mini USB)
--	A laptop/PC with an RJ45 slot or adapter
--	A RJ45 cable (simple network cable)
+- A Waziup gateway with power cable (mini USB)
+- A laptop/PC with an RJ45 slot or adapter
+- A RJ45 cable (simple network cable)
 - Internet access on your laptop/PC
 
+First, connect the RJ45 cable between your laptop/PC and the WaziGate.
+
+In order to connect from your computer to the WaziGate, we need to activate the DHCP service on your computer.
+The local DHCP will attribute an IP address to the WaziGate.
+This option is usually called "Share the internet connection" on your computer.
+The following sections show the procedure for Windows, Mac and Linux.
+
 ### Windows
+
+On Windows, do the following:
 
 {{%action%}}
 **Step \#1:** Open Control panel.
@@ -363,7 +374,7 @@ Press  shortcut key combination Windows + R , type “control” and click ok bu
 
 ![Control panel](media/image44.png)
 
-Here click on "Network and Internet" menù and then "Network and sharing center".
+Here click on "Network and Internet" menu and then "Network and sharing center".
 
 {{%action%}}
 **Step \#2:** Select sharing connection.
@@ -381,8 +392,12 @@ Switch to the “Sharing” tab and check the box to allow other users to connec
 
 ![Allow sharing W.](media/image47.png)
 
+The WaziGate should now have an IP. You can connect to it using this link: http://wazigate.local.
+
+
 ### Linux
 
+On Linux, do the following:
 
 {{%action%}}
 **Step \#1:** Open connection editor.
@@ -394,20 +409,25 @@ Open the connection editor  through the terminal using the comand:
 ```
 <br>
 
+If `nm-connection-editor` if not present, you need to install it.
+
 {{%action%}}
 **Step \#2:** Sharing connection.
 {{%/action%}}
 
-When it opens, select the wired connection item, clicking the edit button . In that menu, switch to the IPv4 tab, and select the method: ‘shared to other computers’
+When it opens, select the wired connection item, clicking the edit button. In that menu, switch to the IPv4 tab, and select the method: ‘shared to other computers’
 
 ![Allow sharing L.](media/image48.jpg)
 
-After that, save everything and connect your cable if you haven’t already, and DHCP should kick-in and set everything up for you
+After that, save everything and connect your cable if you haven’t already, and DHCP should kick-in and set everything up for you.
+
+The WaziGate should now have an IP. You can connect to it using this link: http://wazigate.local.
 
 **Note:** if you need to get the IP address of the connection, you can use ifconfig. You’ll only need this if DHCP doesn’t automatically configure everything.
 
 ### Mac
 
+On Mac, do the following:
 
 {{%action%}}
 **Step \#1:** Open Sharing menu.
@@ -420,9 +440,11 @@ After that, save everything and connect your cable if you haven’t already, and
 **Step \#2:** Sharing connection.
 {{%/action%}}
 
-In the Sharing menu, choose Internet Sharing from the list on the left. You will see Internet Sharing options
+In the Sharing menu, choose Internet Sharing from the list on the left. You will see Internet Sharing options.
 
 ![Allow sharing M.](media/image49.jpg)
 
-Select to share your connection from Wi-Fi, to computers using Ethernet.After that, click on the Internet Sharing checkbox to enable the service
+Select to share your connection from Wi-Fi, to computers using Ethernet.
+After that, click on the Internet Sharing checkbox to enable the service.
 
+The WaziGate should now have an IP. You can connect to it using this link: http://wazigate.local.
