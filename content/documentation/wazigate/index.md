@@ -274,6 +274,25 @@ If you enter your WiFi password correctly and the internet is available, after a
 **Note:** If Wazigate does not manage to connect to your WiFi due to wrong credentials or not being in the range of the WiFi router, it will rollback to the hotspot mode and you need to connect to it again and start over. *This might take a few minutes depending on the router.*
 {{%/warning%}}
 
+Connect to your gateway
+-----------------------
+
+At this stage, your gateway should have access to internet. However in order to connect to it,we need to find its IP.
+If you have OLED installed on raspberry pi the IP will be shown directly on the screen
+
+![OLED IP](media/image50.jpg)
+
+Otherwise you can find it by following this simple tutorial:
+- Download AngryIP Scanner [here](https://angryip.org/download)
+- Connect your PC/Laptop on the same Wi-Fi that the raspberry pi is connected to
+- Scan the IPs
+
+The IP of the gateway should be in the result
+
+![IP scanner](media/image51.png)
+
+Use a web browser on your laptop and open http://<gateway IP>
+
 Verify Gateway Registration
 ---------------------------
 
