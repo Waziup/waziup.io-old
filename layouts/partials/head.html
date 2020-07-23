@@ -33,9 +33,7 @@
       font-style: normal;
     }
   </style>
-
-  {{ $sass := resources.Get "scss/style.scss" }}
-  {{ $styles := $sass | resources.ToCSS }}  
+  {{ $styles := resources.Get "scss/style.scss" | resources.ToCSS | resources.Minify}}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
   <link rel="stylesheet" href="/css/all.css">
   <link rel="stylesheet" href="/css/highlight.css">
