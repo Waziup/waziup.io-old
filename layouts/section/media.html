@@ -5,6 +5,26 @@
 </div>
 {{ partial "mobile-menu" . }}
 
+<!--NEWS-->
+<div class="page">
+  <div class="lander-row lander-row--blue">
+    <div class="container">
+      <h1 class="h1">
+        News
+      </h1>
+      <ul>
+        <!-- orders content according to the "date" field in front matter -->
+        {{ range .Pages.ByExpiryDate }}
+            <li>
+              <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+              <i>{{.Content}}</i>
+              {{.Date.Format "Mon Jan 2 2006"}}
+            </li>
+        {{ end }}
+    </ul>
+    </div>
+  </div>
+
 <!--HEROSPACE ROW-->
 <div class="page">
   <div class="lander-row lander-row--white">
@@ -29,7 +49,7 @@
         <a href="https://github.com/Waziup" target="_blank">
           <i class="fab fa-2x fa-github"></i>
         </a>
-      </h1>
+      </h2>
     </div>
   </div>
 
