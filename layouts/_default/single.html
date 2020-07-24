@@ -2,6 +2,13 @@
 {{ partial "nav" . }}
 
 <div class="page documentation">
+  <div class="left-menu">
+    {{ partial "left-menu" . }}
+  </div>
+    <div class="menu">
+      What's on this Page:
+      {{.TableOfContents}}
+    </div>
     <div class="content">
       <h1 class="content-header">{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
       <div class="markdowned">
