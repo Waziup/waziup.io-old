@@ -1,5 +1,6 @@
 ---
 title: Cattle management
+layout: single
 menu:
   main:
     title: Cattle management 

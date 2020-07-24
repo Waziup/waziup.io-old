@@ -1,6 +1,6 @@
 ---
 title: Fish farming prototype
-layout: singletoc
+layout: single
 menu:
   main:
     title: Fish farming app 

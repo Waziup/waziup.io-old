@@ -1,6 +1,6 @@
 ---
 title: Urban waste management 
-layout: singletoc
+layout: single
 menu:
   main:
     title: Urban waste 

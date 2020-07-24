@@ -1,6 +1,5 @@
 ---
 title: Downloads
-layout: singletoc
 menu:
   main:
     title: Downloads

@@ -1,6 +1,6 @@
 ---
 title: Create your App with Waziup
-layout: singletoc
+layout: single
 menu:
   main:
     title: Web application 

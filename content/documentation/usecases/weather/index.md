@@ -1,6 +1,6 @@
 ---
 title: How to prototype a LoRa Weather Station!
-layout: singletoc
+layout: single
 menu:
   main:
     title: Weather station
