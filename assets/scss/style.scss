@@ -370,7 +370,7 @@ body {
     position: fixed;
     top: 0;
     z-index: -100;
-    filter: brightness(80%);
+    filter: brightness(90%);
     left: 50%;
     transform: translateX(-50%);
     min-width: 100%;
@@ -464,13 +464,29 @@ body {
 // single page
 .menu {
   display: none;
-  background-color: $color-white-squeeze;
-  padding: 40px + 80px 40px 40px 40px;
+  background-color: whitesmoke;
+  padding: 55px + 60px 40px 40px 40px;
   height: 100vh;
   position: fixed;
   bottom: 0;
+  right:0;
   overflow-y: scroll;
-  width: 280px + 40px + 40px;
+  width: 260px + 40px + 40px;
+
+  @media all and (min-width: 1025px) {
+    display: block;
+  }
+}
+.left-menu {
+  margin-top: -80px;
+  display: none;
+  background-color: $color-white-squeeze;
+  padding: 50px 40px 40px 40px;
+  height: 100vh;
+  //position: fixed;
+  //bottom: 0;
+  float: left;
+  width: 260px + 40px + 40px;
 
   @media all and (min-width: 1025px) {
     display: block;
@@ -481,7 +497,7 @@ body {
   padding: 30px 40px 40px 40px;
   background-color: white;
   min-height: 100vh;
-  max-width: 980px;
+  max-width: 730px;
 
   @media all and (min-width: 1025px) {
     //display: block;
@@ -908,8 +924,6 @@ body {
     font-weight: bold;
   }
 
-  .admonotion-content {
-  }
 
   li {
     font-weight: normal;
@@ -1194,7 +1208,7 @@ pre + pre {
     @media all and (min-width: 1201px) {
     }
 
-    .col {}
+    
   }
 }
 

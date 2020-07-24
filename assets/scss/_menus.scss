@@ -141,7 +141,7 @@
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   position: fixed;
-  text-color: white;
+  color: white;
 
   /* The navigation menu links */
   .mobile-menu-item a {
@@ -231,6 +231,51 @@
 
 #TableOfContents ul li {
 
+  font-size: 12px;
+
+  border-bottom: 1px solid #96ADAA;
+
+  &:first-child {
+    padding-top: 0;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+
+  a {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &:hover {
+      color: red;
+    }
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+
+  ul li {
+    border-bottom: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 50px;
+  }
+}
+
+.toctitle {
+  font-size: 24px;
+  padding-bottom: 18px;
+}
+
+#TableOfContents1 ul li {
+  
+
   border-bottom: 1px solid #96ADAA;
 
   &:first-child {
@@ -270,4 +315,8 @@
   font-size: 24px;
   padding-bottom: 18px;
 }
+
+
+
+
 
