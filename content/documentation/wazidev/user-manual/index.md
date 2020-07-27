@@ -1,11 +1,11 @@
 ---
-title: WaziDev User Manual
-layout: single
+date: 2020-07-24T09:00:00+00:00
+title: DocWaziDev
 menu:
   main:
-    title: WaziDev
-    name: docwazidev
-    parent: documentation
+    title: DocWaziDev
+    name: doc-WaziDev
+    parent: wazidev
     weight: 1
 ---
 
