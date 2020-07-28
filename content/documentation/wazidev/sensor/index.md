@@ -65,7 +65,8 @@ void loop(){
   delay(250);
 }
 ```
-The raw source of the sketch example is visible [here](https://diy.waziup.io/assets/src/sketch/Arduino_lm35_temp/Arduino_lm35_temp.ino)
+
+The raw source of the sketch example is visible [here](https://github.com/Waziup/WaziDev/blob/master/examples/sensors/Temperature/LM35/LM35.ino)
 
 DS18B20 Sensor
 --------------
@@ -132,7 +133,7 @@ void loop()
 }
 ```
 
-The raw source of the sketch example is visible [here](https://diy.waziup.io/assets/src/sketch/Arduino_ds18b20_temp/Arduino_ds18b20_temp.ino).
+The raw source of the sketch example is visible [here](https://github.com/Waziup/WaziDev/blob/master/examples/sensors/Temperature/DS18B20/DS18B20.ino).
 
 Proximity Sensor
 ===============
@@ -176,7 +177,7 @@ void setup(){
   Serial.begin(38400); // initialize the serial port
   pinMode(TRIG_PIN, OUTPUT);
   digitalWrite(TRIG_PIN, LOW);
-  pinMode(ECHO_PIN, INTPUT);
+  pinMode(ECHO_PIN, INPUT);
 }
 
 // Define a new function that reads and converts the raw reading to distance (cm)
@@ -193,12 +194,12 @@ float distance_centimetre() {
 }
 
 void loop(){
-  Serial.print(distance_centimetre(), DEC);
-  Serial.println("cm");
+  Serial.print(distance_centimetre());
+  Serial.println(" cm");
   delay(1000); // ms 
 }
 ```
-The raw source of the sketch example is visible [here](https://diy.waziup.io/assets/src/sketch/Arduino_hc-sr04_dist/Arduino_hc-sr04_dist.ino)
+The raw source of the sketch example is visible [here](https://github.com/Waziup/WaziDev/blob/master/examples/sensors/Distance/HC_SR04/HC_SR04.ino)
 
 HRLV-MAXSONAR-EZ sensor
 -----------
@@ -242,65 +243,76 @@ void loop() {
   delay(100);
 }
 ```
-The raw source of the sketch example is visible [here](https://diy.waziup.io/assets/src/sketch/Arduino_hlvr_dist/Arduino_hlvr_dist.ino)
+The raw source of the sketch example is visible [here](https://github.com/Waziup/WaziDev/blob/master/examples/sensors/Distance/HRLV-MAXSONAR-EZ/HRLV-MAXSONAR-EZ.ino)
 
 Humidity Sensor
 ===============
 
 Humidity sensors are commonly used in the meteorology, medical, automobile, HVAC and manufacturing industries. ( Getty Images) A humidity sensor is an electronic device that measures the humidity in its environment and converts its findings into a corresponding electrical signal.
 
-808H5V5 sensor
+DHT11 sensor
 -----------
 
-808H5V5 humidity sensor measures relative humidity in the range of 0 to 100% with accuracy better than 4% when relative humidity (RH) is between 30% and 80%. It operates from a 5V DC supply and typically draws 0.38mA. It has a three-pin interface with 2.54mm pin spacing, making it compatible with typical breadboards and prototyping boards. By measuring its output voltage, you can determine the relative humidity of the sensor's environment.
+The DHT11 is a basic, ultra low-cost digital temperature and humidity sensor. It uses a capacitive humidity sensor and a thermistor to measure the surrounding air, and spits out a digital signal on the data pin (no analog input pins needed). Its fairly simple to use, but requires careful timing to grab data. The only real downside of this sensor is you can only get new data from it once every 2 seconds, so when using our library, sensor readings can be up to 2 seconds old.
 
-![808H5V5 sensor](./media/808h5v5.jpg)
+Compared to the DHT22, this sensor is less precise, less accurate and works in a smaller range of temperature/humidity, but its smaller and less expensive
 
-Documentation for this sensor is available [here](https://www.cooking-hacks.com/skin/frontend/default/cooking/pdf/Humedad-808H5V5.pdf).
+![dht11 sensor](./media/dht11.png)
+
+Documentation for this sensor is available [here](https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf).
 
 **CONNECT TO ARDUINO**
 
-808H5V5 Humidity sensor has the pins marked - V +. Wired as follows:
-
-| **808H5V5 pins** | **Arduino pins** |
-|------------------|------------------|
-| -                | GND              |
-| V                | AO               |
-| +                | 5V               |
-
+![dht11 arduino](./media/Adht11.jpg)
 
 **EXAMPLE CODE**
 
 ```
 /********************
- *  Program:  808H5V5 sensor tester
- *  http://www.cooking-hacks.com/skin/frontend/default/cooking/pdf/Humedad-808H5V5.pdf
+ * Program:  DHT11 sensor tester
+ * Description: print humidity and temperature to serial
  ********************/
+ 
+#include <DHT.h>
 
-float hum = 0;
-float voltage = 0;
-float percentRH = 0;
+//Constants
+#define DHTPIN 2     // what pin on the arduino is the DHT22 data line connected to
+#define DHTTYPE DHT11   // DHT 11
+DHT dht(DHTPIN, DHTTYPE); // Initialize DHT sensor for normal Arduino
 
-void setup() {
-// to run once
-Serial.begin(38400); // Initialize the serial port
+void setup() { // to run once
+  Serial.begin(38400); // Initialize the serial port
+  Serial.println("DHT11 Humidity - Temperature Sensor");
+  Serial.println("RH\t Temp (C)");
+
+//  pinMode(5, OUTPUT);  digitalWrite(5, LOW);
+  pinMode(3, OUTPUT);  digitalWrite(3, HIGH);
+  
+  dht.begin();
+  delay(2000);
 }
 
 void loop() {
-hum = analogRead(0); // Read voltage coming from sensor (value will be between 0-1023)
-voltage = hum * 5.0 / 1024.0; // Translate value into a voltage value
-percentRH = (voltage - 0.788) / 0.0314; // Translate voltage into percent relative humidity
+  // Reading temperature or humidity takes about 250 milliseconds!
+  // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+  // Check if any reads failed and exit early (to try again).
+  if (isnan(h) || isnan(t)) {
+    Serial.println("Failed to read from DHT11 sensor!");
+    return;
+  }
 
-Serial.print("Read value is ");
-Serial.print(hum);
-Serial.print(".   Output voltage is ");
-Serial.print(voltage);
-Serial.print(" .    %RH = ");
-Serial.println(percentRH,DEC); 
-delay(2000);
+  Serial.print(h); 
+  Serial.print(" %\t\t");
+  Serial.print(t); 
+  Serial.println(" °C");
+  // Wait a few seconds between measurements. The DHT11 should not be read at a higher frequency of
+  // about once every 2 seconds. So we add a 3 second delay to cover this.
+  delay(3000);
 }
 ```
-The raw source of the sketch example is visible [here](https://diy.waziup.io/assets/src/sketch/Arduino_808h5v5_hum/Arduino_808h5v5_hum.ino)
+The raw source of the sketch example is visible [here](https://github.com/Waziup/WaziDev/blob/master/examples/sensors/Temperature/DHT11/DHT11.ino)
 
 DHT22 sensor
 -----------
@@ -372,7 +384,7 @@ void loop() {
   delay(3000);
 }
 ```
-The raw source of the sketch example is visible [here](https://diy.waziup.io/assets/src/sketch/Arduino_dht22_hum/Arduino_dht22_hum.ino)
+The raw source of the sketch example is visible [here](https://github.com/Waziup/WaziDev/blob/master/examples/sensors/Temperature/DHT11/DHT11.ino)
 
 SOIL HUMIDITY sensor
 -----------
@@ -419,94 +431,7 @@ void loop() {
   delay(100);
 }
 ```
-The raw source of the sketch example is visible [here](https://diy.waziup.io/assets/src/sketch/Arduino_soil_humidity/Arduino_soil_humidity.ino)
-
-SHT sensor
------------
-
-The SHT1x/SHT2x provides calibrated, linearized sensor signals in digital, I2C format. The SHT1x/SHT2x humidity sensor series contains a capacitive-type humidity sensor, a band-gap temperature sensor, and specialized analog and digital integrated circuits  all on a single CMOSens® chip. This yields superior sensor performance in terms of accuracy and stability as well as minimal power consumption. Its relative humidity calculation accuracy is ±3%.
-
-An electronic identification code is stored on the chip – which can be read out on command. Furthermore, the resolution of the SHT2x humidity sensor can be changed on command (8/12 bit up to 12/14 bit for RH/T) and a checksum helps to improve communication reliability. With this set of features and its proven reliability and long-term stability, the SHT2x humidity sensor offers an outstanding price-performance ratio.
-
-In the second figure, you can see a water proof version of this sensor for outdoor deployment.
-
-![SHT sensor](./media/SHT.png) ![SHTetanche sensor](./media/SHTetanche.jpg)
-
-Documentation for this sensor is available [here](https://www.sensirion.com/en/environmental-sensors/humidity-sensors/humidity-temperature-sensor-sht2x-digital-i2c-accurate/).
-
-**CONNECT TO ARDUINO**
-
-| **SHT pins**         | **Arduino pins**         |
-|----------------------|--------------------------|
-| VDD/VCC              | 5V or 3.3V               |
-| GND                  | GND                      |
-| SDA                  | 2                        |
-| SCL                  | 3                        |
-
-**EXAMPLE CODE**
-
-```
-#include "Sensirion.h"
-
-#define SHTD_PIN 2
-#define SHTC_PIN 3
-#define SHT2x
-
-//we can also power the SHT with a digital pin, here pin 6
-#define PIN_POWER 6
-
-#ifdef SHT2x
-Sensirion sht = Sensirion(SHTD_PIN, SHTC_PIN, 0x40);
-#else
-Sensirion sht = Sensirion(SHTD_PIN, SHTC_PIN);
-#endif
-
-float h;
-float t;
-int ret;
-int retry=0;
-    
-void setup() {
-
-  delay(3000);
-  Serial.begin(38400);
-  //and to power the temperature sensor
-  pinMode(PIN_POWER,OUTPUT);
-}
-
-void loop() {
-
-    digitalWrite(PIN_POWER,HIGH);
-    delay(1000);
-    
-    while ( (ret != S_Meas_Rdy) ) {
-      ret=sht.measure(&t, &h);
-      retry++;
-      Serial.print("[");
-      Serial.print(ret);
-      Serial.print(":");
-      Serial.print(retry);
-      Serial.print("] ");      
-    }
-
-    if (ret != S_Meas_Rdy) {
-        Serial.println("Failed to read from SHT sensor!"); 
-    }
-    else {         
-        Serial.print("Temperature: ");
-        Serial.print(t);
-        Serial.print(" degrees Celcius Humidity: ");
-        Serial.print(h);
-        Serial.println("%"); 
-    }
-
-    digitalWrite(PIN_POWER,LOW);
-    ret=0;
-    retry=0;
-    delay(5000);
-} 
-```
-The raw source of the sketch example is visible [here](https://diy.waziup.io/assets/src/sketch/Arduino_SHT/Arduino_SHT.ino)
+The raw source of the sketch example is visible [here]https://github.com/Waziup/WaziDev/blob/master/examples/sensors/Humidity/SOIL_MOISTURE/SOIL_MOISTURE.ino)
 
 WATER LEVEL sensor
 -----------
@@ -622,7 +547,7 @@ void loop(){
   }
 }
 ```
-The raw source of the sketch example is visible [here](https://diy.waziup.io/assets/src/sketch/Arduino_pir_motion/Arduino_pir_motion.ino)
+The raw source of the sketch example is visible [here](https://github.com/Waziup/WaziDev/blob/master/examples/sensors/Motion/PIR/PIR.ino)
 
 Light sensor
 ============
@@ -685,7 +610,7 @@ void loop() {
 }
 
 ```
-The raw source of the sketch example is visible [here](https://diy.waziup.io/assets/src/sketch/Arduino_pir_motion/Arduino_pir_motion.ino)
+The raw source of the sketch example is visible [here](https://github.com/Waziup/WaziDev/blob/master/examples/sensors/Light/LDR/LDR.ino)
 
 Sound sensor 
 ============
@@ -742,7 +667,7 @@ void loop(){
   delay(100); // ms
 }
 ```
-The raw source of the sketch example is visible [here](https://diy.waziup.io/assets/src/sketch/Arduino_sound_level/Arduino_sound_level.ino)
+The raw source of the sketch example is visible [here](https://github.com/Waziup/WaziDev/blob/master/examples/sensors/Sound/MIC/MIC.ino)
 
 Radio frequency sensor
 ======================
@@ -1140,3 +1065,4 @@ void displayInfo()
 }
 ```
 
+The raw source of the sketch example is visible [here](https://github.com/Waziup/WaziDev/blob/master/examples/sensors/Position/NEO-6M/DeviceExample.ino)
