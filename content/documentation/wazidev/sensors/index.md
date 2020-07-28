@@ -1,10 +1,10 @@
 ---
 date: 2020-07-24T09:00:00+00:00
-title: Sensors
+title: Connect your sensors to your WaziDev
 menu:
   main:
-    title: Sensors
-    name: sensor
+    title: Connect your sensors
+    name: sensors
     parent: wazidev
     weight: 2
 ---

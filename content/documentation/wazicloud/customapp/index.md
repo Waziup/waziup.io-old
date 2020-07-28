@@ -3,9 +3,11 @@ title: Create your App with Waziup
 layout: single
 menu:
   main:
-    title: Web application 
-    parent: documentation
+    title: Create your Web App 
+    parent: wazicloud
     weight: 5
+aliases:
+  - /tutorials/software/browserapp/
 ---
 
 Waziup allows you to develop and host you own IoT applications.

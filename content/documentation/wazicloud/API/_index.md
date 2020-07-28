@@ -5,6 +5,6 @@ menu:
   main:
     title: API Reference
     name: docapi
-    parent: documentation
+    parent: wazicloud
     weight: 4
 ---

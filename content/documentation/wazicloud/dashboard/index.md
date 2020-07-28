@@ -1,13 +1,12 @@
 ---
 date: 2018-04-11T09:00:00+00:00
-title: WaziCloud User Manual 
-layout: single
+title: WaziCloud Dashboard User Manual 
 menu:
   main:
     name: docdashboard
-    title: WaziCloud
-    parent: documentation 
-    weight: 3
+    title: Dashboard User Manual
+    parent: wazicloud 
+    weight: 1
 aliases:
   - /tutorials/software/dashboard/
 

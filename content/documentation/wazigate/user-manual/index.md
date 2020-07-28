@@ -3,9 +3,9 @@ title: WaziGate User Manual
 layout: single
 menu:
   main:
-    title: WaziGate
+    title: WaziGate User Manual
     name: docwazigate
-    parent: documentation 
+    parent: wazigate 
     weight: 2
 ---
 
