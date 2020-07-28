@@ -1,6 +1,5 @@
 ---
 title: WaziDev User Manual
-layout: single
 menu:
   main:
     title: WaziDev
@@ -12,15 +11,16 @@ menu:
 Overview
 ========
 
-WaziDev is a powerful development board for creating IoT application.
-It is based on Arduino and LoRa radio network.
-This document guides through the preparation of programming environment for WaziDev.
-It will also show step by step:
+WaziDev is a Sensing and Actuation platform for your applications! 
+It can send your data up to 7 Km using the LoRa technology.
+It is easily programmable and customizable, using Arduino technology.
+It is an ideal solution for start-ups and entrepreneurs who want to rapid prototype a IoT applications.
+Its features include:
 
--   how to connect your sensors,
--   how to write the code,
--   how to compile and upload the code,
--   how to see and use your sensors in the cloud.
+- Arduino Pro Mini compatible CPU
+- RFM95W LoRa module
+- Fully compatible with the Arduino development environment
+- Embedded Lipo battery charger for solar panels and low power options
+- Two pins with high current support (500mA)
 
-This documentation is available in [PDF format](/docs/WaziDev_User_Manual-V1.0.pdf).
-
+The following documentation will guide you to use your WaziDev. 
