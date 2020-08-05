@@ -309,19 +309,10 @@ body {
 
   }
 
-
   &--blue {
     background-color: $color-big-stone;
 
-    .header, .h1, .h2, .h3, .text-header, .text, .fa, .ul {
-      color: $color-white-squeeze;
-    }
-  }
-
-  &--black {
-    background-color: black;
-
-    .header, .h1, .h2, .text-header, .text, .fa {
+    .header, .h1, .h2, .h3, .text-header, .text, .fa, .ul, i{
       color: $color-white-squeeze;
     }
   }
@@ -331,18 +322,6 @@ body {
 
     .header, .h1, .h2, .h3, .text-header, .text, .fa, .ul, i {
       color: $color-big-stone;
-    }
-  }
-
-  &--grey {
-    background-color: $color-white-squeeze;
-  }
-
-  &--red {
-    background-color: $color-radical-red;
-
-    .header, .h2, .h3, .text, .fa {
-      color: white;
     }
   }
 
@@ -471,7 +450,7 @@ body {
   bottom: 0;
   right:0;
   overflow-y: scroll;
-  width: 260px + 40px + 40px;
+  width: 210px + 40px + 40px;
 
   @media all and (min-width: 1025px) {
     display: block;
@@ -497,11 +476,12 @@ body {
   padding: 30px 40px 40px 40px;
   background-color: white;
   min-height: 100vh;
-  max-width: 730px;
+  //max-width: 730px;
 
   @media all and (min-width: 1025px) {
     //display: block;
     margin-left: 370px;
+    margin-right: 400px;
     padding: 0 40px 40px 80px;
   }
 
@@ -1259,6 +1239,30 @@ figure {
     font-weight: bold;
   }
 }
+
+//News
+.news {
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin: 15px;
+
+  .h2 {
+    margin-top: 10px !important;
+    margin-top: 15px !important;
+    color: #286BBD;
+  }
+  
+  .newsdate {
+    font-size: 10pt;
+    color: grey;
+  }
+
+  .newscontent {
+    margin-bottom: 10px;
+  }
+
+}
+
 
 // Dev
 #__bs_notify__ { top:95% !important; right: 10px !important; border-radius: 15px !important; height:60px !important; }

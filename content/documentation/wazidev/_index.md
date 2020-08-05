@@ -1,5 +1,5 @@
 ---
-title: WaziDev User Manual
+title: WaziDev
 menu:
   main:
     title: WaziDev
@@ -7,9 +7,6 @@ menu:
     parent: documentation
     weight: 1
 ---
-
-Overview
-========
 
 WaziDev is a Sensing and Actuation platform for your applications! 
 It can send your data up to 7 Km using the LoRa technology.

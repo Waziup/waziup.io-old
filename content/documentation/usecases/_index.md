@@ -1,6 +1,6 @@
 ---
 date: 2016-09-13T09:00:00+00:00
-title: Tutorials
+title: Use cases tutorials
 menu:
   main:
     title: Use-cases
@@ -9,5 +9,5 @@ menu:
     weight: 7
 ---
 
-Waziup supports many use cases...
+You can find all the Waziup use case tutorials here:
 

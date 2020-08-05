@@ -1,5 +1,6 @@
 <div>
-    <nav id= "TableOfContents1">
+    <nav id="LeftMenu">
+       <h1 style="font-weight: bold; font-style: italic;"> Documentation </h1>
         {{ $currentPage := . }}
         {{ range where .Site.Menus.main ".Title" "=" "Documentation"}}
             {{ if .HasChildren }}

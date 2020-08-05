@@ -7,4 +7,8 @@ menu:
     name: docapi
     parent: wazicloud
     weight: 4
+aliases:
+  - /documentation/api
+  - /documentation/api/v1
+  - /documentation/api/v2
 ---

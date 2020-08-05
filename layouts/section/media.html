@@ -1,38 +1,33 @@
 {{ partial "head" . }}
-
-<div>
-  {{ partial "nav" . }}
-</div>
+{{ partial "nav" . }}
 {{ partial "mobile-menu" . }}
 
 <!--NEWS-->
 <div class="page">
-  <div class="lander-row lander-row--blue">
+  <div class="lander-row lander-row--white lander-row--small-padding">
     <div class="container">
       <h1 class="h1">
         News
       </h1>
-      <ul>
-        <!-- orders content according to the "date" field in front matter -->
+        Always stay up to date with important events at Waziup e.V.!
         {{ range .Pages.ByExpiryDate }}
-            <li>
-              <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-              <i>{{.Content}}</i>
-              {{.Date.Format "Mon Jan 2 2006"}}
-            </li>
+          <div class="news">
+            <p class="newsdate"> {{.Date.Format "Mon Jan 2 2006"}} <p>
+            <h1 class="h2"> {{ .Title }} </h1>
+            <div class="newscontent"> {{.Description}} </div>
+            <a href="{{.Permalink}}"> Read more... </a>
+          </div>
         {{ end }}
-    </ul>
     </div>
   </div>
 
 <!--HEROSPACE ROW-->
-<div class="page">
-  <div class="lander-row lander-row--white">
+  <div class="lander-row lander-row--blue">
     <div class="container">
       <h1 class="h1">
         Social Medias
       </h1>
-      <h2 class="h2">
+      <div class=text>
         Follow us on the Socials: 
         <a href="https://twitter.com/waziupIOT" target="_blank">
           <i class="fab fa-2x fa-twitter"></i>
@@ -49,11 +44,11 @@
         <a href="https://github.com/Waziup" target="_blank">
           <i class="fab fa-2x fa-github"></i>
         </a>
-      </h2>
+      </div>
     </div>
   </div>
 
-  <div class="lander-row lander-row--blue">
+  <div class="lander-row lander-row--white">
     <div class="container">
       <h1 class="h1">
         Our Videos
