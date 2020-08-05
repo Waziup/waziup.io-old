@@ -97,8 +97,8 @@ To use a 1-Wire sensor, you need to include the [OneWire library](https://github
 #include <OneWire.h>
 #include <DallasTemperature.h>
  
-// Data wire is plugged into pin 2 on the Arduino 
-#define ONE_WIRE_BUS 2 
+// Data wire is plugged into pin 5 on the Arduino 
+#define ONE_WIRE_BUS 5 
 
 // Setup a oneWire instance to communicate with any OneWire devices  
 // (not just Maxim/Dallas temperature ICs) 
@@ -160,7 +160,7 @@ Documentation for this sensor is available [here](https://cdn.sparkfun.com/datas
 
 **CONNECT TO ARDUINO**
 
-![HC_SR04 arduino](./media/Ahcsr04.jpg)
+![HC_SR04 arduino](./media/Ahc_sr04.png)
 
 **EXAMPLE CODE**
 
@@ -218,7 +218,7 @@ Documentation for this sensor is available [here](https://www.maxbotix.com/docum
 | AN               | AO               |
 | +5V              | 5V               |
 
-![HRLV arduino](./media/Ahrlv.jpg)
+![HRLV arduino](./media/Ahrlv.png)
 
 **EXAMPLE CODE**
 
@@ -263,7 +263,7 @@ Documentation for this sensor is available [here](https://www.mouser.com/datashe
 
 **CONNECT TO ARDUINO**
 
-![dht11 arduino](./media/Adht11.jpg)
+![dht11 arduino](./media/Adht11.png)
 
 **EXAMPLE CODE**
 
@@ -276,7 +276,7 @@ Documentation for this sensor is available [here](https://www.mouser.com/datashe
 #include <DHT.h>
 
 //Constants
-#define DHTPIN 2     // what pin on the arduino is the DHT22 data line connected to
+#define DHTPIN 5     // what pin on the arduino is the DHT22 data line connected to
 #define DHTTYPE DHT11   // DHT 11
 DHT dht(DHTPIN, DHTTYPE); // Initialize DHT sensor for normal Arduino
 
@@ -333,7 +333,7 @@ Documentation for this sensor is available [here](http://static.cactus.io/docs/s
 | Pin 3          | Not used                 |
 | Pin 4          | GND                      |
 
-![DHT22 Arduino](./media/Adht22.jpg)
+![DHT22 Arduino](./media/Adht22.png)
 
 You can find the DHT22 (like the one shown in the figure below) on a small PCB which already has the resistor, in which case you don't need to connect the resistor.
 
@@ -406,7 +406,7 @@ There are only three pins that you need to worry about on the soil humidity sens
 | A0                   | A0                       |
 
 
-![soil_humidity Arduino](./media/Asoilhumidity.jpg)
+![soil_humidity Arduino](./media/Asoilhumidity.png)
 
 
 
@@ -504,7 +504,7 @@ Documentation for this sensor is available [here](https://learn.adafruit.com/pir
 
 **CONNECT TO ARDUINO**
 
-![PIR Arduino](./media/Apir.gif)
+![PIR Arduino](./media/Apir.png)
 
 
 **EXAMPLE CODE**
@@ -565,7 +565,7 @@ Documentation for this sensor is available [here](http://www.resistorguide.com/p
 
 **CONNECT TO ARDUINO**
 
-![LDR Arduino](./media/Aldr.jpg)
+![LDR Arduino](./media/Aldr.png)
 
 The typical reistor is 10kOhms but you can also find the LDRs (like the one shown in the figure below) that already contains the resistor, in which case you don't need to connect the resistor.
 
@@ -733,11 +733,11 @@ We will use the MFRC522 [library](https://github.com/miguelbalboa/rfid)
  *             Reader/PCD   Uno/101       Mega      Nano v3    Leonardo/Micro   Pro Micro
  * Signal      Pin          Pin           Pin       Pin        Pin              Pin
  * -----------------------------------------------------------------------------------------
- * RST/Reset   RST          9             5         D9         RESET/ICSP-5     RST
- * SPI SS      SDA(SS)      10            53        D10        10               10
- * SPI MOSI    MOSI         11 / ICSP-4   51        D11        ICSP-4           16
- * SPI MISO    MISO         12 / ICSP-1   50        D12        ICSP-1           14
- * SPI SCK     SCK          13 / ICSP-3   52        D13        ICSP-3           15
+ * RST/Reset   RST          8             5         D8         RESET/ICSP-5     RST
+ * SPI SS      SDA(SS)      9             53        D9         10               10
+ * SPI MOSI    MOSI         10 / ICSP-4   51        D10        ICSP-4           16
+ * SPI MISO    MISO         11 / ICSP-1   50        D11        ICSP-1           14
+ * SPI SCK     SCK          12 / ICSP-3   52        D12        ICSP-3           15
  * 
  * When using Arduino Pro Mini, use the pin layout of Arduino Nano
  * When using Heltec ESP32 WiFi LoRa see below
@@ -757,8 +757,8 @@ We will use the MFRC522 [library](https://github.com/miguelbalboa/rfid)
 #define RFID_MISO 19
 #define RST_PIN 22
 #else
-#define RST_PIN  9   // Configurable, see typical pin layout above 
-#define SS_PIN  10   // Configurable, see typical pin layout above 
+#define RST_PIN  8   // Configurable, see typical pin layout above 
+#define SS_PIN   9   // Configurable, see typical pin layout above 
 #endif
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);     // Create MFRC522 instance
@@ -832,8 +832,8 @@ Also remember never select last block of any sector. Writing into ‘Sector Trai
 #define RFID_MISO 19
 #define RST_PIN 22
 #else
-#define RST_PIN  9   // Configurable, see typical pin layout above 
-#define SS_PIN  10   // Configurable, see typical pin layout above 
+#define RST_PIN  8   // Configurable, see typical pin layout above 
+#define SS_PIN   9   // Configurable, see typical pin layout above 
 #endif
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);     // Create MFRC522 instance
@@ -977,7 +977,7 @@ The program constantly reads data from the GPS serial (gps_serial) and will try 
 #include <TinyGPS++.h>
 #include <SoftwareSerial.h>
 
-static const int RXPin = 4, TXPin = 3;
+static const int RXPin = 5, TXPin = 6;
 static const uint32_t GPSBaud = 9600;
 
 // The TinyGPS++ object
