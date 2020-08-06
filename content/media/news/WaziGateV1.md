@@ -1,6 +1,7 @@
 ---
 title: Waziup e.V. releases WaziGate V1!
 date: "2019-12-12"
+layout: "news"
 description: We are proud to announce that we released the first Major version of the WaziGate.
 ---
 

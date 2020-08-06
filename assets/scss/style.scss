@@ -472,6 +472,31 @@ body {
   }
 }
 
+.news-menu {
+  margin-top: -80px;
+  display: none;
+  background-color: $color-white-squeeze;
+  padding: 50px 40px 40px 40px;
+  height: 100vh;
+  //position: fixed;
+  //bottom: 0;
+  float: left;
+  width: 260px + 40px + 40px;
+
+  li {
+    text-decoration: none;
+  }
+
+  p{
+    font-size: 12px;
+    color:grey
+  }
+
+  @media all and (min-width: 1025px) {
+    display: block;
+  }
+}
+
 .content {
   padding: 30px 40px 40px 40px;
   background-color: white;
