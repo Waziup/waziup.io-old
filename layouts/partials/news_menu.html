@@ -1,0 +1,16 @@
+<div>
+    <nav id="NewsMenu">
+       <h1 style="font-weight: bold; font-style: italic;"> News: </h1>
+       <br>
+      
+        {{ range .Parent.Pages }}
+            <p>{{.Date.Format "Mon Jan 2 2006"}}</p>
+            <li>
+            <a href="{{.URL}}">{{.Title}} </a>
+            </li>
+            <br>
+        {{end}}       
+           
+      </ul>
+    </nav>
+  </div>
