@@ -31,7 +31,7 @@ LM35DZ sensor is typical of many other analog temperature sensors. If you have a
 
 Technical information of this sensor is available [here](https://www.ti.com/lit/ds/symlink/lm35.pdf)
 
-**CONNECT TO ARDUINO**
+**CONNECT TO WAZIDEV**
 
 ![LM35 arduino](./media/Alm35.png)
 
@@ -79,7 +79,7 @@ n the second figure, you can see a water proof version of this sensor for outdoo
 
 Documentation for this sensor is available [here](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf)
 
-**CONNECT TO ARDUINO**
+**CONNECT TO WAZIDEV**
 
 ![DS18B20 sensor](./media/Ads18b20.png)
 
@@ -158,7 +158,7 @@ There are only four pins that you need to worry about on the HC-SR04:
 
 Documentation for this sensor is available [here](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf). If you want to understand the details of how an ultra-sonic sensor for measuring distance works, you can have a look at this [page](https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/)
 
-**CONNECT TO ARDUINO**
+**CONNECT TO WAZIDEV**
 
 ![HC_SR04 arduino](./media/Ahc_sr04.png)
 
@@ -210,7 +210,7 @@ The high resolution HRLV‑MaxSonar‑EZ senors are high performance ultrasonic 
 
 Documentation for this sensor is available [here](https://www.maxbotix.com/documents/HRLV-MaxSonar-EZ_Datasheet.pdf).
 
-**CONNECT TO ARDUINO**
+**CONNECT TO WAZIDEV**
 
 | **HRLV pins**    | **Arduino pins** |
 |------------------|------------------|
@@ -261,7 +261,7 @@ Compared to the DHT22, this sensor is less precise, less accurate and works in a
 
 Documentation for this sensor is available [here](https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf).
 
-**CONNECT TO ARDUINO**
+**CONNECT TO WAZIDEV**
 
 ![dht11 arduino](./media/Adht11.png)
 
@@ -324,7 +324,7 @@ In the second figure, you can see an AM2305 sensor. These sensors are compatible
 
 Documentation for this sensor is available [here](http://static.cactus.io/docs/sensors/temp-humidity/dht22/dht22-datasheet.pdf).
 
-**CONNECT TO ARDUINO**
+**CONNECT TO WAZIDEV**
 
 | **DHT22 pins** | **Arduino pins**         |
 |----------------|--------------------------|
@@ -395,7 +395,7 @@ Soil moisture sensors measures the amount of water in the soil to maintain consi
 
 Documentation for this sensor is available [here](https://www.mouser.com/datasheet/2/744/Seeed_101020008-838655.pdf).
 
-**CONNECT TO ARDUINO**
+**CONNECT TO WAZIDEV**
 
 There are only three pins that you need to worry about on the soil humidity sensor:
 
@@ -451,7 +451,7 @@ If the board has water or another fluid covering all the wire, then it will outp
 
 Documentation for this sensor is available [here](https://scidle.com/how-to-use-a-water-level-sensor-module-with-arduino/).
 
-**CONNECT TO ARDUINO**
+**CONNECT TO WAZIDEV**
 
 There are only three pins on the water level sensor:
 
@@ -502,7 +502,7 @@ PIR sensors allow you to sense motion, almost always used to detect whether a hu
 
 Documentation for this sensor is available [here](https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/how-pirs-work).
 
-**CONNECT TO ARDUINO**
+**CONNECT TO WAZIDEV**
 
 ![PIR Arduino](./media/Apir.png)
 
@@ -563,7 +563,7 @@ Photoresistors, also known as light dependent resistors (LDR), are light sensiti
 
 Documentation for this sensor is available [here](http://www.resistorguide.com/photoresistor/).
 
-**CONNECT TO ARDUINO**
+**CONNECT TO WAZIDEV**
 
 ![LDR Arduino](./media/Aldr.png)
 
@@ -628,7 +628,7 @@ The Electret Mic Breakout translates amplitude (not volume) by capturing sound w
 
 Documentation for this sensor is available [here](http://cdn.sparkfun.com/datasheets/Sensors/Sound/CEM-C9745JAD462P2.54R.pdf/).
 
-**CONNECT TO ARDUINO**
+**CONNECT TO WAZIDEV**
 
 There are only three pins that you need to worry about on the MIC sensor. Wired as follows:
 
@@ -685,7 +685,7 @@ Passing the tag near the reader, makes it possible to read the Unique Identifier
 
 Documentation for this sensor is available [here](https://diy.waziup.io/assets/src/sketch/libraries/MFRC522/doc/rfidmifare.pdf).
 
-**CONNECT TO ARDUINO**
+**CONNECT TO WAZIDEV**
 
 There are only three pins that you need to worry about on the MIC sensor. Wired as follows:
 
@@ -957,7 +957,7 @@ The program constantly reads data from the GPS serial (gps_serial) and will try 
 
 ![gps sensor](./media/gps.png)
 
-**CONNECT TO ARDUINO**
+**CONNECT TO WAZIDEV**
 
 ![gps Arduino](./media/Agps.png)
 
