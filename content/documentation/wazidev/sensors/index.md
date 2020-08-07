@@ -212,11 +212,11 @@ Documentation for this sensor is available [here](https://www.maxbotix.com/docum
 
 **CONNECT TO WAZIDEV**
 
-| **HRLV pins**    | **Arduino pins** |
+| **HRLV pins**    | **Wazdev pins**  |
 |------------------|------------------|
 | GND              | GND              |
 | AN               | AO               |
-| +5V              | 5V               |
+| +5V              | VCC              |
 
 ![HRLV arduino](./media/Ahrlv.png)
 
@@ -326,10 +326,10 @@ Documentation for this sensor is available [here](http://static.cactus.io/docs/s
 
 **CONNECT TO WAZIDEV**
 
-| **DHT22 pins** | **Arduino pins**         |
+| **DHT22 pins** | **Wazidev pins**         |
 |----------------|--------------------------|
-| Pin 1          | 5V                       |
-| Pin 2          | 10K resistor Arduino  Digital Pin 2|
+| Pin 1          | VCC                      |
+| Pin 2          | 10K resistor Wazidev TX  |
 | Pin 3          | Not used                 |
 | Pin 4          | GND                      |
 
@@ -399,9 +399,9 @@ Documentation for this sensor is available [here](https://www.mouser.com/datashe
 
 There are only three pins that you need to worry about on the soil humidity sensor:
 
-| **SOIL SENSOR pins** | **Arduino pins**         |
+| **SOIL SENSOR pins** | **Wazidev pins**         |
 |----------------------|--------------------------|
-| VCC                  | 5V                       |
+| VCC                  | VCC                      |
 | GND                  | GND                      |
 | A0                   | A0                       |
 
@@ -455,11 +455,11 @@ Documentation for this sensor is available [here](https://scidle.com/how-to-use-
 
 There are only three pins on the water level sensor:
 
-| **Water level pins**   | **Arduino pins**         |
+| **Water level pins**   | **Wazidev pins**         |
 |----------------------  |--------------------------|
-| +                      | 5V or 3.3V               |
+| +                      | VCC                      |
 | -                      | GND                      |
-| S                      | 0                        |
+| S                      | A0                       |
 
 
 **EXAMPLE CODE**
@@ -632,11 +632,11 @@ Documentation for this sensor is available [here](http://cdn.sparkfun.com/datash
 
 There are only three pins that you need to worry about on the MIC sensor. Wired as follows:
 
-| **MIC pins**   | **Arduino pins**         |
+| **MIC pins**   | **Wazidev pins**         |
 |----------------|--------------------------|
 | AUD            | A0                       |
 | GDN            | GND                      |
-| VCC            | 3.3V                     |
+| VCC            | VCC                      |
 
 
 **EXAMPLE CODE**
@@ -689,7 +689,7 @@ Documentation for this sensor is available [here](https://diy.waziup.io/assets/s
 
 There are only three pins that you need to worry about on the MIC sensor. Wired as follows:
 
-| **RFID pins**  | **Arduino pins**                           |
+| **RFID pins**  | **Wazidev pins**                           |
 |----------------|--------------------------------------------|
 | SDA            | Digital 10                                 |
 | SCK            | Digital 13                                 |
@@ -698,7 +698,7 @@ There are only three pins that you need to worry about on the MIC sensor. Wired 
 | IRQ            | Unconnected                                |
 | GDN            | GDN                                        |
 | RST            | Digital 9                                  |
-| 3.3V           | 3.3V (caution: must use 3.3V and not 5V)   |
+| 3.3V           | VCC  (caution: must use 3.3V and not 5V)   |
 
 ![RFID arduino](./media/Arfid.png) 
 
