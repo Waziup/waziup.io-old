@@ -19,14 +19,14 @@ menu:
       title: Forum
       pre: <i class='fa fa-external-link-alt'></i>
       url: https://forum.waziup.io
-      weight: 10
+      weight: 7
     - identifier: diy 
       title: DIY
       pre: <i class='fa fa-external-link-alt'></i>
       url: https://diy.waziup.io
-      weight: 11
+      weight: 8
     - identifier: wazihub 
       title: Wazihub
       pre: <i class='fa fa-external-link-alt'></i>
       url: https://www.wazihub.com
-      weight: 12
+      weight: 9

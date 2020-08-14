@@ -1,0 +1,27 @@
+<div>
+    <nav id="LeftMenu">
+       <h1 style="font-weight: bold; font-style: italic;"> Courses list:  </h1>
+        {{ $currentPage := . }}
+        {{ range where .Site.Menus.main ".Title" "=" "Courses"}}
+            {{ if .HasChildren }}
+            <ul>
+              {{ range .Children}}
+                <li>
+                  <a href="{{.URL}}" class="sub-menu-item{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}">{{.Title}} </a>
+                  {{ if .HasChildren }}
+                  <ul>
+                    {{ range .Children}}
+                      <li>
+                        <a href="{{.URL}}" class="sub-menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">{{.Title}}</a>
+                      </li>
+                    {{ end }}
+                  </ul>
+                  {{ end }}
+                </li>
+              {{ end }}
+            </ul>
+            {{ end }}
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
