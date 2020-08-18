@@ -2,25 +2,22 @@
 {{ partial "nav" . }}
 
 <div class="page documentation">
-  <div class="left-menu">
-    {{ partial "courses_menu" . }}
+  <div class="CourseTitle">
+    <h1 class="content-header">{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
   </div>
-    <div class="content">
-      <h1 class="content-header">{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
-      <div class="markdowned">
-        {{ .Content }}
-        <nav>
-          <ul>
-            {{ $currentPage := . }}
-            {{ range $currentPage.Menus.main.Children }}
-              <li>
-                <a href="{{.URL}}">{{.Title}}</a>
-              </li>
-            {{ end }}
-          </ul>
-        </nav>
-      </div>
-    </div>
+<div class="CourseCard-container">
+  <div class="CourseCard CourseCard-1">
+    {{ $currentPage := . }}
+    {{ range where $currentPage.Menus.main.Children ".Title" "=" "WaziApp tutorial"}}
+      
+    <a href="{{.URL}}"><img src="/images/WaziAppcourse.png" /></a>
+      
+    {{ end }}
+    
+  </div>
+  <ul>
+  </ul>
+</div>
 </div>
 
 {{ partial "footer" .}}

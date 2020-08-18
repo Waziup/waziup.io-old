@@ -36,7 +36,8 @@ What you will learn:
   - Package and build the docker image for the App
   - Push the App image to the docker hub
 
- 
+___________________________________________________________________________________________________________________
+
 
 Prerequisites:
 =============
@@ -56,6 +57,7 @@ Prerequisites:
 
 Level: **Intermediate**
 
+___________________________________________________________________________________________________________________
 
 How do WaziApps work?
 =====================
@@ -72,6 +74,8 @@ maintenance much simpler than a monolithic architecture.
 - [https://man7.org/linux/man-pages/man7/unix.7.html](https://man7.org/linux/man-pages/man7/unix.7.html)
 - [https://docs.docker.com/](https://docs.docker.com/)
 
+___________________________________________________________________________________________________________________
+
 Preparing the development environment
 =====================================
 
@@ -87,6 +91,8 @@ In order to flash the Raspberry pi, we go to [waziup.io/downloads](https://www.w
 latest SD card image.
 We use [Etcher tool](https://www.balena.io/etcher/) to flash the downloaded image on the SD card. After flashing is
 done, we insert the SD card into the raspberry pi and turn it on.
+
+___________________________________________________________________________________________________________________
 
 Setup communication channel with Wazigate (WiFi/Ethernet)
 ---------------------------------------------------------
@@ -109,6 +115,8 @@ wireless network that starts with **WAZIGATE_** connect to it, the default passw
 
 When the pi is in WiFi access point mode, the default IP address is: 192.168.200.1
 
+___________________________________________________________________________________________________________________
+
 Find the Wazigate’s IP address with Angry IP Scanner
 ----------------------------------------------------
 
@@ -117,6 +125,8 @@ One of the tools that helps us to find the IP address of our pi is [Angry IP Sca
 
 
 {{< youtube id="BHqr2ZdNR5k" >}}
+
+___________________________________________________________________________________________________________________
 
 Find the Wazigate’s IP address with nmap
 ----------------------------------------
@@ -132,6 +142,8 @@ Here is how to use it to find the IP address of the pi:
 
 {{< youtube id="685nJvFS2LE" >}}
 
+___________________________________________________________________________________________________________________
+
 IDE installation: VS-Code
 -------------------------
 
@@ -140,6 +152,7 @@ You can use any IDE that suits you, here I show what I use and how I communicate
 
 {{< youtube id="dSjVa8t3Wp0" >}}
 
+___________________________________________________________________________________________________________________
 
 Install FTP on Wazigate
 -----------------------
@@ -163,6 +176,9 @@ sudo pure-pw mkdb
 sudo service pure-ftpd restart
 ```
 
+___________________________________________________________________________________________________________________
+
+
 A Wazigate Application in Python
 ================================
 
@@ -170,6 +186,8 @@ Install and run the Python sample App
 -------------------------------------
 
 {{< youtube id="29c5jDzKjlE" >}}
+
+___________________________________________________________________________________________________________________
 
 Make a “Hello world” API
 ------------------------
@@ -183,6 +201,8 @@ Make a “Hello world” API
 - **Shell into the container:** sudo docker exec -it <container_name> sh
 - **Start the App inside the container:** python /root/src/main.py
 
+___________________________________________________________________________________________________________________
+
 Make APIs to handle POST/PUT/DELETE requests
 --------------------------------------------
 
@@ -192,15 +212,21 @@ Make APIs to handle POST/PUT/DELETE requests
 - **Shell into the container:** sudo docker exec -it <container_name> bash
 - **Start the App inside the container:** python /root/src/main.py
 
+___________________________________________________________________________________________________________________
+
 Configure “docker-compose.yml” file
 -----------------------------------
 
 {{< youtube id="eCvEY5iW8ZE" >}}
 
+___________________________________________________________________________________________________________________
+
 Configure “package.json” file
 -----------------------------
 
 {{< youtube id="mcXV39jiLZo" >}}
+
+___________________________________________________________________________________________________________________
 
 Package and build the docker image for the Python App
 -----------------------------------------------------
@@ -209,6 +235,8 @@ Package and build the docker image for the Python App
 
 
 - **Build our app:** docker-compose build
+
+___________________________________________________________________________________________________________________
 
 Push the App image to the docker hub
 ------------------------------------
@@ -221,10 +249,14 @@ docker login
 docker push <the_full_image_name_with_tag>
 ```
 
+___________________________________________________________________________________________________________________
+
 How the update mechanism works in WaziGate
 ------------------------------------------
 
 {{< youtube id="2F4MPkSPg4Y" >}}
+
+___________________________________________________________________________________________________________________
 
 A Wazigate Application in GoLang
 ================================
@@ -233,6 +265,8 @@ Install and run the Go sample App
 ---------------------------------
 
 {{< youtube id="KA6x7ejbqS4" >}}
+
+___________________________________________________________________________________________________________________
 
 Make a “Hello world” API
 ------------------------
@@ -245,6 +279,8 @@ Make a “Hello world” API
 - **Start the container:** docker-compose up -d
 - **Shell into the container:** sudo docker exec -it <container_name> sh
 - **Build and start the App inside the container:** go build -o start . && ./start
+
+___________________________________________________________________________________________________________________
 
 Make APIs to handle POST/PUT/DELETE requests
 --------------------------------------------
@@ -259,15 +295,21 @@ Make APIs to handle POST/PUT/DELETE requests
 
 Please check out its repository to see real-world examples: https://github.com/Waziup/wazigate-system
 
+___________________________________________________________________________________________________________________
+
 Configure “docker-compose.yml” file
 -----------------------------------
 
 {{< youtube id="JO0JmJSuzlo" >}}
 
+___________________________________________________________________________________________________________________
+
 Configure “package.json” file
 -----------------------------
 
 {{< youtube id="XaPMs3Oex04" >}}
+
+___________________________________________________________________________________________________________________
 
 Package and build the docker image for the GoLang App
 -----------------------------------------------------
@@ -275,6 +317,8 @@ Package and build the docker image for the GoLang App
 {{< youtube id="LSKgJ0_r-lA" >}}
 
 **Build our app:** docker-compose build
+
+___________________________________________________________________________________________________________________
 
 Push the App image to the docker hub
 ------------------------------------
@@ -289,10 +333,15 @@ docker login
 docker push <the_full_image_name_with_tag>
 ```
 
+___________________________________________________________________________________________________________________
+
+
 How the update mechanism works in WaziGate
 ------------------------------------------
 
 {{< youtube id="2F4MPkSPg4Y" >}}
+
+___________________________________________________________________________________________________________________
 
 A Wazigate Application in Javascript
 ====================================
@@ -301,6 +350,8 @@ Install and run the Javascript sample App
 -----------------------------------------
 
 {{< youtube id="Kwic3IBsO1I" >}}
+
+___________________________________________________________________________________________________________________
 
 Make a GET Request API call
 ---------------------------
@@ -314,6 +365,8 @@ Make a GET Request API call
 - **API lists:**
     - [Wazigate-System](https://raw.githack.com/Waziup/wazigate-system/master/docs/index.html)
 	- [Wazigate-Edge](https://raw.githack.com/Waziup/wazigate-edge/v2/www/docs/index.html)
+
+___________________________________________________________________________________________________________________
 
 
 Call an API on the Edge to list all registered devices on Wazigate
@@ -338,10 +391,14 @@ Configure “docker-compose.yml” file
 
 {{< youtube id="EcX77Yfl760" >}}
 
+___________________________________________________________________________________________________________________
+
 Configure “package.json” file
 -----------------------------
 
 {{< youtube id="q4rczBY3VVs" >}}
+
+___________________________________________________________________________________________________________________
 
 Package and build the docker image for the App
 ----------------------------------------------
@@ -350,6 +407,8 @@ Package and build the docker image for the App
 
 
 **Build our app:** docker-compose build
+
+___________________________________________________________________________________________________________________
 
 Push the App image to the docker hub
 ------------------------------------
@@ -363,6 +422,8 @@ docker login
 ```
 docker push <the_full_image_name_with_tag>
 ```
+
+___________________________________________________________________________________________________________________
 
 How the update mechanism works in WaziGate
 ------------------------------------------
