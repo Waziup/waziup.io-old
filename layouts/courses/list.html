@@ -13,10 +13,16 @@
     <a href="{{.URL}}"><img src="/images/WaziAppcourse.png" /></a>
       
     {{ end }}
-    
   </div>
-  <ul>
-  </ul>
+  <div class="CourseCard CourseCard-1">
+    {{ $currentPage := . }}
+    {{ range where $currentPage.Menus.main.Children ".Title" "=" "IoT Fundamentals"}}
+      
+    <a href="{{.URL}}"><img src="/images/IoTcourse.png" /></a>
+      
+    {{ end }}
+  </div>
+  
 </div>
 </div>
 

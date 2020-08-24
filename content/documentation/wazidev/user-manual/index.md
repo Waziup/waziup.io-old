@@ -514,3 +514,22 @@ Characteristics
 **Programming**
 
 - IDE: Arduino compatible  (Select **Pro Mini 3.3V 8Mhz**)
+
+Annex
+=====
+
+Use LoRaWAN with WaziDev V1.3
+----------------------
+
+If you have a WaziDev V1.3 device and want to use LoRaWAN some changes are needed. To do this you will need:
+- A welder
+- A connecting cable about 2/3 cm long
+
+
+It is required to solder the cable in the D3 pin of the WaziDev and in the 2nd pin of the LoRa chip.
+Then you have to give a welding point on the JR
+
+The operation is quite simple, for more information see the image below below
+
+
+![Modernize](./media/image32.png)
