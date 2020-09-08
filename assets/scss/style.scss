@@ -1357,3 +1357,29 @@ figure {
 #myBtnC:hover {
   background-color: #555; /* Add a dark-grey background on hover */
 }
+
+/* Slide show */
+
+.slider-wrapper {
+	position: fixed;
+    top: 0;
+    z-index: -100;
+    filter: brightness(90%);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
+    min-height: 760px;
+}
+
+.slide {
+	float: left;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 3s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+	opacity: 1;
+}
