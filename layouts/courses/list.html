@@ -14,11 +14,21 @@
       
     {{ end }}
   </div>
+
   <div class="CourseCard CourseCard-1">
     {{ $currentPage := . }}
     {{ range where $currentPage.Menus.main.Children ".Title" "=" "IoT Fundamentals"}}
       
     <a href="{{.URL}}"><img src="/images/IoTcourse.png" /></a>
+      
+    {{ end }}
+  </div>
+
+  <div class="CourseCard CourseCard-1">
+    {{ $currentPage := . }}
+    {{ range where $currentPage.Menus.main.Children ".Title" "=" "LoRA"}}
+      
+    <a href="{{.URL}}"><img src="/images/lora.png" /></a>
       
     {{ end }}
   </div>
