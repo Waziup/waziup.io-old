@@ -12,8 +12,9 @@ menu:
 Overview
 ========
 
-A device that detects the changes in electrical or physical or other quantities and thereby produces an output as an acknowledgement of change in the quantity is called as a Sensor. Generally, this sensor output will be in the form of electrical or optical signal.
-The world is full of sensors and the variety of sensor applications is remarkable. Thanks to the proliferation of mobile devices, sensors are now remarkably affordable, meaning you can combine inexpensive sensors and microcontroller boards to make your own devices.
+This article will show you how to connect your sensors to the WaziDev.
+The world is full of sensors and the variety of sensor applications is remarkable.
+Thanks to the proliferation of mobile devices, sensors are now remarkably affordable, meaning you can combine inexpensive sensors and microcontroller boards to make your own devices.
 
 Temperature Sensor
 ==================

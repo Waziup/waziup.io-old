@@ -6,6 +6,8 @@ menu:
     title: Documentation
     name: documentation 
     weight: 4
+aliases:
+  - /tutorials/
 ---
 
 All the documentation is listed here:

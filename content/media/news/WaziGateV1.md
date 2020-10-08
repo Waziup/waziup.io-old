@@ -7,6 +7,7 @@ description: We are proud to announce that we released the first Major version o
 
 We are proud to announce that we released the first Major version of the WaziGate.
 This version brings a lot of feature:
+
 - Wifi Hotspot
 - Wifi client
 - Ethernet cable access

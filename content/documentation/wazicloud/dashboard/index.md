@@ -9,6 +9,7 @@ menu:
     weight: 1
 aliases:
   - /tutorials/software/dashboard/
+  - /documentation/dashboard/
 
 ---
 

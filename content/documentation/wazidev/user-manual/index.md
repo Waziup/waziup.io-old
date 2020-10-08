@@ -521,15 +521,22 @@ Annex
 Use LoRaWAN with WaziDev V1.3
 ----------------------
 
-If you have a WaziDev V1.3 device and want to use LoRaWAN some changes are needed. To do this you will need:
+If you have a WaziDev V1.3 device and want to use LoRaWAN some changes are needed.
+Note that WaziDev V1.4 is already capable of LoRaWAN, without changes.
+On your WaziDev V1.3, it is required to solder a small cable between the D3 pin of the WaziDev and the LoRa chip, as can been seen in the image below.
+You also have to close the JR solder pans together with a welding point.
+To do this you will need:
 - A welder
 - A connecting cable about 2/3 cm long
 
-
-It is required to solder the cable in the D3 pin of the WaziDev and in the 2nd pin of the LoRa chip.
-Then you have to give a welding point on the JR
-
-The operation is quite simple, for more information see the image below below
-
-
 ![Modernize](./media/image32.png)
+
+Proceed as follow:
+1. solder one extremity of the cable to the D3 pin of the WaziDev
+2. solder the other end of the cable to the 2nd pin of the LoRa chip. You need to be quite precise!
+3. solder the JR pads together. This is quite easy, you just need to apply some weilding to join the two pads of JR together.
+
+That's it! You should now be able to upload LoRaWAN sketches to you WaziDev.
+Technically, we need this change for the [LMIC library](https://github.com/matthijskooijman/arduino-lmic#dio-pins), that we use for LoRaWAN.
+- Closing JR will connect LoRa DIO0 pin to the Pro mini pin D2.
+- slodering the wire will connect LoRa DIO1 to the Pro mini pin D3.

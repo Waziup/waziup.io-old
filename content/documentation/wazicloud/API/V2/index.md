@@ -345,6 +345,9 @@ Similarly, sensors can be modified:
 curl -X PUT "https://api.waziup.io/api/v2/devices/MyDevice/sensors/TC/name" -H "Content-Type: text/plain" -d "My garden device"
 ```
 
+Sensors management
+==================
+
 Create sensors
 --------------
 
@@ -355,7 +358,7 @@ curl -X POST "https://api.waziup.io/api/v2/devices/MyDevice/sensors" -H "accept:
 ```
 This will add a single sensor called "SM" (for "Soil Moisture") to the device named "MyDevice".
 
-Check your sensor
+Read your sensor
 -----------------
 
 This is an example of a reading a single sensor:
@@ -370,13 +373,16 @@ This will return the sensor called "SM" for the device named "MyDevice".
   "sensing_device": "SoilThermometer",
   "quantity_kind": "SoilTemperature",
   "unit": "DegreeCelsius",
-  "last_value": {
+  "value": {
     "value": "25.6",
     "timestamp": "2016-06-08T18:20:27.873Z",
     "date_received": "2018-10-19T10:16:20.00Z"
   }
 }
 ```
+Among the data returned, you can see the last value it received.
+If you want to read several values at once, please refer to the section "Read datapoints".
+
 If the sensor doesn't exist, an error "404" will be returned.
 
 Push data to your sensor
@@ -393,8 +399,8 @@ This field is optional.
  
 Once you pushed the value, You should already check that your datapoint is arrived on the dashboard: https://dashboard.waziup.io/devices/MyDevice/sensors/TC. 
 
-Read datapoints
----------------
+Read sensor values
+------------------
 
 Once you pushed several datapoints to your sensor, it's time to read them.
 This is performed by the following command:
@@ -417,21 +423,22 @@ This will return the list of datapoints:
 ]
 ```
 An additional field is returned: `date_received`. It contains the date at which the value was received on the Cloud platform.
-It can be different to `timestamp`: `timestamp` is the date at which the value was measured, while `date_received is the date at which is was received.
+It can be different to `timestamp`: `timestamp` is the date at which the value was *measured* by the sensor, while `date_received is the date at which is was *received* at the Cloud.
 As such, `date_received` can have a latter date if there was e.g. network connectivity problems that delayed the sending of the data.
 
 However, there can be a huge number of datapoints registered on your sensor!
 You can filter those datapoints with several query parameters: 
 
-- *lastN*: This parameter allows to return X last datapoints (by timestamp date),
 - *limit*: allows to limit the number of datapoints returned (similar to sensor list),
 - *offset*: used in combination to `limit`, it allows to paginate the datapoints returned,
-- *dateFrom*: sets a minimum timestamp date to retrieve the datapoint list,
-- *dateTo*: sets a maximum timestamp date to retrieve the datapoint list.
+- *sort* (either `asc` or `dsc`): for receiving the data in ascending order or descending order.  
+- *date_from*: sets a minimum timestamp date to retrieve the datapoint list,
+- *date_to*: sets a maximum timestamp date to retrieve the datapoint list.
+- *calibrated* (either `true` or `false`): wheter you want the data raw, or pre-calibrated.
 
 As an example, here is how to retrieve the first 100 datapoints between two particular dates:
 ```
-curl -X GET "https://api.waziup.io/api/v2/device/MyDevice/sensors/TC/values?limit=100&offset=0&dateFrom=2016-01-01T00:00:00.000Z&dateTo=2019-01-31T23:59:59.999Z"
+curl -X GET "https://api.waziup.io/api/v2/devices/MyDevice/sensors/TC/values?limit=100&offset=0&date_from=2016-01-01T00:00:00.000Z&date_to=2025-01-31T23:59:59.999Z"
 ```
 
 Delete your device
@@ -444,6 +451,30 @@ curl -X DELETE "https//api.waziup.io/api/v2/devices/MyDevice"
 ```
 
 Poof! Your sensor is gone.
+
+Datapoints
+==========
+
+In the previous section, we saw how you can read values from a single sensor.
+But what if you want to retrieve values from several sensors, all at once?
+This is performed by the "sensors_data" endpoint:
+```
+curl -X GET "https://api.waziup.io/api/v2/sensors_data?device_id=MyDevice1,MyDevice2&sensor_id=TC" -H "Accept: application/json"
+```
+This will return the list of datapoints for both devices `MyDevice1` and `MyDevice2`. You can add more devices and sensors, separating them with a comma.
+You can filter those datapoints with several query parameters: 
+
+- *limit*: allows to limit the number of datapoints returned (similar to sensor list),
+- *offset*: used in combination to `limit`, it allows to paginate the datapoints returned,
+- *sort* (either `asc` or `dsc`): for receiving the data in ascending order or descending order.:w
+- *date_from*: sets a minimum timestamp date to retrieve the datapoint list,
+- *date_to*: sets a maximum timestamp date to retrieve the datapoint list.
+- *calibrated* (either `true` or `false`): wheter you want the data raw, or pre-calibrated.
+
+As an example, here is how to retrieve the first 100 datapoints between two particular dates:
+```
+curl -X GET "https://api.waziup.io/api/v2/sensors_data?device_id=MyDevice&sensor_id=TC&limit=100&offset=0&date_from=2016-01-01T00:00:00.000Z&date_to=2025-01-31T23:59:59.999Z" -H "Accept: application/json"
+```
 
 Users
 =====

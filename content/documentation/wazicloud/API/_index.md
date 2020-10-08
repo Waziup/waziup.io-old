@@ -11,4 +11,8 @@ aliases:
   - /documentation/api
   - /documentation/api/v1
   - /documentation/api/v2
+  - /documentation/api/sensor_management/
+  - /documentation/api/access_control/
+  - /documentation/api/notifications/
+  - /documentation/api/gateways/
 ---
