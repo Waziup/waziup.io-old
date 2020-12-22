@@ -13,17 +13,15 @@ menu:
 In this course you will learn step by step everything there is to know about IoT.
 The course is structured with external material and with material produced directly from the WAZIUP / WAZIHUB project.
 
-What is IoT 
-=====================
-
 Introduction to IoT
------------------------------------------------------------------
+===================
 
 The Internet of things (IoT) is a system of interrelated computing devices, mechanical and digital machines provided with unique identifiers (UIDs) and the ability to transfer data over a network without requiring human-to-human or human-to-computer interaction.
 
 The definition of the Internet of things has evolved due to the convergence of multiple technologies, real-time analytics, machine learning, commodity sensors, and embedded systems. Traditional fields of embedded systems, wireless sensor networks, control systems, automation (including home and building automation), and others all contribute to enabling the Internet of things. In the consumer market, IoT technology is most synonymous with products pertaining to the concept of the "smart home", including devices and appliances (such as lighting fixtures, thermostats, home security systems and cameras, and other home appliances) that support one or more common ecosystems, and can be controlled via devices associated with that ecosystem, such as smartphones and smart speakers.
 
 IoT system architecture, in its simplistic view, consists of three parts:
+
 - Device
 - Edge Gateway
 - Cloud
@@ -37,18 +35,19 @@ ______
 WAZIUP and IoT
 -------------------------
 
-{{< youtube id="Ro4f69a8ufo" >}}
+{{< youtube id="sf7SRVEChbY">}}
 
 The WAZIUP project uses cutting edge technology from IoT and Big Data to improve the working conditions in the rural ecosystem of Sub-Saharan Africa. First, WAZIUP involves end users of IoT and Big Data in order to define focused validation cases. Secondly, it engages the ICT ecosystem by fostering new tools and good practices amongst entrepreneurs and start-ups.
 
 
 The technology we use to do this is:
+
 - **WAZIDEV**: WaziDev is a Sensing and Actuation platform for your applications! It can send your data up to 7 Km using the LoRa technology. It is easily programmable and customizable, using Arduino technology. It is an ideal solution for start-ups and entrepreneurs who want to rapid prototype a IoT applications.
 - **WAZIGATE** : WaziGate is a IoT LoRa Gateway, ideal for all your remote IoT applications. The Gateway can cover up to 100 IoT Sensors and actuator nodes using LoRa radio network: Weather stations, soil monitoring, GPS applications... The possibilities are endless! The Gateway can also control your actuators, such as electro-valves. You can host your own applications directly in the gateway, and connect to it through WiFi. The gateway can easily work without Internet connectivity and still provides data to end-users through its embedded database and web-based visualization module.
 - **WAZICLOUD** : The WAZIUP Cloud platform allows you to manage your sensors, actuators and IoT data. WAZIUP Cloud platform offers everything that you need for your application:
 
 
-{{< youtube id="sf7SRVEChbY">}}
+{{< youtube id="Ro4f69a8ufo" >}}
 
 ______
 

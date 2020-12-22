@@ -18,7 +18,7 @@ What you will learn:
 
 - **How do WaziApps work?**: You will learn about the structure of the WaziGate and how to utilize docker containers for your applications
 - **Preparing the RPI for development of WaziApps**: You will setup the Wazigate Firmware, install the IDE and communicate to the WaziGate through SSH and FTP
-- **Develop a WaziApp in Python, GoLang and Javascript**: You will learn how to install and run apps on the WaziGate, how to make APIs for your app and how to create docker image for your App
+- **Develop a WaziApp in Python, GoLang and Javascript**: You will learn how to install and run apps on the WaziGate, how to make APIs for your app and how to create docker image for your App.
 
 ______
 
@@ -27,19 +27,17 @@ Prerequisites
 =============
 
 You need to be familiar with:
-  - Raspberry PI
-  - A general knowledge of sensor nodes (e.g. Arduino, ESP, etc)
-  - Docker container concept
 
-You need to have basic knowledge of at least one of the following programming languages:
-  - Python
-  - Go Lang
-  - JavaScript
+- Raspberry PI
+- A general knowledge of sensor nodes (e.g. Arduino, ESP, etc)
+- Docker container concept
+- A basic knowledge of programming (in either Python, Go or Javascript)
 
-The required Hardware:
-  - A Raspberry pi
-  - An SD Card (at least 8GB)
-  - Internet Connection
+You will need the following Hardware:
+
+- A Raspberry pi
+- An SD Card (at least 8GB)
+- Internet Connection
 
 
 Level: **Intermediate**
