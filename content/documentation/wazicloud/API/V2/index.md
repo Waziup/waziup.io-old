@@ -392,12 +392,21 @@ You can push a new datapoint to your sensor.
 For example, here is how you can push the value 22.6 to sensor TC of device MyDevice:
 
 ```
-curl -X POST "https://api.waziup.io/api/v2/devices/MyDevice/sensors/TC/values" -H "Content-Type: application/json" -d '{"value": "25.6", "timestamp": "2016-06-08T18:20:27.873Z"}'
+curl -X POST "https://api.waziup.io/api/v2/devices/MyDevice/sensors/TC/value" -H "Content-Type: application/json" -d '{"value": "25.6", "timestamp": "2016-06-08T18:20:27.873Z"}'
 ```
 This will add a new datapoint to your sensor. The field `timestamp` contains the exact date at which this measurement as been taken by your sensor.
 This field is optional.
  
 Once you pushed the value, You should already check that your datapoint is arrived on the dashboard: https://dashboard.waziup.io/devices/MyDevice/sensors/TC. 
+
+You can also push datapoints in bulk. For this, the URL is really similar: juste use plural "values".
+You can then push an array of datapoints instead of just one.
+
+```
+curl -X POST "https://api.waziup.io/api/v2/devices/MyDevice/sensors/TC/values" -H "Content-Type: application/json" -d '[{"value": "25.6", "timestamp": "2016-06-08T18:20:27.873Z"}, {"value": "27", "timestamp": "2016-06-09T18:20:27.873Z"}]'
+```
+
+
 
 Read sensor values
 ------------------
@@ -407,7 +416,7 @@ This is performed by the following command:
 ```
 curl -X GET "https://api.waziup.io/api/v2/devices/MyDevice/sensors/TC/values" -H "Accept: application/json"
 ```
-This will return the list of datapoints:
+This will return the list of datapoints in JSON:
 ```
 [
   {
@@ -423,7 +432,7 @@ This will return the list of datapoints:
 ]
 ```
 An additional field is returned: `date_received`. It contains the date at which the value was received on the Cloud platform.
-It can be different to `timestamp`: `timestamp` is the date at which the value was *measured* by the sensor, while `date_received is the date at which is was *received* at the Cloud.
+It can be different from `timestamp`. Indeed, `timestamp` is the date at which the value was *measured* by the sensor, while `date_received` is the date at which is was *received* at the Cloud.
 As such, `date_received` can have a latter date if there was e.g. network connectivity problems that delayed the sending of the data.
 
 However, there can be a huge number of datapoints registered on your sensor!
@@ -440,6 +449,22 @@ As an example, here is how to retrieve the first 100 datapoints between two part
 ```
 curl -X GET "https://api.waziup.io/api/v2/devices/MyDevice/sensors/TC/values?limit=100&offset=0&date_from=2016-01-01T00:00:00.000Z&date_to=2025-01-31T23:59:59.999Z"
 ```
+
+Note that you can also retrieve data in CSV format, if you prefer. For that, you need the tell to the Waziup API that you'd rather accept CSV data, with the header `accept: text/csv`.
+The command becomes:
+```
+curl -X GET "https://api.waziup.io/api/v2/devices/MyDevice/sensors/TC/values?limit=100&offset=0&date_from=2016-01-01T00:00:00.000Z&date_to=2025-01-31T23:59:59.999Z" -H "accept: text/csv"
+```
+
+The result is a list of datapoints in CSV format:
+```
+device_id,sensor_id,value,timestamp,date_received
+MyDevice,TC,28,2020-10-31T13:21:17Z,2020-10-31T13:21:22Z
+MyDevice,TC,28,2020-10-31T13:21:33Z,2020-10-31T13:21:34Z
+MyDevice,TC,28,2020-10-31T13:21:33Z,2020-11-12T10:49:55Z
+MyDevice,TC,28,2020-10-31T13:21:50Z,2020-11-12T10:49:55Z
+```
+
 
 Delete your device
 ------------------
