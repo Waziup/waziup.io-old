@@ -10,9 +10,8 @@ function setColorMenu() {
   }
 }
 
-// active links (bolded)
+// active menu links (bolded)
 function setActiveLinks() {
-  //bold ToC links (anchors)
   $("#TableOfContents a").each(function() {
     if (window.location.href == this.href) {
       $(this).addClass("active");
@@ -21,35 +20,6 @@ function setActiveLinks() {
     }
   });
 
-}
-
-// detects which title is in the viewport
-function isElementInViewport (el) {
-  if (typeof jQuery === "function" && el instanceof jQuery) {
-    el = el[0];
-  }
-  var rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
-  );
-}
-
-// Change URL with anchor
-function setAnchor() {
-  jQuery.fn.reverse = [].reverse;
-  $(".markdowned h1, .markdowned h2").each(function (idx, el) {
-    if ( isElementInViewport(el) ) {
-      // update the URL hash
-      if (window.history.pushState) {
-        var urlHash = "#" + $(el).attr("id");
-        window.history.pushState(null, null, urlHash);
-        return false;
-      }
-    }
-  });
 }
 
 /* Set the width of the side navigation to 250px */
@@ -66,11 +36,9 @@ function documentReady() {
 
   setColorMenu();
   setActiveLinks();
-  setAnchor();
   $(window).on("scroll", function () {
     setColorMenu();
     setActiveLinks();
-    setAnchor();
   });
 
   // Set mobile menu
