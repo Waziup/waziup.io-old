@@ -30,6 +30,11 @@ $ hugo
 $ docker build -t waziup/website .
 $ docker push waziup/website
 ```
+Optionally, restart the task on Amazon:
+```
+aws ecs list-tasks --cluster "waziup-frontend" --service "Waziup-website" --output text --query taskArns[0] | xargs aws ecs stop-task --cluster "waziup-frontend" --task
+```
+
 
 Documentation
 -------------
