@@ -15,8 +15,8 @@ WaziGate
 ISO image
 ---------
 
-- [Download V1.1.3 (latest)](https://downloads.waziup.io/WaziGate_V1.1.3.zip)
-- [Older versions](https://downloads.waziup.io/)
+- [Download V2.1 (latest)](https://downloads.waziup.io/WaziGate_V2.1.10.zip)
+- [All versions](https://downloads.waziup.io/)
 - User Manual: [Download V1.0](/docs/WaziGate_User_Manual-V1.0.pdf)
 
 WaziDev

@@ -1,12 +1,6 @@
 ---
 title: WaziGate User Manual 
 layout: single
-menu:
-  main:
-    title: WaziGate User Manual
-    name: docwazigate
-    parent: wazigate 
-    weight: 2
 ---
 
 Overview

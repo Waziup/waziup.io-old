@@ -1,13 +1,21 @@
 ---
 date: 2018-04-11T09:00:00+00:00
-title: API V2 Reference
+title: API Reference
 layout: single
 menu:
   main:
-    title: V2
+    title: API Reference
     name: v2docapi
-    parent: docapi
+    parent: wazicloud 
     weight: 4
+aliases:
+  - /documentation/api
+  - /documentation/api/v1
+  - /documentation/api/v2
+  - /documentation/api/sensor_management/
+  - /documentation/api/access_control/
+  - /documentation/api/notifications/
+  - /documentation/api/gateways/
 ---
 
 
@@ -389,15 +397,22 @@ Push data to your sensor
 ------------------------
 
 You can push a new datapoint to your sensor.
-For example, here is how you can push the value 22.6 to sensor TC of device MyDevice:
+For example, here is how you can push the value 25.6 to sensor TC of device MyDevice, using the JSON format:
 
 ```
 curl -X POST "https://api.waziup.io/api/v2/devices/MyDevice/sensors/TC/value" -H "Content-Type: application/json" -d '{"value": "25.6", "timestamp": "2016-06-08T18:20:27.873Z"}'
 ```
 This will add a new datapoint to your sensor. The field `timestamp` contains the exact date at which this measurement as been taken by your sensor.
 This field is optional.
- 
-Once you pushed the value, You should already check that your datapoint is arrived on the dashboard: https://dashboard.waziup.io/devices/MyDevice/sensors/TC. 
+
+Alternatively, you can push the same value in plain text format:
+
+```
+curl -X POST "https://api.waziup.io/api/v2/devices/MyDevice/sensors/TC/value" -H "Content-Type: text/plain; charset=utf-8" -d "25.6"
+```
+
+In this case, you will not be able to set the `timestamp`. In any case, the field `date_received` will be set by the Cloud.
+Once you pushed the value, you should already check that your datapoint is arrived on the dashboard: https://dashboard.waziup.io/devices/MyDevice/sensors/TC. 
 
 You can also push datapoints in bulk. For this, the URL is really similar: juste use plural "values".
 You can then push an array of datapoints instead of just one.

@@ -1,12 +1,6 @@
 ---
 date: 2020-07-24T09:00:00+00:00
-title: WaziDev User Manual
-menu:
-  main:
-    title: User Manual
-    name: wazidevmanual
-    parent: wazidev
-    weight: 1
+title: Make your own WaziDev
 ---
 
 Overview
@@ -33,7 +27,7 @@ To follow this user manual, one will need the following hardware:
 -   a Micro USB cable
 -   a DHT11 sensor
 
-![WaziDev board](./media/image9.png)
+![WaziDev board](./media/image9.png "WaziDev board")
 ![Micro USB cable](./media/image8.png)
 ![DHT11 sensor](./media/image13.png)
 
@@ -180,48 +174,6 @@ Select the processor "ATmega328P (3.3V, 8 MHz)" in the Tools -\> Processor menu.
 
 Finally, the Programmer needs to be "AVRISP mkll".
 
-Connecting you Sensors and Actuators
-====================================
-
-The WaziDev presents a number of "pins" where you can connect your sensors and actuators.
-
-![WaziDev Pinout](./media/image16.jpg)
-
-The full list of pins can be found in the [Reference](#reference) section.
-
-In practice, you use either the "Digital" pins **D2 to D12** or the "Analog" pins **A0 to A7** to connect your sensorsi and actuators.
-For example, here is how to connect a DHT11 temperature and humidity sensor: 
-
-![dht11 arduino](./media/Adht11.png)
-
-
-Many more sensor examples can be found in the ["Connect your sensors"](/documentation/wazidev/sensors) and ["Connect your actuators"](/documentation/wazidev/sensors) page.
-
-High current/voltage 
---------------------
-
-WaziDev programmable pins provide 3.3v with maximum current of around 20 mA.
-How to control sensors or actuators that require more voltage (e.g. a 12V water valve) or drain more current (e.g. a GPS sensor)?
-
-We can use high current/voltage pins M8 and M9.
-They can be programmed through digital pins D8 and D9 respectively.
-It can be used to activate high current/voltage devices/sensors.
-The maximum current which can be drained is 500mA and the maximum voltage is 12v.
-The wiring is as follows:
-
-- the ground wire of the external high current/voltage source is connected to the same ground of the board (GND),
-- the positive wire of the power source is connected to the high current device that needs to be controlled by our board,
-- One of pins of M8 or M9 is connected to the Ground of the high current device.
-
-We can now can turn it on and off by writing HIGH and LOW to the digital pins D8 or D9 respectively.
-
-
-![High current example](./media/high-current.png)
-
-
-
-
-
 Example applications
 ====================
 
@@ -340,6 +292,44 @@ In the Tools menu open the serial monitor and then set the data rate to 38400 ba
 
 You should see both temperature and humidity displayed.
 
+LoRa Ping Pong
+--------------
+
+We'll program our WaziDev to communicate with the WaziGate, using LoRa radio network.
+Note that you need to have one [WaziGate](https://www.waziup.io/solutions/wazigate/) powered on (however it doesn't need Internet at this stage).
+
+{{%action%}}
+**Step \#1:** Select the LoRa\_Ping\_Pong example.
+{{%/action%}}
+
+This example can be found in the menu File -\> Sketchbook -\> LoRa -\> LoRa\_Ping\_Pong.
+
+![Select the LoRa\_Ping\_Pong example](./media/image28.png)
+
+
+After selecting, the example code should appear in the IDE.
+
+{{%action%}}
+**Step \#2:** Compile and upload the code.
+{{%/action%}}
+
+You just need to hit the arrow button.
+
+{{%action%}}
+**Step \#3:** Open the Arduino IDE Serial Monitor.
+{{%/action%}}
+
+The icon is located in the top right corner.
+
+![Serial monitor icon](./media/image26.png)
+
+This will open a window like below.
+
+![Serial Monitor window](./media/image23.png)
+
+
+If you see the message "Pong received from gateway": Congratulations!
+The WaziDev is communicating with a WaziGate.
 
 Cloud application
 -----------------
