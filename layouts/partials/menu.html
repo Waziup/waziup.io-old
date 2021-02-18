@@ -6,22 +6,22 @@
         <li>
           <a href="{{.URL}}" id="top-menu-item-text" class="top-menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}" >{{.Title}}&nbsp;{{.Pre}}</a>
           {{ if .HasChildren }}
-          <ul>
-            {{ range .Children}}
-              <li>
-                <a href="{{.URL}}" class="sub-menu-item{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}">{{.Title}} ></a>
-                {{ if .HasChildren }}
-                <ul>
-                  {{ range .Children}}
-                    <li>
-                      <a href="{{.URL}}" class="sub-menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">{{.Title}}</a>
-                    </li>
-                  {{ end }}
-                </ul>
-                {{ end }}
-              </li>
-            {{ end }}
-          </ul>
+             <ul>
+               {{ range .Children}}
+                 <li>
+                   <a href="{{.URL}}" class="sub-menu-item{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}">{{.Title}} {{if .HasChildren }} > {{ end }} </a>
+                   {{ if .HasChildren }}
+                     <ul>
+                       {{ range .Children}}
+                         <li>
+                           <a href="{{.URL}}" class="sub-menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">{{.Title}}</a>
+                         </li>
+                       {{ end }}
+                     </ul>
+                   {{ end }}
+                 </li>
+               {{ end }}
+             </ul>
           {{ end }}
         </li>
       {{ end }}

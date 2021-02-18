@@ -443,14 +443,17 @@ body {
 // single page
 .menu {
   display: none;
-  background-color: whitesmoke;
-  padding: 55px + 60px 40px 40px 40px;
-  height: 100vh;
   position: fixed;
-  bottom: 0;
   right:0;
+  top:0;
+  margin-top: 100px;
+  margin-right: 20px;
+  padding: 20px 20px 20px 20px;
+  min-height: 300px;
+  max-height: 85%;
+  width: 260px + 20px + 20px;
   overflow-y: scroll;
-  width: 260px + 40px + 40px;
+  background-color: whitesmoke;
 
   @media all and (min-width: 1025px) {
     display: block;
