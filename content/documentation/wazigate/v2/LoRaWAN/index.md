@@ -13,14 +13,23 @@ Once your gateway is all setup, let's receive and send LoRaWAN messages!
 You need a LoRa capable device, such as WaziDev.
 With WaziDev, you need to install the WaziDev sketchbook, as instructed [here](/documentation/wazidev/user-manual/).
 
-Sensing
-=======
+Device preparation
+==================
 
 In Arduino IDE, select the LoRaWAN/actuation sketch:
-![sketch](img/sketch.png)
+
+![Sketch selection](img/sketch.png)
+
+The sketch looks like that:
+
+![sketch_keys](img/sketch_keys.png)
 
 This sketch has 3 keys: devAddr, appSkey, netSkey. They need to be copied in the WaziGate to be recognized.
 You can flash this sketch on your device.
+
+Sensing
+=======
+
 
 Once flashed, open the WaziGate UI on http://wazigate.local and first select the "Dashboard" menu entry.
 Click on the "Plus" icon at the bottom right:
