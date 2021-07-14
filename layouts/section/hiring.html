@@ -1,0 +1,37 @@
+{{ partial "head" . }}
+{{ partial "nav" . }}
+{{ partial "mobile-menu" . }}
+
+<!--NEWS-->
+<div class="page">
+  <div class="lander-row lander-row--white" style="height:370px">
+    <div class="container" >
+      <div data-jarallax data-speed="0.2" class="jarallax">
+        <img class="jarallax-img" src="/images/hands.jpg" alt="">
+      </div>
+      <h1 class="header center">
+        Come join us!
+      </h1>
+      <h2 class="h2 center"> We are hiring.</h2>
+    </div>
+  </div>
+  <div class="lander-row lander-row--white">
+    <div class="container">
+      <div class="markdowned">
+        {{ .Content }}
+      </div>
+        
+        {{ range .Pages }}
+          <div class="news">
+            <p class="newsdate"> {{.Date.Format "Mon Jan 2 2006"}} <p>
+            <a href="{{.Permalink}}">
+              <h1 class="h2"> {{ .Title }} </h1>
+            </a>
+            <div class="newscontent"> {{.Description}} </div>
+            <a href="{{.Permalink}}"> Read more... </a>
+          </div>
+        {{ end }}
+    </div>
+  </div>
+</div>
+{{ partial "footer" .}}

@@ -10,7 +10,6 @@ menu:
 aliases:
   - /tutorials/software/dashboard/
   - /documentation/dashboard/
-
 ---
 
 
@@ -18,51 +17,51 @@ You can build a full application with Waziup, without programming!
 In this tutorial, we'll learn how to build a soil monitoring application able to display the soil moisture and to send notifications on SMS, twitter and voice messages.
 This documentation is available in [PDF format](/docs/WaziCloud_User_Manual-V2.1.pdf).
 
+
 Login
 =====
 
+The first thing you need to do is to create a login and a password.
 You should already have a gateway and a sensor node ready and configured.
 If not, please check [this section](/documentation/wazigate/).
 
-Create a user
--------------
-The first thing you need to do is to create a login and a password.
-First, [open the WaziCloud dashboard](https://dashboard.waziup.io/).
- 
-![Waziup login page](./images/login.png)
+{{%action%}}
+**Step \#1:** [Open the WaziCloud dashboard](https://dashboard.waziup.io/).
+{{%/action%}}
+
+![login](img/login.png)
 
 You can create a new account by clicking on “Register” of by using a social network OpenId procedure.
 All communications will be secured by SSL. 
 
+{{%action%}}
+**Step \#2:** fill in the fields. 
+{{%/action%}}
+
+![register](img/register.png)
+
+You will receive an email to confirm your registration.
+Once registered, you can now log in.
+
+{{%warning%}}
 **IMPORTANT: Once created your login and password, [you need to insert them in your gateway](/documentation/wazigate)!**
-
-Projects
-========
-
-A project allows you to get all your assets in the same place: gateways, devices, notifications, maps, graphics...
-The first thing to do is to connect your [gateways](/documentation/wazigate/) and [devices](/documentation/wazidev/).
-Once they are connected, you can click on the button "Create a project".
-
-![Project form](./images/project_create.png)
-
-After completing all the steps, your project is ready!
-You can see on this screen the status of your devices and gateways.
-
-![Project resources](./images/project_resources.png)
-
-If your devices are positionned, you should see them on the map.
-Finally, all devices and sensor values are displayed on the graph.
-
-![Project map](./images/project_map_graph.png)
-
+{{%/warning%}}
 
 Devices
 =======
 
 Clicking on the “Devices” menu entry will lead you to the devices page.
-If you configured your gateway correctly, you should be able to find your devices in this page!
-For example, your [WaziDev](/documentation/wazidev/) should be listed here.
+If this is your first time on Waziup, you should not have any devices here:
 
+![no_devices](img/no_devices.png)
+
+At this point, you have two choices:
+1. Let your gateway create the devices for you,
+2. Create your devices manually.
+
+The Waziup gateway will automatically create devices on the WaziCloud dashboard for you.
+So, if you have a WaziGate, you should already be able to find your devices in this page!
+For example, your [WaziDev](/documentation/wazidev/) should be listed here.
 
 ![Devices page](./images/devices.png)
 
@@ -73,6 +72,54 @@ A sensor is deemed unactive if it doesn't send data after 12 hours.
 You can filter the list by domain, visibility or status.
 If you have a lot of devices, you can often find the one you are looking for by filtering by "Active" or "New".
 A device is showed as "New" if it has been created in the last 24 hours.
+
+Manual creation
+---------------
+
+If you want to create your devices yourself on the dashboard, follow this procedure:
+
+{{%action%}}
+**Step \#1:** Click on "Settings" menu. 
+{{%/action%}}
+
+You will get this screen:
+![Settings page](img/Settings_create.png)
+
+{{%action%}}
+**Step \#2:** Activate the "Allow manual creation of gateways and devices" option. 
+{{%/action%}}
+
+This option will allow you to create your own devices.
+
+{{%action%}}
+**Step \#3:** Come back on the devices screen and click on "Add a device" button:
+{{%/action%}}
+
+![Add a device](img/add_device.png)
+
+{{%action%}}
+**Step \#4:** You can now fill in the details of your device.
+{{%/action%}}
+
+![Device creation](img/device_add.png)
+
+On this screen, you can fill in the fields:
+- Device ID
+- Device name
+- Domain
+- Visibility
+- Gateway
+
+The *Device ID* is the most important. It is a unique ID (across all Waziup Platform) referencing your device.
+For instance, it will be used by sensors to push data to your device, or applications to retrieve data from this device.
+Choose it wisely!
+
+The *Device name* is optional, it is a human-readable name for your device. For example, you can set it as "My garden device".
+The Domain is optional, it can be setup to group your devices by use cases, such as "Agriculture".
+*Visibility* can be set to either Public or Private. A Public device can be seen by anyone, while a Private device can be seen only by you.
+For your first devices, it is advised to set them to "Public", they will be easier to share with friends.
+*Gateway* contains the gateway ID that transmitted this device. It is optional.
+
 
 Device details
 --------------
@@ -93,11 +140,21 @@ You can edit your device, input the following:
 The name of you device is important. You should change it as soon as you can, to something significant such as "My weather station".
 The domain allows you to group your devices by topics, such as "Agriculture".
 You can also set the gateway that is associated with your device. You normally don't need to do that, since your gateway will do it automatically.
+
 Finally, using the map you can change the location of your device.
 
+![map](img/map.png)
 
-Sensor details page
--------------------
+You can update the position of you device by clicking "Change".
+You can update your location with three methods:
+1. Click and drag the pointer on the map,
+2. Click on "Get your location" (only available on some browsers),
+3. Enter your GPS coordinates directly.
+
+
+
+Sensors
+=======
 
 Click on one of the sensors to open the sensors details page.
 
@@ -113,7 +170,7 @@ This will allow to set up:
 - a quantity kind. This is what you are really measuring with the sensor. For example, air temperature or water temperature?
 - a unit of measurement.
 
-Setting up this metadata is not mandatory, however is it much better to get if you want to exploit yuor data on the long term.
+Setting up this metadata is not mandatory, however is it much better to get if you want to exploit your data on the long term.
 It will also allow you to create nicer graphics.
 
 
@@ -138,7 +195,7 @@ You can click a device to navigate to that device.
 You can open the own Gateway UI by clicking on the "Remote access" button.
 This will open the [login screen for your gateway UI](/documentation/wazigate).
 
-Finally, you can edit the paramters of your gateway and delete it, using the corresponding buttons. 
+Finally, you can edit the parameters of your gateway and delete it, using the corresponding buttons. 
 
 
 Notifications
@@ -169,7 +226,7 @@ For example, you can include the current value of a sensor in the message with �
 
 The next step is to select the users you want to send it to.
 Select your own username here.
-Finaly, select the social media to send one.
+Finally, select the social media to send one.
 Remember, your account need to be configured with your phone number and Twitter account to receive messages.
 
 Once this is done, you can validate.
@@ -181,5 +238,25 @@ You can click on that notification to view the details.
 
 Did you receive anything?
 You should see the number of times this notification was sent, and the time for the last sending in the box "Status".
+
+Projects
+========
+
+A project allows you to get all your assets in the same place: gateways, devices, notifications, maps, graphics...
+The first thing to do is to connect your [gateways](/documentation/wazigate/) and [devices](/documentation/wazidev/).
+Once they are connected, you can click on the button "Create a project".
+
+![Project form](./images/project_create.png)
+
+After completing all the steps, your project is ready!
+You can see on this screen the status of your devices and gateways.
+
+![Project resources](./images/project_resources.png)
+
+If your devices are positionned, you should see them on the map.
+Finally, all devices and sensor values are displayed on the graph.
+
+![Project map](./images/project_map_graph.png)
+
 
 

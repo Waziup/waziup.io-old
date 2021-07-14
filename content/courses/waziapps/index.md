@@ -10,7 +10,7 @@ menu:
 ---
 
 {{% warning %}}
-WaziApps are possible with WaziGate V2, which will be published officially soon.
+WaziApps are possible with WaziGate V2 only.
 {{% /warning %}}
 
 This course guides you to step through development of a **simple app** running on the Wazigate platform.

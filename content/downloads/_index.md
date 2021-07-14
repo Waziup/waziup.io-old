@@ -32,7 +32,8 @@ WaziCloud
 - API Reference: [Download V2.1](/docs/WaziCloud_API_Reference-V2.1.pdf)
 
 
-Magazine
-========
+Magazines
+=========
 
-- Magazine: [Download issue #1](/docs/WaziupMagazine.pdf)
+- Waziup Magazine (2019): [Download](/docs/WaziupMagazine.pdf)
+- WaziHub Magazine 1 (2021): [Download](/docs/WaziHubMagazine1.pdf)

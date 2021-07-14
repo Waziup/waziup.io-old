@@ -2,6 +2,7 @@ baseurl: "https://www.waziup.io"
 title: "WAZIUP e.V."
 languageCode: "en-us"
 showVisitedLinks: true
+buildFuture: true
 
 markup:
   goldmark:
@@ -30,3 +31,4 @@ menu:
       pre: <i class='fa fa-external-link-alt'></i>
       url: https://www.wazihub.com
       weight: 9
+

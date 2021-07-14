@@ -9,6 +9,9 @@ menu:
     weight: 1
 ---
 
+An Introduction
+===============
+
 The Waziup Platform has three elements:
 
 ![](img/archi.png)
