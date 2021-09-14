@@ -16,16 +16,30 @@ With WaziDev, you need to install the WaziDev sketchbook, as instructed [here](/
 Device preparation
 ==================
 
-In Arduino IDE, select the LoRaWAN/actuation sketch:
+In Arduino IDE, select the `File ▸ Sketchbook ▸ LoRaWAN ▸ Actuation` to open the LoRaWAN Actuation example sketch. You can find this and other Arduino example sketches on our public open-source [Wazidev GitHub repository](https://github.com/Waziup/WaziDev/tree/master/examples) too.
 
-![Sketch selection](img/sketch.png)
+This sketch uses the following technologies and features:
 
-The sketch looks like that:
+- Creating compact payload from sensor data with XLPP
+- Sending data with LoRaWAN encrypted
+- Receiving data with LoRaWAN (for actuation)
+- Reading LoRaWAN statistics (SNR, RSSI, Time-on-air)
+
+LoRaWAN is a low-power wireless networking protocol with very long range. Sending and receiving data is encrypted, thus requiring you to generate (random) keys for your devices. The Wazidev has a LoRaWAN-chip and a LoRaWAN antenna build in. 
+
+The code looks like this:
 
 ![sketch_keys](img/sketch_keys.png)
 
-This sketch has 3 keys: devAddr, appSkey, netSkey. They need to be copied in the WaziGate to be recognized.
-You can flash this sketch on your device.
+You can see 3 values: `DevAddr` (Device Address), `AppSkey` (Application Session Key), `NetSkey` (Network Session Key). They need to be copied in the WaziGate to be recognized.
+
+⚠️ Every device needs to have it's unique `DevAddr` - two devices must not have the same. Change the `DevAddr` digits to a new value for each new device.
+
+⚠️ `AppSkey` and `NetSkey` make your communication secure. Although both keys can be the same, you should select new random keys for each device. Use the Wazigate dashboard to generate new random keys.
+
+Now you can flash this sketch on your Wazidev device.
+
+Don't close the Arduino IDE yet, you will need to copy these 3 values to the Wazigate dashboard next.
 
 Sensing
 =======
@@ -49,12 +63,14 @@ Then click on the "three dots" at the top right of the screen, and select "Make 
 Once the device is converted, fill in the three keys, so they are identical with the keys in you sketch.
 Once the keys filled in, save.
 
-![Lorawan Keys](img/lorawan_keys.png)
+![Lorawan Keys](img/wazigate_lorawan_keys.png)
 
 {{%warning%}}
-You need to make 100% sure that the keys are equal. In particular, make sure that appSkey and nwkSkey are not swapped.
+You need to make 100% sure that the keys are equal. In particular, check that `AppSkey` and `NwkSkey` are not swapped.
 {{%/warning%}}
-Please also make sure that the devAddr is unique, i.e. you don't have two devices with the same devAddr.
+Please also make sure that the `DevAddr` is unique, i.e. you don't have two devices with the same `DevAddr`.
+
+You should also select XLPP (or the older LPP) as the payload encoding, as we recommend these low-power payloads for use with the Wazidev. Have a look at our [Arduino XLPP library](https://github.com/Waziup/arduino-xlpp) for example sketches, or check out the [CayenneLPP Arduino library from TheThingsNetwork](https://www.thethingsnetwork.org/docs/devices/arduino/api/cayennelpp/).
 
 Go back to the "Dashboard" main page.
 
@@ -88,7 +104,7 @@ Select a name for your new actuator:
 
 Your actuator is added, it has no value yet:
 
-![Emtpy actuator](img/actuator_empty.png)
+![Empty actuator](img/actuator_empty.png)
 
 Let's go back on the [Cloud dashboard](http://dashboard.waziup.io).
 Your actuator should already be there!
