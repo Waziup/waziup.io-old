@@ -1,8 +1,9 @@
 ---
-title: Front-End Developer (Student work) (m/f/d)
+title: Front-End Developer [Student work] (m/f/d)
 date: 2021-07-13
 layout: "offer"
 description: "We are looking for an enthusiastic student Front-End developer!"
+open: false
 ---
 
 We are WAZIUP e.V, a non-profit organization promoting cutting-edge Internet of Things technologies in developing countries.
@@ -49,6 +50,7 @@ You will receive a fair compensation.
 Are you interested?
 -------------------
 
-Send us your CV in English to abdur.rahim@waziup.org and corentin.dupont@waziup.org.
-More infos on https://www.waziup.org
+Send us your CV in English to contact@waziup.org.
+
+[Download this offer](../docs/FrontEndDeveloperStudentWork2021.pdf)
 

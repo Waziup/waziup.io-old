@@ -19,18 +19,43 @@
     <div class="container">
       <div class="markdowned">
         {{ .Content }}
+        <h1> Open positions </h1>
       </div>
-        
-        {{ range .Pages }}
-          <div class="news">
-            <p class="newsdate"> {{.Date.Format "Mon Jan 2 2006"}} <p>
+      {{ range .Pages }}
+        {{ if .Params.open }}
+          <div class="jobitem">
+            <div>
+              <a href="{{.Permalink}}">
+                <h1 class="h2"> {{ .Title }} </h1>
+              </a>
+              <div class="jobcontent"> {{.Description}} </div>
+            </div>
             <a href="{{.Permalink}}">
-              <h1 class="h2"> {{ .Title }} </h1>
-            </a>
-            <div class="newscontent"> {{.Description}} </div>
-            <a href="{{.Permalink}}"> Read more... </a>
+            <div class="button button--orange"> 
+               Read more... 
+            </div></a>
           </div>
         {{ end }}
+      {{ end }}
+      <div class="markdowned">
+        <h1> Closed positions </h1>
+      </div>
+      {{ range .Pages }}
+        {{ if not .Params.open }}
+          <div class="jobitem">
+            <div>
+              <a href="{{.Permalink}}">
+                <h1 class="h2"> {{ .Title }} </h1>
+              </a>
+              <div class="jobcontent"> {{.Description}} </div>
+            </div>
+            <a href="{{.Permalink}}">
+            <div class="button button--orange"> 
+               Read more... 
+            </div></a>
+          </div>
+        {{ end }}
+      {{ end }}
     </div>
   </div>
 </div>

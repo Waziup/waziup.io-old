@@ -19,7 +19,7 @@ The Waziup Platform has three elements:
 **WaziDev** is a [Sensing](/documentation/wazidev/sensors/) and [Actuation](/documentation/wazidev/actuators/) platform for your applications!
 It can send your data up to 7 Km using the LoRa technology.
 It is easily programmable and customizable, using Arduino technology.
-It is an ideal solution for start-ups and entrepreneurs who want to rapid prototype a IoT applications.
+It is an ideal solution for start-ups and entrepreneurs who want to rapidly prototype an IoT application.
 Its has:
 - Arduino Pro Mini compatible CPU
 - RFM95W LoRa module

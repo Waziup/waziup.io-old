@@ -1,8 +1,9 @@
 ---
-title: International Project Assistant (Student work) (m/f/d)
+title: International Project Assistant [Student work] (m/f/d)
 date: 2021-07-13
 layout: "offer"
 description: "We are looking for a dedicated student project assistant!"
+open: false
 ---
 
 We are WAZIUP e.V, a non-profit organization promoting cutting-edge Internet of Things technologies in developing countries.
@@ -49,6 +50,6 @@ You can also expect flexible working and on-going career development opportuniti
 Are you interested?
 -------------------
 
-Send us your CV in English to  abdur.rahim@waziup.org and corentin.dupont@waziup.org.
-More infos on https://www.waziup.org
+Send us your CV in English to contact@waziup.org.
 
+[Download this offer](../docs/ProjectAssistanceStudentWork2021.pdf)

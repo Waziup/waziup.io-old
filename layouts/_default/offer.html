@@ -1,0 +1,17 @@
+{{ partial "head" . }}
+{{ partial "nav" . }}
+
+<div class="page documentation">
+  <div class="news-menu">
+    {{ partial "offers_menu" . }}
+  </div>
+    <div class="content">
+      {{ if not .Params.open }} This job offer is closed. </br></br> {{ end }}
+      <h1 class="content-header">{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
+      <div class="markdowned">
+        {{ .Content }}
+      </div>
+    </div>
+</div>
+
+{{ partial "footer" .}}

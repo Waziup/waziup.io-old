@@ -36,4 +36,5 @@ Magazines
 =========
 
 - Waziup Magazine (2019): [Download](/docs/WaziupMagazine.pdf)
-- WaziHub Magazine 1 (2021): [Download](/docs/WaziHubMagazine1.pdf)
+- WaziHub Technology (May 2021): [Download](/docs/WaziHubMagazine1.pdf)
+- WaziHub Startups (July 2021): [Download](/docs/WaziHub_Startups_Magazine.pdf)
