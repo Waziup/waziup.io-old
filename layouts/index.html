@@ -34,45 +34,106 @@
   </div>
 
   <!--ABOUT Waziup ROW-->
-  <div class="lander-row lander-row--white">
+  <!-- <div class="lander-row lander-row--white">
     <div class="container">
       <div class="row">
         <div class="col-4">
-          <div class="tech-image" style="border: 1px double darkblue;max-width: 400px;">
+          <div class="tech-image" style="max-width: 400px;">
             <a href=''>
-              <img src="images/wazihubers.jpg" alt="WaziDev" style="display:block;" />
+              <img src="images/wazihubers.jpg" alt="WaziDev" style="display:block;box-shadow:0px 3px 14px -5px orange ;" />
             </a>
           </div>
         </div>
         <div class="col-11 center" style="padding:50px">
           <div style="align-self:flex-start">
-            <i class="fa fa-2x fa-quote-right" aria-hidden="true" style="color:orange"></i>
+            <i class="fa fa-2x fa-quote-left" aria-hidden="true" style="color:orange"></i>
           </div>
           <div>
           <h2 style="font-size:18pt"> Waziup allows us to create our IoT application and to deploy it easily! </h2>
           </div>
           <div style="align-self:flex-end">
+            <i class="fa fa-2x fa-quote-right" aria-hidden="true" style="color:orange"></i>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="iframe-container">
+          <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/hu-v-eukLAc?rel=0&loop=1" 
+            title="YouTube video player" 
+            frameborder="0" 
+            rel="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+<!-- ******EXPERIMENT***** -->
+
+
+<div class="lander-row lander-row--white">
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div class="iframe-container">
+          <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/hu-v-eukLAc?rel=0&loop=1" 
+            title="YouTube video player" 
+            frameborder="0" 
+            rel="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="col-7" style="margin-left: 10px;">
+        <div style="width: 100%; display: flex; justify-content: right;">
+          <img src="images/wazihubers.jpg" alt="WaziDev" style="display:block;box-shadow:0px 3px 14px -5px orange; height: 15vh;" />
+        </div>
+        <div class="center" style="padding:10px; margin-top: 20px;">
+          <div style="align-self:flex-start">
             <i class="fa fa-2x fa-quote-left" aria-hidden="true" style="color:orange"></i>
+          </div>
+          <div>
+          <h2 style="font-size:18pt"> Waziup allows us to create our IoT application and to deploy it easily! </h2>
+          </div>
+          <div style="align-self:flex-end">
+            <i class="fa fa-2x fa-quote-right" aria-hidden="true" style="color:orange"></i>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 
+<!-- ******EXPERIMENT END***** -->
+
+  <!-- Our Technology -->
   <div class="lander-row lander-row--blue">
     <div class="container">
-      <h1 class="h1">
-        Our technology
-      </h1>
+      <div class="">
+        <h1 class="h1">
+          Our Technology
+        </h1>
+      </div>
       <div class="row">
+        <!-- WaziDev -->
         <div class="col-5">
           <h2 class="h2 center">
             WaziDev
           </h2>
-          <div class="card">
+          <div class="card" onclick="location.href='documentation/wazidev/';" style="cursor: pointer;">
             <div class="tech-image">
-              <a href='documentation/'><img src="img/WaziDev-front.png" alt="WaziDev" class="tech-image"></a>
+              <img src="img/WaziDev-front.png" alt="WaziDev" class="tech-image">
             </div>
             <div class="tech-text">
               WaziDev is a Sensing and Actuation platform for your applications!
@@ -81,13 +142,14 @@
             </div>
           </div>
         </div>
+        <!-- WaziGate -->
         <div class="col-5">
           <h2 class="h2 center">
             WaziGate
           </h2>
-          <div class="card">
+          <div class="card" onclick="location.href='documentation/wazigate/';" style="cursor: pointer;">
             <div class="tech-image">
-              <a href='documentation/' class="image--smaller"><img src="img/WaziGate-black.png" alt="WaziGate" class="tech-image"></a>
+              <img src="img/WaziGate-black.png" alt="WaziGate" class="tech-image">
             </div>
             <div class="tech-text">
               WaziGate is a LoRa gateway that can receive and emit LoRa messages up to 200 devices!
@@ -96,13 +158,14 @@
             </div>
           </div>
         </div>
+        <!-- WaziCloud -->
         <div class="col-5">
           <h2 class="h2 center">
             WaziCloud
           </h2>
-          <div class="card">
+          <div class="card" onclick="location.href='documentation/wazicloud/';" style="cursor: pointer;">
             <div class="tech-image">
-              <a href='documentation/' class="image--smaller"><img src="img/WaziCloud.png" alt="WaziCloud" class="tech-image"></a>
+              <img src="img/WaziCloud.png" alt="WaziCloud" class="tech-image">
             </div>
             <div class="tech-text">
               WaziCloud allows Remote control of your application!
@@ -131,7 +194,7 @@
   <div class="lander-row lander-row--blue">
     <div class="container">
       <h1 class="h1">
-        Waziup socials
+        Waziup Socials
       </h1>
       <div class="row">
         <div class="col-5" style="margin:15px">
@@ -156,12 +219,17 @@
           <div class="card">
             <div id="medium-widget" style="background-color:white;"></div>
             <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
-            <script>MediumWidget.Init({renderTo: '#medium-widget', params: {"resource":"https://medium.com/waziup",
-                                                                            "postsPerLine":1,
-                                                                            "limit":1,
-                                                                            "picture":"big",
-                                                                            "fields":["author","claps","publishAt"],
-                                                                            "ratio":"square"}})
+            <script>
+              MediumWidget.Init({
+              renderTo: '#medium-widget', 
+              params: { "resource":"https://medium.com/waziup",
+                        "postsPerLine":1,
+                        "limit":1,
+                        "picture":"big",
+                        "fields":["author","claps","publishAt"],
+                        "ratio":"square"
+                      }
+              })
             </script>
           </div>
         </div>
@@ -179,6 +247,25 @@
             <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
 
+        </div>
+      </div>
+      <!-- MAGAZIN -->
+      <div class="row" style="justify-content: center;">
+        <div class="col-5">
+          <h2 class="h2 center">
+            Wazihub Magazine (2021)
+          </h2>
+          <div class="card">
+              <img src="img/WazihupMagazine2021.png" alt="WazihupMagazine2021">
+          </div>
+        </div>
+        <div class="col-5">
+          <h2 class="h2 center">
+            Waziup Magazine (2019)
+          </h2>
+          <div class="card">
+            <img src="img/WaziupMagazine2019.png" alt="WaziupMagazine2019">
+          </div>
         </div>
       </div>
     </div>

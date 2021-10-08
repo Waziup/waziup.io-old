@@ -1,10 +1,10 @@
-@import 'reset';
-@import 'variables';
-@import 'grid';
-@import 'menus';
+@import "reset";
+@import "variables";
+@import "grid";
+@import "menus";
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 /* Components */
@@ -16,7 +16,7 @@ body {
 }
 
 .documentation {
-  padding-top: 60px;  
+  padding-top: 60px;
 }
 
 // Fonts
@@ -60,7 +60,6 @@ body {
   font-weight: normal;
   letter-spacing: 0.05em;
   color: $color-big-stone;
-
 
   @media all and (min-width: 1025px) {
     font-size: 22px;
@@ -147,26 +146,26 @@ body {
 
     &--arrow {
       width: 30px;
-      background-image: url('../img/003-Small-icons/Red/Red-Arrow.svg');
+      background-image: url("../img/003-Small-icons/Red/Red-Arrow.svg");
     }
 
     &--arrow-white {
-      background-image: url('../img/003-Small-icons/White/Arrow-White.svg');
+      background-image: url("../img/003-Small-icons/White/Arrow-White.svg");
     }
 
     &--mail {
-      background-image: url('../img/003-Small-icons/White/Mail-White.svg');
+      background-image: url("../img/003-Small-icons/White/Mail-White.svg");
     }
   }
 
   &:hover {
     .button__icon--arrow {
-      background-image: url('../img/003-Small-icons/White/Arrow-White.svg');
+      background-image: url("../img/003-Small-icons/White/Arrow-White.svg");
     }
   }
 
   &--grey {
-    background-color: #F2EFE9;
+    background-color: #f2efe9;
     color: white;
 
     &:hover {
@@ -183,7 +182,6 @@ body {
         color: white;
       }
     }
-
   }
 
   &--red {
@@ -259,12 +257,10 @@ body {
   }
   @media all and (min-width: 321px) {
     padding: 8px 0;
-
   }
 
   @media all and (min-width: 641px) {
     padding: 22px 0;
-
   }
 
   @media all and (min-width: 769px) {
@@ -285,34 +281,37 @@ body {
   &--small-padding {
     @media all and (min-width: 321px) {
       padding: 4px 0;
-
     }
 
     @media all and (min-width: 641px) {
       padding: 11px 0;
-
     }
 
     @media all and (min-width: 769px) {
       padding: 20px 0;
-
     }
 
     @media all and (min-width: 1025px) {
       padding: 40px 0;
-
     }
 
     @media all and (min-width: 1201px) {
       padding: 40px 0;
     }
-
   }
 
   &--blue {
     background-color: $color-big-stone;
 
-    .header, .h1, .h2, .h3, .text-header, .text, .fa, .ul, i{
+    .header,
+    .h1,
+    .h2,
+    .h3,
+    .text-header,
+    .text,
+    .fa,
+    .ul,
+    i {
       color: $color-white-squeeze;
     }
   }
@@ -320,7 +319,15 @@ body {
   &--white {
     background-color: white;
 
-    .header, .h1, .h2, .h3, .text-header, .text, .fa, .ul, i {
+    .header,
+    .h1,
+    .h2,
+    .h3,
+    .text-header,
+    .text,
+    .fa,
+    .ul,
+    i {
       color: $color-big-stone;
     }
   }
@@ -328,14 +335,12 @@ body {
   a {
     text-decoration: none;
   }
-
 }
 
 .col-logo {
   padding: 10px;
   margin-left: 20px;
 }
-
 
 .hero-space {
   padding-top: 14px + 40px;
@@ -381,7 +386,6 @@ body {
     padding-top: 80px;
   }
 
-
   .bottom-background {
     position: absolute;
     left: 0;
@@ -424,7 +428,6 @@ body {
       border: none;
       outline: none !important;
     }
-
   }
 
   .button {
@@ -488,9 +491,9 @@ body {
     text-decoration: none;
   }
 
-  p{
+  p {
     font-size: 12px;
-    color:grey
+    color: grey;
   }
 
   @media all and (min-width: 1025px) {
@@ -511,7 +514,6 @@ body {
     padding: 0 40px 40px 80px;
   }
 
-
   .content-header {
    color: $color-orange-waziup;
     font-size: 32px;
@@ -525,7 +527,7 @@ body {
 // Markdown implementation
 .markdowned {
   h1 {
-    color: $color-orange-waziup;
+   color: $color-orange-waziup;
    font-size: 32px;
    font-weight: bold;
    line-height: 1.5;
@@ -575,7 +577,6 @@ body {
     //padding for anchor tags
     padding-top: 100px;
     margin-top: -100px + 16px !important;
-
   }
 
   h3 + h4 {
@@ -641,7 +642,6 @@ body {
     line-height: 1.7;
     letter-spacing: 0.025em;
     margin: 25px 0;
-
   }
 
   p {
@@ -652,7 +652,6 @@ body {
     letter-spacing: 0.025em;
     margin: 25px 0;
     text-align: justify;
-
   }
 
   p + ul {
@@ -671,12 +670,10 @@ body {
     letter-spacing: 0.025em;
     text-decoration: underline;
     margin: 25px 0;
-
   }
 
   ol {
     margin: 10px 30px;
-
   }
 
   ul {
@@ -698,7 +695,6 @@ body {
     }
   }
 
-
   em {
     color: $color-big-stone;
     font-weight: normal;
@@ -708,18 +704,19 @@ body {
     font-weight: bold;
   }
   code {
-    font-family: 'Roboto Mono', monospace;
+    font-family: "Roboto Mono", monospace;
   }
 
-  p > code, li > code {
-    background-color: #F7F8F9;
+  p > code,
+  li > code {
+    background-color: #f7f8f9;
     padding: 0 5px;
   }
 
   .hljs {
     padding: 40px 20px 40px 20px;
     font-size: 14px;
-    background-color: #F7F8F9;
+    background-color: #f7f8f9;
     span {
       font-weight: normal;
     }
@@ -735,7 +732,8 @@ body {
     text-transform: capitalize;
   }
 
-  td, th {
+  td,
+  th {
     text-align: left;
     padding: 20px 40px;
 
@@ -768,14 +766,12 @@ body {
       background-color: $color-white-squeeze;
     }
   }
-
 }
 
 .date {
   @extend .text;
   color: $color-bermuda-gray;
   margin: 40px 0;
-
 }
 
 // Custom
@@ -795,8 +791,6 @@ body {
     flex-direction: row;
     //width: 400px;
   }
-
-
 }
 
 .offer-item {
@@ -860,7 +854,6 @@ body {
     .text {
       font-weight: normal;
       color: $color-jungle-mist !important;
-
     }
 
     &.rss-feed-link {
@@ -903,7 +896,6 @@ body {
 
   a {
     color: $color-white-squeeze;
-
   }
 }
 
@@ -920,8 +912,8 @@ body {
   .admonition-icon {
     padding-right: 10px;
 
-      width: 75px !important;
-      height: 75px !important;
+    width: 75px !important;
+    height: 75px !important;
   }
 
   .admonition-title {
@@ -930,35 +922,34 @@ body {
     font-weight: bold;
   }
 
-
   li {
     font-weight: normal;
   }
 
   &.note {
-    background-color: #F7F8F9;
-    border-color: #FAAC19;
+    background-color: #f7f8f9;
+    border-color: #faac19;
 
     .admonition-title {
-      color: #234B5F;
+      color: #234b5f;
     }
   }
 
   &.warning {
-    background-color: #FEF0D5;
-    border-color: #F9B32E;
+    background-color: #fef0d5;
+    border-color: #f9b32e;
 
     .admonition-title {
-      color: #F9B32E;
+      color: #f9b32e;
     }
   }
 
   &.action {
     background-color: #dcf7f0;
-    border-color: #1AA379;
+    border-color: #1aa379;
 
     .admonition-title {
-      color: #1AA379;
+      color: #1aa379;
     }
   }
 }
@@ -966,7 +957,7 @@ body {
 .laptop {
   transform: translateY(0px);
   position: relative;
-  max-height: 500px; 
+  max-height: 500px;
 }
 
 .team {
@@ -980,7 +971,7 @@ body {
   width: 340px;
   height: 440px;
   position: relative;
-  
+
   .team-image {
     width: 100%;
     height: 100%;
@@ -997,9 +988,9 @@ body {
     color: $color-big-stone;
     z-index: 100;
     position: absolute;
-    bottom:0;
-    left:0;
-    right:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
     color: black;
     display: none;
@@ -1012,21 +1003,20 @@ body {
   background-color: white;
   padding: 20px;
   transition: transform 0.3s;
-  border: 2px solid orange;
+  border: 2px none;
   border-radius: 5px;
   max-height: 450px !important;
   overflow: hidden;
   text-align: center;
-  
+
   .tech-image {
     height: 250px;
     margin-top: 10px;
     margin-bottom: 20px;
-
   }
-    &:hover {
-      transform: scale(1.05);
-    }
+  &:hover {
+    transform: scale(1.05);
+  }
 
   .tech-text {
     padding-top: 20px;
@@ -1045,7 +1035,7 @@ body {
   line-height: 30px;
 
   a {
-   padding-bottom: 2px;
+    padding-bottom: 2px;
 
     i {
       line-height: inherit;
@@ -1073,9 +1063,7 @@ body {
   padding-top: 20px;
 }
 
-
 a.not-active {
-
   &.button {
     opacity: 0.3;
     cursor: not-allowed;
@@ -1092,8 +1080,8 @@ pre + pre {
 }
 
 .copy-button {
-  background:none;
-  border:none;
+  background: none;
+  border: none;
   position: absolute;
   top: 0;
   right: 0;
@@ -1103,9 +1091,8 @@ pre + pre {
   letter-spacing: 0.1em;
   cursor: pointer;
   width: 100px;
-  background-color: #E7ECF1;
+  background-color: #e7ecf1;
   transition: 0.3s ease-in all;
-
 
   p {
     margin: 0;
@@ -1132,7 +1119,6 @@ pre + pre {
   }
 
   &.clicked {
-
     background-color: $color-big-stone;
     color: white;
     width: 200px;
@@ -1154,17 +1140,15 @@ pre + pre {
 }
 
 .third-icon {
-
   @media all and (min-width: 1025px) {
     width: 66%;
-    transform: translate(0,19px);
+    transform: translate(0, 19px);
   }
 
   @media all and (min-width: 1201px) {
     width: 68%;
-    transform: translate(0,3px);
+    transform: translate(0, 3px);
   }
-
 }
 
 .third-icon + h2 {
@@ -1213,11 +1197,8 @@ pre + pre {
 
     @media all and (min-width: 1201px) {
     }
-
-    
   }
 }
-
 
 //Anchor padding
 
@@ -1228,7 +1209,7 @@ pre + pre {
   height: 80vh;
   padding-top: 80px;
   flex-direction: column;
-  font-family: 'Circular', sans-serif;
+  font-family: "Circular", sans-serif;
 
   h1 {
     font-size: 32px;
@@ -1255,12 +1236,11 @@ pre + pre {
   }
 }
 
-
 // Figures
 
 figure {
   text-align: center;
-  
+
   figcaption {
     font-weight: bold;
   }
@@ -1275,9 +1255,9 @@ figure {
   .h2 {
     margin-top: 10px !important;
     margin-top: 15px !important;
-    color: #286BBD;
+    color: #286bbd;
   }
-  
+
   .newsdate {
     font-size: 10pt;
     color: grey;
@@ -1314,18 +1294,23 @@ figure {
 }
 
 // Dev
-#__bs_notify__ { top:95% !important; right: 10px !important; border-radius: 15px !important; height:60px !important; }
+#__bs_notify__ {
+  top: 95% !important;
+  right: 10px !important;
+  border-radius: 15px !important;
+  height: 60px !important;
+}
 
-.CourseTitle{
-  text-align: center!important;
-  padding-bottom: 20px!important;
+.CourseTitle {
+  text-align: center !important;
+  padding-bottom: 20px !important;
   font-size: 30px;
 }
 
 .CourseCard-container {
   text-align: center;
 }
-.CourseCard{
+.CourseCard {
   background: #fff;
   border-radius: 2px;
   display: inline-block;
@@ -1334,13 +1319,14 @@ figure {
   position: relative;
   width: 400px;
 }
-.CourseCard-1{
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+.CourseCard-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .CourseCard-1:hover {
-  box-shadow: 0 14px 28px 14px rgba(0,0,0,0.25), 0 10px 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px 14px rgba(0, 0, 0, 0.25),
+    0 10px 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 #myBtn {
@@ -1385,27 +1371,27 @@ figure {
 /* Slide show */
 
 .slider-wrapper {
-	position: fixed;
-    top: 0;
-    z-index: -100;
-    filter: brightness(90%);
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 100%;
-    min-height: 760px;
+  position: fixed;
+  top: 0;
+  z-index: -100;
+  filter: brightness(90%);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 100%;
+  min-height: 760px;
 }
 
 .slide {
-	float: left;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	transition: opacity 3s linear;
+  float: left;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 3s linear;
 }
 
 .slider-wrapper > .slide:first-child {
-	opacity: 1;
+  opacity: 1;
 }
 
 .header-link {
@@ -1425,22 +1411,36 @@ h6:hover .header-link {
 }
 
 .jarallax {
-    position: absolute;
-    top: -300px;
-    left: 0;
-    z-index: -1;
-    height: 700px;
-    width: 100%;
-   opacity: 0.6;
+  position: absolute;
+  top: -300px;
+  left: 0;
+  z-index: -1;
+  height: 700px;
+  width: 100%;
+  opacity: 0.6;
 }
 .jarallax > .jarallax-img {
-   // position: absolute;
-    object-fit: cover;
-    /* support for plugin https://github.com/bfred-it/object-fit-images */
-    font-family: 'object-fit: cover;';
-   /* top: 0;
+  // position: absolute;
+  object-fit: cover;
+  /* support for plugin https://github.com/bfred-it/object-fit-images */
+  font-family: "object-fit: cover;";
+  /* top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;*/
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
