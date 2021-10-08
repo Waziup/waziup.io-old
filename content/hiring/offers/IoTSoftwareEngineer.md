@@ -1,8 +1,9 @@
 ---
-title: IoT Software Engineer (m/f/d)
+title: IoT Software Engineer [Full time] (m/f/d)
 date: 2021-07-13
 layout: "offer"
 description: "We are looking for a skilled IoT Software Engineer!"
+open: false
 ---
 
 We are WAZIUP e.V, a non-profit organization promoting cutting-edge Internet of Things technologies in developing countries. For this, we developed an affordable and scalable IoT platform that already reached thousands of users in developing countries. The platform includes a range of sensing and actuating products, an IoT Gateway with Edge computing, and an Open Cloud platform. With this platform, we aim to accelerate social innovation and empower local IoT entrepreneurship. We are also engaged in IoT capacity building for startups, entrepreneurs and SMEs. We organized bootcamps, training and hackathons in more than 20 countries. We are based in Dresden, Germany and Verona, Italy.
@@ -44,6 +45,6 @@ We are social entrepreneurs and we work for a better digital world tomorrow. You
 Are you interested?
 -------------------
 
-Send us your CV in English to abdur.rahim@waziup.org and corentin.dupont@waziup.org.
-More infos on https://www.waziup.org
+Send us your CV in English to contact@waziup.org.
 
+[Download this offer](../docs/IoTSoftwareEngineer2021.pdf)

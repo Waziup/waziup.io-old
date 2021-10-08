@@ -205,8 +205,8 @@ body {
   }
 
   &--orange {
-    background-color: $color-flamingo;
-    color: white;
+    background-color: $color-orange-waziup;
+    color: white !important;
 
     &:hover {
       background-color: $color-tia-maria;
@@ -484,8 +484,6 @@ body {
   background-color: $color-white-squeeze;
   padding: 50px 40px 40px 40px;
   height: 100vh;
-  //position: fixed;
-  //bottom: 0;
   float: left;
   width: 260px + 40px + 40px;
 
@@ -517,9 +515,9 @@ body {
   }
 
   .content-header {
+   color: $color-orange-waziup;
     font-size: 32px;
     font-weight: bold;
-    color: $color-big-stone;
     line-height: 1.5;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -529,19 +527,19 @@ body {
 // Markdown implementation
 .markdowned {
   h1 {
-    font-size: 32px;
-    font-weight: bold;
-    color: $color-big-stone;
-    line-height: 1.5;
-    letter-spacing: 0.05em;
-    padding-top: 100px;
-    margin-top: -68px;
-  }
+    color: $color-orange-waziup;
+   font-size: 32px;
+   font-weight: bold;
+   line-height: 1.5;
+   letter-spacing: 0.05em;
+   padding-top: 100px;
+   margin-top: -68px
+ }
 
   h2 {
     font-size: 24px;
     font-weight: 500;
-    color: $color-big-stone;
+    color: $color-orange-waziup;
     line-height: 1.5em;
     letter-spacing: 0.05em;
     margin: 32px 0 12.5px 0;
@@ -1264,10 +1262,35 @@ figure {
     font-size: 10pt;
     color: grey;
   }
-
   .newscontent {
     margin-bottom: 10px;
   }
+}
+
+.jobitem {
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .h2 {
+    margin-top: 10px !important;
+    margin-top: 15px !important;
+    color: #286BBD;
+  }
+  
+  .jobdate {
+    font-size: 10pt;
+    color: grey;
+  }
+
+  .jobcontent {
+    margin-bottom: 10px;
+  }
+
 }
 
 // Dev

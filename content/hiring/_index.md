@@ -24,5 +24,3 @@ You will work in a highly international environment, with colleagues from many d
 We are very tech-driven and open to new ideas.
 WAZIUP was created from a research project funded by the European Union, putting our research into practice.
 
-Open positions
-==============

@@ -1,0 +1,32 @@
+<div>
+    <nav id="NewsMenu">
+       <h1 style="font-weight: bold; font-style: italic; margin-bottom: 10px">
+         Open positions: 
+       </h1>
+       <ul>
+        {{ range .Parent.Pages }}
+          {{ if .Params.open }}
+            <p>{{.Date.Format "Mon Jan 2 2006"}}</p>
+            <li>
+            <a href="{{.URL}}">{{.Title}} </a>
+            </li>
+            <br>
+          {{ end }}
+        {{end}}       
+      </ul>
+       <h1 style="font-weight: bold; font-style: italic; margin-bottom: 10px">
+         Closed positions: 
+       </h1>
+       <ul>
+        {{ range .Parent.Pages }}
+          {{ if not .Params.open }}
+            <p>{{.Date.Format "Mon Jan 2 2006"}}</p>
+            <li>
+            <a href="{{.URL}}">{{.Title}} </a>
+            </li>
+            <br>
+          {{ end }}
+        {{end}}       
+      </ul>
+    </nav>
+  </div>
