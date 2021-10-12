@@ -6,10 +6,10 @@
 <div class="page">
   <div class="lander-row lander-row--white lander-row--small-padding">
     <div class="container">
-      <h1 class="h1">
-        News
-      </h1>
-        Always stay up to date with important events at Waziup e.V.!
+        <div class="news" style="border: hidden; padding: 0;">
+          <h1 class="h1">News</h1>
+          <p>Always stay up to date with important events at Waziup e.V.!</p>
+        </div>
         {{ range .Pages.ByExpiryDate }}
           <div class="news">
             <p class="newsdate"> {{.Date.Format "Mon Jan 2 2006"}} <p>
