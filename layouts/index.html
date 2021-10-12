@@ -8,9 +8,9 @@
       <div class="slider" id="main-slider">
         <div class="slider-wrapper">
           <img src="img/slide-show/sfondo.png" alt="First" class="slide" />
-	  <img src="img/slide-show/sfondo2.png" alt="Second" class="slide" />
-	  <img src="img/slide-show/sfondo3.png" alt="Third" class="slide" />
-	</div>
+          <img src="img/slide-show/sfondo2.png" alt="Second" class="slide" />
+          <img src="img/slide-show/sfondo3.png" alt="Third" class="slide" />
+	      </div>
       </div>	
     </div>
     <div class="container" style="position:relative">
@@ -73,9 +73,7 @@
     </div>
   </div> -->
 
-<!-- ******EXPERIMENT***** -->
-
-
+<!-- ******EXPERIMENT STARTS***** -->
 <div class="lander-row lander-row--white">
   <div class="container">
     <div class="row">
@@ -107,14 +105,11 @@
           </div>
         </div>
         <div style="width: 100%; display: flex; justify-content: right; margin-top: 3vh;">
-          <span>HomA (WIC Winner 2020)</span>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
 <!-- ******EXPERIMENT END***** -->
 
   <!-- Our Technology -->
@@ -185,29 +180,40 @@
       </h1>
       <div class="row">
         <div class="col center">
-          <img src="images/map.png" alt="WaziDev" style="width: 600px;">
+          <div class="background-map">
+            <!-- <img src="images/map.png" alt="WaziDev" > -->
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- WAZIUP SOCIALS -->
 
   <div class="lander-row lander-row--blue">
     <div class="container">
       <h1 class="h1">
         Waziup Socials
       </h1>
-      <div class="row">
+      <div class="row" style="justify-content: center;">
         <div class="col-5" style="margin:15px">
           <h2 class="h2 center">
             <i class="fab fa-2x fa-facebook" aria-hidden="true"></i>
             Facebook
           </h2>
           <div class="card">
-            <iframe src="https://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FwaziupIOT&width=400&height=400&colorscheme=light&show_faces=true&border_color&stream=true&header=true"
-                    scrolling="yes"
-                    style="border:none; overflow:hidden; width:400px; height:400px; background: white; float:left; "
-                    allowtransparency="true"
-                    frameborder="0">
+            <iframe 
+              src="https://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FwaziupIOT&width=400&height=400&colorscheme=light&show_faces=true&border_color&stream=true&header=true"
+              scrolling="yes"
+              style="
+                border:none; 
+                overflow:hidden; 
+                width:100%; 
+                height:400px;
+                background: white; 
+                float:left; "
+              allowtransparency="true"
+              frameborder="0">
             </iframe>
           </div>
         </div>
@@ -217,7 +223,7 @@
             Medium
           </h2>
           <div class="card">
-            <div id="medium-widget" style="background-color:white;"></div>
+            <div id="medium-widget" style="background-color:white; height: 400px; overflow: hidden;"></div>
             <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
             <script>
               MediumWidget.Init({
@@ -244,7 +250,11 @@
                data-tweet-limit="2">
                Tweets by @twittername
             </a>
-            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <script 
+              async 
+              src="//platform.twitter.com/widgets.js" 
+              charset="utf-8">
+            </script>
           </div>
 
         </div>
@@ -253,18 +263,22 @@
       <div class="row" style="justify-content: center;">
         <div class="col-5">
           <h2 class="h2 center">
-            Wazihub Magazine (2021)
+            Magazine (May 2021)
           </h2>
           <div class="card">
-              <img src="img/WazihupMagazine2021.png" alt="WazihupMagazine2021">
+            <div onclick="location.href='docs/WaziHubMagazine1.pdf';" style="background-color:white; height: 400px; overflow: hidden;">
+              <img src="img/WazihubMagazineMay2021.png" alt="WazihubMagazineMay2021" style="height: 100%; width: 100%;">
+            </div>
           </div>
         </div>
         <div class="col-5">
           <h2 class="h2 center">
-            Waziup Magazine (2019)
+            Magazine (July 2021)
           </h2>
           <div class="card">
-            <img src="img/WaziupMagazine2019.png" alt="WaziupMagazine2019">
+            <div onclick="location.href='docs/WaziHub_Startups_Magazine.pdf';" style="background-color:white; height: 400px; overflow: hidden;">
+              <img src="img/WazihubMagazineJuly2021.png" alt="WazihubMagazineJuly2021" style="height: 100%; width: 100%;">
+            </div>
           </div>
         </div>
       </div>
