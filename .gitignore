@@ -41,3 +41,5 @@ node_modules
 ehthumbs.db
 Thumbs.db
 *.sw?
+
+resources/_gen
