@@ -10,8 +10,7 @@ contact@waziup.org
 
 
 VAT Identification Number in accordance with §27 a VAT Tax Act:  
-DE32418059
-
+DE323418050
 
 Court of jurisdiction
 ---------------------
