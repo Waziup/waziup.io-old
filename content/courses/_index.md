@@ -8,4 +8,4 @@ menu:
     weight: 5
 ---
 
-Waziup proposes the following  course:
+Waziup proposes the following course:

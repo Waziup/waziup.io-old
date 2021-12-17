@@ -8,26 +8,40 @@
   <div class="CourseTitle">
     <h1 class="content-header">{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
   </div>
-    <div class="CourseCard-container">
-      <div class="CourseCard CourseCard-1">
-        {{ $currentPage := . }}
-        {{ range where $currentPage.Menus.main.Children ".Name" "=" "waziapp"}}
-        <a href="{{.URL}}"><img src="/images/WaziAppcourse.png" /></a>
-        {{ end }}
-      </div>
-    
-      <div class="CourseCard CourseCard-1">
-        {{ $currentPage := . }}
-        {{ range where $currentPage.Menus.main.Children ".Name" "=" "iot"}}
-        <a href="{{.URL}}"><img src="/images/IoTcourse.png" /></a>
-        {{ end }}
-      </div>
-    
-      <div class="CourseCard CourseCard-1">
-        {{ $currentPage := . }}
-        {{ range where $currentPage.Menus.main.Children ".Name" "=" "lora"}}
-        <a href="{{.URL}}"><img src="/images/lora.png" /></a>
-        {{ end }}
+  <div class="CourseCard-container">
+    <div class="CourseCard CourseCard-1">
+      {{ $currentPage := . }}
+      {{ range where $currentPage.Menus.main.Children ".Name" "=" "waziapps"}}
+      <a href="{{.URL}}"><img src="/images/WaziAppcourse.png" /></a>
+      {{ end }}
+    </div>
+
+    <div class="CourseCard CourseCard-1">
+      {{ $currentPage := . }}
+      {{ range where $currentPage.Menus.main.Children ".Name" "=" "waziapps_jupyter"}}
+      <a href="{{.URL}}"><img src="/images/jupyterlab.jpg" /></a>
+      {{ end }}
+    </div>
+
+    <div class="CourseCard CourseCard-1">
+      {{ $currentPage := . }}
+      {{ range where $currentPage.Menus.main.Children ".Name" "=" "waziapps_jupyter"}}
+      <a href="{{.URL}}"><img src="/images/artificial-intelligence-education-768x436.jpg" /></a>
+      {{ end }}
+    </div>
+
+    <div class="CourseCard CourseCard-1">
+      {{ $currentPage := . }}
+      {{ range where $currentPage.Menus.main.Children ".Name" "=" "iot"}}
+      <a href="{{.URL}}"><img src="/images/IoTcourse.png" /></a>
+      {{ end }}
+    </div>
+
+    <div class="CourseCard CourseCard-1">
+      {{ $currentPage := . }}
+      {{ range where $currentPage.Menus.main.Children ".Name" "=" "lora"}}
+      <a href="{{.URL}}"><img src="/images/lora.png" /></a>
+      {{ end }}
     </div>
   </div>
 </div>

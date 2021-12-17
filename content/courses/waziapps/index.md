@@ -3,8 +3,8 @@ date: 2020-07-24T09:00:00+00:00
 title: How to develop a WaziApp
 menu:
   main:
-    title: WaziApp tutorial
-    name: waziapp
+    title: Basic WaziApp tutorial
+    name: waziapps
     parent: courses
     weight: 1
 ---
@@ -408,7 +408,6 @@ How the update mechanism works in WaziGate
 ------------------------------------------
 
 {{< youtube id="2F4MPkSPg4Y" >}}
-
 
 
 
