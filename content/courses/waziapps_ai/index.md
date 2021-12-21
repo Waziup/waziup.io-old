@@ -40,7 +40,7 @@ Download the App from DockerHub
 You can just download the build docker image from Dockerhub.
 
 ```
-link is missing, must be added
+docker pull waziup/wazigate-webcam-inference
 ```
 
 ___________________________________________________________________________________________________________________
