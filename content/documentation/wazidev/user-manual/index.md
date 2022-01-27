@@ -334,16 +334,18 @@ Uncomment that line, and change the two values to 3.
 
  Alternatively you can press Cntrl + Shift + i (for Windows users)
 
- ![Library Manager Window](./media/image33.png)
+ ![](./media/image33.png)
 
  In the libraries manager, make sure the "**Type**" and "**Topic**" fields are set to "**ALL**".
 
- Next, search for **DHT** and install the DHT sensor library by **Adafruit** as show in the image above.
+ Next, search for **DHT** and install the DHT sensor library by **Adafruit** as shown in the image below.
+
+ ![Library Manager Window](./media/image34.png)
 
  Close the library manager after the installation completes
 
  **NOTE:** Repeat step **3** for all other sensors you use. i.e search and install the required sensor libraries using the library manager.
- 
+
 
 {{%action%}}
 **Step \#4:** Compile and upload the code.
