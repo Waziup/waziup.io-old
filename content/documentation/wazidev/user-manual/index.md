@@ -324,14 +324,35 @@ pinMode(7, OUTPUT); digitalWrite(7, HIGH);
 
 Uncomment that line, and change the two values to 3.
 
+
+
 {{%action%}}
-**Step \#3:** Compile and upload the code.
+**Step \#3:** Install the DHT library using Library Manager.
+{{%/action%}}
+
+ Go to Sketch -\> Include Library -\> Libraries Manager.
+
+ Alternatively you can press Cntrl + Shift + i (for Windows users)
+
+ ![Library Manager Window](./media/image33.png)
+
+ In the libraries manager, make sure the "**Type**" and "**Topic**" fields are set to "**ALL**".
+
+ Next, search for **DHT** and install the DHT sensor library by **Adafruit** as show in the image above.
+
+ Close the library manager after the installation completes
+
+ **NOTE:** Repeat step **3** for all other sensors you use. i.e search and install the required sensor libraries using the library manager.
+ 
+
+{{%action%}}
+**Step \#4:** Compile and upload the code.
 {{%/action%}}
 
 You just need to hit the arrow button.
 
 {{%action%}}
-**Step \#4:** Open the Arduino IDE Serial Monitor.
+**Step \#5:** Open the Arduino IDE Serial Monitor.
 {{%/action%}}
 
 In the Tools menu open the serial monitor and then set the data rate to 38400 baud.
