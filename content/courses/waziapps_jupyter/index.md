@@ -1,50 +1,39 @@
 ---
 date: 2020-07-24T09:00:00+00:00
-title: How to develop a WaziApp
+title: JupyterLab with WaziApp
 menu:
   main:
-    title: WaziApp for Jupyterlab
+    title: JupyterLab with WaziApp
     name: waziapps_jupyter
     parent: courses
     weight: 1
 ---
 
-___________________________________________________________________________________________________________________
+Introduction
+============
 
-A Wazigate Application for Jupyterlab
-=====================================
+JupyterLab is great way to start with data science, scientific computing, computational journalism, and machine learning.
+It is a web interface for developing AI code and work with data.
+Many online resources are available, explaining the usage of Jupyterlab in detail. One of them is the [official documentation](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html "Official documentation").
 
-Description
------------
-
-Waziup/wazigate-jupyterlab is an Application for the WaziGate, created as Docker image. It contains the basic packages needed for data science tasks. 
-
-**Link to Github repository:**	[waziup/wazigate-jupyterlab](https://github.com/Waziup/wazigate-jupyterlab_armv7l)
+In this course, we will learn how to build a WaziApp with JupyterLab.
 
 ![Screeshot of Jupyterlab with linear-regression-demo.ipynb](./media/notebook.png)
+ 
 
-There is no login needed for this jupyterlab, so it is not recommended to deploy the Application in public networks. In the future it will run on Unix sockets, to solve this problem.
+<!-- add a bit more about what they can do with JupyterLab and this WaziApp -->
 
-Till now the container is still on 32-bit (armv7l), this platform is deprecated and not well maintained in 2021. Later it will be upgraded to 64-bit (armv8), which is well maintained.
-  
+Quick start
+===========
 
-___________________________________________________________________________________________________________________
+<!-- install from dockerhub -->
 
-Download the App from DockerHub
--------------------------------
+Building the application
+========================
 
-You can just download the build docker image from Dockerhub.
+The WaziApp is available at [Github](https://github.com/Waziup/wazigate-jupyterlab_armv7l.git).
 
-```
-docker pull waziup/wazigate-jupyterlab
-```
-
-___________________________________________________________________________________________________________________
-
-Build and run Docker image for Jupyterlab
------------------------------------------
-
-If you want to build it from source you have to follow these steps.
+Let's build it from source:
 
 1. Download the repository to your local machine:
 
@@ -52,7 +41,7 @@ If you want to build it from source you have to follow these steps.
 git clone https://github.com/Waziup/wazigate-jupyterlab_armv7l.git
 ```
 
-2. Install docker and issue the following commands
+2. Install docker and issue the following commands:
 
 ```
 docker buildx create --name rpibuilder --platform linux/arm/v7
@@ -91,7 +80,89 @@ docker tag <id_of_build_image> waziup/wazigate-jupyterlab_armv7l:latest
 docker-compose up
 ```
 
-___________________________________________________________________________________________________________________
+<!-- how to access the app? -->
+
+Using our app
+=============
+
+<!-- How to use the app? add some screenshots, explainations -->
+
+Retrieve values from WaziCloud
+------------------------------
+
+Now that your WaziApp is running, let's use it!
+
+All steps, how to retrieve values from WaziCloud, is also explained in a notebook, you can find it [here](https://github.com/Waziup/wazigate-jupyterlab_armv7l/blob/main/notebooks/get_values.ipynb "jupyterlab get_values.ipynb").
+
+1. Get desired values via the **curl** command. 
+
+You can get an overview about the possible queries from WaziCloud by visiting [Swagger](https://api.waziup.io/docs/#/Sensors/get_devices__device_id__sensors__sensor_id__values "Swagger").
+All you need is your **device_id** and the **sensor_id**, you can find them by visiting the [WaziCloud](https://dashboard.waziup.io/ "WaziCloud").
+
+Here is an example:
+
+```
+response = !curl -s -X GET "https://api.waziup.io/api/v2/devices/0242ac1200023852/sensors/temperatureSensor_0/values" -H "accept: application/json;charset=utf-8"
+print ("This is the response: \n\n", response)
+````
+
+2. We can create a **list** from the **JSON** to organize our values:
+
+```
+import json
+# Opening JSON file
+
+print(type(response))
+rep_str = str(response).replace("'",'')
+print(type(rep_str))
+
+# create JSON list
+response_list = json.loads(rep_str)
+
+# Print first value
+print(response_list[0][0])
+```
+
+3. Or an **NumPy ndarray**:
+
+```
+import numpy as np
+
+temp_vals = np.array([])
+
+for n in range(len(response_list[0])):
+    temp_vals = np.append(temp_vals, response_list[0][n]["value"], axis=None)
+
+print("Temperature values: ", temp_vals)
+```
+
+4. Plot the values, with **Matplotlib**:
+
+````
+import matplotlib.pyplot as plt
+
+plt.plot(temp_vals)
+plt.show()
+````
+
+
+Some other example notebooks are shipped with the git, you can find them [here](https://github.com/Waziup/wazigate-jupyterlab_armv7l/blob/main/notebooks).
+They are also inside the image, located inside the "permanentStorage" folder.
+For example the "simple-linear-regression-notebook.ipynb" from Phillip Bauch [1]. 
+
+There is a persistent storage directory in the home directory of Jupyterlab, named "permanentWorkspace" use it to save all notebooks and files you want to keep.
+Due to the fact that jupyterlab runs in a docker container on your RPI and there can be updates to the docker image, this is the folder to keep your files.
+
+
+
+Going further
+=============
+
+Install useful packages
+-----------------------
+
+One of the example notebooks shows how to install some useful packages.
+You can find it [here](https://github.com/Waziup/wazigate-jupyterlab_armv7l/blob/main/notebooks/install_ml_packages.ipynb "jupyterlab install_ml_packages.ipynb").
 
 Contained packages
 ------------------
@@ -192,86 +263,18 @@ Or inside a cell of a notebook, don't forget to put an exclamation mark in front
 !pip install <name_of_package>
 !apt-get install <name_of_package> -y
 ```
-___________________________________________________________________________________________________________________
 
-Usage
------
+Annexes
+=======
 
-**Tutorial - How to use Jupyterlab**
+Cavehats
+--------
 
-Many online resources are available, explaining the usage of Jupyterlab in detail. One of them is the [official documentation](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html "Official documentation").
+There is no login needed for this jupyterlab, so it is not recommended to deploy the Application in public networks. In the future it will run on Unix sockets, to solve this problem.
 
-**Storage**
+Till now the container is still on 32-bit (armv7l), this platform is deprecated and not well maintained in 2021. Later it will be upgraded to 64-bit (armv8), which is well maintained.
 
-There is a persistent storage directory in the home directory of Jupyterlab, named "permanentWorkspace" use it to save all notebooks and files you want to keep.
-Due to the fact, that jupyterlab runs in a docker container on your RPI and there can be updates to the docker image, this is the folder to keep your files.
-
-**Example notebooks**
-
-Some example notebooks are shipped with the git, you can find them [here](https://github.com/Waziup/wazigate-jupyterlab_armv7l/blob/main/notebooks "jupyterlab notebooks"). They are also inside the image, located inside the "permanentStorage" folder. For example the "simple-linear-regression-notebook.ipynb" from Phillip Bauch [1]. 
-
-**Install useful packages**
-
-One of the example notebooks shows how to install some useful packages. You can find it [here](https://github.com/Waziup/wazigate-jupyterlab_armv7l/blob/main/notebooks/install_ml_packages.ipynb "jupyterlab install_ml_packages.ipynb").
-
-**Retrieve values from the WaziCloud**
-
-All steps, how to retrieve values from WaziCloud, is also explained in a notebook, you can find it [here](https://github.com/Waziup/wazigate-jupyterlab_armv7l/blob/main/notebooks/get_values.ipynb "jupyterlab get_values.ipynb").
-
-1. Get desired values via the **curl** command. 
-
-You can get an overview about the possible queries from WaziCloud by visiting [Swagger](https://api.waziup.io/docs/#/Sensors/get_devices__device_id__sensors__sensor_id__values "Swagger").
-All you need is your **device_id** and the **sensor_id**, you can find them by visiting the [WaziCloud](https://dashboard.waziup.io/ "WaziCloud").
-
-Here is an example:
-
-```
-response = !curl -s -X GET "https://api.waziup.io/api/v2/devices/0242ac1200023852/sensors/temperatureSensor_0/values" -H "accept: application/json;charset=utf-8"
-print ("This is the response: \n\n", response)
-````
-
-2. We can create a **list** from the **JSON** to organize our values:
-
-```
-import json
-# Opening JSON file
-
-print(type(response))
-rep_str = str(response).replace("'",'')
-print(type(rep_str))
-
-# create JSON list
-response_list = json.loads(rep_str)
-
-# Print first value
-print(response_list[0][0])
-```
-
-3. Or an **NumPy ndarray**:
-
-```
-import numpy as np
-
-temp_vals = np.array([])
-
-for n in range(len(response_list[0])):
-    temp_vals = np.append(temp_vals, response_list[0][n]["value"], axis=None)
-
-print("Temperature values: ", temp_vals)
-```
-
-4. Plot the values, with **Matplotlib**:
-
-````
-import matplotlib.pyplot as plt
-
-plt.plot(temp_vals)
-plt.show()
-````
-
-___________________________________________________________________________________________________________________
-
-References:
+References
 -----------
 
 [1] https://github.com/philippbauch/simple-linear-regression-notebook
