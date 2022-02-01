@@ -25,7 +25,7 @@
 
     <div class="CourseCard CourseCard-1">
       {{ $currentPage := . }}
-      {{ range where $currentPage.Menus.main.Children ".Name" "=" "waziapps_jupyter"}}
+      {{ range where $currentPage.Menus.main.Children ".Name" "=" "waziapps_ai"}}
       <a href="{{.URL}}"><img src="/images/artificial-intelligence-education-768x436.jpg" /></a>
       {{ end }}
     </div>

@@ -11,11 +11,12 @@ menu:
 
 ___________________________________________________________________________________________________________________
 
-A Wazigate Application for Jupyterlab
+A Wazigate Application for JupyterLab
 =====================================
 
 Description
 -----------
+JupyterLab is a interactive development environment that runs in your browser. It can be used for notebooks, code and data. A modular design and flexible interface allows for extensions that expand and enrich functionality. It supports different workflows, for example in data science, scientific computing or machine learning, to only name a few. It also supports different kernels for programming languages, python is preinstalled.
 
 Waziup/wazigate-jupyterlab is an Application for the WaziGate, created as Docker image. It contains the basic packages needed for data science tasks. 
 
@@ -23,7 +24,7 @@ Waziup/wazigate-jupyterlab is an Application for the WaziGate, created as Docker
 
 ![Screeshot of Jupyterlab with linear-regression-demo.ipynb](./media/notebook.png)
 
-There is no login needed for this jupyterlab, so it is not recommended to deploy the Application in public networks. In the future it will run on Unix sockets, to solve this problem.
+There is no login needed for this JupyterLab, so it is not recommended to deploy the Application in public networks. In the future it will run on Unix sockets, to solve this issue.
 
 Till now the container is still on 32-bit (armv7l), this platform is deprecated and not well maintained in 2021. Later it will be upgraded to 64-bit (armv8), which is well maintained.
   
@@ -41,7 +42,7 @@ docker pull waziup/wazigate-jupyterlab
 
 ___________________________________________________________________________________________________________________
 
-Build and run Docker image for Jupyterlab
+Build and run Docker image for JupyterLab
 -----------------------------------------
 
 If you want to build it from source you have to follow these steps.
@@ -105,6 +106,7 @@ Here is an overview of the included pip-packages:
 ```
 # pip freeze
 anyio==3.4.0
+argcomplete==1.12.3
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
 attrs==21.2.0
@@ -119,20 +121,22 @@ debugpy==1.5.1
 decorator==5.1.0
 defusedxml==0.7.1
 entrypoints==0.3
-fonttools==4.28.3
+fonttools==4.28.5
 glibc==0.6.1
 idna==3.3
+importlib-metadata==4.10.0
+importlib-resources==5.4.0
 ipykernel==6.6.0
 ipython==7.30.1
 ipython-genutils==0.2.0
 jedi==0.18.1
 Jinja2==3.0.3
 json5==0.9.6
-jsonschema==4.2.1
+jsonschema==4.3.2
 jupyter-client==7.1.0
 jupyter-core==4.9.1
 jupyter-server==1.13.1
-jupyterlab @ file:///wheels/jupyterlab-4.0.0a15-py3-none-any.whl
+jupyterlab==3.2.5
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.9.0
 kiwisolver==1.3.2
@@ -146,7 +150,7 @@ nbconvert==6.3.0
 nbformat==5.1.3
 nest-asyncio==1.5.4
 notebook==6.4.6
-numpy==1.21.4
+numpy==1.21.5
 packaging==21.3
 pandas==1.3.5
 pandocfilters==1.5.0
@@ -165,7 +169,7 @@ python-dateutil==2.8.2
 pytz==2021.3
 pyzmq==22.3.0
 requests==2.26.0
-scipy @ file:///wheels/scipy-1.7.2-cp39-cp39-linux_armv7l.whl
+scipy @ file:///wheels/scipy-1.7.3-cp37-cp37m-linux_armv7l.whl
 Send2Trash==1.8.0
 six==1.16.0
 sniffio==1.2.0
@@ -173,13 +177,15 @@ terminado==0.12.1
 testpath==0.5.0
 tornado==6.1
 traitlets==5.1.1
+typing_extensions==4.0.1
 urllib3==1.26.7
 wcwidth==0.2.5
 webencodings==0.5.1
 websocket-client==1.2.3
+zipp==3.6.0
 ```
 
-New packages can be installed via the terminal, included in jupyterlab, for example:
+New packages can be installed via the terminal, included in JupyterLab, for example:
 
 ```
 pip install <name_of_package>
@@ -197,26 +203,26 @@ ________________________________________________________________________________
 Usage
 -----
 
-**Tutorial - How to use Jupyterlab**
+**Tutorial - How to use JupyterLab**
 
-Many online resources are available, explaining the usage of Jupyterlab in detail. One of them is the [official documentation](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html "Official documentation").
+Many online resources are available, explaining the usage of JupyterLab in detail. One of them is the [official documentation](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html "Official documentation").  
 
 **Storage**
 
-There is a persistent storage directory in the home directory of Jupyterlab, named "permanentWorkspace" use it to save all notebooks and files you want to keep.
-Due to the fact, that jupyterlab runs in a docker container on your RPI and there can be updates to the docker image, this is the folder to keep your files.
+There is a persistent storage directory in the home directory of JupyterLab, named "permanentWorkspace" use it to save all notebooks and files you want to keep.
+Due to the fact, that JupyterLab runs in a docker container on your RPI and there can be updates to the docker image, this is the folder to keep your files. The files are mapped to a folder (/var/lib/waziapp) on the host operating system.
 
 **Example notebooks**
 
-Some example notebooks are shipped with the git, you can find them [here](https://github.com/Waziup/wazigate-jupyterlab_armv7l/blob/main/notebooks "jupyterlab notebooks"). They are also inside the image, located inside the "permanentStorage" folder. For example the "simple-linear-regression-notebook.ipynb" from Phillip Bauch [1]. 
+Some example notebooks are shipped with the git, you can find them [here](https://github.com/Waziup/wazigate-jupyterlab_armv7l/blob/main/notebooks "JupyterLab notebooks"). They are also inside the image, located inside the "permanentStorage" folder. For example the "simple-linear-regression-notebook.ipynb" from Phillip Bauch [1]. 
 
 **Install useful packages**
 
-One of the example notebooks shows how to install some useful packages. You can find it [here](https://github.com/Waziup/wazigate-jupyterlab_armv7l/blob/main/notebooks/install_ml_packages.ipynb "jupyterlab install_ml_packages.ipynb").
+One of the example notebooks shows how to install some useful packages. You can find it [here](https://github.com/Waziup/wazigate-jupyterlab_armv7l/blob/main/notebooks/install_ml_packages.ipynb "JupyterLab install_ml_packages.ipynb"). It shows how to install tensorflow, keras and pycaret. These packages have a big dependency list and would increase size of the docker image. 
 
 **Retrieve values from the WaziCloud**
 
-All steps, how to retrieve values from WaziCloud, is also explained in a notebook, you can find it [here](https://github.com/Waziup/wazigate-jupyterlab_armv7l/blob/main/notebooks/get_values.ipynb "jupyterlab get_values.ipynb").
+All steps, how to retrieve values from WaziCloud, is also explained in a notebook, you can find it [here](https://github.com/Waziup/wazigate-jupyterlab_armv7l/blob/main/notebooks/get_values.ipynb "JupyterLab get_values.ipynb").
 
 1. Get desired values via the **curl** command. 
 
