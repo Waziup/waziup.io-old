@@ -16,20 +16,66 @@ JupyterLab is great way to start with data science, scientific computing, comput
 It is a web interface for developing AI code and work with data.
 Many online resources are available, explaining the usage of Jupyterlab in detail. One of them is the [official documentation](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html "Official documentation").
 
-In this course, we will learn how to build a WaziApp with JupyterLab.
+In this course, we will learn how to build and use a WaziApp with JupyterLab.
 
 ![Screeshot of Jupyterlab with linear-regression-demo.ipynb](./media/notebook.png)
  
 
 <!-- add a bit more about what they can do with JupyterLab and this WaziApp -->
 
+Jupyter Notebook provides an environment tailored to the needs and workflow of data science and simulation. In a single instance, you can write, document and run code, visualize data, perform calculations and examine the corresponding results. In the prototype phase in particular, they benefit from the fact that any code can be accommodated in independent cells: This makes it possible to test specific code blocks individually. Thanks to the numerous additional kernels, Jupyter is not limited to Python as a programming language, which means a lot of flexibility in coding and analysis.
+
+Key features of Jupyter Notebook include:
+
+**Data cleansing:** Distinguishing between important and unimportant data in big data analysis
+ 
+**Statistical modelling:** Mathematical method for determining the estimated distribution probability of a specific characteristic
+ 
+**Creation and training of machine learning models:** Design, programming and training of models based on machine learning
+ 
+**Data visualization:** graphical representation of data to clarify patterns, trends, dependencies, etc.
+
 Quick start
 ===========
 
-<!-- install from dockerhub -->
+Install via user interface
+--------------------------
+
+You can just download the build docker image from the Waziup Dockerhub directly on your RPI. All you have to do is, to navigate in the user interface of your WaziGate to App menu, which is located in the sidebar. Then you want to press the "plus" button, located in the right-hand side bottom of the webpage, illustrated below.
+
+![Press the plus button.](./media/plus_btn.png)
+
+After you pressed the button you will see a menu, where you can type a name of an image. The image has to be available on dockerhub.
+
+![Type a name of an image available on dockerhub.](./media/install_custom_app.png)
+
+Type the name of the image you want to install, in this case you have to type:
+
+```
+waziup/wazigate-jupyterlab
+```
+
+Now you can press the "DOWNLOAD AND INSTALL" button, after the install routine is finished, press the "LAUNCH THE APP" button.
+
+Install via docker
+------------------
+
+You can also connect to via ssh to your Raspberry Pi and issue the following command, to pull the image from [dockerhub](https://hub.docker.com/r/waziup/wazigate-jupyterlab)
+
+```
+docker pull waziup/wazigate-jupyterlab
+```
+
+Afterwards you have to start the app, you can either do this via the following command:
+
+```
+wget -O docker-compose.yml https://raw.githubusercontent.com/Waziup/wazigate-jupyterlab/main/docker-compose.yml
+
+docker-compose up   (docker-compose file has to be in the same location)
+```
 
 Building the application
-========================
+------------------------
 
 The WaziApp is available at [Github](https://github.com/Waziup/wazigate-jupyterlab_armv7l.git).
 
@@ -82,10 +128,21 @@ docker-compose up
 
 <!-- how to access the app? -->
 
-Using our app
+Usage
 =============
 
 <!-- How to use the app? add some screenshots, explainations -->
+
+How to start the Waziapp
+------------------------
+
+After you installed the app, with one of the previous steps. It should be visible in the user interface, in the sidebar. Like shown below:
+
+![Sidebar view of a WaziApp](./media/sidebar_app_jupyter.png)
+
+Click on "wazigate-jupyterlab" in the sidebar to start the application. If the application does not start, go into the Apps menu and click on "wazigate-jupyterlab" card and press the "START" button.
+
+A new tab or window in your browser will start, showing jupyterlab. Now you can create a new notebook file or upload an existing one from your filesystem.
 
 Retrieve values from WaziCloud
 ------------------------------

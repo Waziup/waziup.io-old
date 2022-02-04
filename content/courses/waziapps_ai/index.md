@@ -49,6 +49,12 @@ After you pressed the button you will see a menu, where you can type a name of a
 
 ![Type a name of an image available on dockerhub.](./media/install_custom_app.png)
 
+Type the name of the image you want to install, in this case you have to type:
+
+```
+waziup/wazigate-webcam-inference
+```
+
 Now you can press the "DOWNLOAD AND INSTALL" button, after the install routine is finished, press the "LAUNCH THE APP" button.
 
 Install via docker
@@ -66,8 +72,6 @@ Afterwards you have to start the app, you can either do this via the following c
 wget -O docker-compose.yml https://raw.githubusercontent.com/Waziup/wazigate-webcam-inference/main/docker-compose.yml
 
 docker-compose up   (docker-compose file has to be in the same location)
-
-or you pre
 ```
 
 
