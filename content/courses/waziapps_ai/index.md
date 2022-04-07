@@ -17,8 +17,8 @@ Introduction
 Computer vision is a subfield of machine learning and artificial intelligence, which deals with how computers can recognize visual data in form of images or videos. One understands various techniques to locate elements in images or identify and catalog videos. The goal is to use an automated process to gain a visual understanding while distinguishing between relevant and less distinguish relevant information. This is a complex process that otherwise reserved only for the human visual system, part of the nervous system. Today it is common to train image recognition models, which take an image as a Receive input and output one or more objects and possibly more recognize attributes. The various objects possible to recognize are in classes assigned. Examples of these images must first be stored in so-called image databases collected. In addition to the class prediction these image recognition models also provide an assessment of the accuracy of the prediction meeting. This value can be understood as a kind of probability of prediction and describes how confident the model is that an image becomes a learned class can be assigned. In general, the recognition systems distinguish between single and multiple recognition. With a single detection, the model says only one class as prediction for the entire image. Models designed for multiple detection were able to recognize several objects of different classes in one image. Consequently, information on the localization of the object in the image and confidence needed.
 
 
-In this course, we will learn how to build a WaziApp capable or doing object detection from a webcam.
-With the help of this application you can utilize the WaziGate and RaspiCam to track objects and evaluate their occurrences.
+In this course, we will learn how to build a WaziApp capable or performing object detection on the WaziGate.
+With the help of this application you can utilize the WaziGate to track objects and evaluate their occurrences. This is done via a RaspiCam, a Webcam or a URL using the Real Time Streaming Protocol (RTSP). 
 
 **Link to Github repository:** [waziup/wazigate-webcam-inference](https://github.com/Waziup/wazigate-webcam-inference)
 
@@ -69,6 +69,8 @@ docker pull waziup/wazigate-webcam-inference
 Afterwards you have to start the app, you can either do this via the following command:
 
 ```
+cd /var/lib/waziup
+
 wget -O docker-compose.yml https://raw.githubusercontent.com/Waziup/wazigate-webcam-inference/main/docker-compose.yml
 
 docker-compose up   (docker-compose file has to be in the same location)
