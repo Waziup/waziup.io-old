@@ -178,7 +178,7 @@ Enter the password and click on connect.
 Wazigate is configured through a web user interface.
 When you connect to the Wazigate hotspot, you need to open your browser and go to one of the following addresses:
 
-- [http://192.168.200.1](http://192.168.200.1)
+- [http://10.42.0.1](http://10.42.0.1)
 - [http://wazigate.local/](http://wazigate.local/)
 
 Then you should see something like this.

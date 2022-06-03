@@ -93,7 +93,7 @@ On our PC we should see a wireless network that starts with **WAZIGATE**. Connec
 
 {{< youtube id="I0D3J_yS65o" >}}
 
-When the pi is in WiFi access point mode, the default IP address is: 192.168.200.1
+When the pi is in WiFi access point mode, the default IP address is: 10.42.0.1
 
 ______
 
