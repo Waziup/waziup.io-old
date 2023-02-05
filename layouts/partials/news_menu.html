@@ -7,7 +7,7 @@
         {{ range .Parent.Pages }}
           <p>{{.Date.Format "Mon Jan 2 2006"}}</p>
           <li>
-          <a href="{{.URL}}">{{.Title}} </a>
+          <a href="{{.Permalink}}">{{.Title}} </a>
           </li>
           <br>
         {{end}}       

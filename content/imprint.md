@@ -2,9 +2,9 @@
 title: Imprint
 ---
 
-Waziup e.V.    
-Lipsiusstr 18  
-01309 Dresden  
+Waziup e.V.
+Räcknitzhöhe 50-52
+01217 Dresden 
 Germany  
 contact@waziup.org
 

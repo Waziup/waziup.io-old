@@ -7,7 +7,7 @@
   </div>
     <div class="content">
       {{ if not .Params.open }} This job offer is closed. </br></br> {{ end }}
-      <h1 class="content-header">{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
+      <h1 class="content-header">{{ .Title }}</h1>
       <div class="markdowned">
         {{ .Content }}
       </div>
